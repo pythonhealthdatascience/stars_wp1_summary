@@ -4,7 +4,7 @@
     "href": "pages/example.html",
     "title": "Example page",
     "section": "",
-    "text": "This is an example page."
+    "text": "This is an example page.\n\n1+1\n\n2"
   },
   {
     "objectID": "CHANGELOG.html",
@@ -18,6 +18,6 @@
     "href": "index.html",
     "title": "STARS Work Package 1 Summary",
     "section": "",
-    "text": "Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1. These assessed six discrete-event simulation papers with models in Python and R."
+    "text": "Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1. These assessed six discrete-event simulation papers with models in Python and R.\n\n1+1\n\n2"
   }
 ]
