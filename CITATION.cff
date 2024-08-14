@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+title: STARS Work Package 1 Summary
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Amy
+    family-names: Heather
+    email: a.heather2@exeter.ac.uk
+    affiliation: University of Exeter Medical School, Exeter, UK
+    orcid: 'https://orcid.org/0000-0002-6596-3479'
+  - given-names: Thomas
+    family-names: Monks
+    email: t.m.w.monks@exeter.ac.uk
+    affiliation: University of Exeter Medical School, Exeter, UK
+    orcid: 'https://orcid.org/0000-0003-2631-4481'
+  - given-names: Alison
+    family-names: Harper
+    email: a.l.harper@exeter.ac.uk
+    affiliation: University of Exeter Business School, Exeter, UK
+    orcid: 'https://orcid.org/0000-0001-5274-5037'
+repository-code: >-
+  https://github.com/pythonhealthdatascience/stars_wp1_summary
+abstract: >-
+  Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1. These assessed six discrete-event simulation papers with models in Python and R.
+license: CC-BY-4.0
+# TODO: Manually update with each GitHub release (start with 0.1.0)
+version: '0.1.0'
+date-released: '2024-08-14'
