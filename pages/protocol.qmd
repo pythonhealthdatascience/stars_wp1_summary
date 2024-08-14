@@ -2,4 +2,10 @@
 title: "Protocol"
 ---
 
-TODO: This page summarises the method from the protocol.
+<!-- TODO: Write out a summary here -->
+
+The protocol for this work is summarised in the diagram below and archived on Zenodo:
+
+> Heather, A., Monks, T., Harper, A., Mustafee, N., & Mayne, A. (2024). Protocol for assessing the computational reproducibility of discrete-event simulation models on STARS. Zenodo. <https://doi.org/10.5281/zenodo.12179846>.
+
+![Workflow for STARS work package 1](../images/stars_wp1_workflow.png)

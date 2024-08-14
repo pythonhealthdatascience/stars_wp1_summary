@@ -4,8 +4,7 @@ project:
     browser: true
 
 book:
-  title: STARS Work Package 1
-  subtitle: Summary of six computational reproducibility assessments of discrete event simulation models
+  title: "STARS Work Package 1"
   chapters:
   - index.qmd
   - part: "Methods"
