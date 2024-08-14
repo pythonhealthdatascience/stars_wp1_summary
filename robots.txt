@@ -1,1 +1,0 @@
-Sitemap: https://pythonhealthdatascience.github.io/stars_wp1_summary/sitemap.xml

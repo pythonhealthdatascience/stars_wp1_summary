@@ -1,23 +1,67 @@
 [
   {
-    "objectID": "pages/example.html",
-    "href": "pages/example.html",
-    "title": "Example page",
-    "section": "",
-    "text": "This is an example page.\n\n1+1\n\n2"
-  },
-  {
-    "objectID": "CHANGELOG.html",
-    "href": "CHANGELOG.html",
-    "title": "Changelog",
-    "section": "",
-    "text": "Changelog\nAll notable changes to this project will be documented in this file.\nThe format is based on Keep a Changelog, and this project adheres to Semantic Versioning. Dates formatted as YYYY-MM-DD as per ISO standard."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "STARS Work Package 1 Summary",
+    "title": "STARS Work Package 1",
     "section": "",
-    "text": "Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1. These assessed six discrete-event simulation papers with models in Python and R.\n\n1+1\n\n2"
+    "text": "TODO: Overview page",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "pages/protocol.html",
+    "href": "pages/protocol.html",
+    "title": "2  Protocol",
+    "section": "",
+    "text": "TODO: This page summarises the method from the protocol.",
+    "crumbs": [
+      "Methods",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Protocol</span>"
+    ]
+  },
+  {
+    "objectID": "pages/reproduction.html",
+    "href": "pages/reproduction.html",
+    "title": "3  Reproduction",
+    "section": "",
+    "text": "TODO: Describe reproduction tasks, success, and timings.\n\nInformation about each study and what was trying to reproduce\nDescription of success for each\nCombined figure with time to reproduce each item in scope",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproduction</span>"
+    ]
+  },
+  {
+    "objectID": "pages/reflections.html",
+    "href": "pages/reflections.html",
+    "title": "4  Reflections from reproductions",
+    "section": "",
+    "text": "TODO: Table with reflections from each study",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Reflections from reproductions</span>"
+    ]
+  },
+  {
+    "objectID": "pages/repo_evaluation.html",
+    "href": "pages/repo_evaluation.html",
+    "title": "5  Evaluation of the repository",
+    "section": "",
+    "text": "TODO: Add table with results from evaluation of repository against STARS framework and against journal badges. Include record of timings to complete this part of the evaluation for each.",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Evaluation of the repository</span>"
+    ]
+  },
+  {
+    "objectID": "pages/paper_evaluation.html",
+    "href": "pages/paper_evaluation.html",
+    "title": "6  Evaluation of the article",
+    "section": "",
+    "text": "TODO: Add evaluation of article against STRESS-DES and against the guidelines derived from ISPOR-SDM. Include record of timings to complete this part of the evaluation for each.",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Evaluation of the article</span>"
+    ]
   }
 ]
