@@ -1,9 +1,177 @@
 ---
 title: "Reproduction"
+echo: False
+bibliography: ../references.bib
 ---
 
-TODO: Describe reproduction tasks, success, and timings.
+## Studies
 
-* Information about each study and what was trying to reproduce
-* Description of success for each
-* Combined figure with time to reproduce each item in scope
+<!-- TODO: Modify descriptions so each contains consistent information about each study - e.g. making sure each includes a mention of what was used to make model (e.g. R simmer, base R, python simpy) -->
+
+**Shoaib and Ramamohan 2022:** This is a discrete-event simulation modelling primary health centres (PHCs) in India. There are four patient types: outpatients, inpatients, childbirth cases and antenatal care patients. Four model configurations are developed based on observed PHC practices or government-mandated operational guidelines. The paper explores different operational patterns for scenarios where very high utilisation was observed, to explore what might help reduce utilisation of these resources.
+
+**Huang et al. 2019:** This is a discrete-event simulation model of an endovascular clot retrieval (ECR) service. ECR is a treatment for acute ischaemic stroke. The model includes the stroke pathway, as well as three other pathways that share resources with the stroke pathway: an elective non-stroke interventional neuroradiology pathway, an emergency interventional radiology pathway, and an elective interventional radiology pathway. The model is created using R Simmer. The paper explores waiting times and resource utilisation - particularly focussing on the biplane angiographic suite (angioINR). A few scenarios are tried to help examine why the wait times are so high for the angioINR.
+
+**Lim et al. 2020:** This is a discrete-event simulation modelling the transmission of COVID-19 in laboratory. It examines the proportion of staff infected in scenarios varying the: number of shifts per day; number of staff per shift; overall staff pool; shift patterns; secondary attack rate of the virus; introduction of protective measures (social distancing and personal protective equipment). The model is created using Python.
+
+**Kim et al. 2021:** This study adapts a previously developed discrete-event simulation model for abdominal aortic aneurysm (AAA) screening of men in England. It aims to explore different approaches to resuming screening and surgical repair for AAA, as these survives were paused or substantially reduced during COVID-19 due to concerns about virus transmission.
+
+**Anagnostou et al. 2022:** This paper includes two models - we have focussed just on the dynamiC Hospital wARd Management (CHARM) model. CHARM is a discrete-event simulation modelling intensive care units (ICU) in the COVID-19 pandemic (as well as subsequent stays in a recovery bed). It includes three types of admission to the ICU (emergency, elective or COVID-19). COVID-19 patients are kept seperate, and if they run out of capacity due to a surge in COVID-19 admissions, additional capacity can be pooled from the elective and emergency capacity.
+
+**Johnson et al. 2021:** TBC <!-- TODO: Add Johnson -->
+
+## Scope
+
+| Study | Scope | Success | Time |
+| --- | --- | --- | --- |
+| Shoaib and Ramamohan 2022 | 17 items:<br>• 1 table<br>• 9 figures<br>• 7 in-text results | 16 out of 17 (94%) | 28h 14m |
+| Huang et al. 2019 | 8 items:<br>• 5 figures<br>• 3 in-text results | 3 out of 8 (37.5%) | 24h 10m |
+| Lim et al. 2020 | 9 items:<br>• 5 tables<br>• 4 figures | 9 out of 9 (100%) | 12h 27m |
+| Kim et al. 2021 | 10 items:<br>• 3 tables<br>• 6 figures<br>• 1 in-text result | 10 out of 10 (100%) | 13h 59m |
+| Anagnostou et al. 2022 | 1 item:<br>• 1 figure | 1 out of 1 (100%) | 2h 10m |
+| Johnson et al. 2021 | 5 items:<br>• 1 table<br>• 4 figures | TBC | TBC |
+
+## Time to completion
+
+<!-- TODO: Add Johnson et al. 2021 once conducted reproduction -->
+
+```{python}
+# Import required libraries and functions
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mtick
+import numpy as np
+import pandas as pd
+from plotly import graph_objects as go
+from time_to_complete import process_times, success_static, success_interactive
+
+# Create a dataframe of times from each of the reproductions
+
+# Shoaib and Ramamohan 2022 (16/17)
+time_sho = [
+    [856, 'Table 6'],
+    [971, 'Figure 2A'],
+    [889, 'Figure 2B'],
+    [910, 'Figure 2C'],
+    [981, 'Figure 2D'],
+    [1002, 'Figure 3A'],
+    [1008, 'Figure 3B'],
+    [1009, 'Figure 3C'],
+    [1012, 'Figure 3D'],
+    [1165, 'Figure 4'],
+    [1196, 'In-text result 1'],
+    [1274, 'In-text result 2'],
+    [1383, 'In-text result 3'],
+    [1396, 'In-text result 4'],
+    [1557, 'In-text result 5'],
+    [1490, 'In-text result 6'],
+    [1694, 'In-text result 7']]
+df_sho = process_times(time_sho, adjust='In-text result 7')
+
+# Huang et al. 2019 (3/8)
+time_hua = [
+    [516, 'In-text result 1'],
+    [1193, 'In-text result 2'],
+    [1450, 'Figure 2'], # Finished work, not completed, adjust to set to NaN
+    [np.nan, 'Figure 3'],
+    [np.nan, 'Figure 4'],
+    [1228, 'Figure 5'],
+    [np.nan, 'Supplementary figure'],
+    [np.nan, 'In-text result 3']]
+df_hua = process_times(time_hua, adjust='Figure 2')
+
+# Lim et al. 2020 (9/9)
+time_lim = [
+    [607, 'Figure 2'],
+    [647, 'Figure 3'],
+    [655, 'Figure 4'],
+    [747, 'Figure 5'],
+    [486, 'Supplemental table 2'],
+    [513, 'Supplemental table 3'],
+    [513, 'Supplemental table 4'],
+    [714, 'Supplemental table 5'],
+    [690, 'Supplemental table 6']]
+df_lim = process_times(time_lim)
+
+# Kim et al. 2021 (10/10)
+time_kim = [
+    [445, 'Figure 1'],
+    [511, 'Table 2'],
+    [581, 'Figure 2'],
+    [619, 'Figure 3'],
+    [774, 'In-text result 1'],
+    [672, 'Figure 4'],
+    [785, 'Figure 5'],
+    [793, 'Table 3'],
+    [875, 'Supplementary figure 3'],
+    [839, 'Supplementary table 2']]
+df_kim = process_times(time_kim)
+
+# Anagnostou et al. 2022 (1/1)
+time_ana = [
+    [130, 'Figure 3']]
+df_ana = process_times(time_ana)
+
+# Johnson et al. 2021
+# TODO: Add times once completed reproduction 
+
+# Create list with the dataframes, labels and colours, to use for each plot
+to_plot = [
+    (df_sho, 'Shoaib and<br>Ramamohan<br>2022', '#ee6677'),
+    (df_hua, 'Huang et<br>al. 2019', '#228833'),
+    (df_lim, 'Lim et<br>al. 2020', '#4477aa'),
+    (df_kim, 'Kim et<br>al. 2021', '#ccbb44'),
+    (df_ana, 'Anagnostou<br>et al. 2022', '#66ccee')
+    # 'Johnson et al. 2021', '#aa3377')
+]
+```
+
+Non-interactive figure:
+
+```{python}
+# Create figure object
+fig, ax = plt.subplots()
+
+# Loop through and add lines for each reproduction
+for x in to_plot:
+    success_static(x[0], ax, x[1], x[2])
+
+# Amend appearance
+plt.xlim(0, 30)
+plt.ylim(0, 100)
+plt.xlabel('Time elapsed (hours)')
+plt.ylabel('Percentage of items reproduced')
+ax.yaxis.set_major_formatter(mtick.PercentFormatter())
+ax.legend(loc='center left', bbox_to_anchor=(1, 0.5))
+
+# Show figure
+plt.show()
+```
+
+Interactive figure:
+
+```{python}
+# Create figure object
+fig = go.Figure()
+
+# Loop through and add lines for each reproduction
+for x in to_plot:
+    success_interactive(x[0], fig, x[1], x[2])
+
+# Amend appearance
+fig.update_layout(
+    xaxis=dict(
+        title='Time elapsed (hours)',
+        range=[0, 30]
+    ),
+    yaxis=dict(
+        title='Percentage of items reproduced',
+        range=[0, 100],
+        ticksuffix='%'
+    ),
+    showlegend=True)
+
+# Show plot, hiding toolbar and not allowing zoom
+fig.layout.xaxis.fixedrange = True
+fig.layout.yaxis.fixedrange = True
+fig.show(config={'displayModeBar': False})
+```
