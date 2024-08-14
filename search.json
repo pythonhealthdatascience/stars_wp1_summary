@@ -4,7 +4,37 @@
     "href": "index.html",
     "title": "STARS Work Package 1",
     "section": "",
-    "text": "TODO: Overview page",
+    "text": "Overview\nThis book describes the findings from work package 1 of the project STARS: Sharing Tools and Artefacts for Reproducible Simulations in healthcare.\nUse the sidebar to navigate through:",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "STARS Work Package 1",
+    "section": "",
+    "text": "Introduction - background on the STARS project, pilot work, and the aim of work package 1\nMethods - summarises the methods which are described in detail in our protocol\nResults - describes the results of the reproductions and evaluations, and reflections from the process\nDiscussion - considers and applies findings",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#funding",
+    "href": "index.html#funding",
+    "title": "STARS Work Package 1",
+    "section": "Funding",
+    "text": "Funding\nThis work is supported by the Medical Research Council [grant number MR/Z503915/1].",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "STARS Work Package 1",
+    "section": "License",
+    "text": "License\nThis book is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) license.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Overview</span>"
     ]
@@ -14,7 +44,7 @@
     "href": "pages/protocol.html",
     "title": "2  Protocol",
     "section": "",
-    "text": "TODO: This page summarises the method from the protocol.",
+    "text": "The protocol for this work is summarised in the diagram below and archived on Zenodo:\n\nHeather, A., Monks, T., Harper, A., Mustafee, N., & Mayne, A. (2024). Protocol for assessing the computational reproducibility of discrete-event simulation models on STARS. Zenodo. https://doi.org/10.5281/zenodo.12179846.\n\n\n\n\nWorkflow for STARS work package 1",
     "crumbs": [
       "Methods",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Protocol</span>"
@@ -25,7 +55,29 @@
     "href": "pages/reproduction.html",
     "title": "3  Reproduction",
     "section": "",
-    "text": "TODO: Describe reproduction tasks, success, and timings.\n\nInformation about each study and what was trying to reproduce\nDescription of success for each\nCombined figure with time to reproduce each item in scope",
+    "text": "3.1 Studies\nShoaib and Ramamohan 2022: This is a discrete-event simulation modelling primary health centres (PHCs) in India. There are four patient types: outpatients, inpatients, childbirth cases and antenatal care patients. Four model configurations are developed based on observed PHC practices or government-mandated operational guidelines. The paper explores different operational patterns for scenarios where very high utilisation was observed, to explore what might help reduce utilisation of these resources.\nHuang et al. 2019: This is a discrete-event simulation model of an endovascular clot retrieval (ECR) service. ECR is a treatment for acute ischaemic stroke. The model includes the stroke pathway, as well as three other pathways that share resources with the stroke pathway: an elective non-stroke interventional neuroradiology pathway, an emergency interventional radiology pathway, and an elective interventional radiology pathway. The model is created using R Simmer. The paper explores waiting times and resource utilisation - particularly focussing on the biplane angiographic suite (angioINR). A few scenarios are tried to help examine why the wait times are so high for the angioINR.\nLim et al. 2020: This is a discrete-event simulation modelling the transmission of COVID-19 in laboratory. It examines the proportion of staff infected in scenarios varying the: number of shifts per day; number of staff per shift; overall staff pool; shift patterns; secondary attack rate of the virus; introduction of protective measures (social distancing and personal protective equipment). The model is created using Python.\nKim et al. 2021: This study adapts a previously developed discrete-event simulation model for abdominal aortic aneurysm (AAA) screening of men in England. It aims to explore different approaches to resuming screening and surgical repair for AAA, as these survives were paused or substantially reduced during COVID-19 due to concerns about virus transmission.\nAnagnostou et al. 2022: This paper includes two models - we have focussed just on the dynamiC Hospital wARd Management (CHARM) model. CHARM is a discrete-event simulation modelling intensive care units (ICU) in the COVID-19 pandemic (as well as subsequent stays in a recovery bed). It includes three types of admission to the ICU (emergency, elective or COVID-19). COVID-19 patients are kept seperate, and if they run out of capacity due to a surge in COVID-19 admissions, additional capacity can be pooled from the elective and emergency capacity.\nJohnson et al. 2021: TBC",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproduction</span>"
+    ]
+  },
+  {
+    "objectID": "pages/reproduction.html#scope",
+    "href": "pages/reproduction.html#scope",
+    "title": "3  Reproduction",
+    "section": "3.2 Scope",
+    "text": "3.2 Scope\n\n\n\n\n\n\n\n\n\nStudy\nScope\nSuccess\nTime\n\n\n\n\nShoaib and Ramamohan 2022\n17 items:• 1 table• 9 figures• 7 in-text results\n16 out of 17 (94%)\n28h 14m\n\n\nHuang et al. 2019\n8 items:• 5 figures• 3 in-text results\n3 out of 8 (37.5%)\n24h 10m\n\n\nLim et al. 2020\n9 items:• 5 tables• 4 figures\n9 out of 9 (100%)\n12h 27m\n\n\nKim et al. 2021\n10 items:• 3 tables• 6 figures• 1 in-text result\n10 out of 10 (100%)\n13h 59m\n\n\nAnagnostou et al. 2022\n1 item:• 1 figure\n1 out of 1 (100%)\n2h 10m\n\n\nJohnson et al. 2021\n5 items:• 1 table• 4 figures\nTBC\nTBC",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproduction</span>"
+    ]
+  },
+  {
+    "objectID": "pages/reproduction.html#time-to-completion",
+    "href": "pages/reproduction.html#time-to-completion",
+    "title": "3  Reproduction",
+    "section": "3.3 Time to completion",
+    "text": "3.3 Time to completion\n\nNon-interactive figure:\n\n\n\n\n\n\n\n\n\nInteractive figure:",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Reproduction</span>"
