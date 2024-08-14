@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "pages/example.html",
+    "href": "pages/example.html",
+    "title": "Example page",
+    "section": "",
+    "text": "This is an example page."
+  },
+  {
+    "objectID": "CHANGELOG.html",
+    "href": "CHANGELOG.html",
+    "title": "Changelog",
+    "section": "",
+    "text": "Changelog\nAll notable changes to this project will be documented in this file.\nThe format is based on Keep a Changelog, and this project adheres to Semantic Versioning. Dates formatted as YYYY-MM-DD as per ISO standard."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STARS Work Package 1 Summary",
+    "section": "",
+    "text": "Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1. These assessed six discrete-event simulation papers with models in Python and R."
+  }
+]
