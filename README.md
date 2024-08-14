@@ -2,11 +2,7 @@
 
 [![Valid CITATION.cff](https://github.com/pythonhealthdatascience/stars_wp1_summary/actions/workflows/cff_validation.yaml/badge.svg)](https://github.com/pythonhealthdatascience/stars_wp1_summary/actions/workflows/cff_validation.yaml)
 
-Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1.
-
-These assessed six discrete-event simulation papers with models in Python and R.
-
-Relevant GitHub repositories:
+Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1. These assessed six discrete-event simulation papers with models in Python and R. Relevant GitHub repositories:
 
 | Repository | Description |
 | --- | --- |
@@ -22,9 +18,7 @@ Relevant GitHub repositories:
 
 ## Citation
 
-If you wish to cite this repository, please refer to the citation file `CITATION.cff`, and the auto-generated alternatives `citation_apalike.apa` and `citation_bibtex.bib`.
-
-Authors:
+If you wish to cite this repository, please refer to the citation file `CITATION.cff`, and the auto-generated alternatives `citation_apalike.apa` and `citation_bibtex.bib`. Authors:
 
 | Member | ORCID | GitHub |
 | --- | --- | --- |
