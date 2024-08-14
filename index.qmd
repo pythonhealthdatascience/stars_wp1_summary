@@ -1,0 +1,9 @@
+---
+authors:
+  - name: Amy Heather
+    url: https://github.com/amyheather
+    orcid: 0000-0002-6596-3479
+    affiliation: University of Exeter
+---
+
+Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1. These assessed six discrete-event simulation papers with models in Python and R.

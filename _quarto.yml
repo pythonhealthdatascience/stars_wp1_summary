@@ -1,0 +1,39 @@
+project:
+  type: website
+  preview:
+    browser: true
+
+website:
+  # Name of site in navbar
+  title: "STARS Work Package 1 Summary"
+  # Favicon image for site
+  favicon: "images/stars_logo_blue.png"
+  # Adds edit and issue buttons to footer
+  repo-url: https://github.com/pythonhealthdatascience/stars_wp1_summary
+  repo-actions: [edit, issue]
+  # Settings for navbar across top of page
+  navbar:
+    logo: "images/stars_logo_blue.png"
+    # Left-aligned within navbar...
+    left:
+      - href: pages/example.qmd
+    # Right-aligned within navbar...
+    right:
+      - icon: github
+        href: https://github.com/pythonhealthdatascience/stars_wp1_summary
+  page-footer:
+    left: |
+      [![](https://raw.githubusercontent.com/pythonhealthdatascience/stars-logo/main/stars_logo_blue_text.png){fig-alt="STARS" width=300px}](https://github.com/pythonhealthdatascience)
+    center:
+      - text: "Changelog"
+        href: CHANGELOG.md
+      - text: "License"
+        href: LICENSE
+    right:
+      - icon: github
+        href: https://github.com/pythonhealthdatascience/stars_wp1_summary
+
+format:
+  html:
+    theme: cosmo
+    toc: true
