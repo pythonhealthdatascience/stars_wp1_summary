@@ -7,6 +7,9 @@ book:
   title: "STARS Work Package 1"
   chapters:
   - index.qmd
+  - part: "Introduction"
+    chapters:
+    - pages/background.qmd
   - part: "Methods"
     chapters:
     - pages/protocol.qmd

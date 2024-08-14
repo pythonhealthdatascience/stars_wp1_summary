@@ -1,0 +1,5 @@
+---
+title: "STARS"
+---
+
+TODO: Add background about STARS, pilot work, and aim of WP1
