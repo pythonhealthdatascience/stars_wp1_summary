@@ -1,37 +1,34 @@
 project:
-  type: website
+  type: book
   preview:
     browser: true
 
-website:
-  # Name of site in navbar
-  title: "STARS Work Package 1 Summary"
-  # Favicon image for site
-  favicon: "images/stars_logo_blue.png"
-  # Adds edit and issue buttons to footer
-  repo-url: https://github.com/pythonhealthdatascience/stars_wp1_summary
-  repo-actions: [edit, issue]
-  # Settings for navbar across top of page
+book:
+  title: STARS Work Package 1
+  subtitle: Summary of six computational reproducibility assessments of discrete event simulation models
+  chapters:
+  - index.qmd
+  - part: "Methods"
+    chapters:
+    - pages/protocol.qmd
+  - part: "Results"
+    chapters:
+    - pages/reproduction.qmd
+    - pages/reflections.qmd
+    - pages/repo_evaluation.qmd
+    - pages/paper_evaluation.qmd
+  favicon: images/stars_logo_blue.png
+  search:
+    location: navbar
+    type: overlay
   navbar:
-    logo: "images/stars_logo_blue.png"
-    # Left-aligned within navbar...
-    left:
-      - href: pages/example.qmd
-    # Right-aligned within navbar...
     right:
       - icon: github
         href: https://github.com/pythonhealthdatascience/stars_wp1_summary
-  page-footer:
-    left: |
-      [![](https://raw.githubusercontent.com/pythonhealthdatascience/stars-logo/main/stars_logo_blue_text.png){fig-alt="STARS" width=300px}](https://github.com/pythonhealthdatascience)
-    center:
-      - text: "Changelog"
-        href: CHANGELOG.md
-      - text: "License"
-        href: LICENSE
-    right:
-      - icon: github
-        href: https://github.com/pythonhealthdatascience/stars_wp1_summary
+  sidebar:
+    search: true
+    style: docked
+    logo: images/stars_logo_blue.png
 
 format:
   html:

@@ -1,0 +1,5 @@
+---
+title: "Evaluation of the article"
+---
+
+TODO: Add evaluation of article against STRESS-DES and against the guidelines derived from ISPOR-SDM. Include record of timings to complete this part of the evaluation for each.

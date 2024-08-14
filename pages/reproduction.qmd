@@ -1,0 +1,9 @@
+---
+title: "Reproduction"
+---
+
+TODO: Describe reproduction tasks, success, and timings.
+
+* Information about each study and what was trying to reproduce
+* Description of success for each
+* Combined figure with time to reproduce each item in scope

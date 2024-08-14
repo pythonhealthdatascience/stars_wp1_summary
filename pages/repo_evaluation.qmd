@@ -1,0 +1,5 @@
+---
+title: "Evaluation of the repository"
+---
+
+TODO: Add table with results from evaluation of repository against STARS framework and against journal badges. Include record of timings to complete this part of the evaluation for each.
