@@ -102,6 +102,8 @@ Key:
 
 <!-- TODO: Add Johnson et al. 2021 -->
 
+In this section and below, the criteria for each study are marked as either being fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A).
+
 **Unique criteria:**
 
 | Item | S | H | L | K | A | J |

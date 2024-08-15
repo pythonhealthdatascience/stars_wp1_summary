@@ -68,6 +68,8 @@ Key:
 * **A:** @anagnostou_facs-charm_2022 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/reporting.html#stress-des" target="_blank">link to evaluation</a>
 * **J:** @johnson_cost_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/reporting.html#stress-des" target="_blank">link to evaluation</a>
 
+In this section and below, the criteria for each study are marked as either being fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A).
+
 <!-- TODO: Add Johnson et al. 2021, and update after discussion of Kim et al. 2021 -->
 
 | Item | S | H | L | K | A | J |
