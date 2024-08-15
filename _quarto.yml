@@ -7,12 +7,10 @@ book:
   title: "STARS Work Package 1"
   chapters:
   - index.qmd
-  - part: "Introduction"
-    chapters:
-    - pages/background.qmd
-  - part: "Methods"
-    chapters:
-    - pages/protocol.qmd
+  - text: "Introduction"
+    href: pages/background.qmd
+  - text: "Methods"
+    href: pages/protocol.qmd
   - part: "Results"
     chapters:
     - pages/reproduction.qmd
