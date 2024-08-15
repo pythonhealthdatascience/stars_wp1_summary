@@ -1,5 +1,105 @@
 ---
 title: "Reflections from reproductions"
+bibliography: ../references.bib
 ---
 
-TODO: Table with reflections from each study
+The table below outlines the factors that helped facilitate reproductions, or that would have been helpful (i.e. their absence was a barrier to the reproduction).
+
+To present this concisely, each facilitator identified has been listed in a table, and I have evaluated for each study whether this was fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A).
+
+# Version 1
+
+## Environment
+
+::: {.callout-note appearance="minimal" collapse=true}
+
+## List required packages
+
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ |
+
+@shoaib_simulation_2021: Became a time-consuming issue as it took a while to identify a dependency that was needed for the code to work (`greenlet`), and a while longer to realise I had installed another package when the package I needed was in base (`statistics`).
+
+:::
+
+::: {.callout-note appearance="minimal" collapse=true}
+
+## Provide versions
+
+| S | H | L | K | A | J |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ |
+
+* In one study (@shoaib_simulation_2021) I had to backdate the package versions as the didn't work with the latest
+* @huang_optimizing_2019 -
+* @lim_staff_2020 -
+* @kim_modelling_2021 -
+* @anagnostou_facs-charm_2022 -
+* @johnson_cost_2021
+
+:::
+
+## Running model programmatically
+
+::: {.callout-note appearance="minimal" collapse=true}
+
+## A
+
+:::
+
+# Version 2
+
+Key:
+
+* **S:** @shoaib_simulation_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reflections.html" target="_blank">link to reflections</a>
+* **H:** @huang_optimizing_2019  - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/reflections.html" target="_blank">link to reflections</a>
+* **L:** @lim_staff_2020 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/reflections.html" target="_blank">link to reflections</a>
+* **K:** @kim_modelling_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reflections.html" target="_blank">link to reflections</a>
+* **A:** @anagnostou_facs-charm_2022 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/reflections.html" target="_blank">link to reflections</a>
+* **J:** @johnson_cost_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/reflections.html" target="_blank">link to reflections</a>
+
+| Facilitator | S | H | L | K | A | J |
+| - | - | - | - | - | - | - |
+| **Environment** |
+| List required packages | ❌ |
+| Provide versions | ❌ |
+| **Running model programmatically** |
+| |
+| **Run time** |
+| |
+| **Parameters, scenarios and outputs** |
+| All the required outputs are calculated | ❌ |
+| **Output format** |
+| Saves output to a file | ✅ |
+| Easy to figure out how to use output table/s to create tables/figures | ❌ |
+| **Seeds** |
+| |
+| **Code to produce article results** |
+| Provide code to process results into tables | ❌ |
+| Provide code to process results into figures | ❌ |
+| Provide code to calculate results mentioned in the text (but no in tables/figures) | ❌ |
+: {tbl-colwidths="[70, 5, 5, 5, 5, 5, 5]"}
+
+\
+
+## Extra notes
+
+**Environment: List required packages**
+
+@shoaib_simulation_2021: Became a time-consuming issue as it took a while to identify a dependency that was needed for the code to work (greenlet), and a while longer to realise I had installed another package when the package I needed was in base (statistics)
+
+**Environment: Versions**
+
+* In one study (@shoaib_simulation_2021) I had to backdate the package versions as the didn't work with the latest
+* @huang_optimizing_2019 -
+* @lim_staff_2020 -
+* @kim_modelling_2021 -
+* @anagnostou_facs-charm_2022 -
+* @johnson_cost_2021
+
+**Output format: Easy to figure out how to use output table/s to create tables/figures**
+
+* For @shoaib_simulation_2021, there were two alternative results spreadsheets with some duplicate metrics but sometimes differing results between them, which made it a bit confusing to work out what to use
+
+## References
