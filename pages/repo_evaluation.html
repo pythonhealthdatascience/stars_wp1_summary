@@ -20,10 +20,30 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -68,6 +88,25 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+<script type="text/javascript">
+window.PlotlyConfig = {MathJaxConfig: 'local'};
+if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+if (typeof require !== 'undefined') {
+require.undef("plotly");
+requirejs.config({
+    paths: {
+        'plotly': ['https://cdn.plot.ly/plotly-2.34.0.min']
+    }
+});
+require(['plotly'], function(Plotly) {
+    window._Plotly = Plotly;
+});
+}
+</script>
+
 
 
 </head>
@@ -188,8 +227,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="header-section-number">6.1</span> Summary</a></li>
+  <li><a href="#journal-badges" id="toc-journal-badges" class="nav-link" data-scroll-target="#journal-badges"><span class="header-section-number">6.2</span> Journal badges</a></li>
+  <li><a href="#stars-framework" id="toc-stars-framework" class="nav-link" data-scroll-target="#stars-framework"><span class="header-section-number">6.3</span> STARS framework</a></li>
+  <li><a href="#timings" id="toc-timings" class="nav-link" data-scroll-target="#timings"><span class="header-section-number">6.4</span> Timings</a></li>
+  <li><a href="#badge-sources" id="toc-badge-sources" class="nav-link" data-scroll-target="#badge-sources"><span class="header-section-number">6.5</span> Badge sources</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">6.6</span> References</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -213,9 +263,791 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TODO: Add table with results from evaluation of repository against STARS framework and against journal badges. Include record of timings to complete this part of the evaluation for each.</p>
+<p>The code and related research artefacts in the original code repositories were evaluated against:</p>
+<ul>
+<li>The criteria of badges related to reproducibility from various organisations and journals.</li>
+<li>Recommendations from the STARS framework for the sharing of code and associated materials from discrete-event simulation models (<span class="citation" data-cites="monks_towards_2024">Monks, Harper, and Mustafee (<a href="#ref-monks_towards_2024" role="doc-biblioref">2024</a>)</span>).</li>
+</ul>
+<p>Between each journal badge, there was often alot of overlap in criteria. Hence, a list of unique criteria was produced. The repositories are evaluated against this criteria, and then depending on which criteria they met, against the badges themselves.</p>
+<p><em>Caveat: Please note that these criteria are based on available information about each badge online, and that we have likely differences in our procedure (e.g.&nbsp;allowed troubleshooting for execution and reproduction, not under tight time pressure to complete). Moreover, we focus only on reproduction of the discrete-event simulation, and not on other aspects of the article. We cannot guarantee that the badges below would have been awarded in practice by these journals.</em></p>
+<section id="summary" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">6.1</span> Summary</h2>
+<p><strong>Unique badge criteria:</strong></p>
+<div id="9630cda9" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-display">
+<div>                            <div id="2afff4e7-ab81-47e8-9553-aa2c3f09da59" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("2afff4e7-ab81-47e8-9553-aa2c3f09da59")) {                    Plotly.newPlot(                        "2afff4e7-ab81-47e8-9553-aa2c3f09da59",                        [{"alignmentgroup":"True","customdata":[[3,"25.0%","fully"],[3,"25.0%","fully"],[3,"25.0%","fully"],[0,"0.0%","fully"],[10,"83.3%","fully"],[0,"0.0%","fully"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"fully","marker":{"color":"#06a94d","pattern":{"shape":""}},"name":"Fully met","offsetgroup":"fully","orientation":"h","showlegend":true,"textposition":"auto","x":[0.25,0.25,0.25,0.0,0.8333333333333334,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"partially","marker":{"color":"#ffd68c","pattern":{"shape":""}},"name":"Partially met","offsetgroup":"partially","orientation":"h","showlegend":true,"textposition":"auto","x":[0.0,0.0,0.0,0.0,0.0,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[9,"75.0%","not"],[9,"75.0%","not"],[9,"75.0%","not"],[0,"0.0%","not"],[2,"16.7%","not"],[0,"0.0%","not"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"not","marker":{"color":"#ff9999","pattern":{"shape":""}},"name":"Not met","offsetgroup":"not","orientation":"h","showlegend":true,"textposition":"auto","x":[0.75,0.75,0.75,0.0,0.16666666666666666,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[1,"100.0%","na"],[0,"0.0%","na"],[1,"100.0%","na"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"na","marker":{"color":"#d1dcea","pattern":{"shape":""}},"name":"Not applicable","offsetgroup":"na","orientation":"h","showlegend":true,"textposition":"auto","x":[0.0,0.0,0.0,1.0,0.0,1.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":""},"range":[0,1],"tickmode":"array","tickvals":[0,0.2,0.4,0.6,0.8,1],"ticktext":["0%","20%","40%","60%","80%","100%"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":""},"autorange":"reversed","ticksuffix":"  "},"legend":{"title":{"text":"Result"},"tracegroupgap":0},"barmode":"relative"},                        {"displayModeBar": false, "responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('2afff4e7-ab81-47e8-9553-aa2c3f09da59');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+</div>
+<p><strong>Badges:</strong></p>
+<div id="9fefcf3e" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-display">
+<div>                            <div id="50cc3bd6-425d-419d-94d5-dab1f735b420" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("50cc3bd6-425d-419d-94d5-dab1f735b420")) {                    Plotly.newPlot(                        "50cc3bd6-425d-419d-94d5-dab1f735b420",                        [{"alignmentgroup":"True","customdata":[[3,"25.0%","fully"],[0,"0.0%","fully"],[3,"25.0%","fully"],[0,"0.0%","fully"],[5,"41.7%","fully"],[0,"0.0%","fully"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"fully","marker":{"color":"#06a94d","pattern":{"shape":""}},"name":"Fully met","offsetgroup":"fully","orientation":"h","showlegend":true,"textposition":"auto","x":[0.25,0.0,0.25,0.0,0.4166666666666667,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"partially","marker":{"color":"#ffd68c","pattern":{"shape":""}},"name":"Partially met","offsetgroup":"partially","orientation":"h","showlegend":true,"textposition":"auto","x":[0.0,0.0,0.0,0.0,0.0,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[9,"75.0%","not"],[12,"100.0%","not"],[9,"75.0%","not"],[0,"0.0%","not"],[7,"58.3%","not"],[0,"0.0%","not"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"not","marker":{"color":"#ff9999","pattern":{"shape":""}},"name":"Not met","offsetgroup":"not","orientation":"h","showlegend":true,"textposition":"auto","x":[0.75,1.0,0.75,0.0,0.5833333333333334,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[1,"100.0%","na"],[0,"0.0%","na"],[1,"100.0%","na"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"na","marker":{"color":"#d1dcea","pattern":{"shape":""}},"name":"Not applicable","offsetgroup":"na","orientation":"h","showlegend":true,"textposition":"auto","x":[0.0,0.0,0.0,1.0,0.0,1.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":""},"range":[0,1],"tickmode":"array","tickvals":[0,0.2,0.4,0.6,0.8,1],"ticktext":["0%","20%","40%","60%","80%","100%"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":""},"autorange":"reversed","ticksuffix":"  "},"legend":{"title":{"text":"Result"},"tracegroupgap":0},"barmode":"relative"},                        {"displayModeBar": false, "responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('50cc3bd6-425d-419d-94d5-dab1f735b420');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+</div>
+<p><strong>Essential components of STARS framework:</strong></p>
+<div id="b76030d5" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display">
+<div>                            <div id="4d1427fc-4440-4521-8643-9878aa2b5e5b" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("4d1427fc-4440-4521-8643-9878aa2b5e5b")) {                    Plotly.newPlot(                        "4d1427fc-4440-4521-8643-9878aa2b5e5b",                        [{"alignmentgroup":"True","customdata":[[2,"25.0%","fully"],[2,"25.0%","fully"],[2,"25.0%","fully"],[0,"0.0%","fully"],[7,"87.5%","fully"],[0,"0.0%","fully"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"fully","marker":{"color":"#06a94d","pattern":{"shape":""}},"name":"Fully met","offsetgroup":"fully","orientation":"h","showlegend":true,"textposition":"auto","x":[0.25,0.25,0.25,0.0,0.875,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"partially","marker":{"color":"#ffd68c","pattern":{"shape":""}},"name":"Partially met","offsetgroup":"partially","orientation":"h","showlegend":true,"textposition":"auto","x":[0.0,0.0,0.0,0.0,0.0,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[6,"75.0%","not"],[6,"75.0%","not"],[6,"75.0%","not"],[0,"0.0%","not"],[1,"12.5%","not"],[0,"0.0%","not"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"not","marker":{"color":"#ff9999","pattern":{"shape":""}},"name":"Not met","offsetgroup":"not","orientation":"h","showlegend":true,"textposition":"auto","x":[0.75,0.75,0.75,0.0,0.125,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[1,"100.0%","na"],[0,"0.0%","na"],[1,"100.0%","na"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"na","marker":{"color":"#d1dcea","pattern":{"shape":""}},"name":"Not applicable","offsetgroup":"na","orientation":"h","showlegend":true,"textposition":"auto","x":[0.0,0.0,0.0,1.0,0.0,1.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":""},"range":[0,1],"tickmode":"array","tickvals":[0,0.2,0.4,0.6,0.8,1],"ticktext":["0%","20%","40%","60%","80%","100%"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":""},"autorange":"reversed","ticksuffix":"  "},"legend":{"title":{"text":"Result"},"tracegroupgap":0},"barmode":"relative"},                        {"displayModeBar": false, "responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('4d1427fc-4440-4521-8643-9878aa2b5e5b');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+</div>
+<p><strong>Optional components of STARS framework:</strong></p>
+<div id="61b9e066" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-display">
+<div>                            <div id="0368c22c-56ea-4ad7-a5c0-27bff6b332ca" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("0368c22c-56ea-4ad7-a5c0-27bff6b332ca")) {                    Plotly.newPlot(                        "0368c22c-56ea-4ad7-a5c0-27bff6b332ca",                        [{"alignmentgroup":"True","customdata":[[0,"0.0%","fully"],[2,"40.0%","fully"],[0,"0.0%","fully"],[0,"0.0%","fully"],[1,"20.0%","fully"],[0,"0.0%","fully"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"fully","marker":{"color":"#06a94d","pattern":{"shape":""}},"name":"Fully met","offsetgroup":"fully","orientation":"h","showlegend":true,"textposition":"auto","x":[0.0,0.4,0.0,0.0,0.2,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[1,"20.0%","partially"],[0,"0.0%","partially"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"partially","marker":{"color":"#ffd68c","pattern":{"shape":""}},"name":"Partially met","offsetgroup":"partially","orientation":"h","showlegend":true,"textposition":"auto","x":[0.0,0.0,0.0,0.0,0.2,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[5,"100.0%","not"],[3,"60.0%","not"],[5,"100.0%","not"],[0,"0.0%","not"],[3,"60.0%","not"],[0,"0.0%","not"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"not","marker":{"color":"#ff9999","pattern":{"shape":""}},"name":"Not met","offsetgroup":"not","orientation":"h","showlegend":true,"textposition":"auto","x":[1.0,0.6,1.0,0.0,0.6,0.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[1,"100.0%","na"],[0,"0.0%","na"],[1,"100.0%","na"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"na","marker":{"color":"#d1dcea","pattern":{"shape":""}},"name":"Not applicable","offsetgroup":"na","orientation":"h","showlegend":true,"textposition":"auto","x":[0.0,0.0,0.0,1.0,0.0,1.0],"xaxis":"x","y":["Shoaib and\u003cbr\u003eRamamohan 2021","Huang et al. 2019","Lim et al. 2020","Kim et al. 2021","Anagnostou et al. 2022","Johnson et al. 2021"],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":""},"range":[0,1],"tickmode":"array","tickvals":[0,0.2,0.4,0.6,0.8,1],"ticktext":["0%","20%","40%","60%","80%","100%"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":""},"autorange":"reversed","ticksuffix":"  "},"legend":{"title":{"text":"Result"},"tracegroupgap":0},"barmode":"relative"},                        {"displayModeBar": false, "responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('0368c22c-56ea-4ad7-a5c0-27bff6b332ca');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };                });            </script>        </div>
+</div>
+</div>
+</section>
+<section id="journal-badges" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="journal-badges"><span class="header-section-number">6.2</span> Journal badges</h2>
+<p>Key:</p>
+<ul>
+<li><strong>S:</strong> <span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/badges.html" target="_blank">link to evaluation</a></li>
+<li><strong>H:</strong> <span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/badges.html" target="_blank">link to evaluation</a></li>
+<li><strong>L:</strong> <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/badges.html" target="_blank">link to evaluation</a></li>
+<li><strong>K:</strong> <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/badges.html" target="_blank">link to evaluation</a></li>
+<li><strong>A:</strong> <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/badges.html" target="_blank">link to evaluation</a></li>
+<li><strong>J:</strong> <span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/badges.html" target="_blank">link to evaluation</a></li>
+</ul>
+<!-- TODO: Add Johnson et al. 2021 -->
+<p><strong>Unique criteria:</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 67%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>S</th>
+<th>H</th>
+<th>L</th>
+<th>K</th>
+<th>A</th>
+<th>J</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Criteria related to how artefacts are shared</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Stored in a permanent archive that is publicly and openly accessible</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Has a persistent identifier</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Includes an open license</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Criteria related to what artefacts are shared</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Artefacts are relevant to and contribute to the article’s results</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Complete set of materials shared (as would be needed to fully reproduce article)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Criteria related to the structure and documentation of the artefacts</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Artefacts are well structured/organised (e.g.&nbsp;to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Artefacts are sufficiently documented (i.e.&nbsp;to understand how it works, to enable it to be run, including package versions)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Artefacts are carefully documented (more than sufficient - i.e.&nbsp;to the extent that reuse and repurposing is facilitated - e.g.&nbsp;changing parameters, reusing for own purpose)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Artefacts are clearly documented and accompanied by a README file with step-by-step instructions on how to reproduce results in the manuscript</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Criteria related to running and reproducing results</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Scripts can be successfully executed</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Independent party regenerated results using the authors research artefacts</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Reproduced within approximately one hour (excluding compute time)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p><strong>Badges:</strong></p>
+<p>The badges are grouped into three categories:</p>
+<ul>
+<li>“Open objects” badges: These badges relate to research artefacts being made openly available.</li>
+<li>“Object review” badges: These badges relate to the research artefacts being reviewed against criteria of the badge issuer.</li>
+<li>“Reproduced” badges: These badges relate to an independent party regenerating the reuslts of the article using the author objects.</li>
+</ul>
+<!-- TODO: Add Johnson et al. 2021 -->
+<table class="caption-top table">
+<colgroup>
+<col style="width: 67%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>S</th>
+<th>H</th>
+<th>L</th>
+<th>K</th>
+<th>A</th>
+<th>J</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>“Open objects” badges</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>NISO “Open Research Objects (ORO)”</strong><br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>NISO “Open Research Objects - All (ORO-A)”</strong><br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license<br>• Complete set of materials shared (as would be needed to fully reproduce article)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>ACM “Artifacts Available”</strong><br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>COS “Open Code”</strong><br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Artefacts are sufficiently documented (i.e.&nbsp;to understand how it works, to enable it to be run, including package versions)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>IEEE “Code Available”</strong><br>• Complete set of materials shared (as would be needed to fully reproduce article)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>“Object review” badges</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>ACM “Artifacts Evaluated - Functional”</strong><br>• Artefacts are sufficiently documented (i.e.&nbsp;to understand how it works, to enable it to be run, including package versions)<br>• Artefacts are relevant to and contribute to the article’s results<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>ACM “Artifacts Evaluated - Reusable”</strong><br>• Artefacts are sufficiently documented (i.e.&nbsp;to understand how it works, to enable it to be run, including package versions)<br>• Artefacts are carefully documented (more than sufficient - i.e.&nbsp;to the extent that reuse and repurposing is facilitated - e.g.&nbsp;changing parameters, reusing for own purpose)<br>• Artefacts are relevant to and contribute to the article’s results<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed<br>• Artefacts are well structured/organised (e.g.&nbsp;to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>IEEE “Code Reviewed”</strong><br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>“Reproduced” badges</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>NISO “Results Reproduced (ROR-R)”</strong><br>• Independent party regenerated results using the authors research artefacts</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>ACM “Results Reproduced”</strong><br>• Independent party regenerated results using the authors research artefacts</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>IEEE “Code Reproducible”</strong><br>• Independent party regenerated results using the authors research artefacts</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Psychological Science “Computational Reproducibility”</strong><br>• Independent party regenerated results using the authors research artefacts<br>• Reproduced within approximately one hour (excluding compute time)<br>• Artefacts are well structured/organised (e.g.&nbsp;to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community)<br>• Artefacts are clearly documented and accompanied by a README file with step-by-step instructions on how to reproduce results in the manuscript</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="stars-framework" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="stars-framework"><span class="header-section-number">6.3</span> STARS framework</h2>
+<p>Key:</p>
+<ul>
+<li><strong>S:</strong> <span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/artefacts.html" target="_blank">link to evaluation</a></li>
+<li><strong>H:</strong> <span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/artefacts.html" target="_blank">link to evaluation</a></li>
+<li><strong>L:</strong> <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/artefacts.html" target="_blank">link to evaluation</a></li>
+<li><strong>K:</strong> <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/artefacts.html" target="_blank">link to evaluation</a></li>
+<li><strong>A:</strong> <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/artefacts.html" target="_blank">link to evaluation</a></li>
+<li><strong>J:</strong> <span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/artefacts.html" target="_blank">link to evaluation</a></li>
+</ul>
+<!-- TODO: Add Johnson et al. 2021 -->
+<table class="caption-top table">
+<colgroup>
+<col style="width: 67%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Item</th>
+<th>S</th>
+<th>H</th>
+<th>L</th>
+<th>K</th>
+<th>A</th>
+<th>J</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Essential components</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Open license</strong><br>Free and open-source software (FOSS) license (e.g.&nbsp;MIT, GNU Public License (GPL))</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Dependency management</strong><br>Specify software libraries, version numbers and sources (e.g.&nbsp;dependency management tools like virtualenv, conda, poetry)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>🟡</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>FOSS model</strong><br>Coded in FOSS language (e.g.&nbsp;R, Julia, Python)</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Minimum documentation</strong><br>Minimal instructions (e.g.&nbsp;in README) that overview (a) what model does, (b) how to install and run model to obtain results, and (c) how to vary parameters to run new experiments</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>ORCID</strong><br>ORCID for each study author</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Citation information</strong><br>Instructions on how to cite the research artefact (e.g.&nbsp;CITATION.cff file)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Remote code repository</strong><br>Code available in a remote code repository (e.g.&nbsp;GitHub, GitLab, BitBucket)</td>
+<td>✅</td>
+<td>❌</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Open science archive</strong><br>Code stored in an open science archive with FORCE11 compliant citation and guaranteed persistance of digital artefacts (e.g.&nbsp;Figshare, Zenodo, the Open Science Framework (OSF), and the Computational Modeling in the Social and Ecological Sciences Network (CoMSES Net))</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Optional components</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Enhanced documentation</strong><br>Open and high quality documentation on how the model is implemented and works (e.g.&nbsp;via notebooks and markdown files, brought together using software like Quarto and Jupyter Book). Suggested content includes:<br>• Plain english summary of project and model<br>• Clarifying license<br>• Citation instructions<br>• Contribution instructions<br>• Model installation instructions<br>• Structured code walk through of model<br>• Documentation of modelling cycle using TRACE<br>• Annotated simulation reporting guidelines<br>• Clear description of model validation including its intended purpose</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Documentation hosting</strong><br>Host documentation (e.g.&nbsp;with GitHub pages, GitLab pages, BitBucket Cloud, Quarto Pub)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Online coding environment</strong><br>Provide an online environment where users can run and change code (e.g.&nbsp;BinderHub, Google Colaboratory, Deepnote)</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td>❌</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Model interface</strong><br>Provide web application interface to the model so it is accessible to less technical simulation users</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Web app hosting</strong><br>Host web app online (e.g.&nbsp;Streamlit Community Cloud, ShinyApps hosting)</td>
+<td>❌</td>
+<td>✅</td>
+<td>❌</td>
+<td>❌</td>
+<td>🟡</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="timings" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="timings"><span class="header-section-number">6.4</span> Timings</h2>
+<!-- TODO: Add timings for each from evaluation for reporting
+Also issue may be that I can't necessarily disaggregate into reporting and code times-->
+</section>
+<section id="badge-sources" class="level2" data-number="6.5">
+<h2 data-number="6.5" class="anchored" data-anchor-id="badge-sources"><span class="header-section-number">6.5</span> Badge sources</h2>
+<p><strong>National Information Standards Organisation (NISO)</strong> (<span class="citation" data-cites="niso_reproducibility_badging_and_definitions_working_group_reproducibility_2021">NISO Reproducibility Badging and Definitions Working Group (<a href="#ref-niso_reproducibility_badging_and_definitions_working_group_reproducibility_2021" role="doc-biblioref">2021</a>)</span>)</p>
+<ul>
+<li>“Open Research Objects (ORO)”</li>
+<li>“Open Research Objects - All (ORO-A)”</li>
+<li>“Results Reproduced (ROR-R)”</li>
+</ul>
+<p><strong>Association for Computing Machinery (ACM)</strong> (<span class="citation" data-cites="association_for_computing_machinery_acm_artifact_2020">Association for Computing Machinery (ACM) (<a href="#ref-association_for_computing_machinery_acm_artifact_2020" role="doc-biblioref">2020</a>)</span>)</p>
+<ul>
+<li>“Artifacts Available”</li>
+<li>“Artifacts Evaluated - Functional”</li>
+<li>“Artifacts Evaluated - Resuable”</li>
+<li>“Results Reproduced”</li>
+</ul>
+<p><strong>Center for Open Science (COS)</strong> (<span class="citation" data-cites="blohowiak_badges_2023">Blohowiak et al. (<a href="#ref-blohowiak_badges_2023" role="doc-biblioref">2023</a>)</span>)</p>
+<ul>
+<li>“Open Code”</li>
+</ul>
+<p><strong>Institute of Electrical and Electronics Engineers (IEEE)</strong> (<span class="citation" data-cites="institute_of_electrical_and_electronics_engineers_ieee_about_nodate">Institute of Electrical and Electronics Engineers (IEEE) (<a href="#ref-institute_of_electrical_and_electronics_engineers_ieee_about_nodate" role="doc-biblioref">n.d.</a>)</span>)</p>
+<ul>
+<li>“Code Available”</li>
+<li>“Code Reviewed”</li>
+<li>“Code Reproducible”</li>
+</ul>
+<p><strong>Psychological Science</strong> (<span class="citation" data-cites="hardwicke_transparency_2023">Hardwicke and Vazire (<a href="#ref-hardwicke_transparency_2023" role="doc-biblioref">2023</a>)</span> and <span class="citation" data-cites="association_for_psychological_science_aps_psychological_2023">Association for Psychological Science (APS) (<a href="#ref-association_for_psychological_science_aps_psychological_2023" role="doc-biblioref">2023</a>)</span>)</p>
+<ul>
+<li>“Computational Reproducibility”</li>
+</ul>
+</section>
+<section id="references" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="references"><span class="header-section-number">6.6</span> References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-anagnostou_facs-charm_2022" class="csl-entry" role="listitem">
+Anagnostou, Anastasia, Derek Groen, Simon J. E. Taylor, Diana Suleimenova, Nura Abubakar, Arindam Saha, Kate Mintram, et al. 2022. <span>“<span>FACS</span>-<span>CHARM</span>: <span>A</span> <span>Hybrid</span> <span>Agent</span>-<span>Based</span> and <span>Discrete</span>-<span>Event</span> <span>Simulation</span> <span>Approach</span> for <span>Covid</span>-19 <span>Management</span> at <span>Regional</span> <span>Level</span>.”</span> In <em>2022 <span>Winter</span> <span>Simulation</span> <span>Conference</span> (<span>WSC</span>)</em>, 1223–34. <a href="https://doi.org/10.1109/WSC57314.2022.10015462">https://doi.org/10.1109/WSC57314.2022.10015462</a>.
+</div>
+<div id="ref-association_for_computing_machinery_acm_artifact_2020" class="csl-entry" role="listitem">
+Association for Computing Machinery (ACM). 2020. <span>“Artifact <span>Review</span> and <span>Badging</span> <span>Version</span> 1.1.”</span> <em>ACM</em>. <a href="https://www.acm.org/publications/policies/artifact-review-and-badging-current">https://www.acm.org/publications/policies/artifact-review-and-badging-current</a>.
+</div>
+<div id="ref-association_for_psychological_science_aps_psychological_2023" class="csl-entry" role="listitem">
+Association for Psychological Science (APS). 2023. <span>“Psychological <span>Science</span> <span>Submission</span> <span>Guidelines</span>.”</span> <em>APS</em>. <a href="https://www.psychologicalscience.org/publications/psychological_science/ps-submissions">https://www.psychologicalscience.org/publications/psychological_science/ps-submissions</a>.
+</div>
+<div id="ref-blohowiak_badges_2023" class="csl-entry" role="listitem">
+Blohowiak, Ben B., Johanna Cohoon, Lee de-Wit, Eric Eich, Frank J. Farach, Fred Hasselman, Alex O. Holcombe, Macartan Humphreys, Melissa Lewis, and Brian A. Nosek. 2023. <span>“Badges to <span>Acknowledge</span> <span>Open</span> <span>Practices</span>.”</span> <a href="https://osf.io/tvyxz/">https://osf.io/tvyxz/</a>.
+</div>
+<div id="ref-hardwicke_transparency_2023" class="csl-entry" role="listitem">
+Hardwicke, Tom E., and Simine Vazire. 2023. <span>“Transparency <span>Is</span> <span>Now</span> the <span>Default</span> at <span>Psychological</span> <span>Science</span>.”</span> <em>Psychological Science</em> 0 (0). https://doi.org/<a href="https://doi.org/10.1177/09567976231221573">https://doi.org/10.1177/09567976231221573</a>.
+</div>
+<div id="ref-huang_optimizing_2019" class="csl-entry" role="listitem">
+Huang, Shiwei, Julian Maingard, Hong Kuan Kok, Christen D. Barras, Vincent Thijs, Ronil V. Chandra, Duncan Mark Brooks, and Hamed Asadi. 2019. <span>“Optimizing <span>Resources</span> for <span>Endovascular</span> <span>Clot</span> <span>Retrieval</span> for <span>Acute</span> <span>Ischemic</span> <span>Stroke</span>, a <span>Discrete</span> <span>Event</span> <span>Simulation</span>.”</span> <em>Frontiers in Neurology</em> 10 (June). <a href="https://doi.org/10.3389/fneur.2019.00653">https://doi.org/10.3389/fneur.2019.00653</a>.
+</div>
+<div id="ref-institute_of_electrical_and_electronics_engineers_ieee_about_nodate" class="csl-entry" role="listitem">
+Institute of Electrical and Electronics Engineers (IEEE). n.d. <span>“About <span>Content</span> in <span>IEEE</span> <span>Xplore</span>.”</span> <em>IEEE Explore</em>. Accessed May 20, 2024. <a href="https://ieeexplore.ieee.org/Xplorehelp/overview-of-ieee-xplore/about-content">https://ieeexplore.ieee.org/Xplorehelp/overview-of-ieee-xplore/about-content</a>.
+</div>
+<div id="ref-johnson_cost_2021" class="csl-entry" role="listitem">
+Johnson, Kate M., Mohsen Sadatsafavi, Amin Adibi, Larry Lynd, Mark Harrison, Hamid Tavakoli, Don D. Sin, and Stirling Bryan. 2021. <span>“Cost <span>Effectiveness</span> of <span>Case</span> <span>Detection</span> <span>Strategies</span> for the <span>Early</span> <span>Detection</span> of <span>COPD</span>.”</span> <em>Applied Health Economics and Health Policy</em> 19 (2): 203–15. <a href="https://doi.org/10.1007/s40258-020-00616-2">https://doi.org/10.1007/s40258-020-00616-2</a>.
+</div>
+<div id="ref-kim_modelling_2021" class="csl-entry" role="listitem">
+Kim, Lois G., Michael J. Sweeting, Morag Armer, Jo Jacomelli, Akhtar Nasim, and Seamus C. Harrison. 2021. <span>“Modelling the Impact of Changes to Abdominal Aortic Aneurysm Screening and Treatment Services in <span>England</span> During the <span>COVID</span>-19 Pandemic.”</span> <em>PLOS ONE</em> 16 (6): e0253327. <a href="https://doi.org/10.1371/journal.pone.0253327">https://doi.org/10.1371/journal.pone.0253327</a>.
+</div>
+<div id="ref-lim_staff_2020" class="csl-entry" role="listitem">
+Lim, Chun Yee, Mary Kathryn Bohn, Giuseppe Lippi, Maurizio Ferrari, Tze Ping Loh, Kwok-Yung Yuen, Khosrow Adeli, and Andrea Rita Horvath. 2020. <span>“Staff Rostering, Split Team Arrangement, Social Distancing (Physical Distancing) and Use of Personal Protective Equipment to Minimize Risk of Workplace Transmission During the <span>COVID</span>-19 Pandemic: <span>A</span> Simulation Study.”</span> <em>Clinical Biochemistry</em> 86 (December): 15–22. <a href="https://doi.org/10.1016/j.clinbiochem.2020.09.003">https://doi.org/10.1016/j.clinbiochem.2020.09.003</a>.
+</div>
+<div id="ref-monks_towards_2024" class="csl-entry" role="listitem">
+Monks, Thomas, Alison Harper, and Navonil Mustafee. 2024. <span>“Towards Sharing Tools and Artefacts for Reusable Simulations in Healthcare.”</span> <em>Journal of Simulation</em> 0 (0): 1–20. <a href="https://doi.org/10.1080/17477778.2024.2347882">https://doi.org/10.1080/17477778.2024.2347882</a>.
+</div>
+<div id="ref-niso_reproducibility_badging_and_definitions_working_group_reproducibility_2021" class="csl-entry" role="listitem">
+NISO Reproducibility Badging and Definitions Working Group. 2021. <span>“Reproducibility <span>Badging</span> and <span>Definitions</span>.”</span> <a href="https://doi.org/10.3789/niso-rp-31-2021">https://doi.org/10.3789/niso-rp-31-2021</a>.
+</div>
+<div id="ref-shoaib_simulation_2021" class="csl-entry" role="listitem">
+Shoaib, Mohd, and Varun Ramamohan. 2021. <span>“Simulation <span>Modelling</span> and <span>Analysis</span> of <span>Primary</span> <span>Health</span> <span>Centre</span> <span>Operations</span>.”</span> <em>arXiv</em>, June. <a href="https://doi.org/10.48550/arXiv.2104.12492">https://doi.org/10.48550/arXiv.2104.12492</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
