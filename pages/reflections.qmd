@@ -22,9 +22,11 @@ Links to each study:
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ✅ |
+| ❌ | ❌ | ✅ | ✅ |
 
 @shoaib_simulation_2021: Became a time-consuming issue as it took a while to identify a dependency that was needed for the code to work (`greenlet`), and a while longer to realise I had installed another package when the package I needed was in base (`statistics`).
+
+@kim_modelling_2021: Provides commands to install packages required at the start of scripts, which I could then easily base renv on automatically (as it detects them).
 
 :::
 
@@ -34,7 +36,7 @@ Links to each study:
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | 🟡 |
+| ❌ | ❌ | 🟡 | 🟡 |
 
 In @shoaib_simulation_2021 I had to backdate the package versions as the didn't work with the latest.
 
@@ -44,6 +46,8 @@ In @shoaib_simulation_2021 I had to backdate the package versions as the didn't 
 * Problems in finding available/a source for specific package versions for specific versions or R
 
 @lim_staff_2020: Provides major Python version, but chose minor and package versions based on article publication date.
+
+@kim_modelling_2021: States version of R but not package. Due to prior issues with backdating R, used latest versions. There were no issues using the latest versions of R and packages, but if there had been, it would be important to know what versions had previously been used and worked.
 
 :::
 
@@ -132,6 +136,7 @@ The studies where I made adjustments were:
 * @shoaib_simulation_2021: Add parallel processing and ran fewer replications
 * <!-- TODO: Check run time of Huang -->
 * @lim_staff_2020: Add parallel processing
+* @kim_modelling_2021: Reduced number of people in simulation, and switched from serial to the provided parallel option.
 
 :::
 
@@ -141,9 +146,11 @@ The studies where I made adjustments were:
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| <!----> | <!----> | ❌ |
+| <!----> | <!----> | ❌ | ❌ | N/A |
 
 For long models with no statement, it can take a while to realise that it's not an error in the code or anything, but actually just a long run time! And hard to know how long to expect, and whether it is without the capacities of your machine and so on.
+
+@anagnostou_facs-charm_2022: Very quick! Seconds!
 
 :::
 
@@ -154,6 +161,8 @@ For long models with no statement, it can take a while to realise that it's not 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
 | <!----> | <!----> | <!----> |
+
+<!--TODO: Figure where to put this... Kim et al. 2021: reproduction facilitated by provision of option to run model with parallel processing. However, would've been beneficial to provide suggestions for how to run model quicker on lower spec machine (e.g. lowering number of people) -->
 
 :::
 
@@ -181,11 +190,13 @@ For long models with no statement, it can take a while to realise that it's not 
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | <!--TODO--> | ❌ |
+| ❌ | <!--TODO--> | ❌ | ❌ |
 
 @shoaib_simulation_2021: Had to add some outputs and calculations (e.g. proportion of childbirth cases referred, standard deviation)
 
 @lim_staff_2020: The model script provided was only set up to provide results from days 7, 14 and 21. The figures require daily results, so I needed to modify the code to output that. 
+
+@kim_modelling_2021: Had to write code to find aorta sizes of people with AAA-related deaths.
 
 :::
 
@@ -236,7 +247,7 @@ For long models with no statement, it can take a while to realise that it's not 
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ✅ |
+| ❌ | ✅ | <!--TODO--> |
 
 @shoaib_simulation_2021: It was unclear how to estimate inter-arrival time
 
@@ -252,7 +263,7 @@ For long models with no statement, it can take a while to realise that it's not 
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ✅ | <!----> | ❌ |
+| ✅ | <!--TODO--> | ❌ |
 
 :::
 
@@ -278,7 +289,7 @@ For @shoaib_simulation_2021, there were two alternative results spreadsheets wit
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ |
+| ❌ | ❌ | ❌ | ✅ |
 
 @shoaib_simulation_2021: The lack of seeds wasn't actually a barrier to the reproduction though due to the replication number. I later add seeds so my results could be reproduced, and found that the ease of setting seeds with salabim was a greater facilitator to the work. I only had to change one or two lines of code to then get consistent results between runs (unlike other simulation software like SimPy where you have to consider the use of seeds by different sampling functions). Moreover, by default, salabim would have set a seed (although overridden by original authors to enable them to run replications).
 
@@ -296,7 +307,7 @@ For @shoaib_simulation_2021, there were two alternative results spreadsheets wit
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | N/A | <!--TODO--> |
+| ❌ | N/A | <!--TODO--> | ❌ |
 
 <!--TODO: Lim 2020... I think from memory that this output tables  similar to the paper, but I then changed them as that format was difficult to compare/work with -->
 
@@ -308,7 +319,7 @@ For @shoaib_simulation_2021, there were two alternative results spreadsheets wit
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ |
+| ❌ | ❌ | ❌ | ❌ |
 
 @huang_optimizing_2019: Had to write code from scratch. For one of the figures, it would have been handy if informed that plot was produced by a simmer function (as didn’t initially realise this). It also took a bit of time for me to work out how to transform the figure axes as this was not mentioned in the paper (and no code was provided for these). It was also unclear and a bit tricky to work out how to standardise the density in the figures (since it is only described in the text and no formula/calculations are provided there or in the code). <!-- TODO: Consider whether this should be split into another box (i.e. about providing the processing?) -->
 
@@ -330,7 +341,9 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 
 Include tick marks/grid lines on figures, so it is easier to read across and judge whether a result is above or below a certain Y value.
 
-For @lim_staff_2020, the simplicity of the model structure and code, and simplicity and similarity between figures, really helped to facilitate the reproduction.
+For @lim_staff_2020, the simplicity of the model structure and code, and simplicity and similarity between figures, really helped to facilitate the reproduction. For @kim_modelling_2021, reproduction was facilitated by having relatively simple and repetitive plots which were easy to understand and create.
+
+Fix errors in script. For @kim_modelling_2021, an error appears to have been introduced with the aoorta diameter thresholds by switching between nested and unnested lists, which I’m anticipating was unresolved due to the long run times of the model meaning they weren’t all run in sequence at the end.
 
 <!-- TODO: Check if any of these should be above. e.g. might want to put simplicity in a same way as i put run time - as simplicity is not inherently required (its about focus of project partly) BUT it is really handy (and it is always a good principle to hold) -->
 
