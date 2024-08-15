@@ -145,7 +145,13 @@ Key:
 
 ## Timings
 
-<!-- TODO: Add timings for each from evaluation for reporting
-Also issue may be that I can't necessarily disaggregate into reporting and code times-->
+<!-- Add johnson and kim -->
+
+* @shoaib_simulation_2021 - 1h 56m
+* @huang_optimizing_2019 - 1h 28m
+* @lim_staff_2020 - 1h 12m
+* @kim_modelling_2021
+* @anagnostou_facs-charm_2022 - 53m
+* @johnson_cost_2021
 
 ## References

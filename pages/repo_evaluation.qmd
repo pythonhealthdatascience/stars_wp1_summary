@@ -189,8 +189,14 @@ Key:
 
 ## Timings
 
-<!-- TODO: Add timings for each from evaluation for reporting
-Also issue may be that I can't necessarily disaggregate into reporting and code times-->
+<!-- Add johnson and kim -->
+
+* @shoaib_simulation_2021 - 30m
+* @huang_optimizing_2019 - 17m
+* @lim_staff_2020 - 18m
+* @kim_modelling_2021
+* @anagnostou_facs-charm_2022 - 19m
+* @johnson_cost_2021
 
 ## Badge sources
 
