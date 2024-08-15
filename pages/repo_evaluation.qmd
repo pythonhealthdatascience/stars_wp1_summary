@@ -1,5 +1,224 @@
 ---
 title: "Evaluation of the repository"
+echo: False
+bibliography: ../references.bib
 ---
 
-TODO: Add table with results from evaluation of repository against STARS framework and against journal badges. Include record of timings to complete this part of the evaluation for each.
+The code and related research artefacts in the original code repositories were evaluated against:
+
+* The criteria of badges related to reproducibility from various organisations and journals.
+* Recommendations from the STARS framework for the sharing of code and associated materials from discrete-event simulation models (@monks_towards_2024).
+
+Between each journal badge, there was often alot of overlap in criteria. Hence, a list of unique criteria was produced. The repositories are evaluated against this criteria, and then depending on which criteria they met, against the badges themselves.
+
+*Caveat: Please note that these criteria are based on available information about each badge online, and that we have likely differences in our procedure (e.g. allowed troubleshooting for execution and reproduction, not under tight time pressure to complete). Moreover, we focus only on reproduction of the discrete-event simulation, and not on other aspects of the article. We cannot guarantee that the badges below would have been awarded in practice by these journals.*
+
+## Summary
+
+**Unique badge criteria:**
+
+```{python}
+import pandas as pd
+from functions import eval_chart
+
+# Create dataframe of results
+col = ['fully', 'partially', 'not', 'na']
+criteria_dict = {
+  'Shoaib and<br>Ramamohan 2021': [3, 0, 9, 0],
+  'Huang et al. 2019': [3, 0, 9, 0],
+  'Lim et al. 2020': [3, 0, 9, 0],
+  'Kim et al. 2021': [0, 0, 0, 1],
+  'Anagnostou et al. 2022': [10, 0, 2, 0],
+  'Johnson et al. 2021': [0, 0, 0, 1]
+}
+criteria_wide = pd.DataFrame(criteria_dict, index=col).T
+
+eval_chart(criteria_wide)
+```
+
+**Badges:**
+
+```{python}
+# Create dataframe of results
+col = ['fully', 'partially', 'not', 'na']
+badge_dict = {
+  'Shoaib and<br>Ramamohan 2021': [3, 0, 9, 0],
+  'Huang et al. 2019': [0, 0, 12, 0],
+  'Lim et al. 2020': [3, 0, 9, 0],
+  'Kim et al. 2021': [0, 0, 0, 1],
+  'Anagnostou et al. 2022': [5, 0, 7, 0],
+  'Johnson et al. 2021': [0, 0, 0, 1]
+}
+badge_wide = pd.DataFrame(badge_dict, index=col).T
+
+eval_chart(badge_wide)
+```
+
+**Essential components of STARS framework:**
+
+```{python}
+# Create dataframe of results
+col = ['fully', 'partially', 'not', 'na']
+essential_dict = {
+  'Shoaib and<br>Ramamohan 2021': [2, 0, 6, 0],
+  'Huang et al. 2019': [2, 0, 6, 0],
+  'Lim et al. 2020': [2, 0, 6, 0],
+  'Kim et al. 2021': [0, 0, 0, 1],
+  'Anagnostou et al. 2022': [7, 0, 1, 0],
+  'Johnson et al. 2021': [0, 0, 0, 1]
+}
+essential_wide = pd.DataFrame(essential_dict, index=col).T
+
+eval_chart(essential_wide)
+```
+
+**Optional components of STARS framework:**
+
+```{python}
+# Create dataframe of results
+optional_dict = {
+  'Shoaib and<br>Ramamohan 2021': [0, 0, 5, 0],
+  'Huang et al. 2019': [2, 0, 3, 0],
+  'Lim et al. 2020': [0, 0, 5, 0],
+  'Kim et al. 2021': [0, 0, 0, 1],
+  'Anagnostou et al. 2022': [1, 1, 3, 0],
+  'Johnson et al. 2021': [0, 0, 0, 1]
+}
+optional_wide = pd.DataFrame(optional_dict, index=col).T
+
+eval_chart(optional_wide)
+```
+
+## Journal badges
+
+Key:
+
+* **S:** @shoaib_simulation_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/badges.html" target="_blank">link to evaluation</a>
+* **H:** @huang_optimizing_2019  - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/badges.html" target="_blank">link to evaluation</a>
+* **L:** @lim_staff_2020 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/badges.html" target="_blank">link to evaluation</a>
+* **K:** @kim_modelling_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/badges.html" target="_blank">link to evaluation</a>
+* **A:** @anagnostou_facs-charm_2022 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/badges.html" target="_blank">link to evaluation</a>
+* **J:** @johnson_cost_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/badges.html" target="_blank">link to evaluation</a>
+
+<!-- TODO: Add Johnson et al. 2021 -->
+
+**Unique criteria:**
+
+| Item | S | H | L | K | A | J |
+| - | - | - | - | - | - | - | - |
+| **Criteria related to how artefacts are shared** |
+| Stored in a permanent archive that is publicly and openly accessible | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Has a persistent identifier | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Includes an open license | ❌ | ✅ | ❌ | ✅ | ✅ |
+| **Criteria related to what artefacts are shared** |
+| Artefacts are relevant to and contribute to the article’s results | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Complete set of materials shared (as would be needed to fully reproduce article) | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Criteria related to the structure and documentation of the artefacts** |
+| Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community) | ❌ | ❌ | ❌ | ✅ | ✅ |
+| Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions) | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Artefacts are carefully documented (more than sufficient - i.e. to the extent that reuse and repurposing is facilitated - e.g. changing parameters, reusing for own purpose) | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Artefacts are clearly documented and accompanied by a README file with step-by-step instructions on how to reproduce results in the manuscript | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Criteria related to running and reproducing results** |
+| Scripts can be successfully executed | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |
+| Reproduced within approximately one hour (excluding compute time) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+: {tbl-colwidths="[70, 5, 5, 5, 5, 5, 5]"}
+
+\ 
+
+**Badges:**
+
+The badges are grouped into three categories:
+
+* "Open objects" badges: These badges relate to research artefacts being made openly available.
+* "Object review" badges: These badges relate to the research artefacts being reviewed against criteria of the badge issuer.
+* "Reproduced" badges: These badges relate to an independent party regenerating the reuslts of the article using the author objects.
+
+<!-- TODO: Add Johnson et al. 2021 -->
+
+| Item | S | H | L | K | A | J |
+| - | - | - | - | - | - | - | - |
+| **“Open objects” badges** |
+| **NISO "Open Research Objects (ORO)"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **NISO "Open Research Objects - All (ORO-A)"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license<br>• Complete set of materials shared (as would be needed to fully reproduce article) | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **ACM "Artifacts Available"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **COS "Open Code"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions) | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **IEEE "Code Available"**<br>• Complete set of materials shared (as would be needed to fully reproduce article) | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **"Object review" badges** |
+| **ACM "Artifacts Evaluated - Functional"**<br>• Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions)<br>• Artefacts are relevant to and contribute to the article’s results<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **ACM "Artifacts Evaluated - Reusable"**<br>• Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions)<br>• Artefacts are carefully documented (more than sufficient - i.e. to the extent that reuse and repurposing is facilitated - e.g. changing parameters, reusing for own purpose)<br>• Artefacts are relevant to and contribute to the article's results<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed<br>• Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community) | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **IEEE "Code Reviewed"**<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **"Reproduced" badges** |
+| **NISO "Results Reproduced (ROR-R)"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |
+| **ACM "Results Reproduced"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |
+| **IEEE "Code Reproducible"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |
+| **Psychological Science "Computational Reproducibility"**<br>• Independent party regenerated results using the authors research artefacts<br>• Reproduced within approximately one hour (excluding compute time)<br>• Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community)<br>• Artefacts are clearly documented and accompanied by a README file with step-by-step instructions on how to reproduce results in the manuscript | ❌ | ❌ | ❌ | ❌ | ❌ |
+: {tbl-colwidths="[70, 5, 5, 5, 5, 5, 5]"}
+
+## STARS framework
+
+Key:
+
+* **S:** @shoaib_simulation_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/artefacts.html" target="_blank">link to evaluation</a>
+* **H:** @huang_optimizing_2019  - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/artefacts.html" target="_blank">link to evaluation</a>
+* **L:** @lim_staff_2020 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/artefacts.html" target="_blank">link to evaluation</a>
+* **K:** @kim_modelling_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/artefacts.html" target="_blank">link to evaluation</a>
+* **A:** @anagnostou_facs-charm_2022 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/artefacts.html" target="_blank">link to evaluation</a>
+* **J:** @johnson_cost_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/artefacts.html" target="_blank">link to evaluation</a>
+
+<!-- TODO: Add Johnson et al. 2021 -->
+
+| Item | S | H | L | K | A | J |
+| - | - | - | - | - | - | - | - |
+| **Essential components** |
+| **Open license**<br>Free and open-source software (FOSS) license (e.g. MIT, GNU Public License (GPL)) | ❌ | ✅ | ❌ | ✅ | ✅ |
+| **Dependency management**<br>Specify software libraries, version numbers and sources (e.g. dependency management tools like virtualenv, conda, poetry) | ❌ | ❌ | ❌ | 🟡 | ✅ |
+| **FOSS model**<br>Coded in FOSS language (e.g. R, Julia, Python) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Minimum documentation**<br>Minimal instructions (e.g. in README) that overview (a) what model does, (b) how to install and run model to obtain results, and (c) how to vary parameters to run new experiments | ❌ | ❌ | ❌ | ✅ | ✅ |
+| **ORCID**<br>ORCID for each study author | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Citation information**<br>Instructions on how to cite the research artefact (e.g. CITATION.cff file) | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Remote code repository**<br>Code available in a remote code repository (e.g. GitHub, GitLab, BitBucket) | ✅ | ❌ | ✅ | ✅ | ✅ |
+| **Open science archive**<br>Code stored in an open science archive with FORCE11 compliant citation and guaranteed persistance of digital artefacts (e.g. Figshare, Zenodo, the Open Science Framework (OSF), and the Computational Modeling in the Social and Ecological Sciences Network (CoMSES Net)) | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Optional components** |
+| **Enhanced documentation**<br>Open and high quality documentation on how the model is implemented and works  (e.g. via notebooks and markdown files, brought together using software like Quarto and Jupyter Book). Suggested content includes:<br>• Plain english summary of project and model<br>• Clarifying license<br>• Citation instructions<br>• Contribution instructions<br>• Model installation instructions<br>• Structured code walk through of model<br>• Documentation of modelling cycle using TRACE<br>• Annotated simulation reporting guidelines<br>• Clear description of model validation including its intended purpose | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Documentation hosting**<br>Host documentation (e.g. with GitHub pages, GitLab pages, BitBucket Cloud, Quarto Pub) | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Online coding environment**<br>Provide an online environment where users can run and change code (e.g. BinderHub, Google Colaboratory, Deepnote) | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **Model interface**<br>Provide web application interface to the model so it is accessible to less technical simulation users | ❌ | ✅ | ❌ | ❌ | ✅ |
+| **Web app hosting**<br>Host web app online (e.g. Streamlit Community Cloud, ShinyApps hosting) | ❌ | ✅ | ❌ | ❌ | 🟡 |
+: {tbl-colwidths="[70, 5, 5, 5, 5, 5, 5]"}
+
+## Timings
+
+<!-- TODO: Add timings for each from evaluation for reporting
+Also issue may be that I can't necessarily disaggregate into reporting and code times-->
+
+## Badge sources
+
+**National Information Standards Organisation (NISO)** (@niso_reproducibility_badging_and_definitions_working_group_reproducibility_2021)
+
+* "Open Research Objects (ORO)"
+* "Open Research Objects - All (ORO-A)"
+* "Results Reproduced (ROR-R)"
+
+**Association for Computing Machinery (ACM)** (@association_for_computing_machinery_acm_artifact_2020)
+
+* "Artifacts Available"
+* "Artifacts Evaluated - Functional"
+* "Artifacts Evaluated - Resuable"
+* "Results Reproduced"
+
+**Center for Open Science (COS)** (@blohowiak_badges_2023)
+
+* "Open Code"
+
+**Institute of Electrical and Electronics Engineers (IEEE)** (@institute_of_electrical_and_electronics_engineers_ieee_about_nodate)
+
+* "Code Available"
+* "Code Reviewed"
+* "Code Reproducible"
+
+**Psychological Science** (@hardwicke_transparency_2023 and @association_for_psychological_science_aps_psychological_2023)
+
+* "Computational Reproducibility"
+
+## References
