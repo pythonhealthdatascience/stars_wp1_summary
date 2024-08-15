@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -188,8 +208,23 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#version-1" id="toc-version-1" class="nav-link active" data-scroll-target="#version-1"><span class="header-section-number">6</span> Version 1</a>
+  <ul class="collapse">
+  <li><a href="#environment" id="toc-environment" class="nav-link" data-scroll-target="#environment"><span class="header-section-number">6.1</span> Environment</a></li>
+  <li><a href="#running-model-programmatically" id="toc-running-model-programmatically" class="nav-link" data-scroll-target="#running-model-programmatically"><span class="header-section-number">6.2</span> Running model programmatically</a></li>
+  </ul></li>
+  <li><a href="#version-2" id="toc-version-2" class="nav-link" data-scroll-target="#version-2"><span class="header-section-number">7</span> Version 2</a>
+  <ul class="collapse">
+  <li><a href="#extra-notes" id="toc-extra-notes" class="nav-link" data-scroll-target="#extra-notes"><span class="header-section-number">7.1</span> Extra notes</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">7.2</span> References</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -213,9 +248,367 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>TODO: Table with reflections from each study</p>
+<p>The table below outlines the factors that helped facilitate reproductions, or that would have been helpful (i.e.&nbsp;their absence was a barrier to the reproduction).</p>
+<p>To present this concisely, each facilitator identified has been listed in a table, and I have evaluated for each study whether this was fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A).</p>
+<section id="version-1" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Version 1</h1>
+<section id="environment" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="environment"><span class="header-section-number">6.1</span> Environment</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+List required packages
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Became a time-consuming issue as it took a while to identify a dependency that was needed for the code to work (<code>greenlet</code>), and a while longer to realise I had installed another package when the package I needed was in base (<code>statistics</code>).</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Provide versions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">S</th>
+<th style="text-align: center;">H</th>
+<th style="text-align: center;">L</th>
+<th style="text-align: center;">K</th>
+<th style="text-align: center;">A</th>
+<th style="text-align: center;">J</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>In one study (<span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>) I had to backdate the package versions as the didn’t work with the latest</li>
+<li><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span> -</li>
+<li><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span> -</li>
+<li><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> -</li>
+<li><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span> -</li>
+<li><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="running-model-programmatically" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="running-model-programmatically"><span class="header-section-number">6.2</span> Running model programmatically</h2>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+A
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="version-2" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Version 2</h1>
+<p>Key:</p>
+<ul>
+<li><strong>S:</strong> <span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reflections.html" target="_blank">link to reflections</a></li>
+<li><strong>H:</strong> <span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/reflections.html" target="_blank">link to reflections</a></li>
+<li><strong>L:</strong> <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/reflections.html" target="_blank">link to reflections</a></li>
+<li><strong>K:</strong> <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reflections.html" target="_blank">link to reflections</a></li>
+<li><strong>A:</strong> <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/reflections.html" target="_blank">link to reflections</a></li>
+<li><strong>J:</strong> <span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/reflections.html" target="_blank">link to reflections</a></li>
+</ul>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 70%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Facilitator</th>
+<th>S</th>
+<th>H</th>
+<th>L</th>
+<th>K</th>
+<th>A</th>
+<th>J</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Environment</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>List required packages</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Provide versions</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Running model programmatically</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Run time</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Parameters, scenarios and outputs</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>All the required outputs are calculated</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Output format</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Saves output to a file</td>
+<td>✅</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Easy to figure out how to use output table/s to create tables/figures</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Seeds</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>Code to produce article results</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Provide code to process results into tables</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Provide code to process results into figures</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Provide code to calculate results mentioned in the text (but no in tables/figures)</td>
+<td>❌</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><br>
+</p>
+<section id="extra-notes" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="extra-notes"><span class="header-section-number">7.1</span> Extra notes</h2>
+<p><strong>Environment: List required packages</strong></p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Became a time-consuming issue as it took a while to identify a dependency that was needed for the code to work (greenlet), and a while longer to realise I had installed another package when the package I needed was in base (statistics)</p>
+<p><strong>Environment: Versions</strong></p>
+<ul>
+<li>In one study (<span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>) I had to backdate the package versions as the didn’t work with the latest</li>
+<li><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span> -</li>
+<li><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span> -</li>
+<li><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> -</li>
+<li><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span> -</li>
+<li><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></li>
+</ul>
+<p><strong>Output format: Easy to figure out how to use output table/s to create tables/figures</strong></p>
+<ul>
+<li>For <span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>, there were two alternative results spreadsheets with some duplicate metrics but sometimes differing results between them, which made it a bit confusing to work out what to use</li>
+</ul>
+</section>
+<section id="references" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="references"><span class="header-section-number">7.2</span> References</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-anagnostou_facs-charm_2022" class="csl-entry" role="listitem">
+Anagnostou, Anastasia, Derek Groen, Simon J. E. Taylor, Diana Suleimenova, Nura Abubakar, Arindam Saha, Kate Mintram, et al. 2022. <span>“<span>FACS</span>-<span>CHARM</span>: <span>A</span> <span>Hybrid</span> <span>Agent</span>-<span>Based</span> and <span>Discrete</span>-<span>Event</span> <span>Simulation</span> <span>Approach</span> for <span>Covid</span>-19 <span>Management</span> at <span>Regional</span> <span>Level</span>.”</span> In <em>2022 <span>Winter</span> <span>Simulation</span> <span>Conference</span> (<span>WSC</span>)</em>, 1223–34. <a href="https://doi.org/10.1109/WSC57314.2022.10015462">https://doi.org/10.1109/WSC57314.2022.10015462</a>.
+</div>
+<div id="ref-huang_optimizing_2019" class="csl-entry" role="listitem">
+Huang, Shiwei, Julian Maingard, Hong Kuan Kok, Christen D. Barras, Vincent Thijs, Ronil V. Chandra, Duncan Mark Brooks, and Hamed Asadi. 2019. <span>“Optimizing <span>Resources</span> for <span>Endovascular</span> <span>Clot</span> <span>Retrieval</span> for <span>Acute</span> <span>Ischemic</span> <span>Stroke</span>, a <span>Discrete</span> <span>Event</span> <span>Simulation</span>.”</span> <em>Frontiers in Neurology</em> 10 (June). <a href="https://doi.org/10.3389/fneur.2019.00653">https://doi.org/10.3389/fneur.2019.00653</a>.
+</div>
+<div id="ref-johnson_cost_2021" class="csl-entry" role="listitem">
+Johnson, Kate M., Mohsen Sadatsafavi, Amin Adibi, Larry Lynd, Mark Harrison, Hamid Tavakoli, Don D. Sin, and Stirling Bryan. 2021. <span>“Cost <span>Effectiveness</span> of <span>Case</span> <span>Detection</span> <span>Strategies</span> for the <span>Early</span> <span>Detection</span> of <span>COPD</span>.”</span> <em>Applied Health Economics and Health Policy</em> 19 (2): 203–15. <a href="https://doi.org/10.1007/s40258-020-00616-2">https://doi.org/10.1007/s40258-020-00616-2</a>.
+</div>
+<div id="ref-kim_modelling_2021" class="csl-entry" role="listitem">
+Kim, Lois G., Michael J. Sweeting, Morag Armer, Jo Jacomelli, Akhtar Nasim, and Seamus C. Harrison. 2021. <span>“Modelling the Impact of Changes to Abdominal Aortic Aneurysm Screening and Treatment Services in <span>England</span> During the <span>COVID</span>-19 Pandemic.”</span> <em>PLOS ONE</em> 16 (6): e0253327. <a href="https://doi.org/10.1371/journal.pone.0253327">https://doi.org/10.1371/journal.pone.0253327</a>.
+</div>
+<div id="ref-lim_staff_2020" class="csl-entry" role="listitem">
+Lim, Chun Yee, Mary Kathryn Bohn, Giuseppe Lippi, Maurizio Ferrari, Tze Ping Loh, Kwok-Yung Yuen, Khosrow Adeli, and Andrea Rita Horvath. 2020. <span>“Staff Rostering, Split Team Arrangement, Social Distancing (Physical Distancing) and Use of Personal Protective Equipment to Minimize Risk of Workplace Transmission During the <span>COVID</span>-19 Pandemic: <span>A</span> Simulation Study.”</span> <em>Clinical Biochemistry</em> 86 (December): 15–22. <a href="https://doi.org/10.1016/j.clinbiochem.2020.09.003">https://doi.org/10.1016/j.clinbiochem.2020.09.003</a>.
+</div>
+<div id="ref-shoaib_simulation_2021" class="csl-entry" role="listitem">
+Shoaib, Mohd, and Varun Ramamohan. 2021. <span>“Simulation <span>Modelling</span> and <span>Analysis</span> of <span>Primary</span> <span>Health</span> <span>Centre</span> <span>Operations</span>.”</span> <em>arXiv</em>, June. <a href="https://doi.org/10.48550/arXiv.2104.12492">https://doi.org/10.48550/arXiv.2104.12492</a>.
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
