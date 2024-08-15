@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from plotly import graph_objects as go
+import plotly.express as px
 
 
 def process_times(time_list, adjust=False):
@@ -129,3 +130,68 @@ def success_static(times_df, ax, label, colour):
     '''
     ax.plot(times_df['hours'], times_df['ecdf'], marker='.', markevery=2,
             label=label.replace('<br>', '\n'), color=colour)
+
+
+def eval_chart(df):
+    '''
+    Create a stacked bar chart presenting the results from evaluation for
+    each study.
+
+    Parameters:
+    -----------
+    df : dataframe
+        Wide dataframe where columns are result of evaluation, and rows
+        are the study
+    '''
+    eval = (df
+            .melt(ignore_index=False)
+            .reset_index()
+            .rename(columns={'index': 'guideline',
+                             'variable': 'result',
+                             'value': 'count'}))
+
+    # Add percentages
+    eval['total'] = eval['count'].groupby(eval['guideline']).transform('sum')
+    eval['percent'] = eval['count'] / eval['total']
+    eval['percentage'] = round(eval['percent']*100, 1).astype(str) + '%'
+
+    # Create stacked bar visualisation
+    fig = px.bar(
+        eval,
+        x='percent',
+        y='guideline',
+        color='result',
+        color_discrete_map={'fully': '#06a94d',
+                            'partially': '#ffd68c',
+                            'not': '#ff9999',
+                            'na': '#d1dcea'},
+        orientation='h',
+        hover_data={
+            'count': True,
+            'percent': False,
+            'percentage': True,
+            'guideline': False,
+            'result': False})
+
+    # Amend x axis label and ticks
+    fig.update_layout(xaxis=dict(
+        range=[0, 1],
+        tickmode='array',
+        tickvals=[0, 0.2, 0.4, 0.6, 0.8, 1],
+        ticktext=['0%', '20%', '40%', '60%', '80%', '100%'],
+        title=''))
+
+    # Amend y axis label and order, and add space between ticks and plot
+    fig.update_layout(yaxis=dict(
+        autorange='reversed',
+        title=''))
+    fig.update_yaxes(ticksuffix='  ')
+
+    # Relabel legend
+    fig.update_layout(legend_title_text='Result')
+    newnames = {'fully': 'Fully met', 'partially': 'Partially met',
+                'not': 'Not met', 'na': 'Not applicable'}
+    fig.for_each_trace(lambda t: t.update(name=newnames[t.name]))
+
+    # Show without toolbar
+    fig.show(config={'displayModeBar': False})
