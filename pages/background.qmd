@@ -1,5 +1,16 @@
 ---
-title: "STARS"
+title: "Introduction"
+bibliography: ../references.bib
 ---
 
-TODO: Add background about STARS, pilot work, and aim of WP1
+<!-- TODO: Write an introduction -->
+
+Review: @monks_computer_2023
+
+Framework: @monks_towards_2024
+
+![STARS framework overview](../images/stars_framework_overview.png)
+
+Aim of this work: Computational reproducibility assessments of six discrete event simulation models in Python and R.
+
+## References
