@@ -109,9 +109,7 @@ Links to each study:
 
 ::: {.callout-warning icon=false collapse=true}
 
-## Model is designed to be run programmatically
-
-In other words, there is some provision for re-running the model with different parameters without changing the code for the model itself.
+## Model is designed to be run programmatically (i.e. can run model with different parameters without needing to change the model code)
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -172,9 +170,25 @@ In other words, there is some provision for re-running the model with different 
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ |
+| ❌ | ✅ | ✅ | ❌ | ✅ | <!--TODO--> |
 
-@shoaib_simulation_2021: The model often contained very similar code before or after warm-up. This has the potential to introduce mistakes - with a suspected (although unconfirmed) mistake being that the lower boundary for the doctor consultation times in configuration 1 differed before and after warm-up.
+@shoaib_simulation_2021: Not met. The model often contained very similar blocks of code before or after warm-up. This has the potential to introduce mistakes - with a suspected (although unconfirmed) mistake being that the lower boundary for the doctor consultation times in configuration 1 differed before and after warm-up.
+
+@huang_optimizing_2019: Fully met.
+
+@lim_staff_2020: Fully met.
+
+@kim_modelling_2021: Not met. There was alot of duplication when running each scenario (e.g. repeated calls to `Eventsandcosts`, and repeatedly defining the same parameters). This meant, if changing a parameter that you want to be consistent between all the scripts (e.g. number of persons), you had to change each of the scripts one by one.
+
+@johnson_cost_2021: Fully met.
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:** Large amounts of code duplication are non-ideal as they can:
+
+* Make code less readable
+* Make it trickier to change universal parameters
+* Increase the likelihood of introducing mistakes
 
 :::
 
@@ -184,11 +198,23 @@ In other words, there is some provision for re-running the model with different 
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| <!--TODO--> | ❌ | ✅ |
+| ❌ | ❌ | ✅ | 🟡 | 🟡 | <!--TODO--> |
 
-@huang_optimizing_2019: Would have benefitted from more comments, as it took some time to decipher and ensure I have correctly understood code as it uses lots of abbreviations.
+@shoaib_simulation_2021 and @huang_optimizing_2019: Not met. Would have benefitted from more comments, as it took some time to ensure I have correctly understood code, particularly if they used lots of abbreviations.
 
-@lim_staff_2020: Lots of comments in the code (including doc-string-style comments at the start of functions) that aided understanding of how it worked.
+@lim_staff_2020: Fully met. There were lots of comments in the code (including doc-string-style comments at the start of functions) that aided understanding of how it worked.
+
+@kim_modelling_2021: Partially met. Didn't have any particular issues in working out the code. There are sufficient comments in the scenario scripts and at the start of the model scripts, although within the model scripts, there were sometimes quite dense sections of code that would likely benefit from some additional comments.
+
+@anagnostou_facs-charm_2022: Partially met. Didn't have to delve into the code much, so can't speak from experience as to whether the comments were sufficient. From looking through the model code, several scripts have lots of comments and docstrings for each function, but some do not.
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:**
+
+* With increasing code complexity, the inclusion of sufficient comments becomes increasingly important, as it can otherwise be quite time consuming to figure out how to fix and change sections of code
+* Define abbreviations used within the code
+* Good to have consistent comments and docstrings throughout (i.e. on all scripts, on not just some of them)
 
 :::
 
@@ -203,38 +229,67 @@ I have not evaluated like as a criteria, as a long run time is not inherently a 
 The studies where I made adjustments were:
 
 * @shoaib_simulation_2021: Add parallel processing and ran fewer replications
-* <!-- TODO: Check run time of Huang -->
+* @huang_optimizing_2019: No changes made.
 * @lim_staff_2020: Add parallel processing
 * @kim_modelling_2021: Reduced number of people in simulation, and switched from serial to the provided parallel option.
 * @anagnostou_facs-charm_2022: Model was super quick which made it really easy to run and re-run each time
+* @johnson_cost_2021: <!--TODO-->
 
 For @kim_modelling_2021, an error appears to have been introduced with the aoorta diameter thresholds by switching between nested and unnested lists, which I’m anticipating was unresolved due to the long run times of the model meaning they weren’t all run in sequence at the end.
 
-:::
+**Reflections:**
 
-::: {.callout-important icon=false collapse=true}
-
-## For slow models, it's very important to state the expected run time
-
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| <!----> | <!----> | ❌ | ❌ | N/A |
-
-For long models with no statement, it can take a while to realise that it's not an error in the code or anything, but actually just a long run time! And hard to know how long to expect, and whether it is without the capacities of your machine and so on.
-
-@anagnostou_facs-charm_2022: Very quick! Seconds!
+* Reduce model run time if possible as it makes it easier to work with, and facilitates doing full re-runs of all scenarios (which can be important with code changes, etc).
+* Common issue (to varying degrees - i.e. taking 20 minutes, up to taking several hours).
 
 :::
 
 ::: {.callout-important icon=false collapse=true}
 
-## For computationally expensive models, state memory usage, and potentially include alternatives for running it on machines without the capacity for it
+## For slow models, state the expected run time
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| <!----> | <!----> | <!----> | <!--TODO--> | N/A |
+| 🟡 | ❌ | ❌ | ❌ | N/A | <!--TODO--> |
 
-<!--TODO: Figure where to put this... Kim et al. 2021: reproduction facilitated by provision of option to run model with parallel processing. However, would've been beneficial to provide suggestions for how to run model quicker on lower spec machine (e.g. lowering number of people) -->
+@shoaib_simulation_2021: Partially met. Run time stated in paper but not repository.
+
+@huang_optimizing_2019: Not met.
+
+@lim_staff_2020: Not met.
+
+@kim_modelling_2021: Not met. A prior paper describing the model development mentions the run time, but not the current paper or repository.
+
+@anagnostou_facs-charm_2022: Not applicable. Very quick! Seconds! So not particularly relevant - although, you could argue, potentially still important if there were some error that made it look like the model were running continuously (e.g. stuck in a loop) - although this is relatively unlikely.
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:**
+
+* For long models with no statement, it can take a while to realise that it's not an error in the code or anything, but actually just a long run time! And hard to know how long to expect, and whether it is without the capacities of your machine and so on.
+* Common issue.
+
+:::
+
+::: {.callout-important icon=false collapse=true}
+
+## For computationally expensive models, state memory usage and provide alternatives for lower spec machines
+
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| N/A | N/A | N/A | ❌ | N/A | <!--TODO--> |
+
+@shoaib_simulation_2021, @huang_optimizing_2019, and @lim_staff_2020: Not applicable. Didn't find it to be too computationally expensive for my machine.
+
+@kim_modelling_2021: Not met. Unable to run on my machine (`serial` took too long to run (would have to leave laptop on for many many hours which isn't feasible), and `parallel` was too computationally expensive and crashed the machine (with the original number of people)). This is not mentioned in the repository or paper, but only referred to in a prior publication. Would've been handy if it included suggestions like reducing number of people and so on (which is what I had to do to feasibly run it).
+
+@anagnostou_facs-charm_2022: Not applicable. Runs in seconds.
+
+**Reflections:**
+
+* Some models are so computationally expensive that it may be simply impossible to run it a feasible length of time without a high powered machine.
+* If a model is computationally expensive, it would be good to provide suggested alternatives that allow it to be run on lower spec machines
+* Not a common problem - only relevant to computationally expensive models
 
 :::
 
@@ -246,13 +301,24 @@ For long models with no statement, it can take a while to realise that it's not 
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | <!--TODO--> | N/A |
+| ❌ | ❌ | ❌ | ❌ | N/A | <!--TODO--> |
 
-@shoaib_simulation_2021: There were several instances where it took quite a while to understand how and where to modify the code in order to run scenarios (e.g. no arrivals, transferring admin work, reducing doctor intervention in deliveries).
+@shoaib_simulation_2021: Not met. There were several instances where it took quite a while to understand how and where to modify the code in order to run scenarios (e.g. no arrivals, transferring admin work, reducing doctor intervention in deliveries).
 
-@huang_optimizing_2019: Set up a notebook to programmatically run the model scenarios. It took alot of work to modify and write code that could run the scenarios, and I often made mistakes in my interpretation for the implementation of scenarios, which could be avoided if code for those scenarios was provided.
+@huang_optimizing_2019: Not met. Set up a notebook to programmatically run the model scenarios. It took alot of work to modify and write code that could run the scenarios, and I often made mistakes in my interpretation for the implementation of scenarios, which could be avoided if code for those scenarios was provided.
 
-@lim_staff_2020: Several parameters or scenarios were not incorporated in the code, and had to be added (e.g. with conditional logic to skip or change code run, removing hard-coding, adding parameters to existing).
+@lim_staff_2020: Not met. Several parameters or scenarios were not incorporated in the code, and had to be added (e.g. with conditional logic to skip or change code run, removing hard-coding, adding parameters to existing).
+
+@kim_modelling_2021: Not met. Took alot of work to change model from for loop to function, to set all parameters as inputs (some were hard coded), and add conditional logic of scenarios when required.
+
+@anagnostou_facs-charm_2022: Not applicable. No scenarios.
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:**
+
+* Common issue
+* Time consuming and tricky to resolve
 
 :::
 
@@ -262,13 +328,24 @@ For long models with no statement, it can take a while to realise that it's not 
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | <!--TODO--> | ❌ | ❌ | ✅ |
+| ❌ | ❌ | ❌ | ❌ | ✅ | <!--TODO--> |
 
-@shoaib_simulation_2021: Had to add some outputs and calculations (e.g. proportion of childbirth cases referred, standard deviation)
+@shoaib_simulation_2021: Not met. Had to add some outputs and calculations (e.g. proportion of childbirth cases referred, standard deviation)
 
-@lim_staff_2020: The model script provided was only set up to provide results from days 7, 14 and 21. The figures require daily results, so I needed to modify the code to output that. 
+@huang_optimizing_2019: Not met. It has a complicated output (standardised density of patient in queue) that I was never certain on whether I correctly calculated. Although it outputs the columns required to calculate it, due its complexity, I feel this was not met, as it feels like a whole new output in its own right (and not just something simple like a mean).
 
-@kim_modelling_2021: Had to write code to find aorta sizes of people with AAA-related deaths.
+@lim_staff_2020: Not met. The model script provided was only set up to provide results from days 7, 14 and 21. The figures require daily results, so I needed to modify the code to output that. 
+
+@kim_modelling_2021: Not met. Had to write code to find aorta sizes of people with AAA-related deaths.
+
+@anagnostou_facs-charm_2022: Fully met. Although worth noting this only had one scenario/version of model and one output to reproduce.
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:**
+
+* Calculate and provide all the outputs required
+* Appreicate this can be a bit "ambiguous" (e.g. if its just plotting a mean or simple calculation, then didn't consider that here) (however, combined with other criteria, we do want them to provide code to calculate outputs, so we would want them to provide that anyway)
 
 :::
 
@@ -278,9 +355,23 @@ For long models with no statement, it can take a while to realise that it's not 
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| <!--TODO--> | ❌ | <!--TODO--> | <!--TODO--> | ✅ |
+| 🟡 | ❌ | 🟡 | ✅ | ✅ | <!--TODO--> |
 
-@huang_optimizing_2019: The baseline model in the script did not match the baseline model in the paper, so had to modify parameters.
+@shoaib_simulation_2021: Partially met. Script is set with parameters for base configuration 1, with the exception of number of replications.
+
+@huang_optimizing_2019: Not met. The baseline model in the script did not match the baseline model (or any scenario) in the paper, so had to modify parameters.
+
+@lim_staff_2020: Partially met. The included parameters were corrected, but the baseline scenario included varying staff strength to 2, and the provided code only varied 4 and 6. I had to add some code that enabled it to run with staff strength 2 (as there were an error that occured if you tried to set that).
+
+@kim_modelling_2021: Fully met.
+
+@anagnostou_facs-charm_2022: Fully met.
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:**
+
+* At least provide a script that can run the baseline model as in the paper (even if not providing the scenarios)
 
 :::
 
@@ -290,13 +381,23 @@ For long models with no statement, it can take a while to realise that it's not 
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | <!--TODO--> | ✅ |
+| ❌ | ❌ | ❌ | ✅ | ✅ | <!--TODO--> |
 
 @shoaib_simulation_2021: Some parameters that could not be calculated were not provided - ie. what consultation boundaries to use when mean length of doctor consultation was 2.5 minutes
 
 @huang_optimizing_2019: In this case, patient arrivals and resource numbers were listed in the paper, and there were several discprepancies between this and the provided code. However, for many of the model parameters like length of appointment, these were not mentioned in the paper, and so it was not possible to confirm whether or not those were correct.
 
 @lim_staff_2020: For Figure 5, had to guess the value for `staff_per_shift`.
+
+@kim_modelling_2021: Fully met.
+
+@anagnostou_facs-charm_2022: Fully met.
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:**
+
+* Provide all required parameters
 
 :::
 
