@@ -42,9 +42,19 @@
   {
     "objectID": "pages/background.html",
     "href": "pages/background.html",
-    "title": "2  STARS",
+    "title": "2  Introduction",
     "section": "",
-    "text": "TODO: Add background about STARS, pilot work, and aim of WP1",
+    "text": "2.1 References",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "pages/background.html#references",
+    "href": "pages/background.html#references",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "Monks, Thomas, and Alison Harper. 2023. “Computer Model and Code Sharing Practices in Healthcare Discrete-Event Simulation: A Systematic Scoping Review.” Journal of Simulation 0 (0): 1–16. https://doi.org/10.1080/17477778.2023.2260772.\n\n\nMonks, Thomas, Alison Harper, and Navonil Mustafee. 2024. “Towards Sharing Tools and Artefacts for Reusable Simulations in Healthcare.” Journal of Simulation 0 (0): 1–20. https://doi.org/10.1080/17477778.2024.2347882.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -52,9 +62,19 @@
   {
     "objectID": "pages/protocol.html",
     "href": "pages/protocol.html",
-    "title": "3  Protocol",
+    "title": "3  Methods",
     "section": "",
-    "text": "The protocol for this work is summarised in the diagram below and archived on Zenodo:\n\nHeather, A., Monks, T., Harper, A., Mustafee, N., & Mayne, A. (2024). Protocol for assessing the computational reproducibility of discrete-event simulation models on STARS. Zenodo. https://doi.org/10.5281/zenodo.12179846.\n\n\n\n\nWorkflow for STARS work package 1",
+    "text": "3.1 References",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Methods</span>"
+    ]
+  },
+  {
+    "objectID": "pages/protocol.html#references",
+    "href": "pages/protocol.html#references",
+    "title": "3  Methods",
+    "section": "",
+    "text": "Heather, Amy, Thomas Monks, Alison Harper, Navonil Mustafee, and Andrew Mayne. 2024. “Protocol for Assessing the Computational Reproducibility of Discrete-Event Simulation Models on STARS,” June. https://zenodo.org/records/12179846.",
     "crumbs": [
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Methods</span>"
     ]
@@ -343,6 +363,39 @@
     "crumbs": [
       "Results",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Evaluation of the article</span>"
+    ]
+  },
+  {
+    "objectID": "pages/framework.html",
+    "href": "pages/framework.html",
+    "title": "8  Modifying the framework",
+    "section": "",
+    "text": "8.1 Contents of the framework",
+    "crumbs": [
+      "Discussion",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Modifying the framework</span>"
+    ]
+  },
+  {
+    "objectID": "pages/framework.html#contents-of-the-framework",
+    "href": "pages/framework.html#contents-of-the-framework",
+    "title": "8  Modifying the framework",
+    "section": "",
+    "text": "Section from reflections\nConsideration for framework\n\n\n\n\nList required packages\nThe difference between listing all packages, and listing some that then have other dependencies. The various options there are for listing packages, and the downside of just assuming its obvious from imports. The options for guiding dependency management (e.g. providing scripts that download packages, and then environment management tools)\n\n\nProvide version for Python/R and for packages\nImportant to do so for both (not just packages). Challenge of implementing in R. Ease of implementing in Python. Importance of listing in repository itself. Options for doing this in R and Python. Suggestions. Need to explore more with R. Is it a matter of providing renv but suggesting someone could try with latest versions in first instance? As not realistic to guarantee maintenance of research projects. But know at least when it worked - as being clear, it won’t always, even in R\n\n\nModel in a “runnable” format\nThis was an unusual case, but I think could merge more under the example of providing code that aligns with the paper, as in that case, it was the code for a web app when the paper wasn’t about that\n\n\nModel designed to run programmatically, and don’t hard code parameters you want to change.\nConsider whether framework will given guidance on model structure. If so, it should be suggesting that (A) parameters are seperate from model and (B) run scenarios by changing elsewhere (and not by directly modifying the model code). Why do this? Because its simpler to run multiple versions of model with same script, and reduces likelihood of missing errors of inputing wrong parameters\n\n\nAvoid large amounts of code duplciation\nThis would also be a code structure thing (does it fit in framework?). Good to do in general - fairly standard coding practice. Here as it makes code more readable, makes it easier when want to change all scenarios, and reduces likelihood of introducing mistakes (which did see)\n\n\nSufficient comments in code\nLikewise, code structure. Standard practice like docstrings (which only one or two had). The standard structures that are available for docstrings (e.g. roxygen in R). And then also just general comments in code itself.\n\n\nQuicker models\nWorth considering for framework, as this was practically one of the big things for me when it came to using the models. Think about the options that are available for reducing model run time. And from the start, principles of keeping it simple and small. Things to avoid that make it slow. Alternatives to those things. The value of a quicker model (e.g. in being able to make an app, to rerun it all easily and spot mistakes, to just be easier to work with).\n\n\nState run time\nCould include in minimum documentation\n\n\nState memory usage and alterantives for lower spec machines\nCould include in enhanced documentation? Or minimum? Need to consider that this can seem a daunting thing if not familiar and wouldn’t know how to find this out or what this means\n\n\nProvide code for all scenarios\n\n\n\nInclude correct parameters in script\nSuggestion of default model parameters matching up to baseline in paper, and explaining that if not, issue becomes that its hard to check if model is all correct without code or paper listing every single parameter\n\n\nProvide all required parameters\n\n\n\nClearly present parameters in paper\nThis would not be relevant for STARS framework, but could feed into STRESS-DES work? How it being in a table was so much easier than it being described in the text, and how it being comprehensive of all parameters that get varied (or clear if those are the only things changed from baseline, and so on)\n\n\nProvide calculations\nAgain, might not quite fit into STARS? But if you are going to be mentioning the “pre-processed” values at all, then its important to include the calculation (ideally in the code, as that is the clearest demonstration of exactly what you did)\n\n\nSaves output to a file\nCode structure type thing. This was really handy, particularly for long run times. In doing this, set up in way that is easy to change name and location of output file, and not hard coded to one thing\n\n\nUnderstandable output tables\nNot sure where/if this might fit. But suggestion is to not provide alternative results for same metrics. And if a table or output might be unclear on what need or how to calculate, then providing some docs or something that supports\n\n\nUsing seeds\nExplain how, how it can be quite simple, and what benefit of this is. Could be in enhanced\n\n\nProvide code to produce (a) tables (b) figures (c) in-text results\nExplaining why this is handy (being able to reproduce gives confidence model is running right and also important in science) (plus useful for self too if need to make changes in review process and so on). Noting importance of not forgetting about “in-text” results\n\n\nInstructions on how to run model\nAlready in minimal documentation, but be aware, even as simple as “run this script and here is an example of how” is helpful\n\n\nGrid lines\nMinor, not sure if fits/to include\n\n\nData dictionaries\nMinor and intersects with good commenting, might not be relevant for all, but also worth considering, if people are uploading data as part of model, what the principles and practices and recommendations are for shairng of data and linking to those (as this is likely part of those, along with other things). If there is overlap, make it clear the synergies (e.g. if talks about archiving data, how could do alongside code, and so on).",
+    "crumbs": [
+      "Discussion",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Modifying the framework</span>"
+    ]
+  },
+  {
+    "objectID": "pages/framework.html#presentation-of-the-framework",
+    "href": "pages/framework.html#presentation-of-the-framework",
+    "title": "8  Modifying the framework",
+    "section": "8.2 Presentation of the framework",
+    "text": "8.2 Presentation of the framework\nChecklist table with categories, description and space to complete. But in multiple synced formats (perhaps auto conversion github action between them) - e.g. markdown, latex, docx\nDiagram: Think about any ways could adapt this and if would benefit from that. E.g. gradual reveal with GIF. more icons. alt layout. etc.\nWebsite: Could share like https://joss.readthedocs.io/en/latest/paper.html but would want to make sure we are adding sufficient detail on top of checklist.",
+    "crumbs": [
+      "Discussion",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Modifying the framework</span>"
     ]
   }
 ]
