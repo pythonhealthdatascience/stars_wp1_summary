@@ -24,6 +24,9 @@
 * [📝 Citation](#-citation)
 * [💰 Funding](#-funding)
 
+<br>
+<br>
+
 ## 👋 About the repository
 
 In work package 1, we assessed the computational reproducibility of six discrete-event simulation papers with models in Python and R. The reproductions and findings are summarised at: <https://pythonhealthdatascience.github.io/stars_wp1_summary/>.
@@ -44,6 +47,9 @@ Relevant GitHub repositories:
 | [stars-reproduce-kim-2021](https://github.com/pythonhealthdatascience/stars-reproduce-kim-2021) | Reproduction study 4: Kim et al. 2021 (R) |
 | [stars-reproduce-anagnostou-2022](https://github.com/pythonhealthdatascience/stars-reproduce-anagnostou-2022) | Reproduction study 5: Anagnostou et al. 2022 (Python) |
 | [stars-reproduce-johnson-2021](https://github.com/pythonhealthdatascience/stars-reproduce-johnson-2021) | Reproduction study 6: Johnson et al. 2021 (R) |
+
+<br>
+<br>
 
 ## 📖 View book locally
 
@@ -71,6 +77,9 @@ quarto render
 
 4. Open the book in your browser (open the `_book/index.html` file).
 
+<br>
+<br>
+
 ## 📝 Citation
 
 If you wish to cite this repository, please refer to the citation file `CITATION.cff`, and the auto-generated alternatives `citation_apalike.apa` and `citation_bibtex.bib`. Authors:
@@ -80,6 +89,9 @@ If you wish to cite this repository, please refer to the citation file `CITATION
 | Amy Heather | [![ORCID: Heather](https://img.shields.io/badge/ORCID-0000--0002--6596--3479-brightgreen)](https://orcid.org/0000-0002-6596-3479) | https://github.com/amyheather |
 | Thomas Monks | [![ORCID: Monks](https://img.shields.io/badge/ORCID-0000--0003--2631--4481-brightgreen)](https://orcid.org/0000-0003-2631-4481) | https://github.com/TomMonks |
 | Alison Harper | [![ORCID: Harper](https://img.shields.io/badge/ORCID-0000--0001--5274--5037-brightgreen)](https://orcid.org/0000-0001-5274-5037) | https://github.com/AliHarp |
+
+<br>
+<br>
 
 ## 💰 Funding
 
