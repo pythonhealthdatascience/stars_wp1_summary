@@ -1,8 +1,38 @@
-# STARS WP1 Summary
+<h1 align="center">
+  <br>
+  <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/pythonhealthdatascience/stars_wp1_summary/main/images/stars_banner.png" alt="Markdownify"></a>
+  <br>
+  STARS Work Package 1 Summary
+  <br>
+</h1>
 
-[![Valid CITATION.cff](https://github.com/pythonhealthdatascience/stars_wp1_summary/actions/workflows/cff_validation.yaml/badge.svg)](https://github.com/pythonhealthdatascience/stars_wp1_summary/actions/workflows/cff_validation.yaml)
+<p align="center">
+  <i align="center">Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1.</i>
+</p>
 
-Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1. These assessed six discrete-event simulation papers with models in Python and R. Relevant GitHub repositories:
+<p align="center">
+    <!--<a href="#"><img src="https://img.shields.io/github/v/release/pythonhealthdatascience/stars_wp1_summary" alt="GitHub release" /></a>
+    <a href="#"><img src="https://img.shields.io/github/release-date/pythonhealthdatascience/stars_wp1_summary" alt="GitHub release date" /></a>-->
+    <a href="#"><img src="https://img.shields.io/github/last-commit/pythonhealthdatascience/stars_wp1_summary" alt="GitHub last commit" /></a>
+    <a target="_blank" href="https://github.com/pythonhealthdatascience/stars_wp1_summary/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-CC--BY--4.0-blue.svg" alt="MIT license"/></a>
+    <a href="#"><img src="https://github.com/pythonhealthdatascience/stars_wp1_summary/actions/workflows/cff_validation.yaml/badge.svg" alt="Valid CITATION.cff" /></a>
+</p>
+
+## Table of contents
+
+* [👋 About the repository](#-about-the-repository)
+* [📖 View book locally](#-view-book-locally)
+* [📝 Citation](#-citation)
+* [💰 Funding](#-funding)
+
+## 👋 About the repository
+
+In work package 1, we assessed the computational reproducibility of six discrete-event simulation papers with models in Python and R. The reproductions and findings are summarised at: <https://pythonhealthdatascience.github.io/stars_wp1_summary/>.
+
+[![Python](https://img.shields.io/badge/-python-black?style=for-the-badge&logoColor=white&logo=python&color=3776AB)](https://www.python.org/)
+[![R](https://img.shields.io/badge/-r-black?style=for-the-badge&logoColor=white&logo=r&color=276DC3)](https://www.r-project.org/)
+
+Relevant GitHub repositories:
 
 | Repository | Description |
 | --- | --- |
@@ -16,7 +46,33 @@ Summary of the six computational reproducibility assessments conducted as part o
 | [stars-reproduce-anagnostou-2022](https://github.com/pythonhealthdatascience/stars-reproduce-anagnostou-2022) | Reproduction study 5: Anagnostou et al. 2022 (Python) |
 | [stars-reproduce-johnson-2021](https://github.com/pythonhealthdatascience/stars-reproduce-johnson-2021) | Reproduction study 6: Johnson et al. 2021 (R) |
 
-## Citation
+## 📖 View book locally
+
+The [website](https://pythonhealthdatascience.github.io/stars_wp1_summary/) is a quarto book hosted with GitHub pages. If you want to view the book locally on your own machine you will need to:
+
+1. Clone GitHub repository
+
+```
+git clone https://github.com/pythonhealthdatascience/stars_wp1_summary.git
+```
+
+2. Create the virtual environment
+
+```
+virtualenv stars_wp1_summary
+source stars_wp1_summary/bin/activate
+pip install -r requirements.txt
+```
+
+3. Create the book
+
+```
+quarto render
+```
+
+4. Open the book in your browser (open the `_book/index.html` file).
+
+## 📝 Citation
 
 If you wish to cite this repository, please refer to the citation file `CITATION.cff`, and the auto-generated alternatives `citation_apalike.apa` and `citation_bibtex.bib`. Authors:
 
@@ -25,3 +81,7 @@ If you wish to cite this repository, please refer to the citation file `CITATION
 | Amy Heather | [![ORCID: Heather](https://img.shields.io/badge/ORCID-0000--0002--6596--3479-brightgreen)](https://orcid.org/0000-0002-6596-3479) | https://github.com/amyheather |
 | Thomas Monks | [![ORCID: Monks](https://img.shields.io/badge/ORCID-0000--0003--2631--4481-brightgreen)](https://orcid.org/0000-0003-2631-4481) | https://github.com/TomMonks |
 | Alison Harper | [![ORCID: Harper](https://img.shields.io/badge/ORCID-0000--0001--5274--5037-brightgreen)](https://orcid.org/0000-0001-5274-5037) | https://github.com/AliHarp |
+
+## 💰 Funding
+
+This project is supported by the Medical Research Council [grant number [MR/Z503915/1](https://gtr.ukri.org/projects?ref=MR%2FZ503915%2F1)].
