@@ -24,11 +24,25 @@ Links to each study:
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ✅ | ✅ | ✅ |
+| ❌ | ❌ | 🟡 | ✅ | ✅ | <!--TODO--> |
 
-@shoaib_simulation_2021: Became a time-consuming issue as it took a while to identify a dependency that was needed for the code to work (`greenlet`), and a while longer to realise I had installed another package when the package I needed was in base (`statistics`).
+@shoaib_simulation_2021: Not met. This became a time-consuming issue as it took a while to identify a dependency that was needed for the code to work (`greenlet`) (based on reading the documentation for `salabim`), and a while longer to realise I had installed another package when the package I needed was in base (`statistics`).
 
-@kim_modelling_2021: Provides commands to install packages required at the start of scripts, which I could then easily base renv on automatically (as it detects them).
+@huang_optimizing_2019: Not met. However, this was fairly easily resolved based on imports to `.R` script, and then on extra imports suggested by RStudio when I tried and failed to run the script.
+
+@lim_staff_2020: Partially met. The only packages needed (`numpy` and `pandas`) are mentioned in the paper (although only listed as imports in the script).
+
+@kim_modelling_2021: Fully met. Provides commands to install packages required at the start of scripts, which I could then easily base renv on automatically (as it detects them).
+
+@anagnostou_facs-charm_2022: Fully met. Provides `requirements.txt`
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:**
+
+* The `import` statements can be sufficient in indicating all the packages required but this is not always the case if there are "hidden"/unmentioned dependencies that don't get imported
+* There are various options for listing the packages (e.g. comprehensive import statements, installation lines in the script, environment files).
+* This was a common issue.
 
 :::
 
@@ -38,18 +52,29 @@ Links to each study:
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | 🟡 | 🟡 | ✅ |
+| ❌ | ❌ | 🟡 | 🟡 | 🟡 | <!--TODO--> |
 
-In @shoaib_simulation_2021 I had to backdate the package versions as the didn't work with the latest.
+@shoaib_simulation_2021: Not met. I had to backdate the package versions as the model didn't work with the latest.
 
-@huang_optimizing_2019 was an R model. As no versions were provided, I initially tried to create an environment with R and package versions that were prior to the article publication date. However, I had great difficulties implementing this with R, and never managed to successfully do this. This was related to:
+@huang_optimizing_2019: Not met. I initially tried to create an environment with R and package versions that were prior to the article publication date. However, I had great difficulties implementing this with R, and never managed to successfully do this. This was related to:
 
 * The difficulty of switching between R versions
 * Problems in finding available/a source for specific package versions for specific versions or R
 
-@lim_staff_2020: Provides major Python version, but chose minor and package versions based on article publication date.
+@lim_staff_2020: Partially met. Provides major Python version, but chose minor and the package versions based on article publication date.
 
-@kim_modelling_2021: States version of R but not package. Due to prior issues with backdating R, used latest versions. There were no issues using the latest versions of R and packages, but if there had been, it would be important to know what versions had previously been used and worked.
+@kim_modelling_2021: Partially met. States version of R but not package. Due to prior issues with backdating R, used latest versions. There were no issues using the latest versions of R and packages, but if there had been, it would be important to know what versions had previously been used and worked.
+
+@anagnostou_facs-charm_2022: Partially met (depending on how strict you are being). The Python version was stated in the paper, and the simpy version was stated in the complementary app repository (although neither were mentioned in the model repository itself).
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:**
+
+* Models will sometimes work with the latest versions of packages, but likewise, you will sometimes need to backdate as it no longer works with the latest
+* For Python, it was very easy to "backdate" the python and package versions. However, I found this very difficult to in R, and ended up always using the latest versions.
+* Versions are sometimes provided elsewhere (e.g. in paper, in other repositories), but would be handy to be in model repository itself
+* This was a very common issue.
 
 :::
 
@@ -61,9 +86,24 @@ In @shoaib_simulation_2021 I had to backdate the package versions as the didn't 
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ✅ | ❌ | <!--TODO--> | <!--TODO--> | ✅ |
+| ✅ | ❌ | ✅ | ✅ | ✅ | <!--TODO--> |
 
-@huang_optimizing_2019: The code provided was to run the model as part of a web application, but the paper was not focused on this application, but instead on specific model scenarios, so I had to extract the model code and transform it into a format that was "runnable" as an R script/notebook.
+@shoaib_simulation_2021: Fully met. Provided as a single `.py` file which ran model with function `main()`.
+
+@huang_optimizing_2019: Not met. The model code was provided within the code for a web application, but the paper was not focused on this application, and instead on specific model scenarios. I had to extract the model code and transform it into a format that was "runnable" as an R script/notebook.
+
+@lim_staff_2020: Fully met. Provided as a single `.py` file which ran the model with a for loop.
+
+@kim_modelling_2021: Fully met. Has seperate `.R` scripts for each scenario which ran the model by calling functions from elsewhere in repository.
+
+@anagnostou_facs-charm_2022: Fully met. Can run model from command line.
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:**
+
+* If you are presenting the results of a model, then provide the code for that model in a "runnable" format.
+* This was an uncommon issue.
 
 :::
 
@@ -71,15 +111,30 @@ In @shoaib_simulation_2021 I had to backdate the package versions as the didn't 
 
 ## Model is designed to be run programmatically
 
+In other words, there is some provision for re-running the model with different parameters without changing the code for the model itself.
+
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ✅ | 🟡 |
+| ❌ | ✅ | ✅ | ✅ | ✅ | <!--TODO--> |
 
-@shoaib_simulation_2021: Model was designed so that you directly change parameters in the script itself. This meant you couldn't run multiple versions of the model using the same script. It also meant hidden errors were more likely (e.g. if miss changing a parameter somewhere, or input the wrong parameters and don’t realise).
+@shoaib_simulation_2021: Not met. The model is set up as classes and run using a function. However, it is not designed to allow any variation in inputs. Everything uses default inputs, and it designed in such a way that - if you wish to vary model parameters - you need to directly change these in the script itself. This meant you couldn't run multiple versions of the model using the same script. It also meant hidden errors were more likely (e.g. if miss changing a parameter somewhere, or input the wrong parameters and don’t realise).
 
-@huang_optimizing_2019: Model was set up as a function, with many of the required parameters already set as inputs to that function.
+@huang_optimizing_2019: Fully met. Model was set up as a function, with many of the required parameters already set as "changeable" inputs to that function.
 
-@lim_staff_2020: Structure of provided code (model largely in functions) made it easier when making changes to run it programmatically. However, it wasn't all in functions, and the model itself was designed to run a single scenario, so I did need to change to a function that can call to easily vary parameters and run scenarios programmatically. <!-- TODO: Consider whether I have evaluated this correctly -->
+@lim_staff_2020: Fully met. The model is created from a series of functions and run with a for loop that iterates through different parameters. As such, the model is able to be run programmatically (within that for loop, which varied e.g. staff per shift and so on and re-ran the model).
+
+@kim_modelling_2021: Fully met. Each scenario is an R script which states different parameters and then calls functions to run model.
+
+@anagnostou_facs-charm_2022: Fully met. Change inputs in input `.csv` files.
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:**
+
+* Design model so that you can re-run it with different parameters without needing to make changes to the model code itself.
+    * This allows you to run multiple versions of the model with the same script.
+    * It also reduces the likelihood of missing errors (e.g. if miss changing an input parameter somewhere, or input the wrong parameters and don't realise).
+* This was an uncommon issue.
 
 :::
 
@@ -89,13 +144,25 @@ In @shoaib_simulation_2021 I had to backdate the package versions as the didn't 
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ |
+| ❌ | 🟡 | ❌ | ✅ | N/A | <!--TODO--> |
 
-@shoaib_simulation_2021: Parameters were often hard-coded, and so it took time to spot where these were and correctly adjust them to be modifiable inputs.
+@shoaib_simulation_2021: Not met. Although some parameters sat "outside" of the model within the `main()` function (and hence were more "changeable", even if not "changeable" inputs to that function, but changed directly in script). However, many of the other parameters were hard-coded within the model itself. It took time to spot where these were and correctly adjust them to be modifiable inputs.
 
-<!-- TODO: Double-check this is marked correctly for Huang... I think it is, as some were not hard coded but some were... potentialy could say partially... -->
+@huang_optimizing_2019: Partially met. Pretty much all of the parameters that we wanted to change were not hard coded and were instead inputs to the model function `simulate_nav()`. However, I did need to add an `exclusive_use` scenario which conditionally changed `ir_resources`, but that is the only exception. I also add `ed_triage` as a changeable input but didn't end up needing that to reproduce any results (was just part of troubleshooting). I also
 
-@lim_staff_2020: Several parameters were hard coded
+@lim_staff_2020: Not met. Some parameters were not hard coded within the model, but lots of them were not.
+
+@kim_modelling_2021: Fully met. All model parameters could be varied from "outside" the model code itself, as they were provided as changeable inputs to the model.
+
+@anagnostou_facs-charm_2022: N/A as no scenarios.
+
+@johnson_cost_2021: <!--TODO-->
+
+**Reflections:**
+
+* It can be quite difficult to change parameters that are hard coded into the model. Ideally, all the parameters that a user might want to change should be easily changeable and not hard coded.
+* This is a somewhat common issue.
+* There is overlap between this and whether the code for scenarios is provided (as typically, the code for scenario is conditionally changing parameter values, although this can be facilitated by not hard coding the parameters, so you call need to change the values from "outside" the model code, rather than making changes to the model functions themselves). Hence, have included as two seperate reflections.
 
 :::
 
