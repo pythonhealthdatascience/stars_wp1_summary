@@ -1,0 +1,38 @@
+---
+title: "Modifying the framework"
+bibliography: ../references.bib
+---
+
+## Contents of the framework
+
+| Section from reflections | Consideration for framework |
+| - | - |
+| List required packages | The difference between listing all packages, and listing some that then have other dependencies. The various options there are for listing packages, and the downside of just assuming its obvious from imports. The options for guiding dependency management (e.g. providing scripts that download packages, and then environment management tools) |
+| Provide version for Python/R and for packages | Important to do so for both (not just packages). Challenge of implementing in R. Ease of implementing in Python. Importance of listing in repository itself. Options for doing this in R and Python. Suggestions. Need to explore more with R. Is it a matter of providing renv but suggesting someone could try with latest versions in first instance? As not realistic to guarantee maintenance of research projects. But know at least when it worked - as being clear, it won't always, even in R |
+| Model in a "runnable" format | This was an unusual case, but I think could merge more under the example of providing code that aligns with the paper, as in that case, it was the code for a web app when the paper wasn't about that |
+| Model designed to run programmatically, and don't hard code parameters you want to change. | Consider whether framework will given guidance on model structure. If so, it should be suggesting that (A) parameters are seperate from model and (B) run scenarios by changing elsewhere (and not by directly modifying the model code). Why do this? Because its simpler to run multiple versions of model with same script, and reduces likelihood of missing errors of inputing wrong parameters |
+| Avoid large amounts of code duplciation | This would also be a code structure thing (does it fit in framework?). Good to do in general - fairly standard coding practice. Here as it makes code more readable, makes it easier when want to change all scenarios, and reduces likelihood of introducing mistakes (which did see) |
+| Sufficient comments in code | Likewise, code structure. Standard practice like docstrings (which only one or two had). The standard structures that are available for docstrings (e.g. roxygen in R). And then also just general comments in code itself. |
+| Quicker models | Worth considering for framework, as this was practically one of the big things for me when it came to using the models. Think about the options that are available for reducing model run time. And from the start, principles of keeping it simple and small. Things to avoid that make it slow. Alternatives to those things. The value of a quicker model (e.g. in being able to make an app, to rerun it all easily and spot mistakes, to just be easier to work with). |
+| State run time | Could include in minimum documentation |
+| State memory usage and alterantives for lower spec machines | Could include in enhanced documentation? Or minimum? Need to consider that this can seem a daunting thing if not familiar and wouldn't know how to find this out or what this means |
+| Provide code for all scenarios |
+| Include correct parameters in script | Suggestion of default model parameters matching up to baseline in paper, and explaining that if not, issue becomes that its hard to check if model is all correct without code or paper listing every single parameter |
+| Provide all required parameters |
+| Clearly present parameters in paper | This would not be relevant for STARS framework, but could feed into STRESS-DES work? How it being in a table was so much easier than it being described in the text, and how it being comprehensive of all parameters that get varied (or clear if those are the only things changed from baseline, and so on) |
+| Provide calculations | Again, might not quite fit into STARS? But if you are going to be mentioning the "pre-processed" values at all, then its important to include the calculation (ideally in the code, as that is the clearest demonstration of exactly what you did) |
+| Saves output to a file | Code structure type thing. This was really handy, particularly for long run times. In doing this, set up in way that is easy to change name and location of output file, and not hard coded to one thing |
+| Understandable output tables | Not sure where/if this might fit. But suggestion is to not provide alternative results for same metrics. And if a table or output might be unclear on what need or how to calculate, then providing some docs or something that supports |
+| Using seeds | Explain how, how it can be quite simple, and what benefit of this is. Could be in enhanced |
+| Provide code to produce (a) tables (b) figures (c) in-text results | Explaining why this is handy (being able to reproduce gives confidence model is running right and also important in science) (plus useful for self too if need to make changes in review process and so on). Noting importance of not forgetting about "in-text" results |
+| Instructions on how to run model | Already in minimal documentation, but be aware, even as simple as "run this script and here is an example of how" is helpful |
+| Grid lines | Minor, not sure if fits/to include |
+| Data dictionaries | Minor and intersects with good commenting, might not be relevant for all, but also worth considering, if people are uploading data as part of model, what the principles and practices and recommendations are for shairng of data and linking to those (as this is likely part of those, along with other things). If there is overlap, make it clear the synergies (e.g. if talks about archiving data, how could do alongside code, and so on). |
+
+## Presentation of the framework
+
+**Checklist** table with categories, description and space to complete. But in multiple synced formats (perhaps auto conversion github action between them) - e.g. markdown, latex, docx
+
+**Diagram**: Think about any ways could adapt this and if would benefit from that. E.g. gradual reveal with GIF. more icons. alt layout. etc.
+
+**Website**: Could share like <https://joss.readthedocs.io/en/latest/paper.html> but would want to make sure we are adding sufficient detail on top of checklist.

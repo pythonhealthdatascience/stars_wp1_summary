@@ -17,17 +17,19 @@ book:
     - pages/reflections.qmd
     - pages/repo_evaluation.qmd
     - pages/paper_evaluation.qmd
+  - part: "Discussion"
+    chapters:
+    - pages/framework.qmd
   favicon: images/stars_logo_blue.png
   search:
     location: navbar
     type: overlay
   navbar:
+    collapse: false
     right:
       - icon: github
         href: https://github.com/pythonhealthdatascience/stars_wp1_summary
   sidebar:
-    search: true
-    style: docked
     logo: images/stars_logo_blue.png
 
 format:
