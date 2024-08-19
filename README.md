@@ -1,5 +1,4 @@
 <h1 align="center">
-  <br>
   <a href="http://www.amitmerchant.com/electron-markdownify"><img src="https://raw.githubusercontent.com/pythonhealthdatascience/stars_wp1_summary/main/images/stars_banner.png" alt="Markdownify"></a>
   <br>
   STARS Work Package 1 Summary
