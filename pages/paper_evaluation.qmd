@@ -125,8 +125,8 @@ Key:
 | **1 Is the focused health-related decision problem clarified?**<br>...the decision problem under investigation was defined. DES studies included different types of decision problems, eg, those listed in previously developed taxonomies. | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **2 Is the modeled healthcare setting/health condition clarified?**<br>...the physical context/scope (eg, a certain healthcare unit or a broader system) or disease spectrum simulated was described. | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **3 Is the model structure described?**<br>...the model’s conceptual structure was described in the form of either graphical or text presentation. | ✅ | ✅ | ✅ | tbc | ✅ |
-| **4 Is the time horizon given?**<br>...the time period covered by the simulation was reported. | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| **5 Are all simulated strategies/scenarios specified?**<br>...the comparators under test were described in terms of their components, corresponding variations, etc | ✅ | ✅ | ✅ | ✅ | ✅ | N/A |
+| **4 Is the time horizon given?**<br>...the time period covered by the simulation was reported. | ✅ | ✅ | ✅ | ✅ | ❌ |
+| **5 Are all simulated strategies/scenarios specified?**<br>...the comparators under test were described in terms of their components, corresponding variations, etc | ✅ | ✅ | ✅ | ✅ | N/A |
 | **6 Is the target population described?**<br>...the entities simulated and their main attributes were characterized. | ✅ | ❌ | ✅ | ✅ | 🟡 |
 | **Paramaterisation and uncertainty assessment** |
 | **7 Are data sources informing parameter estimations provided?**<br>...the sources of all data used to inform model inputs were reported. | ✅ | ✅ | ✅ | ✅ | ✅ |
