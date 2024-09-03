@@ -62,6 +62,9 @@ div.csl-indent {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -217,7 +220,10 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#references" id="toc-references" class="nav-link active" data-scroll-target="#references"><span class="header-section-number">3.1</span> References</a></li>
+  <li><a href="#protocol-summary" id="toc-protocol-summary" class="nav-link active" data-scroll-target="#protocol-summary"><span class="header-section-number">3.1</span> Protocol summary</a></li>
+  <li><a href="#minor-deviations-from-the-protocol" id="toc-minor-deviations-from-the-protocol" class="nav-link" data-scroll-target="#minor-deviations-from-the-protocol"><span class="header-section-number">3.2</span> Minor deviations from the protocol</a></li>
+  <li><a href="#timings" id="toc-timings" class="nav-link" data-scroll-target="#timings"><span class="header-section-number">3.3</span> Timings</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">3.4</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -243,21 +249,160 @@ div.csl-indent {
 </header>
 
 
-<!-- TODO: Write out a summary here -->
-<p>Protocol: <span class="citation" data-cites="heather_protocol_2024">Heather et al. (<a href="#ref-heather_protocol_2024" role="doc-biblioref">2024</a>)</span></p>
+<p>For work package 1, the methods were described in our protocol, <span class="citation" data-cites="heather_protocol_2024">Heather et al. (<a href="#ref-heather_protocol_2024" role="doc-biblioref">2024</a>)</span>.</p>
+<blockquote class="blockquote">
+<p>Heather, Amy, Thomas Monks, Alison Harper, Navonil Mustafee, and Andrew Mayne. 2024. “Protocol for Assessing the Computational Reproducibility of Discrete-Event Simulation Models on STARS,” June. <a href="https://zenodo.org/records/12179846" class="uri">https://zenodo.org/records/12179846</a>.</p>
+</blockquote>
+<p>These are summarised below, and deviations from the protocol are also described.</p>
+<section id="protocol-summary" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="protocol-summary"><span class="header-section-number">3.1</span> Protocol summary</h2>
+<p>For this work, six published healthcare DES models were selected. These were models with publicly available code under an open license (either already available or add on request from the STARS team). For each model, the follow stages of work were conducted:</p>
+<p><strong>Stage 1: Reproduction</strong> - assessing the computational reproducibility of each study</p>
+<ul>
+<li>Informed authors about study and, if not available, asked if they would be happy to add an open license to their code</li>
+<li>Set up repository for reproduction with the article and code</li>
+<li>Read the article and defined the scope of the reproduction, archiving the scope (and repository) on Zenodo before proceeding</li>
+<li>Looked over the model code, created a suitable environment with the software and packages required, and then ran the model. For each study, with any issues faced in running the model, troubleshooting was performed such as modifying or writing code. If troubleshooting was exhaused and there were still issues or discrepancies in the results, the original study authors were informed and provided the opportunity to advice on the reason for this (although with no pressure or requirement to do so)</li>
+<li>For each item in the scope, a decision was made as to whether this had been successfully reproduced or not. This was a subjective decision which allowed some expected deviation due to model stochasticity (for example, lack of seed control).</li>
+<li>This is timed (including time to produce each item in the scope), and limited to a maximum of 40 horus</li>
+</ul>
+<p><strong>Stage 2: Evaluation</strong> - evaluating the publication, code and associated artefacts against sharing and reporting standards</p>
+<ul>
+<li>The publication was evaluated against reporting guidelines for DES:
+<ul>
+<li><span class="citation" data-cites="monks_strengthening_2019">Monks et al. (<a href="#ref-monks_strengthening_2019" role="doc-biblioref">2019</a>)</span> - STRESS-DES: Strengthening The Reporting of Empirical Simulation Studies (Discrete-Event Simulation) (Version 1.0).</li>
+<li><span class="citation" data-cites="zhang_reporting_2020">Zhang, Lhachimi, and Rogowski (<a href="#ref-zhang_reporting_2020" role="doc-biblioref">2020</a>)</span> - The generic reporting checklist for healthcare-related discrete event simulation studies derived from the the International Society for Pharmacoeconomics and Outcomes Research Society for Medical Decision Making (ISPOR-SDM) Modeling Good Research Practices Task Force reports.</li>
+</ul></li>
+<li>The model code and associated artefacts (e.g.&nbsp;the GitHub repository shared by the authors) was evaluated against:
+<ul>
+<li>The criteria of badges related to reproducibility from various organisations and journals - namely:
+<ul>
+<li>National Information Standards Organisation (NISO)(<span class="citation" data-cites="niso_reproducibility_badging_and_definitions_working_group_reproducibility_2021">NISO Reproducibility Badging and Definitions Working Group (<a href="#ref-niso_reproducibility_badging_and_definitions_working_group_reproducibility_2021" role="doc-biblioref">2021</a>)</span>)</li>
+<li>Association for Computing Machinery (ACM) (<span class="citation" data-cites="association_for_computing_machinery_acm_artifact_2020">Association for Computing Machinery (ACM) (<a href="#ref-association_for_computing_machinery_acm_artifact_2020" role="doc-biblioref">2020</a>)</span>)</li>
+<li>Center for Open Science (COS) (<span class="citation" data-cites="blohowiak_badges_2023">Blohowiak et al. (<a href="#ref-blohowiak_badges_2023" role="doc-biblioref">2023</a>)</span>)</li>
+<li>Institute of Electrical and Electronics Engineers (IEEE) (<span class="citation" data-cites="institute_of_electrical_and_electronics_engineers_ieee_about_nodate">Institute of Electrical and Electronics Engineers (IEEE) (<a href="#ref-institute_of_electrical_and_electronics_engineers_ieee_about_nodate" role="doc-biblioref">n.d.</a>)</span>)</li>
+<li>Psychological Science (<span class="citation" data-cites="hardwicke_transparency_2023">Hardwicke and Vazire (<a href="#ref-hardwicke_transparency_2023" role="doc-biblioref">2023</a>)</span> and <span class="citation" data-cites="association_for_psychological_science_aps_psychological_2023">Association for Psychological Science (APS) (<a href="#ref-association_for_psychological_science_aps_psychological_2023" role="doc-biblioref">2023</a>)</span>)</li>
+</ul></li>
+<li>Recommendations from the pilot STARS framework for the sharing of code and associated materials from discrete-event simulation models (<span class="citation" data-cites="monks_towards_2024">Monks, Harper, and Mustafee (<a href="#ref-monks_towards_2024" role="doc-biblioref">2024</a>)</span>).</li>
+</ul></li>
+<li>This is timed</li>
+</ul>
+<p><strong>Stage 3: Report and research compendium</strong> - summary report and organised repository</p>
+<ul>
+<li>Wrote a report summarising the computational reproducibility assessment and evaluation</li>
+<li>Restructed the reposuitory into a “research compendium”, which essentially consisted of organising the repository to ensure it is easy and clear for someone else to re-run. Steps included:
+<ul>
+<li>Adding run times to the model notebooks</li>
+<li>Write a README for the reproduction folder</li>
+<li>Moving data, methods and outputs into seperate folders</li>
+<li>Creating tests which check if a user can get the same results from the model as we did during the reproduction</li>
+<li>A Dockerfile and Docker image published on the GitHub container registry</li>
+</ul></li>
+<li>A second researcher from the STARS team then attempted to use the repository and confirm whether they were able to reproduce the results of the first researcher</li>
+<li>Finally, the repository was archived on Zenodo, and the authors were informed.</li>
+</ul>
+<p>For each study, a quarto site was produced which shared the results from the reproduction and evaluation and the summary report. Throughout the work, a detailed logbook was kept to keep track of timings and to record work on each stage, such as detailing troubleshooting steps during the reproduction, or uncertainities discussed with another STARS team member during the evaluation.</p>
+<p><strong>Summary diagram</strong></p>
+<p>This process is captured in the diagram below:</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/stars_wp1_workflow.png" class="img-fluid figure-img"></p>
+<p><a href="../images/stars_wp1_workflow.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Workflow for STARS work package 1"><img src="../images/stars_wp1_workflow.png" class="img-fluid figure-img" alt="Workflow for STARS work package 1"></a></p>
 <figcaption>Workflow for STARS work package 1</figcaption>
 </figure>
 </div>
-<section id="references" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="references"><span class="header-section-number">3.1</span> References</h2>
+</section>
+<section id="minor-deviations-from-the-protocol" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="minor-deviations-from-the-protocol"><span class="header-section-number">3.2</span> Minor deviations from the protocol</h2>
+<p>There were some minor deviations from the protocol, which are explained below…</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Deviation</th>
+<th>Description and reason for the change</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Using the latest software packages</td>
+<td>In the protocol, I had planned that - if no versions were provided we select a version of the software and each package that is closest to but still prior to the date of the code archive or paper publication. I kept to this for the Python models (easily set using a conda/mamba environment). However, I had great difficulties attempting to do this in R, and could not successfully backdate both. As such, I used the latest versions of R and each package for those studies</td>
+</tr>
+<tr class="even">
+<td>Using percentage difference in results to help decided reproduction success</td>
+<td>This is not particularly deviation, as I did explore this, but I ultimately found it very unhelpful, as the percentage difference could be greatly impacted by scale (for example, 0.1 vs 0.2 would appear much greater than 3 vs 4, but the actual meaning of these differences might be similar (e.g.&nbsp;both might be considered a small difference) depending on the scale used and what is being compared - whilst in another context with a different scale, 0.1 vs 0.2 might actually reflect a huge difference!).</td>
+</tr>
+<tr class="odd">
+<td>Moving onto evaluation stage before receive author response regarding reproduction discrepancy</td>
+<td>In the protocol, we required that authors are contacted if there are any remaining difficulties in running the code or items in the scope that were not reproduced. The authors were given a total of four weeks to respond if they chose to. We had implied that we must wait for this time to pass before continuing to the evaluation stage (since the three stages were presented as being completed one after another). The rationale for this was that the timings for the reproduction would be influenced by whether the evaluation had been completed or not, and vice versa. However, given the many possible influences on the timings, this was considered negligble.</td>
+</tr>
+<tr class="even">
+<td>Organisation of the repository for the research compendium</td>
+<td>In the protocol, we had planned that seperate folders were created for data, methods and outputs. This was generally followed but, if an alternative structure seemed more suitable (for example, if the original study already divided items well, but perhaps with different folder names or with multiple scripts folders or so on, we might have used that original structure, as it still served the purpose of being clear and easy to re-run, whilst reducing the number of differences compared with the original study).</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="timings" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="timings"><span class="header-section-number">3.3</span> Timings</h2>
+<p>As per the protocol, the reproduction and evaluation stages were timed. Although this was conducted carefully and thoroughly, it will not be perfect, and we recognise some of the potential sources of variation in timings between studies, such as:</p>
+<ul>
+<li>Whether we consistently included amendments to the quarto site and repository and time spent on GitHub commits etc. within the timings for the reproduction.</li>
+<li>For the first R study (<span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>), I initially tried to create an environment with R and package versions prior to the article publication date, although had great difficulties with this and ended up using the latest versions. This contributed to the set-up time during this reproduction, but on later R models (<span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>), based on that experience, I did not attempt to backdate them when getting started.</li>
+<li>Any estimated times (for example, if I were partway through working but someone in the office came to talk to me and I forgot to note the time of that, I might estimate if that were about five or ten minutes of conversation, and set the time accordingly).</li>
+<li>Timings from consensus discussions regarding uncertainities in the evaluation or reproduction (as these might be longer if done in person rather than over email - or vice versa - and I sometimes spent longer on sorting/tidying these for some studies than others, which I would have included in the time)</li>
+<li>Whether subjectively feel that need to add random seeds during reproduction stage, if results vary considerably between each run, and so a certain seed could get a much more similar result than another</li>
+</ul>
+<p>At an estimate, this uncertainty between study timings would lead me to conclude that the timings are approximately correct, give or take up to about four hours. However, this is just an estimate, and it is worth noting that <span class="citation" data-cites="krafczyk_learning_2021">Krafczyk et al. (<a href="#ref-krafczyk_learning_2021" role="doc-biblioref">2021</a>)</span>, who also conducted computational reproducibility assessments in a different context, estimated that human error introduced a maximum of 8 hours ambiguity in the timings, due to the “non-precise nature of starting and stopping the watch consistently”.</p>
+</section>
+<section id="references" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="references"><span class="header-section-number">3.4</span> References</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-association_for_computing_machinery_acm_artifact_2020" class="csl-entry" role="listitem">
+Association for Computing Machinery (ACM). 2020. <span>“Artifact <span>Review</span> and <span>Badging</span> <span>Version</span> 1.1.”</span> <em>ACM</em>. <a href="https://www.acm.org/publications/policies/artifact-review-and-badging-current">https://www.acm.org/publications/policies/artifact-review-and-badging-current</a>.
+</div>
+<div id="ref-association_for_psychological_science_aps_psychological_2023" class="csl-entry" role="listitem">
+Association for Psychological Science (APS). 2023. <span>“Psychological <span>Science</span> <span>Submission</span> <span>Guidelines</span>.”</span> <em>APS</em>. <a href="https://www.psychologicalscience.org/publications/psychological_science/ps-submissions">https://www.psychologicalscience.org/publications/psychological_science/ps-submissions</a>.
+</div>
+<div id="ref-blohowiak_badges_2023" class="csl-entry" role="listitem">
+Blohowiak, Ben B., Johanna Cohoon, Lee de-Wit, Eric Eich, Frank J. Farach, Fred Hasselman, Alex O. Holcombe, Macartan Humphreys, Melissa Lewis, and Brian A. Nosek. 2023. <span>“Badges to <span>Acknowledge</span> <span>Open</span> <span>Practices</span>.”</span> <a href="https://osf.io/tvyxz/">https://osf.io/tvyxz/</a>.
+</div>
+<div id="ref-hardwicke_transparency_2023" class="csl-entry" role="listitem">
+Hardwicke, Tom E., and Simine Vazire. 2023. <span>“Transparency <span>Is</span> <span>Now</span> the <span>Default</span> at <span>Psychological</span> <span>Science</span>.”</span> <em>Psychological Science</em> 0 (0). https://doi.org/<a href="https://doi.org/10.1177/09567976231221573">https://doi.org/10.1177/09567976231221573</a>.
+</div>
 <div id="ref-heather_protocol_2024" class="csl-entry" role="listitem">
 Heather, Amy, Thomas Monks, Alison Harper, Navonil Mustafee, and Andrew Mayne. 2024. <span>“Protocol for Assessing the Computational Reproducibility of Discrete-Event Simulation Models on <span>STARS</span>,”</span> June. <a href="https://zenodo.org/records/12179846">https://zenodo.org/records/12179846</a>.
+</div>
+<div id="ref-huang_optimizing_2019" class="csl-entry" role="listitem">
+Huang, Shiwei, Julian Maingard, Hong Kuan Kok, Christen D. Barras, Vincent Thijs, Ronil V. Chandra, Duncan Mark Brooks, and Hamed Asadi. 2019. <span>“Optimizing <span>Resources</span> for <span>Endovascular</span> <span>Clot</span> <span>Retrieval</span> for <span>Acute</span> <span>Ischemic</span> <span>Stroke</span>, a <span>Discrete</span> <span>Event</span> <span>Simulation</span>.”</span> <em>Frontiers in Neurology</em> 10 (June). <a href="https://doi.org/10.3389/fneur.2019.00653">https://doi.org/10.3389/fneur.2019.00653</a>.
+</div>
+<div id="ref-institute_of_electrical_and_electronics_engineers_ieee_about_nodate" class="csl-entry" role="listitem">
+Institute of Electrical and Electronics Engineers (IEEE). n.d. <span>“About <span>Content</span> in <span>IEEE</span> <span>Xplore</span>.”</span> <em>IEEE Explore</em>. Accessed May 20, 2024. <a href="https://ieeexplore.ieee.org/Xplorehelp/overview-of-ieee-xplore/about-content">https://ieeexplore.ieee.org/Xplorehelp/overview-of-ieee-xplore/about-content</a>.
+</div>
+<div id="ref-johnson_cost_2021" class="csl-entry" role="listitem">
+Johnson, Kate M., Mohsen Sadatsafavi, Amin Adibi, Larry Lynd, Mark Harrison, Hamid Tavakoli, Don D. Sin, and Stirling Bryan. 2021. <span>“Cost <span>Effectiveness</span> of <span>Case</span> <span>Detection</span> <span>Strategies</span> for the <span>Early</span> <span>Detection</span> of <span>COPD</span>.”</span> <em>Applied Health Economics and Health Policy</em> 19 (2): 203–15. <a href="https://doi.org/10.1007/s40258-020-00616-2">https://doi.org/10.1007/s40258-020-00616-2</a>.
+</div>
+<div id="ref-kim_modelling_2021" class="csl-entry" role="listitem">
+Kim, Lois G., Michael J. Sweeting, Morag Armer, Jo Jacomelli, Akhtar Nasim, and Seamus C. Harrison. 2021. <span>“Modelling the Impact of Changes to Abdominal Aortic Aneurysm Screening and Treatment Services in <span>England</span> During the <span>COVID</span>-19 Pandemic.”</span> <em>PLOS ONE</em> 16 (6): e0253327. <a href="https://doi.org/10.1371/journal.pone.0253327">https://doi.org/10.1371/journal.pone.0253327</a>.
+</div>
+<div id="ref-krafczyk_learning_2021" class="csl-entry" role="listitem">
+Krafczyk, M. S., A. Shi, A. Bhaskar, D. Marinov, and V. Stodden. 2021. <span>“Learning from Reproducing Computational Results: Introducing Three Principles and the <span>Reproduction</span> <span>Package</span>.”</span> <em>Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences</em> 379 (2197): 20200069. <a href="https://doi.org/10.1098/rsta.2020.0069">https://doi.org/10.1098/rsta.2020.0069</a>.
+</div>
+<div id="ref-monks_strengthening_2019" class="csl-entry" role="listitem">
+Monks, Thomas, Christine S. M. Currie, Bhakti Stephan Onggo, Stewart Robinson, Martin Kunc, and Simon J. E. Taylor. 2019. <span>“Strengthening the Reporting of Empirical Simulation Studies: <span>Introducing</span> the <span>STRESS</span> Guidelines.”</span> <em>Journal of Simulation</em> 13 (1): 55–67. <a href="https://doi.org/10.1080/17477778.2018.1442155">https://doi.org/10.1080/17477778.2018.1442155</a>.
+</div>
+<div id="ref-monks_towards_2024" class="csl-entry" role="listitem">
+Monks, Thomas, Alison Harper, and Navonil Mustafee. 2024. <span>“Towards Sharing Tools and Artefacts for Reusable Simulations in Healthcare.”</span> <em>Journal of Simulation</em> 0 (0): 1–20. <a href="https://doi.org/10.1080/17477778.2024.2347882">https://doi.org/10.1080/17477778.2024.2347882</a>.
+</div>
+<div id="ref-niso_reproducibility_badging_and_definitions_working_group_reproducibility_2021" class="csl-entry" role="listitem">
+NISO Reproducibility Badging and Definitions Working Group. 2021. <span>“Reproducibility <span>Badging</span> and <span>Definitions</span>.”</span> <a href="https://doi.org/10.3789/niso-rp-31-2021">https://doi.org/10.3789/niso-rp-31-2021</a>.
+</div>
+<div id="ref-zhang_reporting_2020" class="csl-entry" role="listitem">
+Zhang, Xiange, Stefan K. Lhachimi, and Wolf H. Rogowski. 2020. <span>“Reporting <span>Quality</span> of <span>Discrete</span> <span>Event</span> <span>Simulations</span> in <span>Healthcare</span>—<span>Results</span> <span>From</span> a <span>Generic</span> <span>Reporting</span> <span>Checklist</span>.”</span> <em>Value in Health</em> 23 (4): 506–14. <a href="https://doi.org/10.1016/j.jval.2020.01.005">https://doi.org/10.1016/j.jval.2020.01.005</a>.
 </div>
 </div>
 </section>
@@ -696,6 +841,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","openEffect":"zoom","descPosition":"bottom","loop":false,"selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
