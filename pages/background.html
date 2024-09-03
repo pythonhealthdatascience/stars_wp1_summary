@@ -62,6 +62,9 @@ div.csl-indent {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -217,7 +220,13 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#references" id="toc-references" class="nav-link active" data-scroll-target="#references"><span class="header-section-number">2.1</span> References</a></li>
+  <li><a href="#pilot-work" id="toc-pilot-work" class="nav-link active" data-scroll-target="#pilot-work"><span class="header-section-number">2.1</span> Pilot work</a>
+  <ul class="collapse">
+  <li><a href="#review-of-healthcare-simulation-sharing-practices" id="toc-review-of-healthcare-simulation-sharing-practices" class="nav-link" data-scroll-target="#review-of-healthcare-simulation-sharing-practices"><span class="header-section-number">2.1.1</span> Review of healthcare simulation sharing practices</a></li>
+  <li><a href="#pilot-stars-framework" id="toc-pilot-stars-framework" class="nav-link" data-scroll-target="#pilot-stars-framework"><span class="header-section-number">2.1.2</span> Pilot STARS framework</a></li>
+  </ul></li>
+  <li><a href="#stars-project" id="toc-stars-project" class="nav-link" data-scroll-target="#stars-project"><span class="header-section-number">2.2</span> STARS project</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">2.3</span> References</a></li>
   </ul>
 </nav>
     </div>
@@ -243,21 +252,122 @@ div.csl-indent {
 </header>
 
 
-<!-- TODO: Write an introduction -->
-<p>Review: <span class="citation" data-cites="monks_computer_2023">Monks and Harper (<a href="#ref-monks_computer_2023" role="doc-biblioref">2023</a>)</span></p>
-<p>Framework: <span class="citation" data-cites="monks_towards_2024">Monks, Harper, and Mustafee (<a href="#ref-monks_towards_2024" role="doc-biblioref">2024</a>)</span></p>
+<p>This book describes work from <strong>work package 1</strong> of the project STARS: Sharing Tools and Artefacts for Reproducible Simulations in healthcare.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="../images/stars_framework_overview.png" class="img-fluid figure-img"></p>
+<p><img src="../images/stars_banner.png" class="img-fluid figure-img"></p>
+<figcaption>STARS: Sharing Tools and Artefacts for Reproducible Simulations in healthcare</figcaption>
+</figure>
+</div>
+<p>The project was funded for two years by the <a href="https://gtr.ukri.org/projects?ref=MR%2FZ503915%2F1">Medical Research Council</a>, from April 2024 to April 2026. Prior to this funding, some <strong>pilot work</strong> was carried out by Tom Monks, Alison Harper and Nav Mustafee. This included a review of code sharing practices and the development of the STARS framework.</p>
+<section id="pilot-work" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="pilot-work"><span class="header-section-number">2.1</span> Pilot work</h2>
+<section id="review-of-healthcare-simulation-sharing-practices" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="review-of-healthcare-simulation-sharing-practices"><span class="header-section-number">2.1.1</span> Review of healthcare simulation sharing practices</h3>
+<p><span class="citation" data-cites="monks_computer_2023">Monks and Harper (<a href="#ref-monks_computer_2023" role="doc-biblioref">2023</a>)</span> explored how discrete-event simulation (DES) models used in a health context (e.g.&nbsp;health services, health economics) were shared and whether this sharing adhered to best practice. The full study can be viewed at:</p>
+<blockquote class="blockquote">
+<p>Monks, Thomas, and Alison Harper. 2023. “Computer Model and Code Sharing Practices in Healthcare Discrete-Event Simulation: A Systematic Scoping Review.” Journal of Simulation 0 (0): 1–16. <a href="https://doi.org/10.1080/17477778.2023.2260772" class="uri">https://doi.org/10.1080/17477778.2023.2260772</a>.</p>
+</blockquote>
+<p>In summary, they identified 564 papers describing a DES model from a health context published from 2019 to 2022. Of these, only <strong>8.3% (47/564) had available model code</strong> (either sharing the code themselves, or citing an openly available model). Looking by year, this rose from 4.0% for studies published in 2019, to 9.0% for 2022.</p>
+<p>Further findings:</p>
+<ul>
+<li>More likely that code was shared if model was:
+<ul>
+<li>Created using free and open source software (FOSS) (28.7%, 29/101)</li>
+<li>A COVID-19 model (24.6%, 17/69)</li>
+</ul></li>
+<li>Of the papers that did share a model:
+<ul>
+<li>Most were written in a programming language (66%, 31/47), the rest in a commercial off the shelf Visual Interactive Modelling (VIM) software</li>
+<li>These were evaluated in a best practice audit, with the results as follows: “In general, computer models and artefacts were published without a DOI (n = 7); rarely included ORCIDs for authors (n = 6); rarely included an open licence (n = 21); were mostly supported by a README file (n = 28); rarely included documentation detailing how to run the model (n = 15); provided no form of formal or informal dependency management (n = 21); did not include any evidence of model testing (n = 3); were almost all downloadable (n = 38); and rarely executable via a cloud-based platform (n = 10).” (<span class="citation" data-cites="monks_computer_2023">Monks and Harper (<a href="#ref-monks_computer_2023" role="doc-biblioref">2023</a>)</span>)</li>
+</ul></li>
+<li>Few studies used a reporting guideline (12.8%, 72/564) - mostly using:
+<ul>
+<li>One of the International Society for Pharmacoeconomics and Outcomes Research (ISPOR) publications (n=37), or</li>
+<li>The Strengthening the Reporting of Empirical Simulation Studies (STRESS) guidelines from <span class="citation" data-cites="monks_strengthening_2019">Monks et al. (<a href="#ref-monks_strengthening_2019" role="doc-biblioref">2019</a>)</span> (n=22)</li>
+</ul></li>
+</ul>
+<p>The review concludes that “there are many (simple) best practices the community can adopt, such as the use of trusted archives, and documentation, to improve its sharing”. (<span class="citation" data-cites="monks_computer_2023">Monks and Harper (<a href="#ref-monks_computer_2023" role="doc-biblioref">2023</a>)</span>)</p>
+</section>
+<section id="pilot-stars-framework" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="pilot-stars-framework"><span class="header-section-number">2.1.2</span> Pilot STARS framework</h3>
+<p><span class="citation" data-cites="monks_towards_2024">Monks, Harper, and Mustafee (<a href="#ref-monks_towards_2024" role="doc-biblioref">2024</a>)</span> introduces a pilot framework for sharing DES models called STARS: Sharing Tools and Artefacts for Reusable Simulations. Note that this “reusable” is changed into “reproducible” for the STARS project as we build on this work in the current project.</p>
+<p>The pilot STARS framework consists of essential components (minimum to make models “long-term, citable, functional, appropriately licenced”) and optional components (enhance model “accessibility, understanding, and maintainability”). (<span class="citation" data-cites="monks_towards_2024">Monks, Harper, and Mustafee (<a href="#ref-monks_towards_2024" role="doc-biblioref">2024</a>)</span>)</p>
+<p>The essential components are:</p>
+<ul>
+<li>Open license</li>
+<li>Dependency management</li>
+<li>FOSS model</li>
+<li>Minimum documentation</li>
+<li>Open Researcher and Contributor IDs (ORCID)</li>
+<li>Citation information</li>
+<li>Remote code repository</li>
+<li>Open science archive</li>
+</ul>
+<p>The optional components are:</p>
+<ul>
+<li>Enhanced documentation</li>
+<li>Documentation hosting</li>
+<li>Online coding environment</li>
+<li>Model interface</li>
+<li>Web app hosting</li>
+</ul>
+<p>This is summarised in the diagram below…</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="../images/stars_framework_overview.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="STARS framework overview"><img src="../images/stars_framework_overview.png" class="img-fluid figure-img" alt="STARS framework overview"></a></p>
 <figcaption>STARS framework overview</figcaption>
 </figure>
 </div>
-<p>Aim of this work: Computational reproducibility assessments of six discrete event simulation models in Python and R.</p>
-<section id="references" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="references"><span class="header-section-number">2.1</span> References</h2>
+<p>This was supported by example implementations in Python:</p>
+<ul>
+<li>Example 1 - <a href="https://github.com/pythonhealthdatascience/stars-treat-sim">stars-treat-sim</a></li>
+<li>Example 2 - <a href="https://github.com/pythonhealthdatascience/stars-streamlit-example">stars-streamlit-example</a> and <a href="https://github.com/pythonhealthdatascience/stars-simpy-example-docs">stars-simpy-example-docs</a> - with <a href="https://stars-simpy-example.streamlit.app/">web app</a> and <a href="https://pythonhealthdatascience.github.io/stars-simpy-example-docs">hosted docs</a></li>
+<li>Example 3 - <a href="https://github.com/pythonhealthdatascience/stars-ciw-example">stars-ciw-example</a> - with <a href="https://pythonhealthdatascience.shinyapps.io/stars-ciw-examplar">web app</a> and <a href="https://pythonhealthdatascience.github.io/stars-ciw-example">hosted docs</a></li>
+</ul>
+</section>
+</section>
+<section id="stars-project" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="stars-project"><span class="header-section-number">2.2</span> STARS project</h2>
+<p>The MRC-funded STARS project builds on this pilot work. As stated in the funding application, the objective of this project is “to improve the quality and quantity of shared discrete-event simulation models, tools and other research artefacts:</p>
+<ol type="1">
+<li>Identify barriers, and good practices for sharing simulation models;</li>
+<li>Develop a new framework for sharing computer models applicable the most common free and open-source languages;</li>
+<li>Test the framework in both retrospective and prospective case studies;</li>
+<li>Develop online interactive training materials;</li>
+<li>Transfer knowledge of our STARS framework to health data science researchers;</li>
+<li>Ensure sustainability of materials;</li>
+<li>Support our partner archival journals adopt open science principles and our findings;”</li>
+</ol>
+<p>This objectives will be achieved through four work packages:</p>
+<p><strong>Work package 1: Reproducibility of computational results</strong></p>
+<ul>
+<li>Assess the computational reproducibility of six published DES models created in Python and R.</li>
+<li>Evaluate the publication, code and associated artefacts against reporting guidelines, best practice for code sharing, and criteria from journal artefact badges.</li>
+</ul>
+<p><strong>Work package 2: R and Python framework for sharing DES models</strong></p>
+<ul>
+<li>Improve the pilot framework (e.g.&nbsp;extend baesd on barriers and enablers to reproduction observed in work package 1, and making it relevant to R models)</li>
+<li>Provide time-saving measures for researchers (e.g.&nbsp;automated support for STRESS, use of large language models (LLM) to support creating of summaries, automated testing of models, continuous integration tools)</li>
+</ul>
+<p><strong>Work package 3: Prospective and retrospective application of the framework</strong></p>
+<ul>
+<li>Apply STARS framework within two case studies (one prospective and one retrospective)</li>
+</ul>
+<p><strong>Work package 4: Training</strong></p>
+<ul>
+<li>Develop online interactive training materials to support researchers in using the STARS framework</li>
+</ul>
+<p>From this point onwards, this site/book summarises the findings from work package 1.</p>
+</section>
+<section id="references" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="references"><span class="header-section-number">2.3</span> References</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-monks_strengthening_2019" class="csl-entry" role="listitem">
+Monks, Thomas, Christine S. M. Currie, Bhakti Stephan Onggo, Stewart Robinson, Martin Kunc, and Simon J. E. Taylor. 2019. <span>“Strengthening the Reporting of Empirical Simulation Studies: <span>Introducing</span> the <span>STRESS</span> Guidelines.”</span> <em>Journal of Simulation</em> 13 (1): 55–67. <a href="https://doi.org/10.1080/17477778.2018.1442155">https://doi.org/10.1080/17477778.2018.1442155</a>.
+</div>
 <div id="ref-monks_computer_2023" class="csl-entry" role="listitem">
 Monks, Thomas, and Alison Harper. 2023. <span>“Computer Model and Code Sharing Practices in Healthcare Discrete-Event Simulation: A Systematic Scoping Review.”</span> <em>Journal of Simulation</em> 0 (0): 1–16. <a href="https://doi.org/10.1080/17477778.2023.2260772">https://doi.org/10.1080/17477778.2023.2260772</a>.
 </div>
@@ -701,6 +811,38 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"descPosition":"bottom","closeEffect":"zoom","openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
