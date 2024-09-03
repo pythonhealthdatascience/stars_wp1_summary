@@ -1,134 +1,183 @@
-\hypertarget{stars-framework-checklist}{%
-\section{STARS Framework Checklist}\label{stars-framework-checklist}}
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 
-\hypertarget{essential-components}{%
-\subsection{Essential components}\label{essential-components}}
+\author{}
+\date{}
+
+\begin{document}
+
+\section{STARS Framework}
+
+\subsection{Checklist}
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
-\begin{minipage}[b]{0.47\columnwidth}\raggedright
-Item\strut
-\end{minipage} & \begin{minipage}[b]{0.47\columnwidth}\raggedright
-Implementation\strut
-\end{minipage}\tabularnewline
+Item & Implementation\tabularnewline
 \midrule
 \endhead
-\begin{minipage}[t]{0.47\columnwidth}\raggedright
-\textbf{Open license}\emph{Free and open-source software (FOSS) license
-(e.g.~MIT, GNU Public License (GPL))}\strut
-\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.47\columnwidth}\raggedright
-\textbf{Dependency management}\emph{Specify software libraries, version
-numbers and sources (e.g.~dependency management tools like virtualenv,
-conda, poetry)}\strut
-\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.47\columnwidth}\raggedright
-\textbf{FOSS model}\emph{Coded in FOSS language (e.g.~R, Julia,
-Python)}\strut
-\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.47\columnwidth}\raggedright
-\textbf{Minimum documentation}\emph{Minimal instructions (e.g.~in
-README) that overview (a) what model does, (b) how to install and run
-model to obtain results, and (c) how to vary parameters to run new
-experiments}\strut
-\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.47\columnwidth}\raggedright
-\textbf{ORCID}\emph{ORCID for each study author}\strut
-\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.47\columnwidth}\raggedright
-\textbf{Citation information}\emph{Instructions on how to cite the
-research artefact (e.g.~CITATION.cff file)}\strut
-\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.47\columnwidth}\raggedright
-\textbf{Remote code repository}\emph{Code available in a remote code
-repository (e.g.~GitHub, GitLab, BitBucket)}\strut
-\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.47\columnwidth}\raggedright
-\textbf{Open science archive}\emph{Code stored in an open science
-archive with FORCE11 compliant citation and guaranteed persistance of
-digital artefacts (e.g.~Figshare, Zenodo, the Open Science Framework
-(OSF), and the Computational Modeling in the Social and Ecological
-Sciences Network (CoMSES Net))}\strut
-\end{minipage} & \begin{minipage}[t]{0.47\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
+\textbf{Essential components} &\tabularnewline
+Open license & \emph{Describe your implementation of this
+component}\tabularnewline
+Dependency management &\tabularnewline
+FOSS model &\tabularnewline
+Minimum documentation &\tabularnewline
+ORCID &\tabularnewline
+Citation information &\tabularnewline
+Remote code repository &\tabularnewline
+Open science archive &\tabularnewline
+\textbf{Optional components} &\tabularnewline
+Enhanced documentation &\tabularnewline
+Documentation hosting &\tabularnewline
+Online coding environment &\tabularnewline
+Model interface &\tabularnewline
+Web app hosting &\tabularnewline
 \bottomrule
 \end{longtable}
 
-\hypertarget{optional-components}{%
-\subsection{Optional components}\label{optional-components}}
+\subsection{Description}
 
-\begin{longtable}[]{@{}lll@{}}
-\toprule
-\begin{minipage}[b]{0.30\columnwidth}\raggedright
-Item\strut
-\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\raggedright
-Description\strut
-\end{minipage} & \begin{minipage}[b]{0.30\columnwidth}\raggedright
-Implementation\strut
-\end{minipage}\tabularnewline
-\midrule
-\endhead
-\begin{minipage}[t]{0.30\columnwidth}\raggedright
-Enhanced documentation\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+\subsubsection{Essential components}
+
+\paragraph{Open license}
+
+Free and open-source software (FOSS) license (e.g. MIT, GNU Public
+License (GPL))
+
+\paragraph{Dependency management}
+
+Specify software libraries, version numbers and sources (e.g. dependency
+management tools like virtualenv, conda, poetry)
+
+\paragraph{FOSS model}
+
+Coded in FOSS language (e.g. R, Julia, Python)
+
+\paragraph{Minimum documentation}
+
+Minimal instructions (e.g. in README) that overview (a) what model does,
+(b) how to install and run model to obtain results, and (c) how to vary
+parameters to run new experiments
+
+\paragraph{ORCID}
+
+ORCID for each study author
+
+\paragraph{Citation information}
+
+Instructions on how to cite the research artefact (e.g. CITATION.cff
+file)
+
+\paragraph{Remote code repository}
+
+Code available in a remote code repository (e.g. GitHub, GitLab,
+BitBucket)
+
+\paragraph{Open science archive}
+
+Code stored in an open science archive with FORCE11 compliant citation
+and guaranteed persistance of digital artefacts (e.g. Figshare, Zenodo,
+the Open Science Framework (OSF), and the Computational Modeling in the
+Social and Ecological Sciences Network (CoMSES Net))
+
+\subsubsection{Optional components}
+
+\paragraph{Enhanced documentation}
+
 Open and high quality documentation on how the model is implemented and
-works (e.g.~via notebooks and markdown files, brought together using
-software like Quarto and Jupyter Book). Suggested content includes:•
-Plain english summary of project and model• Clarifying license• Citation
-instructions• Contribution instructions• Model installation
-instructions• Structured code walk through of model• Documentation of
-modelling cycle using TRACE• Annotated simulation reporting guidelines•
-Clear description of model validation including its intended
-purpose\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.30\columnwidth}\raggedright
-Documentation hosting\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-Host documentation (e.g.~with GitHub pages, GitLab pages, BitBucket
-Cloud, Quarto Pub)\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.30\columnwidth}\raggedright
-Online coding environment\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-Provide an online environment where users can run and change code
-(e.g.~BinderHub, Google Colaboratory, Deepnote)\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.30\columnwidth}\raggedright
-Model interface\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
+works (e.g. via notebooks and markdown files, brought together using
+software like Quarto and Jupyter Book). Suggested content includes:
+
+\begin{itemize}
+\tightlist
+\item
+  Plain english summary of project and model
+\item
+  Clarifying license
+\item
+  Citation instructions
+\item
+  Contribution instructions
+\item
+  Model installation instructions
+\item
+  Structured code walk through of model
+\item
+  Documentation of modelling cycle using TRACE
+\item
+  Annotated simulation reporting guidelines
+\item
+  Clear description of model validation including its intended purpose
+\end{itemize}
+
+\paragraph{Documentation hosting}
+
+Host documentation (e.g. with GitHub pages, GitLab pages, BitBucket
+Cloud, Quarto Pub)
+
+\paragraph{Online coding environment}
+
+Provide an online environment where users can run and change code (e.g.
+BinderHub, Google Colaboratory, Deepnote)
+
+\paragraph{Model interface}
+
 Provide web application interface to the model so it is accessible to
-less technical simulation users\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\begin{minipage}[t]{0.30\columnwidth}\raggedright
-Web app hosting\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-Host web app online (e.g.~Streamlit Community Cloud, ShinyApps
-hosting)\strut
-\end{minipage} & \begin{minipage}[t]{0.30\columnwidth}\raggedright
-\strut
-\end{minipage}\tabularnewline
-\bottomrule
-\end{longtable}
+less technical simulation users
+
+\paragraph{Web app hosting}
+
+Host web app online (e.g. Streamlit Community Cloud, ShinyApps hosting)
+
+\end{document}
