@@ -15,6 +15,8 @@ Between each journal badge, there was often alot of overlap in criteria. Hence, 
 
 ## Summary
 
+<!-- TODO: Add Johnson et al. 2021 -->
+
 **Unique badge criteria:**
 
 ```{python}
@@ -27,7 +29,7 @@ criteria_dict = {
   'Shoaib and<br>Ramamohan 2021': [3, 0, 9, 0],
   'Huang et al. 2019': [3, 0, 9, 0],
   'Lim et al. 2020': [3, 0, 9, 0],
-  'Kim et al. 2021': [0, 0, 0, 1],
+  'Kim et al. 2021': [5, 0, 7, 0],
   'Anagnostou et al. 2022': [10, 0, 2, 0],
   'Johnson et al. 2021': [0, 0, 0, 1]
 }
@@ -45,7 +47,7 @@ badge_dict = {
   'Shoaib and<br>Ramamohan 2021': [3, 0, 9, 0],
   'Huang et al. 2019': [0, 0, 12, 0],
   'Lim et al. 2020': [3, 0, 9, 0],
-  'Kim et al. 2021': [0, 0, 0, 1],
+  'Kim et al. 2021': [3, 0, 9, 0],
   'Anagnostou et al. 2022': [5, 0, 7, 0],
   'Johnson et al. 2021': [0, 0, 0, 1]
 }
@@ -63,7 +65,7 @@ essential_dict = {
   'Shoaib and<br>Ramamohan 2021': [2, 0, 6, 0],
   'Huang et al. 2019': [2, 0, 6, 0],
   'Lim et al. 2020': [2, 0, 6, 0],
-  'Kim et al. 2021': [0, 0, 0, 1],
+  'Kim et al. 2021': [4, 1, 3, 0],
   'Anagnostou et al. 2022': [7, 0, 1, 0],
   'Johnson et al. 2021': [0, 0, 0, 1]
 }
@@ -80,7 +82,7 @@ optional_dict = {
   'Shoaib and<br>Ramamohan 2021': [0, 0, 5, 0],
   'Huang et al. 2019': [2, 0, 3, 0],
   'Lim et al. 2020': [0, 0, 5, 0],
-  'Kim et al. 2021': [0, 0, 0, 1],
+  'Kim et al. 2021': [0, 0, 5, 0],
   'Anagnostou et al. 2022': [1, 1, 3, 0],
   'Johnson et al. 2021': [0, 0, 0, 1]
 }
@@ -191,12 +193,12 @@ Key:
 
 ## Timings
 
-<!-- Add johnson and kim -->
+<!-- TODO: Add Johnson et al. 2021 -->
 
 * @shoaib_simulation_2021 - 30m
 * @huang_optimizing_2019 - 17m
 * @lim_staff_2020 - 18m
-* @kim_modelling_2021
+* @kim_modelling_2021 - 18m
 * @anagnostou_facs-charm_2022 - 19m
 * @johnson_cost_2021
 
