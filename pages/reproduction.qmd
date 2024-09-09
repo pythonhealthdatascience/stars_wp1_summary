@@ -25,7 +25,7 @@ bibliography: ../references.bib
 | Shoaib and Ramamohan 2022 | 17 items:<br>• 1 table<br>• 9 figures<br>• 7 in-text results | 16 out of 17 (94%) | 28h 14m |
 | Huang et al. 2019 | 8 items:<br>• 5 figures<br>• 3 in-text results | 3 out of 8 (37.5%) | 24h 10m |
 | Lim et al. 2020 | 9 items:<br>• 5 tables<br>• 4 figures | 9 out of 9 (100%) | 12h 27m |
-| Kim et al. 2021 | 10 items:<br>• 3 tables<br>• 6 figures<br>• 1 in-text result | 10 out of 10 (100%) | 13h 59m |
+| Kim et al. 2021 | 10 items:<br>• 3 tables<br>• 6 figures<br>• 1 in-text result | 10 out of 10 (100%) | 14h 42m |
 | Anagnostou et al. 2022 | 1 item:<br>• 1 figure | 1 out of 1 (100%) | 2h 10m |
 | Johnson et al. 2021 | 5 items:<br>• 1 table<br>• 4 figures | TBC | TBC |
 
