@@ -21,7 +21,7 @@ This book describes the findings from work package 1 of the project **STARS: Sha
 
 Use the sidebar to navigate through:
 
-* **Introduction** - background on the STARS project, pilot work, and the aim of work package 1
+* **Introduction** - background on STARS, pilot work, and the aim of work package 1
 * **Methods** - summarises the methods which are described in detail in our protocol
 * **Results** - describes the results of the reproductions and evaluations, and reflections from the process
 * **Discussion** - considers and applies findings \
