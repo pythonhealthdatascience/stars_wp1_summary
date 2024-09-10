@@ -1,0 +1,54 @@
+---
+title: "Comparison to other studies"
+bibliography: ../references.bib
+---
+
+**In-progress**
+
+TODO: Add page comparing our findings to other studies. This could include:
+
+* Studies that have gone through this same process of finding barriers in reproductions
+* Studies that recommend how to share code (although, it might be simpler to just start with that first bullet and then decide whether to do both)
+
+*Do we also compare the evaluation results? Or do we just use that in context of barriers?* (e.g. @schwander_replication_2021 and @zhang_reporting_2020 for reporting... @laurinavichyute_share_2022 for code...)
+
+*not sure if want to be comparing the actual proportions reproduced... or maybe do, but important to bare in mind what is being compared and what define as success... e.g. some include studies that haven't shared the code*
+
+Starting points:
+
+* @krafczyk_learning_2021 - results are recommendations based on experiences, which were:
+    * can see completion in figure 1
+    * being clear on links between article, code and data (e.g. which code uses which data, and which parts of code made each bit of article)
+    * include scripts for each aspect of article, with it easy to locate the scripts needed, and the scripts including the parameters needed and clearly label
+    * be clear about hardware needed, e.g. if large amount of computing resources would be required. at least report hardware used. ideally include "small test case that can be run by users with conventional hardware"
+    * list software dependencies and versions
+    * use seeds, and report seed you used
+    * make all code and data available with an appropriate license
+    * include master script that runs in computations in publication
+    * use same terminology in code and article
+    * use version control and specify the e.g. commit hash that identifies the version used
+    * avoid hard coding parameters
+    * design scripts in a way that allows people to easily change parameters and run again
+    * avoid hard coding file paths
+    * provide script that checks whether users results match original (within expected deviation)
+    * if compare against competing methods, include info on how those were implemented and tested
+    * use build system for C/C++ code
+    * provide scripts to make the figures and tables
+* @wood_push_2018
+    * complete data: 27 comparable results, 5 minor differences, 0 major differences
+    * incomplete data: 10 comparable, 4 minor differences, 1 major differences
+    * main issue was the code and data not being shared
+* @schwander_replication_2021
+    * reproduction success for 3 out of 4 models
+    * facilitators:
+        * "Model structure and possible state transitions were presented in a state transition diagram"
+        * "Overview of input parameters was provided in table format"
+    * hurdles:
+        * "PSAs were performed" (probablistic sensitivity analysis)
+        * "Relevant PSA values for PSA result reproduction were provided (type of distribution and either mean and standard deviation or distribution parameters were provided)"
+        * "Clinical event simulation results were provided (which are very helpful to guide potential assumptions to be made for rebuilding the model and which provide an additional means of testing the fit of the replication)"
+        * "Relevant details on the underlying life tables were provided (including year of data)"
+        * "Several self-created regression equations were introduced but without details on how to apply/solve the provided regressions correctly"
+* @laurinavichyute_share_2022
+* @konkol_computational_2019
+* @hardwicke_analytic_2021

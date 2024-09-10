@@ -20,6 +20,7 @@ book:
   - part: "Discussion"
     chapters:
     - pages/framework.qmd
+    - pages/other_studies.qmd
   favicon: images/stars_logo_blue.png
   search:
     location: navbar
