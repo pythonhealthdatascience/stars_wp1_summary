@@ -1,0 +1,6 @@
+---
+title: "Relationship between reproduction and evaluation"
+bibliography: ../references.bib
+---
+
+TODO: Add this page, to assess whether (and if so, how) there is a relationship between the evaluation (code and/or reporting) and how easy it was / able we were to reproduce
