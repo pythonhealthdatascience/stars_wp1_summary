@@ -1,0 +1,6 @@
+---
+title: "Acknowledgements"
+bibliography: ../references.bib
+---
+
+We would like to thank the authors who made their code available under open licenses, facilitating our research. We are especially grateful to the following authors for their helpful communication and support throughout the project: <!--TODO: Ask authors who have emailed with us for their permission to include their name in the acknowledgements -->
