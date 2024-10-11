@@ -15,6 +15,8 @@ Between each journal badge, there was often alot of overlap in criteria. Hence, 
 
 Consider: **What criteria are people struggling to meet from the guidelines?**
 
+<!-- TODO: Once complete, carefully go over again and check everything is correct -->
+
 ## Summary
 
 <!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->

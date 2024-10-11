@@ -7,6 +7,8 @@ format:
 bibliography: ../references.bib
 ---
 
+<!-- TODO: Once complete, carefully go over again and check everything is correct -->
+
 This page shares the results from the evaluation of the journal articles against criteria from two discrete-event simulation study reporting guidelines:
 
 * @monks_strengthening_2019 - STRESS-DES: Strengthening The Reporting of Empirical Simulation Studies (Discrete-Event Simulation) (Version 1.0).

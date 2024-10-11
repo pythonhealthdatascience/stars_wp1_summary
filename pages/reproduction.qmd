@@ -4,6 +4,8 @@ echo: False
 bibliography: ../references.bib
 ---
 
+<!-- TODO: Once complete, carefully go over again and check everything is correct -->
+
 ## Studies
 
 **@shoaib_simulation_2021:** Uses **python (salabim)** to model primary health centres (PHCs) in India. The model has four patient types: outpatients, inpatients, childbirth cases and antenatal care patients. Four model configurations are developed based on observed PHC practices or government-mandated operational guidelines. The paper explores different operational patterns for scenarios where very high utilisation was observed, to explore what might help reduce utilisation of these resources. Note: The article was as @shoaib_simulation_2022, but we used the green open access pre-print @shoaib_simulation_2021. <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>

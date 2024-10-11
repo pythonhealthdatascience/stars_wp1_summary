@@ -18,6 +18,12 @@ Links to each study:
 * @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/reflections.html" target="_blank">link to reflections</a>
 * @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/reflections.html" target="_blank">link to reflections</a>
 
+<!-- TODO: Consider whether to make further attempts at managing to backdate R. Didn't manage before. E.g. `containerit` package. Although - is it necessary, if I succeeded without? Note, I always backdated the python environments. So, relatedly, TODO: Is it worth checking/trying with newest Python and seeing if they would work?</mark -->
+
+<!-- TODO: Add reflections related specifically to the reproduction package and second reproduction test parts of the work (i.e. after the reproduction) -->
+
+<!-- TODO: Once complete, carefully go over again and check everything is correct -->
+
 ## Environment
 
 ::: {.callout-note icon=false collapse=true}
