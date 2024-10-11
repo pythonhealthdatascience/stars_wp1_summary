@@ -12,11 +12,15 @@ bibliography: ../references.bib
 
 **@lim_staff_2020:** Uses **python (numpy and pandas)** to model the transmission of COVID-19 in a laboratory. It examines the proportion of staff infected in scenarios varying the: number of shifts per day; number of staff per shift; overall staff pool; shift patterns; secondary attack rate of the virus; introduction of protective measures (social distancing and personal protective equipment). <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
 
-**@kim_modelling_2021:** Adapts a previously developed **R (Rcpp, expm, msm, foreach, iterators, doParallel)** model for abdominal aortic aneurysm (AAA) screening of men in England. The model is adapted/used to explore different approaches to resuming screening and surgical repair for AAA, as these survives were paused or substantially reduced during COVID-19 due to concerns about virus transmission. <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
+**@kim_modelling_2021:** Adapts a previously developed **R (Rcpp, expm, msm, foreach, iterators, doParallel)** model for abdominal aortic aneurysm (AAA) screening of men in England. The model is adapted/used to explore different approaches to resuming screening and surgical repair for AAA, as these services were paused or substantially reduced during COVID-19 due to concerns about virus transmission. <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
 
 **@anagnostou_facs-charm_2022:** This paper includes two models - we have focussed just on the dynamiC Hospital wARd Management (CHARM) model. CHARM uses **Python (simpy)** to model intensive care units (ICU) in the COVID-19 pandemic (as well as subsequent stays in a recovery bed). It includes three types of admission to the ICU (emergency, elective or COVID-19). COVID-19 patients are kept seperate, and if they run out of capacity due to a surge in COVID-19 admissions, additional capacity can be pooled from the elective and emergency capacity. <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
 
 **@johnson_cost_2021:** TBC <!-- TODO: Add Johnson -->
+
+**@hernandez_optimal_2015:** TBC <!-- TODO -->
+
+**@wood_value_2021:** TBC <!-- TODO -->
 
 ## Scope
 
@@ -26,12 +30,14 @@ bibliography: ../references.bib
 | Huang et al. 2019 | 8 items:<br>• 5 figures<br>• 3 in-text results | 3 out of 8 (37.5%) | 24h 10m |
 | Lim et al. 2020 | 9 items:<br>• 5 tables<br>• 4 figures | 9 out of 9 (100%) | 12h 27m |
 | Kim et al. 2021 | 10 items:<br>• 3 tables<br>• 6 figures<br>• 1 in-text result | 10 out of 10 (100%) | 14h 42m |
-| Anagnostou et al. 2022 | 1 item:<br>• 1 figure | 1 out of 1 (100%) | 2h 10m |
+| Anagnostou et al. 2022 | 1 item:<br>• 1 figure | 1 out of 1 (100%) | 2h 11m |
 | Johnson et al. 2021 | 5 items:<br>• 1 table<br>• 4 figures | TBC | TBC |
+| Hernandez et al. 2015 | 8 items:<br>• 6 figures<br>• 2 tables | TBC | TBC |
+| Wood et al. 2021 | 5 items:<br>• 4 figures<br>• 1 table | TBC | TBC |
 
 ## Time to completion
 
-<!-- TODO: Add Johnson et al. 2021 once conducted reproduction -->
+<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 once conducted reproduction -->
 
 ```{python}
 # Import required libraries and functions
@@ -112,6 +118,12 @@ df_ana = process_times(time_ana)
 # Johnson et al. 2021
 # TODO: Add times once completed reproduction 
 
+# Hernandez et al. 2015
+# TODO: Add times once completed reproduction 
+
+# Wood et al. 2021
+# TODO: Add times once completed reproduction 
+
 # Create list with the dataframes, labels and colours, to use for each plot
 to_plot = [
     (df_sho, 'Shoaib and<br>Ramamohan<br>2022', '#ee6677'),
@@ -119,7 +131,9 @@ to_plot = [
     (df_lim, 'Lim et<br>al. 2020', '#4477aa'),
     (df_kim, 'Kim et<br>al. 2021', '#ccbb44'),
     (df_ana, 'Anagnostou<br>et al. 2022', '#66ccee')
-    # 'Johnson et al. 2021', '#aa3377')
+    # (df_joh, 'Johnson et<br>al. 2021', '#aa3377'),
+    # (df_her, 'Hernandez<br>et al. 2015', '#117733'),
+    # (df_woo, 'Woord et al.<br>2021', '#882255')
 ]
 ```
 

@@ -13,9 +13,11 @@ Between each journal badge, there was often alot of overlap in criteria. Hence, 
 
 *Caveat: Please note that these criteria are based on available information about each badge online, and that we have likely differences in our procedure (e.g. allowed troubleshooting for execution and reproduction, not under tight time pressure to complete). Moreover, we focus only on reproduction of the discrete-event simulation, and not on other aspects of the article. We cannot guarantee that the badges below would have been awarded in practice by these journals.*
 
+Consider: **What criteria are people struggling to meet from the guidelines?**
+
 ## Summary
 
-<!-- TODO: Add Johnson et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->
 
 **Unique badge criteria:**
 
@@ -31,7 +33,9 @@ criteria_dict = {
   'Lim et al. 2020': [3, 0, 9, 0],
   'Kim et al. 2021': [5, 0, 7, 0],
   'Anagnostou et al. 2022': [10, 0, 2, 0],
-  'Johnson et al. 2021': [0, 0, 0, 1]
+  'Johnson et al. 2021': [0, 0, 0, 1],
+  'Hernandez et al. 2015': [0, 0, 0, 1],
+  'Wood et al. 2021': [0, 0, 0, 1]
 }
 criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 
@@ -49,7 +53,9 @@ badge_dict = {
   'Lim et al. 2020': [3, 0, 9, 0],
   'Kim et al. 2021': [3, 0, 9, 0],
   'Anagnostou et al. 2022': [5, 0, 7, 0],
-  'Johnson et al. 2021': [0, 0, 0, 1]
+  'Johnson et al. 2021': [0, 0, 0, 1],
+  'Hernandez et al. 2015': [0, 0, 0, 1],
+  'Wood et al. 2021': [0, 0, 0, 1]
 }
 badge_wide = pd.DataFrame(badge_dict, index=col).T
 
@@ -67,7 +73,9 @@ essential_dict = {
   'Lim et al. 2020': [2, 0, 6, 0],
   'Kim et al. 2021': [4, 1, 3, 0],
   'Anagnostou et al. 2022': [7, 0, 1, 0],
-  'Johnson et al. 2021': [0, 0, 0, 1]
+  'Johnson et al. 2021': [0, 0, 0, 1],
+  'Hernandez et al. 2015': [0, 0, 0, 1],
+  'Wood et al. 2021': [0, 0, 0, 1]
 }
 essential_wide = pd.DataFrame(essential_dict, index=col).T
 
@@ -84,7 +92,9 @@ optional_dict = {
   'Lim et al. 2020': [0, 0, 5, 0],
   'Kim et al. 2021': [0, 0, 5, 0],
   'Anagnostou et al. 2022': [1, 1, 3, 0],
-  'Johnson et al. 2021': [0, 0, 0, 1]
+  'Johnson et al. 2021': [0, 0, 0, 1],
+  'Hernandez et al. 2015': [0, 0, 0, 1],
+  'Wood et al. 2021': [0, 0, 0, 1]
 }
 optional_wide = pd.DataFrame(optional_dict, index=col).T
 
@@ -96,20 +106,22 @@ eval_chart(optional_wide)
 Key:
 
 * **S:** @shoaib_simulation_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/badges.html" target="_blank">link to evaluation</a>
-* **H:** @huang_optimizing_2019  - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/badges.html" target="_blank">link to evaluation</a>
+* **Hu:** @huang_optimizing_2019  - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/badges.html" target="_blank">link to evaluation</a>
 * **L:** @lim_staff_2020 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/badges.html" target="_blank">link to evaluation</a>
 * **K:** @kim_modelling_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/badges.html" target="_blank">link to evaluation</a>
 * **A:** @anagnostou_facs-charm_2022 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/badges.html" target="_blank">link to evaluation</a>
 * **J:** @johnson_cost_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/badges.html" target="_blank">link to evaluation</a>
+* **He:** @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/badges.html" target="_blank">link to evaluation</a>
+* **W:** @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/badges.html" target="_blank">link to evaluation</a>
 
-<!-- TODO: Add Johnson et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->
 
 In this section and below, the criteria for each study are marked as either being fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A).
 
 **Unique criteria:**
 
-| Item | S | H | L | K | A | J |
-| - | - | - | - | - | - | - | - |
+| Item | S | Hu | L | K | A | J | He | W |
+| - | - | - | - | - | - | - | - | - | - |
 | **Criteria related to how artefacts are shared** |
 | Stored in a permanent archive that is publicly and openly accessible | ❌ | ❌ | ❌ | ❌ | ✅ |
 | Has a persistent identifier | ❌ | ❌ | ❌ | ❌ | ✅ |
@@ -126,7 +138,7 @@ In this section and below, the criteria for each study are marked as either bein
 | Scripts can be successfully executed | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |
 | Reproduced within approximately one hour (excluding compute time) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-: {tbl-colwidths="[70, 5, 5, 5, 5, 5, 5]"}
+: {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
 
 \ 
 
@@ -138,10 +150,10 @@ The badges are grouped into three categories:
 * "Object review" badges: These badges relate to the research artefacts being reviewed against criteria of the badge issuer.
 * "Reproduced" badges: These badges relate to an independent party regenerating the reuslts of the article using the author objects.
 
-<!-- TODO: Add Johnson et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->
 
-| Item | S | H | L | K | A | J |
-| - | - | - | - | - | - | - | - |
+| Item | S | Hu | L | K | A | J | He | W |
+| - | - | - | - | - | - | - | - | - | - |
 | **“Open objects” badges** |
 | **NISO "Open Research Objects (ORO)"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license | ❌ | ❌ | ❌ | ❌ | ✅ |
 | **NISO "Open Research Objects - All (ORO-A)"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license<br>• Complete set of materials shared (as would be needed to fully reproduce article) | ❌ | ❌ | ❌ | ❌ | ❌ |
@@ -157,23 +169,25 @@ The badges are grouped into three categories:
 | **ACM "Results Reproduced"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |
 | **IEEE "Code Reproducible"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |
 | **Psychological Science "Computational Reproducibility"**<br>• Independent party regenerated results using the authors research artefacts<br>• Reproduced within approximately one hour (excluding compute time)<br>• Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community)<br>• Artefacts are clearly documented and accompanied by a README file with step-by-step instructions on how to reproduce results in the manuscript | ❌ | ❌ | ❌ | ❌ | ❌ |
-: {tbl-colwidths="[70, 5, 5, 5, 5, 5, 5]"}
+: {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
 
 ## STARS framework
 
 Key:
 
 * **S:** @shoaib_simulation_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/artefacts.html" target="_blank">link to evaluation</a>
-* **H:** @huang_optimizing_2019  - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/artefacts.html" target="_blank">link to evaluation</a>
+* **Hu:** @huang_optimizing_2019  - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/artefacts.html" target="_blank">link to evaluation</a>
 * **L:** @lim_staff_2020 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/artefacts.html" target="_blank">link to evaluation</a>
 * **K:** @kim_modelling_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/artefacts.html" target="_blank">link to evaluation</a>
 * **A:** @anagnostou_facs-charm_2022 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/artefacts.html" target="_blank">link to evaluation</a>
 * **J:** @johnson_cost_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/artefacts.html" target="_blank">link to evaluation</a>
+* **He:** @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/artefacts.html" target="_blank">link to evaluation</a>
+* **W:** @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/artefacts.html" target="_blank">link to evaluation</a>
 
-<!-- TODO: Add Johnson et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->
 
-| Item | S | H | L | K | A | J |
-| - | - | - | - | - | - | - | - |
+| Item | S | Hu | L | K | A | J | He | W |
+| - | - | - | - | - | - | - | - | - | - |
 | **Essential components** |
 | **Open license**<br>Free and open-source software (FOSS) license (e.g. MIT, GNU Public License (GPL)) | ❌ | ✅ | ❌ | ✅ | ✅ |
 | **Dependency management**<br>Specify software libraries, version numbers and sources (e.g. dependency management tools like virtualenv, conda, poetry) | ❌ | ❌ | ❌ | 🟡 | ✅ |
@@ -189,11 +203,11 @@ Key:
 | **Online coding environment**<br>Provide an online environment where users can run and change code (e.g. BinderHub, Google Colaboratory, Deepnote) | ❌ | ❌ | ❌ | ❌ | ❌ |
 | **Model interface**<br>Provide web application interface to the model so it is accessible to less technical simulation users | ❌ | ✅ | ❌ | ❌ | ✅ |
 | **Web app hosting**<br>Host web app online (e.g. Streamlit Community Cloud, ShinyApps hosting) | ❌ | ✅ | ❌ | ❌ | 🟡 |
-: {tbl-colwidths="[70, 5, 5, 5, 5, 5, 5]"}
+: {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
 
 ## Timings
 
-<!-- TODO: Add Johnson et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->
 
 * @shoaib_simulation_2021 - 30m
 * @huang_optimizing_2019 - 17m
@@ -201,6 +215,8 @@ Key:
 * @kim_modelling_2021 - 18m
 * @anagnostou_facs-charm_2022 - 19m
 * @johnson_cost_2021
+* @hernandez_optimal_2015 -
+* @wood_value_2021 -
 
 ## Badge sources
 

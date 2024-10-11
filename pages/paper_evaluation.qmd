@@ -12,9 +12,11 @@ This page shares the results from the evaluation of the journal articles against
 * @monks_strengthening_2019 - STRESS-DES: Strengthening The Reporting of Empirical Simulation Studies (Discrete-Event Simulation) (Version 1.0).
 * @zhang_reporting_2020 - The generic reporting checklist for healthcare-related discrete event simulation studies derived from the the International Society for Pharmacoeconomics and Outcomes Research Society for Medical Decision Making (ISPOR-SDM) Modeling Good Research Practices Task Force reports.
 
+Consider: **What criteria are people struggling to meet from the guidelines?**
+
 ## Summary
 
-<!-- TODO: Add Johnson et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->
 
 **STRESS-DES:**
 
@@ -30,7 +32,9 @@ stress_dict = {
   'Lim et al. 2020': [16, 2, 3, 3],
   'Kim et al. 2021': [15, 5, 2, 2],
   'Anagnostou et al. 2022': [14, 2, 5, 3],
-  'Johnson et al. 2021': [0, 0, 0, 1]
+  'Johnson et al. 2021': [0, 0, 0, 1],
+  'Hernandez et al. 2015': [18, 2, 3, 1],
+  'Wood et al. 2021': [0, 0, 0, 1]
 }
 stress_wide = pd.DataFrame(stress_dict, index=col).T
 
@@ -48,7 +52,9 @@ ispor_dict = {
   'Lim et al. 2020': [12, 0, 4, 2],
   'Kim et al. 2021': [12, 0, 5, 1],
   'Anagnostou et al. 2022': [8, 3, 4, 3],
-  'Johnson et al. 2021': [0, 0, 0, 1]
+  'Johnson et al. 2021': [0, 0, 0, 1],
+  'Hernandez et al. 2015': [10, 0, 8, 0],
+  'Wood et al. 2021': [0, 0, 0, 1]
 }
 ispor_wide = pd.DataFrame(ispor_dict, index=col).T
 
@@ -62,18 +68,20 @@ eval_chart(ispor_wide)
 Key:
 
 * **S:** @shoaib_simulation_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reporting.html#stress-des" target="_blank">link to evaluation</a>
-* **H:** @huang_optimizing_2019  - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/reporting.html#stress-des" target="_blank">link to evaluation</a>
+* **Hu:** @huang_optimizing_2019  - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/reporting.html#stress-des" target="_blank">link to evaluation</a>
 * **L:** @lim_staff_2020 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/reporting.html#stress-des" target="_blank">link to evaluation</a>
 * **K:** @kim_modelling_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reporting.html#stress-des" target="_blank">link to evaluation</a>
 * **A:** @anagnostou_facs-charm_2022 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/reporting.html#stress-des" target="_blank">link to evaluation</a>
 * **J:** @johnson_cost_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/reporting.html#stress-des" target="_blank">link to evaluation</a>
+* **He:** @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/reporting.html#stress-des" target="_blank">link to evaluation</a>
+* **W:** @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/reporting.html#stress-des" target="_blank">link to evaluation</a>
 
 In this section and below, the criteria for each study are marked as either being fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A).
 
-<!-- TODO: Add Johnson et al. 2021, and update after discussion of Kim et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021, and update after discussion of Kim et al. 2021 -->
 
-| Item | S | H | L | K | A | J |
-| - | - | - | - | - | - | - | - |
+| Item | S | Hu | L | K | A | J | He | W |
+| - | - | - | - | - | - | - | - | - | - |
 | **Objectives** | 
 | **1.1 Purpose of the model**<br>Explain the background and objectives for the model | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **1.2 Model outputs**<br>Define all quantitative performance measures that are reported, using equations where necessary.  Specify how and when they are calculated during the model run along with how any measures of error such as confidence intervals are calculated. | 🟡 | ✅ | ✅ | ✅ | ✅ |
@@ -104,23 +112,25 @@ In this section and below, the criteria for each study are marked as either bein
 | **5.4 System specification**<br>State the model run time and specification of hardware used.  This is particularly important for large scale models that require substantial computing power.  For parallel, distributed and/or use grid or cloud computing, etc. state the details of all systems used in the implementation (processors, network, etc.) | ✅ | ❌ | 🟡 | 🟡 | ❌ |
 | **Code access** |
 | **6.1 Computer model sharing statement**<br>Describe how someone could obtain the model described in the paper, the simulation software and any other associated software (or hardware) needed to reproduce the results.  Provide, where possible, the link and DOIs to these. | ✅ | ✅ | ✅ | ✅ | ✅ |
-: {tbl-colwidths="[70, 5, 5, 5, 5, 5, 5]"}
+: {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
 
 ## DES checklist derived from ISPOR-SDM
 
 Key:
 
 * **S:** @shoaib_simulation_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
-* **H:** @huang_optimizing_2019  - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
+* **Hu:** @huang_optimizing_2019  - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
 * **L:** @lim_staff_2020 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
 * **K:** @kim_modelling_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
 * **A:** @anagnostou_facs-charm_2022 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
 * **J:** @johnson_cost_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
+* **He:** @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
+* **W:** @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
 
-<!-- TODO: Add Johnson -->
+<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021, and update after discussion of Kim et al. 2021 -->
 
-| Item | S | H | L | K | A | J |
-| - | - | - | - | - | - | - | - |
+| Item | S | Hu | L | K | A | J | He | W |
+| - | - | - | - | - | - | - | - | - | - |
 | **Model conceptualisation** |
 | **1 Is the focused health-related decision problem clarified?**<br>...the decision problem under investigation was defined. DES studies included different types of decision problems, eg, those listed in previously developed taxonomies. | ✅ | ✅ | ✅ | ✅ | ✅ |
 | **2 Is the modeled healthcare setting/health condition clarified?**<br>...the physical context/scope (eg, a certain healthcare unit or a broader system) or disease spectrum simulated was described. | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -143,11 +153,11 @@ Key:
 | **16 Are decision makers or other stakeholders involved in modeling?**<br>...the modeler(s) reported in which part throughout the modeling process decision makers and other stakeholders (eg, subject experts) were engaged. | ❌ | ❌ | ❌ | ❌ | ✅ |
 | **17 Is the source of funding stated?**<br>...the sponsorship of the study was indicated. | ✅ | ❌ | ✅ | ✅ | ✅ |
 | **18 Are model limitations discussed?**<br>...limitations of the assessed model, especially limitations of interest to decision makers, were discussed. | ✅ | 🟡 | ✅ | ✅ | 🟡 |
-: {tbl-colwidths="[70, 5, 5, 5, 5, 5, 5]"}
+: {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
 
 ## Timings
 
-<!-- TODO: Add johnson -->
+<!-- TODO: Add johnson, hernandez, wood -->
 
 * @shoaib_simulation_2021 - 1h 56m
 * @huang_optimizing_2019 - 1h 28m
@@ -155,5 +165,7 @@ Key:
 * @kim_modelling_2021 - 2h 12m
 * @anagnostou_facs-charm_2022 - 53m
 * @johnson_cost_2021
+* @hernandez_optimal_2015
+* @wood_value_2021
 
 ## References

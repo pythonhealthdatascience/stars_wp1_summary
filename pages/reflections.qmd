@@ -5,7 +5,7 @@ bibliography: ../references.bib
 
 This page describes the facilitators for each reproduction (and, conversely, the barriers to the reproduction, in their absence). With each section, I have created a table which evaluates whether the facilitators were fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A) for each study.
 
-<!--TODO: Add Johnson et al. 2021 reflections once have finished reproduction -->
+<!--TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 reflections once have finished reproduction -->
 
 Links to each study:
 
@@ -15,6 +15,8 @@ Links to each study:
 * @kim_modelling_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reflections.html" target="_blank">link to reflections</a>
 * @anagnostou_facs-charm_2022 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/reflections.html" target="_blank">link to reflections</a>
 * @johnson_cost_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/reflections.html" target="_blank">link to reflections</a>
+* @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/reflections.html" target="_blank">link to reflections</a>
+* @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/reflections.html" target="_blank">link to reflections</a>
 
 ## Environment
 
@@ -22,9 +24,9 @@ Links to each study:
 
 ## List required packages
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | 🟡 | ✅ | ✅ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ❌ | 🟡 | ✅ | ✅ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. This became a time-consuming issue as it took a while to identify a dependency that was needed for the code to work (`greenlet`) (based on reading the documentation for `salabim`), and a while longer to realise I had installed another package when the package I needed was in base (`statistics`).
 
@@ -38,7 +40,11 @@ Links to each study:
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * The `import` statements can be sufficient in indicating all the packages required but this is not always the case if there are "hidden"/unmentioned dependencies that don't get imported
 * There are various options for listing the packages (e.g. comprehensive import statements, installation lines in the script, environment files).
@@ -50,9 +56,9 @@ Links to each study:
 
 ## Provide versions
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | 🟡 | 🟡 | 🟡 | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ❌ | 🟡 | 🟡 | 🟡 | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. I had to backdate the package versions as the model didn't work with the latest.
 
@@ -69,7 +75,11 @@ Links to each study:
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Models will sometimes work with the latest versions of packages, but likewise, you will sometimes need to backdate as it no longer works with the latest
 * For Python, it was very easy to "backdate" the python and package versions. However, I found this very difficult to in R, and ended up always using the latest versions.
@@ -84,9 +94,9 @@ Links to each study:
 
 ## Model is provided in a "runnable" format
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ✅ | ❌ | ✅ | ✅ | ✅ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ✅ | ❌ | ✅ | ✅ | ✅ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Fully met. Provided as a single `.py` file which ran model with function `main()`.
 
@@ -100,7 +110,11 @@ Links to each study:
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * If you are presenting the results of a model, then provide the code for that model in a "runnable" format.
 * This was an uncommon issue.
@@ -111,9 +125,9 @@ Links to each study:
 
 ## Model is designed to be run programmatically (i.e. can run model with different parameters without needing to change the model code)
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ✅ | ✅ | ✅ | ✅ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ✅ | ✅ | ✅ | ✅ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. The model is set up as classes and run using a function. However, it is not designed to allow any variation in inputs. Everything uses default inputs, and it designed in such a way that - if you wish to vary model parameters - you need to directly change these in the script itself. This meant you couldn't run multiple versions of the model using the same script. It also meant hidden errors were more likely (e.g. if miss changing a parameter somewhere, or input the wrong parameters and don’t realise).
 
@@ -127,7 +141,11 @@ Links to each study:
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Design model so that you can re-run it with different parameters without needing to make changes to the model code itself.
     * This allows you to run multiple versions of the model with the same script.
@@ -140,9 +158,9 @@ Links to each study:
 
 ## Don't hard code parameters that you will want to change for scenario analyses
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | 🟡 | ❌ | ✅ | N/A | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | 🟡 | ❌ | ✅ | N/A | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. Although some parameters sat "outside" of the model within the `main()` function (and hence were more "changeable", even if not "changeable" inputs to that function, but changed directly in script). However, many of the other parameters were hard-coded within the model itself. It took time to spot where these were and correctly adjust them to be modifiable inputs.
 
@@ -156,7 +174,11 @@ Links to each study:
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * It can be quite difficult to change parameters that are hard coded into the model. Ideally, all the parameters that a user might want to change should be easily changeable and not hard coded.
 * This is a somewhat common issue.
@@ -168,9 +190,9 @@ Links to each study:
 
 ## Avoid large amounts of code duplication
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ✅ | ✅ | ❌ | ✅ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ✅ | ✅ | ❌ | ✅ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. The model often contained very similar blocks of code before or after warm-up. This has the potential to introduce mistakes - with a suspected (although unconfirmed) mistake being that the lower boundary for the doctor consultation times in configuration 1 differed before and after warm-up.
 
@@ -184,7 +206,11 @@ Links to each study:
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:** Large amounts of code duplication are non-ideal as they can:
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --> Large amounts of code duplication are non-ideal as they can:
 
 * Make code less readable
 * Make it trickier to change universal parameters
@@ -196,9 +222,9 @@ Links to each study:
 
 ## Include sufficient comments in the code
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ✅ | 🟡 | 🟡 | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ❌ | ✅ | 🟡 | 🟡 | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021 and @huang_optimizing_2019: Not met. Would have benefitted from more comments, as it took some time to ensure I have correctly understood code, particularly if they used lots of abbreviations.
 
@@ -210,7 +236,11 @@ Links to each study:
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * With increasing code complexity, the inclusion of sufficient comments becomes increasingly important, as it can otherwise be quite time consuming to figure out how to fix and change sections of code
 * Define abbreviations used within the code
@@ -237,7 +267,11 @@ The studies where I made adjustments were:
 
 For @kim_modelling_2021, an error appears to have been introduced with the aoorta diameter thresholds by switching between nested and unnested lists, which I’m anticipating was unresolved due to the long run times of the model meaning they weren’t all run in sequence at the end.
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Reduce model run time if possible as it makes it easier to work with, and facilitates doing full re-runs of all scenarios (which can be important with code changes, etc).
     * Relatedly, it is good practice to re-run all scripts before finishing up, as then you can spot any errors like the one mentioned for @kim_modelling_2021
@@ -249,9 +283,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## For slow models, state the expected run time
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| 🟡 | ❌ | ❌ | ❌ | N/A | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| 🟡 | ❌ | ❌ | ❌ | N/A | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Partially met. Run time stated in paper but not repository.
 
@@ -265,7 +299,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * For long models with no statement, it can take a while to realise that it's not an error in the code or anything, but actually just a long run time! And hard to know how long to expect, and whether it is without the capacities of your machine and so on.
 * Common issue.
@@ -276,9 +314,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## For computationally expensive models, state memory usage and provide alternatives for lower spec machines
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| N/A | N/A | N/A | ❌ | N/A | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| N/A | N/A | N/A | ❌ | N/A | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021, @huang_optimizing_2019, and @lim_staff_2020: Not applicable. Didn't find it to be too computationally expensive for my machine.
 
@@ -286,7 +324,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @anagnostou_facs-charm_2022: Not applicable. Runs in seconds.
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Some models are so computationally expensive that it may be simply impossible to run it a feasible length of time without a high powered machine.
 * If a model is computationally expensive, it would be good to provide suggested alternatives that allow it to be run on lower spec machines
@@ -300,9 +342,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## Provide code for all scenarios
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | ❌ | N/A | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ❌ | ❌ | ❌ | N/A | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. There were several instances where it took quite a while to understand how and where to modify the code in order to run scenarios (e.g. no arrivals, transferring admin work, reducing doctor intervention in deliveries).
 
@@ -316,7 +358,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Common issue
 * Time consuming and tricky to resolve
@@ -327,9 +373,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## All the required outputs are calculated/provided
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | ❌ | ✅ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ❌ | ❌ | ❌ | ✅ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. Had to add some outputs and calculations (e.g. proportion of childbirth cases referred, standard deviation)
 
@@ -343,7 +389,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Calculate and provide all the outputs required
 * Appreicate this can be a bit "ambiguous" (e.g. if its just plotting a mean or simple calculation, then didn't consider that here) (however, combined with other criteria, we do want them to provide code to calculate outputs, so we would want them to provide that anyway)
@@ -354,9 +404,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## Include correct parameters in the script (even if just for one scenario)
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| 🟡 | ❌ | 🟡 | ✅ | ✅ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| 🟡 | ❌ | 🟡 | ✅ | ✅ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Partially met. Script is set with parameters for base configuration 1, with the exception of number of replications.
 
@@ -370,7 +420,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * At least provide a script that can run the baseline model as in the paper (even if not providing the scenarios)
 * This can introduce difficulties - when some parameters are wrong, you rely on the paper to check which parameters are correct or not, but if the paper doesn't mention every single parameter (which is reasonably likely, as this includes those not varied by scenarios), then you aren't able to be sure that the model you are running is correct.
@@ -381,9 +435,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## Provide all the required parameters
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | ✅ | ✅ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ❌ | ❌ | ✅ | ✅ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Some parameters that could not be calculated were not provided - ie. what consultation boundaries to use when mean length of doctor consultation was 2.5 minutes
 
@@ -397,7 +451,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Provide all required parameters
 
@@ -407,9 +465,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## If not provided in the script, then *clearly* present all parameters in the paper
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | 🟡 | N/A | N/A | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ❌ | 🟡 | N/A | N/A | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. Although there was a scenario table, this did not include all the parameters I would need to change. It was more challenging to identify parameters that were only described in the body of the article. There were also some discrepancies in parameters between the main text of the article, and the tables and figures. Some scenarios were quite ambiguous/unclear from their description in the text, and I initially misunderstood the required parameters for the scenarios.
 
@@ -421,7 +479,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Provide parameters in a table (including for each scenario), as it can be difficult/ambiguous to interpret them from the text, and hard to spot them too.
 * Be sure to mention every parameter that gets changed (e.g. for @lim_staff_2020, as there wasn't a default `staff_per_shift` across all scenarios, but not stated for the scenario, had to guess it).
@@ -432,9 +494,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## If will need to process parameters, provide required calculations
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ✅ | N/A | N/A | N/A | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ✅ | N/A | N/A | N/A | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. It was unclear how to estimate inter-arrival time.
 
@@ -446,7 +508,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * If you are going to be mentioning the "pre-processed" values at all, then its important to include the calculation (ideally in the code, as that is the clearest demonstration of exactly what you did)
 
@@ -458,9 +524,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## Saves output to a file
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ✅ | ❌ | ❌ | ❌ | ✅ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ✅ | ❌ | ❌ | ❌ | ✅ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Fully met. Outputs to `.xlsx` files
 
@@ -470,7 +536,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Common issue
 * Particularly important if model run time is even slightly long (even just minutes long, but even more so as becomes many minutes / hours), so don't always have to re-run it each time to get results
@@ -482,9 +552,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## Understandable output tables
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ✅ | ✅ | ❌ | ✅ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ✅ | ✅ | ❌ | ✅ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. There were two alternative results spreadsheets with some duplicate metrics but sometimes differing results between them, which made it a bit confusing to work out what to use.
 
@@ -494,7 +564,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Don't provide alternative results for the same metrics
 * Make it clear what each colum/category in the results table means, if it might not be immediately clear.
@@ -507,9 +581,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## Use seeds to control stochasticity
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | ✅ | ✅ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ❌ | ❌ | ✅ | ✅ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. The lack of seeds wasn't actually a barrier to the reproduction though due to the replication number. I later add seeds so my results could be reproduced, and found that the ease of setting seeds with salabim was a greater facilitator to the work. I only had to change one or two lines of code to then get consistent results between runs (unlike other simulation software like SimPy where you have to consider the use of seeds by different sampling functions). Moreover, by default, salabim would have set a seed (although overridden by original authors to enable them to run replications).
 
@@ -523,7 +597,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Depending on your model and the outputs/type of output you are looking at, the lack of seeds can have varying impacts on the appearance of your results, and can make the subjective judgement of whether results are consistent harder (if discrepancies could be attributed to not having consistent seeds or not).
 * It can be really quite simple to include seeds.
@@ -536,9 +614,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## Provide code to process results into tables
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | N/A | 🟡 | ❌ | N/A | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | N/A | 🟡 | ❌ | N/A | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 <!--TODO: Lim 2020... I think from memory that this output tables  similar to the paper, but I then changed them as that format was difficult to compare/work with -->
 
@@ -554,7 +632,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * It can take a bit of time to do this processing, so very handy for it to be provided.
 * Common issue.
@@ -565,9 +647,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## Provide code to process results into figures
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | ❌ | ❌ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ❌ | ❌ | ❌ | ❌ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met.
 
@@ -577,7 +659,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * It can take a bit of time to do this processing, particularly if the figure involves any transformations (and less so if the figure is simple), so very handy for it to be provided.
 * Common issue.
@@ -590,9 +676,9 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 By "in-text results", I am referred to results that are mentioned in the text but not included in/cannot be deduced from any of the tables or figures.
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | N/A | ❌ | N/A | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ❌ | N/A | ❌ | N/A | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021, @huang_optimizing_2019, @kim_modelling_2021: Not met.
 
@@ -600,7 +686,11 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 
 @johnson_cost_2021: <!--TODO-->
 
-**Reflections:**
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Provide code to calculate in-text results
 * Common issue
@@ -613,9 +703,9 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 
 ## Include instructions on how to run the model/script
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | 🟡 | ✅ | <!--TODO--> |
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| ❌ | ❌ | ❌ | 🟡 | ✅ | <!--TODO--> | <!--TODO--> | <!--TODO--> |
 
 @shoaib_simulation_2021: Not met. No instructions, although is just a single script that you run.
 
@@ -627,7 +717,13 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 
 @anagnostou_facs-charm_2022: Fully met. Clear README with instructions on how to run the model was really helpful.
 
-**Reflections:**
+@johnson_cost_2021: <!--TODO-->
+
+@hernandez_optimal_2015: <!--TODO-->
+
+@wood_value_2021: <!--TODO-->
+
+**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
 * Even if as simple as running a script, include instructions on how to do so
 * Common issue
