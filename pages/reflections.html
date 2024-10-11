@@ -271,7 +271,7 @@ div.csl-indent {
 
 
 <p>This page describes the facilitators for each reproduction (and, conversely, the barriers to the reproduction, in their absence). With each section, I have created a table which evaluates whether the facilitators were fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A) for each study.</p>
-<!--TODO: Add Johnson et al. 2021 reflections once have finished reproduction -->
+<!--TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 reflections once have finished reproduction -->
 <p>Links to each study:</p>
 <ul>
 <li><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reflections.html" target="_blank">link to reflections</a></li>
@@ -280,6 +280,8 @@ div.csl-indent {
 <li><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reflections.html" target="_blank">link to reflections</a></li>
 <li><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/reflections.html" target="_blank">link to reflections</a></li>
 <li><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/reflections.html" target="_blank">link to reflections</a></li>
+<li><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/reflections.html" target="_blank">link to reflections</a></li>
+<li><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/reflections.html" target="_blank">link to reflections</a></li>
 </ul>
 <section id="environment" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="environment"><span class="header-section-number">5.1</span> Environment</h2>
@@ -297,12 +299,14 @@ List required packages
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -312,6 +316,8 @@ List required packages
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -322,6 +328,8 @@ List required packages
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -331,7 +339,9 @@ List required packages
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Provides commands to install packages required at the start of scripts, which I could then easily base renv on automatically (as it detects them).</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Provides <code>requirements.txt</code></p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>The <code>import</code> statements can be sufficient in indicating all the packages required but this is not always the case if there are “hidden”/unmentioned dependencies that don’t get imported</li>
 <li>There are various options for listing the packages (e.g.&nbsp;comprehensive import statements, installation lines in the script, environment files).</li>
@@ -354,12 +364,14 @@ Provide versions
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -369,6 +381,8 @@ Provide versions
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -378,6 +392,8 @@ Provide versions
 <td style="text-align: center;">🟡</td>
 <td style="text-align: center;">🟡</td>
 <td style="text-align: center;">🟡</td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 <td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
@@ -392,7 +408,9 @@ Provide versions
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Partially met. States version of R but not package. Due to prior issues with backdating R, used latest versions. There were no issues using the latest versions of R and packages, but if there had been, it would be important to know what versions had previously been used and worked.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Partially met (depending on how strict you are being). The Python version was stated in the paper, and the simpy version was stated in the complementary app repository (although neither were mentioned in the model repository itself).</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Models will sometimes work with the latest versions of packages, but likewise, you will sometimes need to backdate as it no longer works with the latest</li>
 <li>For Python, it was very easy to “backdate” the python and package versions. However, I found this very difficult to in R, and ended up always using the latest versions.</li>
@@ -419,12 +437,14 @@ Model is provided in a “runnable” format
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -434,6 +454,8 @@ Model is provided in a “runnable” format
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -444,6 +466,8 @@ Model is provided in a “runnable” format
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -453,7 +477,9 @@ Model is provided in a “runnable” format
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Has seperate <code>.R</code> scripts for each scenario which ran the model by calling functions from elsewhere in repository.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Can run model from command line.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>If you are presenting the results of a model, then provide the code for that model in a “runnable” format.</li>
 <li>This was an uncommon issue.</li>
@@ -475,12 +501,14 @@ Model is designed to be run programmatically (i.e.&nbsp;can run model with diffe
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -490,6 +518,8 @@ Model is designed to be run programmatically (i.e.&nbsp;can run model with diffe
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -500,6 +530,8 @@ Model is designed to be run programmatically (i.e.&nbsp;can run model with diffe
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -509,7 +541,9 @@ Model is designed to be run programmatically (i.e.&nbsp;can run model with diffe
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Each scenario is an R script which states different parameters and then calls functions to run model.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Change inputs in input <code>.csv</code> files.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Design model so that you can re-run it with different parameters without needing to make changes to the model code itself.
 <ul>
@@ -535,12 +569,14 @@ Don’t hard code parameters that you will want to change for scenario analyses
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -550,6 +586,8 @@ Don’t hard code parameters that you will want to change for scenario analyses
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -560,6 +598,8 @@ Don’t hard code parameters that you will want to change for scenario analyses
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -569,7 +609,9 @@ Don’t hard code parameters that you will want to change for scenario analyses
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. All model parameters could be varied from “outside” the model code itself, as they were provided as changeable inputs to the model.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: N/A as no scenarios.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>It can be quite difficult to change parameters that are hard coded into the model. Ideally, all the parameters that a user might want to change should be easily changeable and not hard coded.</li>
 <li>This is a somewhat common issue.</li>
@@ -592,12 +634,14 @@ Avoid large amounts of code duplication
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -607,6 +651,8 @@ Avoid large amounts of code duplication
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -617,6 +663,8 @@ Avoid large amounts of code duplication
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -626,7 +674,9 @@ Avoid large amounts of code duplication
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. There was alot of duplication when running each scenario (e.g.&nbsp;repeated calls to <code>Eventsandcosts</code>, and repeatedly defining the same parameters). This meant, if changing a parameter that you want to be consistent between all the scripts (e.g.&nbsp;number of persons), you had to change each of the scripts one by one.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong> Large amounts of code duplication are non-ideal as they can:</p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --> Large amounts of code duplication are non-ideal as they can:</p>
 <ul>
 <li>Make code less readable</li>
 <li>Make it trickier to change universal parameters</li>
@@ -649,12 +699,14 @@ Include sufficient comments in the code
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -664,6 +716,8 @@ Include sufficient comments in the code
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -674,6 +728,8 @@ Include sufficient comments in the code
 <td style="text-align: center;">🟡</td>
 <td style="text-align: center;">🟡</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -682,7 +738,9 @@ Include sufficient comments in the code
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Partially met. Didn’t have any particular issues in working out the code. There are sufficient comments in the scenario scripts and at the start of the model scripts, although within the model scripts, there were sometimes quite dense sections of code that would likely benefit from some additional comments.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Partially met. Didn’t have to delve into the code much, so can’t speak from experience as to whether the comments were sufficient. From looking through the model code, several scripts have lots of comments and docstrings for each function, but some do not.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>With increasing code complexity, the inclusion of sufficient comments becomes increasingly important, as it can otherwise be quite time consuming to figure out how to fix and change sections of code</li>
 <li>Define abbreviations used within the code</li>
@@ -717,7 +775,9 @@ Quicker models are easier to work with
 <li><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></li>
 </ul>
 <p>For <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>, an error appears to have been introduced with the aoorta diameter thresholds by switching between nested and unnested lists, which I’m anticipating was unresolved due to the long run times of the model meaning they weren’t all run in sequence at the end.</p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Reduce model run time if possible as it makes it easier to work with, and facilitates doing full re-runs of all scenarios (which can be important with code changes, etc).
 <ul>
@@ -742,12 +802,14 @@ For slow models, state the expected run time
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -757,6 +819,8 @@ For slow models, state the expected run time
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -767,6 +831,8 @@ For slow models, state the expected run time
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -776,7 +842,9 @@ For slow models, state the expected run time
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. A prior paper describing the model development mentions the run time, but not the current paper or repository.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. Very quick! Seconds! So not particularly relevant - although, you could argue, potentially still important if there were some error that made it look like the model were running continuously (e.g.&nbsp;stuck in a loop) - although this is relatively unlikely.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>For long models with no statement, it can take a while to realise that it’s not an error in the code or anything, but actually just a long run time! And hard to know how long to expect, and whether it is without the capacities of your machine and so on.</li>
 <li>Common issue.</li>
@@ -798,12 +866,14 @@ For computationally expensive models, state memory usage and provide alternative
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -813,6 +883,8 @@ For computationally expensive models, state memory usage and provide alternative
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -823,13 +895,17 @@ For computationally expensive models, state memory usage and provide alternative
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
 <p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, and <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not applicable. Didn’t find it to be too computationally expensive for my machine.</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Unable to run on my machine (<code>serial</code> took too long to run (would have to leave laptop on for many many hours which isn’t feasible), and <code>parallel</code> was too computationally expensive and crashed the machine (with the original number of people)). This is not mentioned in the repository or paper, but only referred to in a prior publication. Would’ve been handy if it included suggestions like reducing number of people and so on (which is what I had to do to feasibly run it).</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. Runs in seconds.</p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Some models are so computationally expensive that it may be simply impossible to run it a feasible length of time without a high powered machine.</li>
 <li>If a model is computationally expensive, it would be good to provide suggested alternatives that allow it to be run on lower spec machines</li>
@@ -855,12 +931,14 @@ Provide code for all scenarios
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -870,6 +948,8 @@ Provide code for all scenarios
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -880,6 +960,8 @@ Provide code for all scenarios
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -889,7 +971,9 @@ Provide code for all scenarios
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Took alot of work to change model from for loop to function, to set all parameters as inputs (some were hard coded), and add conditional logic of scenarios when required.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. No scenarios.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Common issue</li>
 <li>Time consuming and tricky to resolve</li>
@@ -911,12 +995,14 @@ All the required outputs are calculated/provided
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -926,6 +1012,8 @@ All the required outputs are calculated/provided
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -936,6 +1024,8 @@ All the required outputs are calculated/provided
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -945,7 +1035,9 @@ All the required outputs are calculated/provided
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Had to write code to find aorta sizes of people with AAA-related deaths.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Although worth noting this only had one scenario/version of model and one output to reproduce.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Calculate and provide all the outputs required</li>
 <li>Appreicate this can be a bit “ambiguous” (e.g.&nbsp;if its just plotting a mean or simple calculation, then didn’t consider that here) (however, combined with other criteria, we do want them to provide code to calculate outputs, so we would want them to provide that anyway)</li>
@@ -967,12 +1059,14 @@ Include correct parameters in the script (even if just for one scenario)
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -982,6 +1076,8 @@ Include correct parameters in the script (even if just for one scenario)
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -992,6 +1088,8 @@ Include correct parameters in the script (even if just for one scenario)
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -1001,7 +1099,9 @@ Include correct parameters in the script (even if just for one scenario)
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>At least provide a script that can run the baseline model as in the paper (even if not providing the scenarios)</li>
 <li>This can introduce difficulties - when some parameters are wrong, you rely on the paper to check which parameters are correct or not, but if the paper doesn’t mention every single parameter (which is reasonably likely, as this includes those not varied by scenarios), then you aren’t able to be sure that the model you are running is correct.</li>
@@ -1023,12 +1123,14 @@ Provide all the required parameters
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1038,6 +1140,8 @@ Provide all the required parameters
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1048,6 +1152,8 @@ Provide all the required parameters
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -1057,7 +1163,9 @@ Provide all the required parameters
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Provide all required parameters</li>
 </ul>
@@ -1078,12 +1186,14 @@ If not provided in the script, then <em>clearly</em> present all parameters in t
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1093,6 +1203,8 @@ If not provided in the script, then <em>clearly</em> present all parameters in t
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1103,6 +1215,8 @@ If not provided in the script, then <em>clearly</em> present all parameters in t
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -1111,7 +1225,9 @@ If not provided in the script, then <em>clearly</em> present all parameters in t
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Partially met. Nearly all parameters are in the paper table, and others are described in the article. However, didn’t provide information for the <code>staff_per_shift</code> for Figure 5.</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. All provided.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Provide parameters in a table (including for each scenario), as it can be difficult/ambiguous to interpret them from the text, and hard to spot them too.</li>
 <li>Be sure to mention every parameter that gets changed (e.g.&nbsp;for <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, as there wasn’t a default <code>staff_per_shift</code> across all scenarios, but not stated for the scenario, had to guess it).</li>
@@ -1133,12 +1249,14 @@ If will need to process parameters, provide required calculations
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1148,6 +1266,8 @@ If will need to process parameters, provide required calculations
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1158,6 +1278,8 @@ If will need to process parameters, provide required calculations
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -1166,7 +1288,9 @@ If will need to process parameters, provide required calculations
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not applicable. The parameter not provided is not one that you would calculate.</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. All provided.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>If you are going to be mentioning the “pre-processed” values at all, then its important to include the calculation (ideally in the code, as that is the clearest demonstration of exactly what you did)</li>
 </ul>
@@ -1190,12 +1314,14 @@ Saves output to a file
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1205,6 +1331,8 @@ Saves output to a file
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1215,6 +1343,8 @@ Saves output to a file
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -1222,7 +1352,9 @@ Saves output to a file
 <p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, and <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Outputs to dataframe/s.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Outputs to <code>OUT_STATS.csv</code>. Note: Although not needed for the reproduction itself, when I tried to amend the name and location of the csv file output the model for use in tests, this was very tricky to do as it was hard coded into the scripts and I found difficult to amend due to how the model is run and set up.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Common issue</li>
 <li>Particularly important if model run time is even slightly long (even just minutes long, but even more so as becomes many minutes / hours), so don’t always have to re-run it each time to get results</li>
@@ -1245,12 +1377,14 @@ Understandable output tables
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1260,6 +1394,8 @@ Understandable output tables
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1270,6 +1406,8 @@ Understandable output tables
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -1277,7 +1415,9 @@ Understandable output tables
 <p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, and <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Didn’t experience issues interpreting the contents of the output table/s.</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. It took me a little while to work out what surgery columns I needed, and to realise I needed to combine two of them. This required looking at what inputs genreated this, and referring to a input data dictionary.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Don’t provide alternative results for the same metrics</li>
 <li>Make it clear what each colum/category in the results table means, if it might not be immediately clear.</li>
@@ -1302,12 +1442,14 @@ Use seeds to control stochasticity
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1317,6 +1459,8 @@ Use seeds to control stochasticity
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1327,6 +1471,8 @@ Use seeds to control stochasticity
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -1336,7 +1482,9 @@ Use seeds to control stochasticity
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Included a seed, although I don’t get identical results as I had to reduce number of people in simulation.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. The authors included a random seed so the results I got were identical to the original (so no need for any subjectivity in deciding whether its similar enough, as I could perfectly reproduce).</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Depending on your model and the outputs/type of output you are looking at, the lack of seeds can have varying impacts on the appearance of your results, and can make the subjective judgement of whether results are consistent harder (if discrepancies could be attributed to not having consistent seeds or not).</li>
 <li>It can be really quite simple to include seeds.</li>
@@ -1361,12 +1509,14 @@ Provide code to process results into tables
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1376,6 +1526,8 @@ Provide code to process results into tables
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1385,6 +1537,8 @@ Provide code to process results into tables
 <td style="text-align: center;">🟡</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">N/A</td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 <td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
@@ -1396,7 +1550,9 @@ Provide code to process results into tables
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Had to write code to generate tables, which included correctly implementing calculation of excess e.g.&nbsp;deaths, scaling to population size, and identify which columns provide the operation outcomes.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. No tables in scope.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>It can take a bit of time to do this processing, so very handy for it to be provided.</li>
 <li>Common issue.</li>
@@ -1418,12 +1574,14 @@ Provide code to process results into figures
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1433,6 +1591,8 @@ Provide code to process results into figures
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1443,6 +1603,8 @@ Provide code to process results into figures
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -1450,7 +1612,9 @@ Provide code to process results into figures
 <p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. Had to write code from scratch. For one of the figures, it would have been handy if informed that plot was produced by a simmer function (as didn’t initially realise this). It also took a bit of time for me to work out how to transform the figure axes as this was not mentioned in the paper (and no code was provided for these). It was also unclear and a bit tricky to work out how to standardise the density in the figures (since it is only described in the text and no formula/calculations are provided there or in the code). <!-- TODO: Consider whether this should be split into another box (i.e. about providing the processing?) --></p>
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not met. However, the simplicity and repetition of the figures was handy.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>It can take a bit of time to do this processing, particularly if the figure involves any transformations (and less so if the figure is simple), so very handy for it to be provided.</li>
 <li>Common issue.</li>
@@ -1473,12 +1637,14 @@ Provide code to calculate in-text results
 <p>By “in-text results”, I am referred to results that are mentioned in the text but not included in/cannot be deduced from any of the tables or figures.</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1488,6 +1654,8 @@ Provide code to calculate in-text results
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1498,13 +1666,17 @@ Provide code to calculate in-text results
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
 <p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met.</p>
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable (no in-text results).</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Provide code to calculate in-text results</li>
 <li>Common issue</li>
@@ -1529,12 +1701,14 @@ Include instructions on how to run the model/script
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
-<col style="width: 16%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1544,6 +1718,8 @@ Include instructions on how to run the model/script
 <th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
 <th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -1554,6 +1730,8 @@ Include instructions on how to run the model/script
 <td style="text-align: center;">🟡</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
@@ -1562,7 +1740,10 @@ Include instructions on how to run the model/script
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not met. No instructions, although is just a single script that you run.</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Partially met. README tells you which folder has the scripts you need, although nothing further. Although all you need to do is run them.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Clear README with instructions on how to run the model was really helpful.</p>
-<p><strong>Reflections:</strong></p>
+<p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Even if as simple as running a script, include instructions on how to do so</li>
 <li>Common issue</li>
@@ -1589,6 +1770,9 @@ Include instructions on how to run the model/script
 <div id="ref-anagnostou_facs-charm_2022" class="csl-entry" role="listitem">
 Anagnostou, Anastasia, Derek Groen, Simon J. E. Taylor, Diana Suleimenova, Nura Abubakar, Arindam Saha, Kate Mintram, et al. 2022. <span>“<span>FACS</span>-<span>CHARM</span>: <span>A</span> <span>Hybrid</span> <span>Agent</span>-<span>Based</span> and <span>Discrete</span>-<span>Event</span> <span>Simulation</span> <span>Approach</span> for <span>Covid</span>-19 <span>Management</span> at <span>Regional</span> <span>Level</span>.”</span> In <em>2022 <span>Winter</span> <span>Simulation</span> <span>Conference</span> (<span>WSC</span>)</em>, 1223–34. <a href="https://doi.org/10.1109/WSC57314.2022.10015462">https://doi.org/10.1109/WSC57314.2022.10015462</a>.
 </div>
+<div id="ref-hernandez_optimal_2015" class="csl-entry" role="listitem">
+Hernandez, Ivan, Jose E. Ramirez-Marquez, David Starr, Ryan McKay, Seth Guthartz, Matt Motherwell, and Jessica Barcellona. 2015. <span>“Optimal Staffing Strategies for Points of Dispensing.”</span> <em>Computers &amp; Industrial Engineering</em> 83 (May): 172–83. <a href="https://doi.org/10.1016/j.cie.2015.02.015">https://doi.org/10.1016/j.cie.2015.02.015</a>.
+</div>
 <div id="ref-huang_optimizing_2019" class="csl-entry" role="listitem">
 Huang, Shiwei, Julian Maingard, Hong Kuan Kok, Christen D. Barras, Vincent Thijs, Ronil V. Chandra, Duncan Mark Brooks, and Hamed Asadi. 2019. <span>“Optimizing <span>Resources</span> for <span>Endovascular</span> <span>Clot</span> <span>Retrieval</span> for <span>Acute</span> <span>Ischemic</span> <span>Stroke</span>, a <span>Discrete</span> <span>Event</span> <span>Simulation</span>.”</span> <em>Frontiers in Neurology</em> 10 (June). <a href="https://doi.org/10.3389/fneur.2019.00653">https://doi.org/10.3389/fneur.2019.00653</a>.
 </div>
@@ -1603,6 +1787,9 @@ Lim, Chun Yee, Mary Kathryn Bohn, Giuseppe Lippi, Maurizio Ferrari, Tze Ping Loh
 </div>
 <div id="ref-shoaib_simulation_2021" class="csl-entry" role="listitem">
 Shoaib, Mohd, and Varun Ramamohan. 2021. <span>“Simulation <span>Modelling</span> and <span>Analysis</span> of <span>Primary</span> <span>Health</span> <span>Centre</span> <span>Operations</span>.”</span> <em>arXiv</em>, June. <a href="https://doi.org/10.48550/arXiv.2104.12492">https://doi.org/10.48550/arXiv.2104.12492</a>.
+</div>
+<div id="ref-wood_value_2021" class="csl-entry" role="listitem">
+Wood, Richard M., Adrian C. Pratt, Charlie Kenward, Christopher J. McWilliams, Ross D. Booton, Matthew J. Thomas, Christopher P. Bourdeaux, and Christos Vasilakis. 2021. <span>“The <span>Value</span> of <span>Triage</span> During <span>Periods</span> of <span>Intense</span> <span>COVID</span>-19 <span>Demand</span>: <span>Simulation</span> <span>Modeling</span> <span>Study</span>.”</span> <em>Medical Decision Making</em> 41 (4): 393–407. <a href="https://doi.org/10.1177/0272989X21994035">https://doi.org/10.1177/0272989X21994035</a>.
 </div>
 </div>
 </section>
