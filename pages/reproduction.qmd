@@ -12,17 +12,17 @@ bibliography: ../references.bib
 
 **@huang_optimizing_2019:** Uses **R (simmer)** to model an endovascular clot retrieval (ECR) service. ECR is a treatment for acute ischaemic stroke. The model includes the stroke pathway, as well as three other pathways that share resources with the stroke pathway: an elective non-stroke interventional neuroradiology pathway, an emergency interventional radiology pathway, and an elective interventional radiology pathway. The paper explores waiting times and resource utilisation - particularly focussing on the biplane angiographic suite (angioINR). A few scenarios are tried to help examine why the wait times are so high for the angioINR. <a href="https://pythonhealthdatascience.github.io/stars-reproduce-huang-2019/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
 
-**@lim_staff_2020:** Uses **python (numpy and pandas)** to model the transmission of COVID-19 in a laboratory. It examines the proportion of staff infected in scenarios varying the: number of shifts per day; number of staff per shift; overall staff pool; shift patterns; secondary attack rate of the virus; introduction of protective measures (social distancing and personal protective equipment). <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
+**@lim_staff_2020:** Uses **python (NumPy and pandas)** to model the transmission of COVID-19 in a laboratory. It examines the proportion of staff infected in scenarios varying the: number of shifts per day; number of staff per shift; overall staff pool; shift patterns; secondary attack rate of the virus; introduction of protective measures (social distancing and personal protective equipment). <a href="https://pythonhealthdatascience.github.io/stars-reproduce-lim-2020/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
 
 **@kim_modelling_2021:** Adapts a previously developed **R (Rcpp, expm, msm, foreach, iterators, doParallel)** model for abdominal aortic aneurysm (AAA) screening of men in England. The model is adapted/used to explore different approaches to resuming screening and surgical repair for AAA, as these services were paused or substantially reduced during COVID-19 due to concerns about virus transmission. <a href="https://pythonhealthdatascience.github.io/stars-reproduce-kim-2021/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
 
-**@anagnostou_facs-charm_2022:** This paper includes two models - we have focussed just on the dynamiC Hospital wARd Management (CHARM) model. CHARM uses **Python (simpy)** to model intensive care units (ICU) in the COVID-19 pandemic (as well as subsequent stays in a recovery bed). It includes three types of admission to the ICU (emergency, elective or COVID-19). COVID-19 patients are kept seperate, and if they run out of capacity due to a surge in COVID-19 admissions, additional capacity can be pooled from the elective and emergency capacity. <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
+**@anagnostou_facs-charm_2022:** This paper includes two models - we have focussed just on the dynamiC Hospital wARd Management (CHARM) model. CHARM uses **python (SimPy)** to model intensive care units (ICU) in the COVID-19 pandemic (as well as subsequent stays in a recovery bed). It includes three types of admission to the ICU (emergency, elective or COVID-19). COVID-19 patients are kept seperate, and if they run out of capacity due to a surge in COVID-19 admissions, additional capacity can be pooled from the elective and emergency capacity. <a href="https://pythonhealthdatascience.github.io/stars-reproduce-anagnostou-2022/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
 
 **@johnson_cost_2021:** TBC <!-- TODO: Add Johnson -->
 
-**@hernandez_optimal_2015:** TBC <!-- TODO -->
+**@hernandez_optimal_2015:** This study models Points-of-Dispensing (PODs) in New York City. These are sites set up during a public health emergency to dispense counter-measures. The authors use evolutionary algorithms combined with discrete-event simulation to explore optimal staff numbers with regards to resource use, wait time and throughput. They use **python** for most of the analysis (with **SimPy** for the simulation component), but **R** to produce the plots and tables for the paper. <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
 
-**@wood_value_2021:** TBC <!-- TODO -->
+**@wood_value_2021:** This study uses discrete-event simulation (**R (base R, dplyr, tidyr)**) to explore the deaths and life years lost under different triage strategies for an intensive care unit, relative to a baseline strategy. The unit is modelled with 20 beds (varied from 10 to 200 in sensitivity analyses). Three different triage strategies are explored, under three different projected demand trajectories. <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
 
 ## Scope
 
@@ -33,13 +33,13 @@ bibliography: ../references.bib
 | Lim et al. 2020 | 9 items:<br>• 5 tables<br>• 4 figures | 9 out of 9 (100%) | 12h 27m |
 | Kim et al. 2021 | 10 items:<br>• 3 tables<br>• 6 figures<br>• 1 in-text result | 10 out of 10 (100%) | 14h 42m |
 | Anagnostou et al. 2022 | 1 item:<br>• 1 figure | 1 out of 1 (100%) | 2h 11m |
-| Johnson et al. 2021 | 5 items:<br>• 1 table<br>• 4 figures | TBC | TBC |
-| Hernandez et al. 2015 | 8 items:<br>• 6 figures<br>• 2 tables | TBC | TBC |
-| Wood et al. 2021 | 5 items:<br>• 4 figures<br>• 1 table | TBC | TBC |
+| Johnson et al. 2021 | 5 items:<br>• 1 table<br>• 4 figures | <!--TODO--> | <!--TODO--> |
+| Hernandez et al. 2015 | 8 items:<br>• 6 figures<br>• 2 tables | 1 out of 8 (12.5%) | 17h 56m |
+| Wood et al. 2021 | 5 items:<br>• 4 figures<br>• 1 table | 5 out of 5 (100%) | 3h 50m |
 
 ## Time to completion
 
-<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 once conducted reproduction -->
+<!-- TODO: Add Johnson et al. 2021 once conducted reproduction -->
 
 ```{python}
 # Import required libraries and functions
@@ -120,11 +120,26 @@ df_ana = process_times(time_ana)
 # Johnson et al. 2021
 # TODO: Add times once completed reproduction 
 
-# Hernandez et al. 2015
-# TODO: Add times once completed reproduction 
+# Hernandez et al. 2015 (1/8)
+time_her = [
+    [1076, 'Figure 5'], # Finished work, not completed, adjust to set to NaN
+    [696, 'Figure 6'],
+    [np.nan, 'Figure 7'],
+    [np.nan, 'Figure 8'],
+    [np.nan, 'Figure 9'],
+    [np.nan, 'Figure 10'],
+    [np.nan, 'Table 3'],
+    [np.nan, 'Table 4']]
+df_her = process_times(time_her, adjust='Figure 5')
 
 # Wood et al. 2021
-# TODO: Add times once completed reproduction 
+time_woo = [
+    [170, 'Figure 4'],
+    [170, 'Table 4'],
+    [170, 'Figure 5'],
+    [170, 'Figure 6'],
+    [230, 'Figure 7']]
+df_woo = process_times(time_woo)
 
 # Create list with the dataframes, labels and colours, to use for each plot
 to_plot = [
@@ -132,10 +147,10 @@ to_plot = [
     (df_hua, 'Huang et<br>al. 2019', '#228833'),
     (df_lim, 'Lim et<br>al. 2020', '#4477aa'),
     (df_kim, 'Kim et<br>al. 2021', '#ccbb44'),
-    (df_ana, 'Anagnostou<br>et al. 2022', '#66ccee')
+    (df_ana, 'Anagnostou<br>et al. 2022', '#66ccee'),
     # (df_joh, 'Johnson et<br>al. 2021', '#aa3377'),
-    # (df_her, 'Hernandez<br>et al. 2015', '#117733'),
-    # (df_woo, 'Woord et al.<br>2021', '#882255')
+    (df_her, 'Hernandez<br>et al. 2015', '#882255'),
+    (df_woo, 'Wood et al.<br>2021', '#117733')
 ]
 ```
 
