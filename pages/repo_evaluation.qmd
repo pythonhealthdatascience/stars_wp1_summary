@@ -30,19 +30,51 @@ from functions import eval_chart
 # Create dataframe of results
 col = ['fully', 'partially', 'not', 'na']
 criteria_dict = {
-  'Shoaib and<br>Ramamohan 2021': [3, 0, 9, 0],
-  'Huang et al. 2019': [3, 0, 9, 0],
-  'Lim et al. 2020': [3, 0, 9, 0],
-  'Kim et al. 2021': [5, 0, 7, 0],
-  'Anagnostou et al. 2022': [10, 0, 2, 0],
-  'Johnson et al. 2021': [0, 0, 0, 1],
-  'Hernandez et al. 2015': [3, 0, 9, 0],
-  'Wood et al. 2021': [4, 0, 8, 0]
+  'Shoaib and Ramamohan<br>2021 (16/17)': [3, 0, 9, 0],
+  'Huang et al. 2019 (3/8)': [3, 0, 9, 0],
+  'Lim et al. 2020 (9/9)': [3, 0, 9, 0],
+  'Kim et al. 2021 (10/10)': [5, 0, 7, 0],
+  'Anagnostou et al. 2022 (1/1)': [10, 0, 2, 0],
+  'Johnson et al. 2021 (X/X)': [0, 0, 0, 1],
+  'Hernandez et al. 2015 (1/8)': [3, 0, 9, 0],
+  'Wood et al. 2021 (5/5)': [4, 0, 8, 0]
 }
 criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 
 eval_chart(criteria_wide)
 ```
+
+::: {.callout icon=false collapse=true}
+
+## Reflections
+
+The studies meeting 33.3%, 41.7% and 83.3% of criteria were all fully reproduced.
+
+The remaining four studies met 25% of criteria, and ranged from 12.5% to 100% reproduced.
+
+However, I think it is more meaningful to actually look at what criteria were and were not met.
+
+```{python}
+import plotly.express as px
+
+# Percentage of items reproduced, and percentage of badge criteria met
+df = pd.DataFrame({
+  'Shoaib and Ramamohan 2021': [94, 25],
+  'Huang et al. 2019': [37.5, 25],
+  'Lim et al. 2020': [100, 25],
+  'Kim et al. 2021': [100, 41.7],
+  'Anagnostou et al. 2022': [100, 83.3],
+  #'Johnson et al. 2021': [],
+  'Hernandez et al. 2015': [12.5, 25],
+  'Wood et al. 2021': [100, 33.3]
+}).T.reset_index()
+df.columns = ['study', 'reproduce', 'criteria']
+
+px.scatter(df, x='criteria', y='reproduce',
+           hover_data={'study': True})
+```
+
+:::
 
 **Badges:**
 
@@ -50,19 +82,49 @@ eval_chart(criteria_wide)
 # Create dataframe of results
 col = ['fully', 'partially', 'not', 'na']
 badge_dict = {
-  'Shoaib and<br>Ramamohan 2021': [3, 0, 9, 0],
-  'Huang et al. 2019': [0, 0, 12, 0],
-  'Lim et al. 2020': [3, 0, 9, 0],
-  'Kim et al. 2021': [3, 0, 9, 0],
-  'Anagnostou et al. 2022': [5, 0, 7, 0],
-  'Johnson et al. 2021': [0, 0, 0, 1],
-  'Hernandez et al. 2015': [0, 0, 12, 0],
-  'Wood et al. 2021': [5, 0, 7, 0]
+  'Shoaib and Ramamohan<br>2021 (16/17)': [3, 0, 9, 0],
+  'Huang et al. 2019 (3/8)': [0, 0, 12, 0],
+  'Lim et al. 2020 (9/9)': [3, 0, 9, 0],
+  'Kim et al. 2021 (10/10)': [3, 0, 9, 0],
+  'Anagnostou et al. 2022 (1/1)': [5, 0, 7, 0],
+  'Johnson et al. 2021 (X/X)': [0, 0, 0, 1],
+  'Hernandez et al. 2015 (1/8)': [0, 0, 12, 0],
+  'Wood et al. 2021 (5/5)': [5, 0, 7, 0]
 }
 badge_wide = pd.DataFrame(badge_dict, index=col).T
 
 eval_chart(badge_wide)
 ```
+
+::: {.callout icon=false collapse=true}
+
+## Reflections
+
+Not certain how meaningful these numbers are, as we have imbalanced numbers of different types of badge, and meeting certain popular criteria will quite weight what is met v.s. not.
+
+Feel that looking at the criteria met is a bit more meaningful? And then specific examples of how that translates into badges - e.g. none meeting ACM "Artifacts Evaluated - Functional" as requires xyz and these are commonly not met.
+
+```{python}
+import plotly.express as px
+
+# Percentage of items reproduced, and percentage of badges awarded
+df = pd.DataFrame({
+  'Shoaib and Ramamohan 2021': [94, 25],
+  'Huang et al. 2019': [37.5, 0],
+  'Lim et al. 2020': [100, 25],
+  'Kim et al. 2021': [100, 25],
+  'Anagnostou et al. 2022': [100, 41.7],
+  #'Johnson et al. 2021': [],
+  'Hernandez et al. 2015': [12.5, 0],
+  'Wood et al. 2021': [100, 41.7]
+}).T.reset_index()
+df.columns = ['study', 'reproduce', 'badges']
+
+px.scatter(df, x='badges', y='reproduce',
+           hover_data={'study': True})
+```
+
+:::
 
 **Essential components of STARS framework:**
 
@@ -70,14 +132,14 @@ eval_chart(badge_wide)
 # Create dataframe of results
 col = ['fully', 'partially', 'not', 'na']
 essential_dict = {
-  'Shoaib and<br>Ramamohan 2021': [2, 0, 6, 0],
-  'Huang et al. 2019': [2, 0, 6, 0],
-  'Lim et al. 2020': [2, 0, 6, 0],
-  'Kim et al. 2021': [4, 1, 3, 0],
-  'Anagnostou et al. 2022': [7, 0, 1, 0],
-  'Johnson et al. 2021': [0, 0, 0, 1],
-  'Hernandez et al. 2015': [2, 0, 6, 0],
-  'Wood et al. 2021': [2, 0, 6, 0]
+  'Shoaib and Ramamohan<br>2021 (16/17)': [2, 0, 6, 0],
+  'Huang et al. 2019 (3/8)': [2, 0, 6, 0],
+  'Lim et al. 2020 (9/9)': [2, 0, 6, 0],
+  'Kim et al. 2021 (10/10)': [4, 1, 3, 0],
+  'Anagnostou et al. 2022 (1/1)': [7, 0, 1, 0],
+  'Johnson et al. 2021 (X/X)': [0, 0, 0, 1],
+  'Hernandez et al. 2015 (1/8)': [2, 0, 6, 0],
+  'Wood et al. 2021 (5/5)': [2, 0, 6, 0]
 }
 essential_wide = pd.DataFrame(essential_dict, index=col).T
 
@@ -89,14 +151,14 @@ eval_chart(essential_wide)
 ```{python}
 # Create dataframe of results
 optional_dict = {
-  'Shoaib and<br>Ramamohan 2021': [0, 0, 5, 0],
-  'Huang et al. 2019': [2, 0, 3, 0],
-  'Lim et al. 2020': [0, 0, 5, 0],
-  'Kim et al. 2021': [0, 0, 5, 0],
-  'Anagnostou et al. 2022': [1, 1, 3, 0],
-  'Johnson et al. 2021': [0, 0, 0, 1],
-  'Hernandez et al. 2015': [0, 0, 5, 0],
-  'Wood et al. 2021': [0, 0, 5, 0]
+  'Shoaib and Ramamohan<br>2021 (16/17)': [0, 0, 5, 0],
+  'Huang et al. 2019 (3/8)': [2, 0, 3, 0],
+  'Lim et al. 2020 (9/9)': [0, 0, 5, 0],
+  'Kim et al. 2021 (10/10)': [0, 0, 5, 0],
+  'Anagnostou et al. 2022 (1/1)': [1, 1, 3, 0],
+  'Johnson et al. 2021 (X/X)': [0, 0, 0, 1],
+  'Hernandez et al. 2015 (1/8)': [0, 0, 5, 0],
+  'Wood et al. 2021 (5/5)': [0, 0, 5, 0]
 }
 optional_wide = pd.DataFrame(optional_dict, index=col).T
 
