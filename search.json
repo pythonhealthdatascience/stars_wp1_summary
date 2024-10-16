@@ -316,6 +316,17 @@
     ]
   },
   {
+    "objectID": "pages/repo_evaluation.html#summary",
+    "href": "pages/repo_evaluation.html#summary",
+    "title": "6  Evaluation of the repository",
+    "section": "",
+    "text": "Reflections\n\n\n\n\n\nThe studies meeting 33.3%, 41.7% and 83.3% of criteria were all fully reproduced.\nThe remaining four studies met 25% of criteria, and ranged from 12.5% to 100% reproduced.\nHowever, I think it is more meaningful to actually look at what criteria were and were not met.\n\n\n                                                \n\n\n\n\n\n\n\n\n\n\n\n\n\nReflections\n\n\n\n\n\nNot certain how meaningful these numbers are, as we have imbalanced numbers of different types of badge, and meeting certain popular criteria will quite weight what is met v.s. not.\nFeel that looking at the criteria met is a bit more meaningful? And then specific examples of how that translates into badges - e.g. none meeting ACM “Artifacts Evaluated - Functional” as requires xyz and these are commonly not met.",
+    "crumbs": [
+      "Results",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Evaluation of the repository</span>"
+    ]
+  },
+  {
     "objectID": "pages/repo_evaluation.html#journal-badges",
     "href": "pages/repo_evaluation.html#journal-badges",
     "title": "6  Evaluation of the repository",
