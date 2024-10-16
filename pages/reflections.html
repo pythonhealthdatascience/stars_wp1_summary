@@ -331,8 +331,8 @@ List required packages
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">🟡</td>
+<td style="text-align: center;">❌</td>
 </tr>
 </tbody>
 </table>
@@ -342,12 +342,13 @@ List required packages
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Provides commands to install packages required at the start of scripts, which I could then easily base renv on automatically (as it detects them).</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Provides <code>requirements.txt</code></p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially met. Some (but not all) of the required packages were listed in the paper.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not met. However, easily resolved based on imports to <code>.R</code> script.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>The <code>import</code> statements can be sufficient in indicating all the packages required but this is not always the case if there are “hidden”/unmentioned dependencies that don’t get imported</li>
 <li>There are various options for listing the packages (e.g.&nbsp;comprehensive import statements, installation lines in the script, environment files).</li>
+<li>Ideally mention this in repository, not just the paper.</li>
 <li>This was a common issue.</li>
 </ul>
 </div>
@@ -396,8 +397,8 @@ Provide versions
 <td style="text-align: center;">🟡</td>
 <td style="text-align: center;">🟡</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">🟡</td>
+<td style="text-align: center;">🟡</td>
 </tr>
 </tbody>
 </table>
@@ -409,15 +410,16 @@ Provide versions
 </ul>
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Partially met. Provides major Python version, but chose minor and the package versions based on article publication date.</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Partially met. States version of R but not package. Due to prior issues with backdating R, used latest versions. There were no issues using the latest versions of R and packages, but if there had been, it would be important to know what versions had previously been used and worked.</p>
-<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Partially met (depending on how strict you are being). The Python version was stated in the paper, and the simpy version was stated in the complementary app repository (although neither were mentioned in the model repository itself).</p>
+<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Partially met (depending on how strict you are being). The Python version was stated in the paper, and the SimPy version was stated in the complementary app repository (although neither were mentioned in the model repository itself).</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially. Versions of Python, R and some (but not all) packages given in the paper. Some versions weren’t very specific (e.g.&nbsp;Python 2.7 v.s. something specific like 2.7.12)</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Partially met. States version of R but not package. Due to prior issues with backdating R, used latest versions. There were no issues using the latest versions of R and packages, but if there had been, it would be important to know what versions had previously been used and worked.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Models will sometimes work with the latest versions of packages, but likewise, you will sometimes need to backdate as it no longer works with the latest</li>
 <li>For Python, it was very easy to “backdate” the python and package versions. However, I found this very difficult to in R, and ended up always using the latest versions.</li>
-<li>Versions are sometimes provided elsewhere (e.g.&nbsp;in paper, in other repositories), but would be handy to be in model repository itself</li>
+<li>Versions are sometimes provided elsewhere (e.g.&nbsp;in paper, in other repositories), but would be handy to be in model repository itself.</li>
+<li>Handy to provide specific versions too, particularly when there can be reasonably large changes between minor versions.</li>
 <li>This was a very common issue.</li>
 </ul>
 </div>
@@ -469,8 +471,8 @@ Model is provided in a “runnable” format
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
@@ -480,8 +482,8 @@ Model is provided in a “runnable” format
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Has seperate <code>.R</code> scripts for each scenario which ran the model by calling functions from elsewhere in repository.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Can run model from command line.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. The model (python code) can be run from <code>main.py</code>.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Provided as a single <code>.R</code> file which ran the model with a for loop.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>If you are presenting the results of a model, then provide the code for that model in a “runnable” format.</li>
@@ -490,6 +492,7 @@ Model is provided in a “runnable” format
 </div>
 </div>
 </div>
+<!--TODO: Consider overlap between some of these and how clear it is. I seperated to seperate out the script structure v.s. hard coding v.s. providing parameters and scenarios later. Consider whether evaluation for Shoaib below feels correct or not. -->
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -533,19 +536,19 @@ Model is designed to be run programmatically (i.e.&nbsp;can run model with diffe
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. The model is set up as classes and run using a function. However, it is not designed to allow any variation in inputs. Everything uses default inputs, and it designed in such a way that - if you wish to vary model parameters - you need to directly change these in the script itself. This meant you couldn’t run multiple versions of the model using the same script. It also meant hidden errors were more likely (e.g.&nbsp;if miss changing a parameter somewhere, or input the wrong parameters and don’t realise).</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. The model is set up as classes and run using a function. However, it is not designed to allow any variation in inputs. Everything uses default inputs, and it designed in such a way that - if you wish to vary model parameters - you need to directly change these in the script itself.</p>
 <p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Fully met. Model was set up as a function, with many of the required parameters already set as “changeable” inputs to that function.</p>
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Fully met. The model is created from a series of functions and run with a for loop that iterates through different parameters. As such, the model is able to be run programmatically (within that for loop, which varied e.g.&nbsp;staff per shift and so on and re-ran the model).</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Each scenario is an R script which states different parameters and then calls functions to run model.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Change inputs in input <code>.csv</code> files.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. Model created from classes, which accept some inputs and can run the model.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Changes inputs to run all scenarios from a single <code>.R</code> file.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Design model so that you can re-run it with different parameters without needing to make changes to the model code itself.
@@ -601,8 +604,8 @@ Don’t hard code parameters that you will want to change for scenario analyses
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">🟡</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
@@ -612,13 +615,14 @@ Don’t hard code parameters that you will want to change for scenario analyses
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. All model parameters could be varied from “outside” the model code itself, as they were provided as changeable inputs to the model.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: N/A as no scenarios.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially met. Did not hard code, runs, population, generations, and percent pre-screened. However, did hard code other parameters like bi-objective v.s tri-objective model and bounding. Also, it was pretty tricky to change percent pre-screened, as it assumed you provided a <code>.txt</code> file for each %.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. All model parameters for the scenarios/sensitivity analysis could be varied from “outside” the model code itself.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>It can be quite difficult to change parameters that are hard coded into the model. Ideally, all the parameters that a user might want to change should be easily changeable and not hard coded.</li>
 <li>This is a somewhat common issue.</li>
 <li>There is overlap between this and whether the code for scenarios is provided (as typically, the code for scenario is conditionally changing parameter values, although this can be facilitated by not hard coding the parameters, so you call need to change the values from “outside” the model code, rather than making changes to the model functions themselves). Hence, have included as two seperate reflections.</li>
+<li>Important to note that we evaluate this in the context of reproduction - and have not checked for hard-coded parameters outside the specified scenario analyses, but that someone may wish to alter if reusing the model for a different analysis/context/purpose.</li>
 </ul>
 </div>
 </div>
@@ -629,12 +633,13 @@ Don’t hard code parameters that you will want to change for scenario analyses
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Avoid large amounts of code duplication
+Use relative file paths
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<!--TODO: Consider whether this is something to keep? Did any have an issue with relative file paths? Or was it more that I saw an issue with relative file paths that were tricky to change? Have mentioned this is a bit under "Saves output to a file"-->
 <table class="caption-top table">
 <colgroup>
 <col style="width: 12%">
@@ -660,31 +665,26 @@ Avoid large amounts of code duplication
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
 <td style="text-align: center;"><!--TODO--></td>
 <td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. The model often contained very similar blocks of code before or after warm-up. This has the potential to introduce mistakes - with a suspected (although unconfirmed) mistake being that the lower boundary for the doctor consultation times in configuration 1 differed before and after warm-up.</p>
-<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Fully met.</p>
-<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Fully met.</p>
-<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. There was alot of duplication when running each scenario (e.g.&nbsp;repeated calls to <code>Eventsandcosts</code>, and repeatedly defining the same parameters). This meant, if changing a parameter that you want to be consistent between all the scripts (e.g.&nbsp;number of persons), you had to change each of the scripts one by one.</p>
-<p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: <!--TODO--></p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --> Large amounts of code duplication are non-ideal as they can:</p>
-<ul>
-<li>Make code less readable</li>
-<li>Make it trickier to change universal parameters</li>
-<li>Increase the likelihood of introducing mistakes</li>
-</ul>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. Creates folder in current working directory based on date/time to store results.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Although I then changed things a bit as reorganised repository and prefer not to work with <code>setwd()</code>, these were set up in such a way that it would be really easy to correct file path, just by setting working directory at start of script.</p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (when add Shoaib, Huang, Lim, Kim and Wood) and then (since have added Johnson, Hernandez and Wood) --></p>
 </div>
 </div>
 </div>
@@ -694,7 +694,7 @@ Avoid large amounts of code duplication
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Include sufficient comments in the code
+Avoid large amounts of code duplication
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -726,82 +726,44 @@ Include sufficient comments in the code
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;">🟡</td>
-<td style="text-align: center;">🟡</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. Would have benefitted from more comments, as it took some time to ensure I have correctly understood code, particularly if they used lots of abbreviations.</p>
-<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Fully met. There were lots of comments in the code (including doc-string-style comments at the start of functions) that aided understanding of how it worked.</p>
-<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Partially met. Didn’t have any particular issues in working out the code. There are sufficient comments in the scenario scripts and at the start of the model scripts, although within the model scripts, there were sometimes quite dense sections of code that would likely benefit from some additional comments.</p>
-<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Partially met. Didn’t have to delve into the code much, so can’t speak from experience as to whether the comments were sufficient. From looking through the model code, several scripts have lots of comments and docstrings for each function, but some do not.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. The model often contained very similar blocks of code before or after warm-up. This has the potential to introduce mistakes - with a suspected (although unconfirmed) mistake being that the lower boundary for the doctor consultation times in configuration 1 differed before and after warm-up.</p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Fully met.</p>
+<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Fully met.</p>
+<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. There was alot of duplication when running each scenario (e.g.&nbsp;repeated calls to <code>Eventsandcosts</code>, and repeatedly defining the same parameters). This meant, if changing a parameter that you want to be consistent between all the scripts (e.g.&nbsp;number of persons), you had to change each of the scripts one by one.</p>
+<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --> Large amounts of code duplication are non-ideal as they can:</p>
 <ul>
-<li>With increasing code complexity, the inclusion of sufficient comments becomes increasingly important, as it can otherwise be quite time consuming to figure out how to fix and change sections of code</li>
-<li>Define abbreviations used within the code</li>
-<li>Good to have consistent comments and docstrings throughout (i.e.&nbsp;on all scripts, on not just some of them)</li>
+<li>Make code less readable</li>
+<li>Make it trickier to change universal parameters</li>
+<li>Increase the likelihood of introducing mistakes</li>
 </ul>
 </div>
 </div>
 </div>
-</section>
-<section id="run-time-and-memory-usage" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="run-time-and-memory-usage"><span class="header-section-number">5.3</span> Run time and memory usage</h2>
-<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Quicker models are easier to work with
+Include sufficient comments in the code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>I have not evaluated like as a criteria, as a long run time is not inherently a bad thing. However, I definitely found that the run time of models had a big impact on how easy it was to reproduce results as longer run times meant it was tricky (or even impossible) to run in the first place, or tricky to re-run.</p>
-<p>The studies where I made adjustments were:</p>
-<ul>
-<li><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Add parallel processing and ran fewer replications</li>
-<li><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: No changes made.</li>
-<li><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Add parallel processing</li>
-<li><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Reduced number of people in simulation, and switched from serial to the provided parallel option.</li>
-<li><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Model was super quick which made it really easy to run and re-run each time</li>
-<li><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></li>
-</ul>
-<p>For <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>, an error appears to have been introduced with the aoorta diameter thresholds by switching between nested and unnested lists, which I’m anticipating was unresolved due to the long run times of the model meaning they weren’t all run in sequence at the end.</p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
-<ul>
-<li>Reduce model run time if possible as it makes it easier to work with, and facilitates doing full re-runs of all scenarios (which can be important with code changes, etc).
-<ul>
-<li>Relatedly, it is good practice to re-run all scripts before finishing up, as then you can spot any errors like the one mentioned for <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></li>
-</ul></li>
-<li>Common issue (to varying degrees - i.e.&nbsp;taking 20 minutes, up to taking several hours).</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-For slow models, state the expected run time
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -828,29 +790,68 @@ For slow models, state the expected run time
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">🟡</td>
+<td style="text-align: center;">🟡</td>
+<td style="text-align: center;"><!--TODO--></td>
 <td style="text-align: center;">🟡</td>
 <td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">N/A</td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Partially met. Run time stated in paper but not repository.</p>
-<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met.</p>
-<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not met.</p>
-<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. A prior paper describing the model development mentions the run time, but not the current paper or repository.</p>
-<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. Very quick! Seconds! So not particularly relevant - although, you could argue, potentially still important if there were some error that made it look like the model were running continuously (e.g.&nbsp;stuck in a loop) - although this is relatively unlikely.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. Would have benefitted from more comments, as it took some time to ensure I have correctly understood code, particularly if they used lots of abbreviations.</p>
+<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Fully met. There were lots of comments in the code (including doc-string-style comments at the start of functions) that aided understanding of how it worked.</p>
+<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Partially met. Didn’t have any particular issues in working out the code. There are sufficient comments in the scenario scripts and at the start of the model scripts, although within the model scripts, there were sometimes quite dense sections of code that would likely benefit from some additional comments.</p>
+<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Partially met. Didn’t have to delve into the code much, so can’t speak from experience as to whether the comments were sufficient. From looking through the model code, several scripts have lots of comments and docstrings for each function, but some do not.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially met. There are some comments and doc-strings, but not comprehensively.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not met. Very few comments, so for the small bit of the code that I did delve into, took a bit of working out what different variables referred to.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
-<li>For long models with no statement, it can take a while to realise that it’s not an error in the code or anything, but actually just a long run time! And hard to know how long to expect, and whether it is without the capacities of your machine and so on.</li>
-<li>Common issue.</li>
+<li>With increasing code complexity, the inclusion of sufficient comments becomes increasingly important, as it can otherwise be quite time consuming to figure out how to fix and change sections of code</li>
+<li>Define abbreviations used within the code</li>
+<li>Good to have consistent comments and docstrings throughout (i.e.&nbsp;on all scripts, on not just some of them)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="run-time-and-memory-usage" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="run-time-and-memory-usage"><span class="header-section-number">5.3</span> Run time and memory usage</h2>
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Quicker models are easier to work with
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>I have not evaluated like as a criteria, as a long run time is not inherently a bad thing. However, I definitely found that the run time of models had a big impact on how easy it was to reproduce results as longer run times meant it was tricky (or even impossible) to run in the first place, or tricky to re-run.</p>
+<p>The studies where I made adjustments were:</p>
+<ul>
+<li><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Add parallel processing and ran fewer replications</li>
+<li><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: No changes made.</li>
+<li><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Add parallel processing</li>
+<li><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Reduced number of people in simulation, and switched from serial to the provided parallel option.</li>
+<li><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Model was super quick which made it really easy to run and re-run each time</li>
+<li><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></li>
+<li><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Add parallel processing, did not run one of the scenarios (it was very long, and hadn’t managed to reproduce other parts of same figure regardless), and experimented with reducing parameters for evolutionary algorithm (but, in the end, ran with full parameters, though lower were helpful while working through and troubleshooting).</li>
+<li><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: No changes made, but unlike other reproduction, didn’t try to run at smaller amounts - just set it to run as-is over the weekend.</li>
+</ul>
+<p>For <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>, an error appears to have been introduced with the aoorta diameter thresholds by switching between nested and unnested lists, which I’m anticipating was unresolved due to the long run times of the model meaning they weren’t all run in sequence at the end.</p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<ul>
+<li>Reduce model run time if possible as it makes it easier to work with, and facilitates doing full re-runs of all scenarios (which can be important with code changes, etc).
+<ul>
+<li>Relatedly, it is good practice to re-run all scripts before finishing up, as then you can spot any errors like the one mentioned for <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></li>
+</ul></li>
+<li>Common issue (to varying degrees - i.e.&nbsp;taking 20 minutes, up to taking several hours).</li>
 </ul>
 </div>
 </div>
@@ -861,7 +862,7 @@ For slow models, state the expected run time
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-For computationally expensive models, state memory usage and provide alternatives for lower spec machines
+For slow models, state the expected run time
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -892,41 +893,42 @@ For computationally expensive models, state memory usage and provide alternative
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">N/A</td>
-<td style="text-align: center;">N/A</td>
-<td style="text-align: center;">N/A</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">🟡</td>
+<td style="text-align: center;">🟡</td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, and <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not applicable. Didn’t find it to be too computationally expensive for my machine.</p>
-<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Unable to run on my machine (<code>serial</code> took too long to run (would have to leave laptop on for many many hours which isn’t feasible), and <code>parallel</code> was too computationally expensive and crashed the machine (with the original number of people)). This is not mentioned in the repository or paper, but only referred to in a prior publication. Would’ve been handy if it included suggestions like reducing number of people and so on (which is what I had to do to feasibly run it).</p>
-<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. Runs in seconds.</p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Run time stated in paper (but not repository).</p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met.</p>
+<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not met.</p>
+<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. A prior paper describing the model development mentions the run time, but not the current paper or repository, so this is easily missed.</p>
+<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. Very quick! Seconds! So not particularly relevant - although, you could argue, potentially still important if there were some error that made it look like the model were running continuously (e.g.&nbsp;stuck in a loop) - although this is relatively unlikely.</p>
+<p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially met. Some of the run times are mentioned in the paper, but not all, although this did help indicate that we would anticipate other s scenarios to similarly take hours to run.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Partially met. In the paper, they state that it takes less than five minutes for each scenario, but this feels like half the picture, given the total run time was 48 hours.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
-<li>Some models are so computationally expensive that it may be simply impossible to run it a feasible length of time without a high powered machine.</li>
-<li>If a model is computationally expensive, it would be good to provide suggested alternatives that allow it to be run on lower spec machines</li>
-<li>Not a common problem - only relevant to computationally expensive models</li>
+<li>For long models with no statement, it can take a while to realise that it’s not an error in the code or anything, but actually just a long run time! And hard to know how long to expect, and whether it is without the capacities of your machine and so on.</li>
+<li>Ideally include statement of run time in repository as well as paper.</li>
+<li>Ideally include run time of all components of analysis (e.g.&nbsp;all scenarios).</li>
+<li>Common issue.</li>
 </ul>
 </div>
 </div>
 </div>
-</section>
-<section id="parameters-scenarios-and-outputs" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="parameters-scenarios-and-outputs"><span class="header-section-number">5.4</span> Parameters, scenarios and outputs</h2>
-<div class="callout callout-style-default callout-tip no-icon callout-titled">
+<div class="callout callout-style-default callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Provide code for all scenarios
+For computationally expensive models, state memory usage and provide alternatives for lower spec machines
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -957,40 +959,42 @@ Provide code for all scenarios
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
+<td style="text-align: center;">N/A</td>
+<td style="text-align: center;">N/A</td>
+<td style="text-align: center;">N/A</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">N/A</td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. There were several instances where it took quite a while to understand how and where to modify the code in order to run scenarios (e.g.&nbsp;no arrivals, transferring admin work, reducing doctor intervention in deliveries).</p>
-<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. Set up a notebook to programmatically run the model scenarios. It took alot of work to modify and write code that could run the scenarios, and I often made mistakes in my interpretation for the implementation of scenarios, which could be avoided if code for those scenarios was provided.</p>
-<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not met. Several parameters or scenarios were not incorporated in the code, and had to be added (e.g.&nbsp;with conditional logic to skip or change code run, removing hard-coding, adding parameters to existing).</p>
-<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Took alot of work to change model from for loop to function, to set all parameters as inputs (some were hard coded), and add conditional logic of scenarios when required.</p>
-<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. No scenarios.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, and <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not applicable. Didn’t find it to be too computationally expensive for my machine.</p>
+<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Unable to run on my machine (<code>serial</code> took too long to run (would have to leave laptop on for many many hours which isn’t feasible), and <code>parallel</code> was too computationally expensive and crashed the machine (with the original number of people)). This is not mentioned in the repository or paper, but only referred to in a prior publication. Would’ve been handy if it included suggestions like reducing number of people and so on (which is what I had to do to feasibly run it).</p>
+<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. Runs in seconds.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO: This had long run times but I don't know if it was computationally expensive or not. May need to run again for a while and see what memory usage is--></p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not applicable. As stated in their prior paper, the model is constrained by processing time, not computer memory.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
-<li>Common issue</li>
-<li>Time consuming and tricky to resolve</li>
+<li>Some models are so computationally expensive that it may be simply impossible to run it a feasible length of time without a high powered machine.</li>
+<li>If a model is computationally expensive, it would be good to provide suggested alternatives that allow it to be run on lower spec machines</li>
+<li>Not a common problem - only relevant to computationally expensive models</li>
 </ul>
 </div>
 </div>
 </div>
+</section>
+<section id="parameters-scenarios-and-outputs" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="parameters-scenarios-and-outputs"><span class="header-section-number">5.4</span> Parameters, scenarios and outputs</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-All the required outputs are calculated/provided
+Provide code for all scenarios
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1025,25 +1029,25 @@ All the required outputs are calculated/provided
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">N/A</td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. Had to add some outputs and calculations (e.g.&nbsp;proportion of childbirth cases referred, standard deviation)</p>
-<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. It has a complicated output (standardised density of patient in queue) that I was never certain on whether I correctly calculated. Although it outputs the columns required to calculate it, due its complexity, I feel this was not met, as it feels like a whole new output in its own right (and not just something simple like a mean).</p>
-<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not met. The model script provided was only set up to provide results from days 7, 14 and 21. The figures require daily results, so I needed to modify the code to output that.</p>
-<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Had to write code to find aorta sizes of people with AAA-related deaths.</p>
-<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Although worth noting this only had one scenario/version of model and one output to reproduce.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. There were several instances where it took quite a while to understand how and where to modify the code in order to run scenarios (e.g.&nbsp;no arrivals, transferring admin work, reducing doctor intervention in deliveries).</p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. Set up a notebook to programmatically run the model scenarios. It took alot of work to modify and write code that could run the scenarios, and I often made mistakes in my interpretation for the implementation of scenarios, which could be avoided if code for those scenarios was provided.</p>
+<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not met. Several parameters or scenarios were not incorporated in the code, and had to be added (e.g.&nbsp;with conditional logic to skip or change code run, removing hard-coding, adding parameters to existing).</p>
+<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Took alot of work to change model from for loop to function, to set all parameters as inputs (some were hard coded), and add conditional logic of scenarios when required.</p>
+<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. No scenarios.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not met. Took a while to figure out how to implement scenarios.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
-<li>Calculate and provide all the outputs required</li>
-<li>Appreicate this can be a bit “ambiguous” (e.g.&nbsp;if its just plotting a mean or simple calculation, then didn’t consider that here) (however, combined with other criteria, we do want them to provide code to calculate outputs, so we would want them to provide that anyway)</li>
+<li>Common issue</li>
+<li>Time consuming and tricky to resolve</li>
 </ul>
 </div>
 </div>
@@ -1054,7 +1058,7 @@ All the required outputs are calculated/provided
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Include correct parameters in the script (even if just for one scenario)
+All the required outputs are calculated/provided
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1085,29 +1089,29 @@ Include correct parameters in the script (even if just for one scenario)
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">🟡</td>
 <td style="text-align: center;">❌</td>
-<td style="text-align: center;">🟡</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;"><!--TODO--></td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Partially met. Script is set with parameters for base configuration 1, with the exception of number of replications.</p>
-<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. The baseline model in the script did not match the baseline model (or any scenario) in the paper, so had to modify parameters.</p>
-<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Partially met. The included parameters were corrected, but the baseline scenario included varying staff strength to 2, and the provided code only varied 4 and 6. I had to add some code that enabled it to run with staff strength 2 (as there were an error that occured if you tried to set that).</p>
-<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
-<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. Had to add some outputs and calculations (e.g.&nbsp;proportion of childbirth cases referred, standard deviation)</p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. It has a complicated output (standardised density of patient in queue) that I was never certain on whether I correctly calculated. Although it outputs the columns required to calculate it, due its complexity, I feel this was not met, as it feels like a whole new output in its own right (and not just something simple like a mean).</p>
+<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not met. The model script provided was only set up to provide results from days 7, 14 and 21. The figures require daily results, so I needed to modify the code to output that.</p>
+<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Had to write code to find aorta sizes of people with AAA-related deaths.</p>
+<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Although worth noting this only had one scenario/version of model and one output to reproduce.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
-<li>At least provide a script that can run the baseline model as in the paper (even if not providing the scenarios)</li>
-<li>This can introduce difficulties - when some parameters are wrong, you rely on the paper to check which parameters are correct or not, but if the paper doesn’t mention every single parameter (which is reasonably likely, as this includes those not varied by scenarios), then you aren’t able to be sure that the model you are running is correct.</li>
+<li>Calculate and provide all the outputs required</li>
+<li>Appreicate this can be a bit “ambiguous” (e.g.&nbsp;if its just plotting a mean or simple calculation, then didn’t consider that here) (however, combined with other criteria, we do want them to provide code to calculate outputs, so we would want them to provide that anyway)</li>
 </ul>
 </div>
 </div>
@@ -1118,7 +1122,7 @@ Include correct parameters in the script (even if just for one scenario)
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Provide all the required parameters
+Include correct parameters in the script (even if just for one scenario)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1149,28 +1153,30 @@ Provide all the required parameters
 </thead>
 <tbody>
 <tr class="odd">
+<td style="text-align: center;">🟡</td>
 <td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
+<td style="text-align: center;">🟡</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Some parameters that could not be calculated were not provided - ie. what consultation boundaries to use when mean length of doctor consultation was 2.5 minutes</p>
-<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. In this case, patient arrivals and resource numbers were listed in the paper, and there were several discprepancies between this and the provided code. However, for many of the model parameters like length of appointment, these were not mentioned in the paper, and so it was not possible to confirm whether or not those were correct. Hence, marked as not met, as the presence of discrepenancies for several other parameters puts these into doubt.</p>
-<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not met. For Figure 5, had to guess the value for <code>staff_per_shift</code>.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Partially met. Script is set with parameters for base configuration 1, with the exception of number of replications.</p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. The baseline model in the script did not match the baseline model (or any scenario) in the paper, so had to modify parameters.</p>
+<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Partially met. The included parameters were corrected, but the baseline scenario included varying staff strength to 2, and the provided code only varied 4 and 6. I had to add some code that enabled it to run with staff strength 2 (as there were an error that occured if you tried to set that).</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not met. As agreed with the author, this is likely the primary reason for the discrepancy in these results - they are very close, and we see similar patterns, but not reproduced. Unfortunately, several parameters were wrong, and although we changed those we spotted, we anticipate there could be others we hadn’t spotted that might explain the remaining discrepancies.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
-<li>Provide all required parameters</li>
+<li>At least provide a script that can run the baseline model as in the paper (even if not providing the scenarios)</li>
+<li>This can introduce difficulties - when some parameters are wrong, you rely on the paper to check which parameters are correct or not, but if the paper doesn’t mention every single parameter (which is reasonably likely, as this includes those not varied by scenarios), then you aren’t able to be sure that the model you are running is correct.</li>
+<li>This can make a really big difference, and be likely cause of managing to reproduce everything v.s. nothing, if it impacts all aspects of the results.</li>
 </ul>
 </div>
 </div>
@@ -1181,7 +1187,7 @@ Provide all the required parameters
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-If not provided in the script, then <em>clearly</em> present all parameters in the paper
+Provide all the required parameters
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1214,26 +1220,26 @@ If not provided in the script, then <em>clearly</em> present all parameters in t
 <tr class="odd">
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
-<td style="text-align: center;">🟡</td>
-<td style="text-align: center;">N/A</td>
-<td style="text-align: center;">N/A</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. Although there was a scenario table, this did not include all the parameters I would need to change. It was more challenging to identify parameters that were only described in the body of the article. There were also some discrepancies in parameters between the main text of the article, and the tables and figures. Some scenarios were quite ambiguous/unclear from their description in the text, and I initially misunderstood the required parameters for the scenarios.</p>
-<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. As described above, paper didn’t adequately describe all parameters.</p>
-<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Partially met. Nearly all parameters are in the paper table, and others are described in the article. However, didn’t provide information for the <code>staff_per_shift</code> for Figure 5.</p>
-<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. All provided.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Some parameters that could not be calculated were not provided - ie. what consultation boundaries to use when mean length of doctor consultation was 2.5 minutes</p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. In this case, patient arrivals and resource numbers were listed in the paper, and there were several discprepancies between this and the provided code. However, for many of the model parameters like length of appointment, these were not mentioned in the paper, and so it was not possible to confirm whether or not those were correct. Hence, marked as not met, as the presence of discrepenancies for several other parameters puts these into doubt.</p>
+<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not met. For Figure 5, had to guess the value for <code>staff_per_shift</code>.</p>
+<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
+<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not met. The results have a large impact by the bounding set, but this was not mentioned in the paper or repository, and required me looking at the numbers in results and GitHub commit history to estimate the appropriate bounds to use.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
-<li>Provide parameters in a table (including for each scenario), as it can be difficult/ambiguous to interpret them from the text, and hard to spot them too.</li>
-<li>Be sure to mention every parameter that gets changed (e.g.&nbsp;for <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, as there wasn’t a default <code>staff_per_shift</code> across all scenarios, but not stated for the scenario, had to guess it).</li>
+<li>Provide all required parameters</li>
 </ul>
 </div>
 </div>
@@ -1244,7 +1250,7 @@ If not provided in the script, then <em>clearly</em> present all parameters in t
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-If will need to process parameters, provide required calculations
+If not provided in the script, then <em>clearly</em> present all parameters in the paper
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1276,40 +1282,38 @@ If will need to process parameters, provide required calculations
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">❌</td>
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">N/A</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">🟡</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">🟡</td>
+<td style="text-align: center;">N/A</td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. It was unclear how to estimate inter-arrival time.</p>
-<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Fully met. The calculations for inter-arrival times were provided in the code, and the inputs to the code were the number of arrivals, as reported in the paper, and so making it easy to compare those parameters and check if numbers were correct or not.</p>
-<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not applicable. The parameter not provided is not one that you would calculate.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. Although there was a scenario table, this did not include all the parameters I would need to change. It was more challenging to identify parameters that were only described in the body of the article. There were also some discrepancies in parameters between the main text of the article, and the tables and figures. Some scenarios were quite ambiguous/unclear from their description in the text, and I initially misunderstood the required parameters for the scenarios.</p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. As described above, paper didn’t adequately describe all parameters.</p>
+<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Partially met. Nearly all parameters are in the paper table, and others are described in the article. However, didn’t provide information for the <code>staff_per_shift</code> for Figure 5.</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. All provided.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Most parameters are relatively easily identified from the text or figure legends (though would be easier if provided in a table or similar). Parameter for bounding was not provided in paper.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not applicable. All provided.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
-<li>If you are going to be mentioning the “pre-processed” values at all, then its important to include the calculation (ideally in the code, as that is the clearest demonstration of exactly what you did)</li>
+<li>Provide parameters in a table (including for each scenario), as it can be difficult/ambiguous to interpret them from the text, and hard to spot them too.</li>
+<li>Be sure to mention every parameter that gets changed (e.g.&nbsp;for <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, as there wasn’t a default <code>staff_per_shift</code> across all scenarios, but not stated for the scenario, had to guess it).</li>
 </ul>
 </div>
 </div>
 </div>
-</section>
-<section id="output-format" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="output-format"><span class="header-section-number">5.5</span> Output format</h2>
-<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout callout-style-default callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Saves output to a file
+If will need to process parameters, provide required calculations
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1340,39 +1344,41 @@ Saves output to a file
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">✅</td>
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
+<td style="text-align: center;">N/A</td>
+<td style="text-align: center;">N/A</td>
+<td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">N/A</td>
+<td style="text-align: center;">N/A</td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Outputs to <code>.xlsx</code> files</p>
-<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, and <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Outputs to dataframe/s.</p>
-<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Outputs to <code>OUT_STATS.csv</code>. Note: Although not needed for the reproduction itself, when I tried to amend the name and location of the csv file output the model for use in tests, this was very tricky to do as it was hard coded into the scripts and I found difficult to amend due to how the model is run and set up.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. It was unclear how to estimate inter-arrival time.</p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Fully met. The calculations for inter-arrival times were provided in the code, and the inputs to the code were the number of arrivals, as reported in the paper, and so making it easy to compare those parameters and check if numbers were correct or not.</p>
+<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not applicable. The parameter not provided is not one that you would calculate.</p>
+<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. All provided.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not applicable.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not applicable. All provided.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
-<li>Common issue</li>
-<li>Particularly important if model run time is even slightly long (even just minutes long, but even more so as becomes many minutes / hours), so don’t always have to re-run it each time to get results</li>
-<li>Set up this in such a way that it is easy to change the name and location of the output file.</li>
+<li>If you are going to be mentioning the “pre-processed” values at all, then its important to include the calculation (ideally in the code, as that is the clearest demonstration of exactly what you did)</li>
 </ul>
 </div>
 </div>
 </div>
+</section>
+<section id="output-format" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="output-format"><span class="header-section-number">5.5</span> Output format</h2>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Understandable output tables
+Saves output to a file
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1403,41 +1409,39 @@ Understandable output tables
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;">❌</td>
-<td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. There were two alternative results spreadsheets with some duplicate metrics but sometimes differing results between them, which made it a bit confusing to work out what to use.</p>
-<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, and <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Didn’t experience issues interpreting the contents of the output table/s.</p>
-<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. It took me a little while to work out what surgery columns I needed, and to realise I needed to combine two of them. This required looking at what inputs genreated this, and referring to a input data dictionary.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Outputs to <code>.xlsx</code> files</p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, and <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Outputs to dataframe/s.</p>
+<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Outputs to <code>OUT_STATS.csv</code>. Note: Although not needed for the reproduction itself, when I tried to amend the name and location of the csv file output the model for use in tests, this was very tricky to do as it was hard coded into the scripts and I found difficult to amend due to how the model is run and set up.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. Outputs to <code>.txt</code> files.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Outputs to <code>.csv</code> files.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
-<li>Don’t provide alternative results for the same metrics</li>
-<li>Make it clear what each colum/category in the results table means, if it might not be immediately clear.</li>
+<li>Common issue</li>
+<li>Particularly important if model run time is even slightly long (even just minutes long, but even more so as becomes many minutes / hours), so don’t always have to re-run it each time to get results</li>
+<li>Set up this in such a way that it is easy to change the name and location of the output file.</li>
 </ul>
 </div>
 </div>
 </div>
-</section>
-<section id="seeds" class="level2" data-number="5.6">
-<h2 data-number="5.6" class="anchored" data-anchor-id="seeds"><span class="header-section-number">5.6</span> Seeds</h2>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Use seeds to control stochasticity
+Understandable output tables
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -1469,13 +1473,141 @@ Use seeds to control stochasticity
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
+</tr>
+</tbody>
+</table>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. There were two alternative results spreadsheets with some duplicate metrics but sometimes differing results between them, which made it a bit confusing to work out what to use.</p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, and <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Didn’t experience issues interpreting the contents of the output table/s.</p>
+<p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. It took me a little while to work out what surgery columns I needed, and to realise I needed to combine two of them. This required looking at what inputs genreated this, and referring to a input data dictionary.</p>
+<p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. Straightforward with key information provided.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. I didn’t need to work with the output tables, but from looking at them now, they make sense.</p>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<ul>
+<li>Don’t provide alternative results for the same metrics</li>
+<li>Make it clear what each colum/category in the results table means, if it might not be immediately clear.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Avoid large file sizes if possible
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>I have not evaluated like as a criteria, as a large file size is not inherently a bad thing, and might be difficult to avoid. However, when files are very large, this can make things trickier, such as with requiring compression and use of GitHub Large File Storage (LFS) for tracking, which has limits on the free tier.</p>
+<p>Regarding file sizes in each study:</p>
+<ul>
+<li><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not relevant (results files <strong>&lt;35 kB</strong>)</li>
+<li><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Provided code didn’t save results to file. When I saved to file, these were large, so I compressed to <code>.csv.gz</code>, which made them small enough that GitHub was still happy (<strong>26 MB</strong>).</li>
+<li><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Provided code didn’t save results to file. When I saved to file, these were small, so not relevant (results files <strong>&lt;60 kB</strong>)</li>
+<li><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Provided code didn’t save results to file. When I saved to file, these were small, so not relevant (results files <strong>&lt;1 kB</strong>)</li>
+<li><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not relevant (results file <strong>34 kB</strong>)</li>
+<li><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></li>
+<li><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not relevant (aggregate results files <strong>&lt;10 kB</strong>).</li>
+<li><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Aggregate results files are small (<strong>327 kB</strong>), but raw results files are very large (<strong>2.38 GB</strong>), and even when compressed to <code>.csv.gz</code> (<strong>128 MB</strong>) require using of GitHub LFS</li>
+</ul>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections once add Johnson --></p>
+<ul>
+<li>For most studies, this was not relevant, with outputs relatively small</li>
+<li>I only really found this to be an issue when files exceeded GitHub threshold. <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github">GitHub</a> give warning over 50 MB, blocks files over 100 MB, requiring you to use GitHub LFS. Recommends repositories ideally &lt;1 GB and for sure &lt; 5GB. <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage">GitHub LFS</a> has limits on storage and bandwith use (1GB of each).</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Do not output excessive numbers of files
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>I have not evaluated like as a criteria, as a large number of files is not inherently a bad thing, and might be difficult to avoid.</p>
+<p>Regarding number of files:</p>
+<ul>
+<li><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not relevant.</li>
+<li><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not relevant.</li>
+<li><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not relevant.</li>
+<li><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not relevant.</li>
+<li><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not relevant.</li>
+<li><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></li>
+<li><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: The default behaviour of the script was to output <strong>lots of files</strong> from each round (so you could easily have 90, 100, 200+ files), which were then <strong>not</strong> used in analysis (as it just depended on an aggregate results file). Although these individual files might be useful during quality control, as a default behaviour of the script, it could easily make the repository quite busy/littered with files.</li>
+<li><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not relevant.</li>
+</ul>
+<p><strong>Reflections:</strong> <!--TODO: Update reflections once add Johnson --></p>
+<ul>
+<li>Outputting hundreds of files - particularly if they are not then used normally in analysis - can easily make repository cluttered/busy</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="seeds" class="level2" data-number="5.6">
+<h2 data-number="5.6" class="anchored" data-anchor-id="seeds"><span class="header-section-number">5.6</span> Seeds</h2>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Use seeds to control stochasticity
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+<col style="width: 12%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span></th>
+<th style="text-align: center;"><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">✅</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
@@ -1485,8 +1617,8 @@ Use seeds to control stochasticity
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Included a seed, although I don’t get identical results as I had to reduce number of people in simulation.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. The authors included a random seed so the results I got were identical to the original (so no need for any subjectivity in deciding whether its similar enough, as I could perfectly reproduce).</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. This ensured consistent results between runs of the script, which was really helpful.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Sets seed based on replication number.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Depending on your model and the outputs/type of output you are looking at, the lack of seeds can have varying impacts on the appearance of your results, and can make the subjective judgement of whether results are consistent harder (if discrepancies could be attributed to not having consistent seeds or not).</li>
@@ -1499,7 +1631,7 @@ Use seeds to control stochasticity
 <section id="code-to-produce-article-results" class="level2" data-number="5.7">
 <h2 data-number="5.7" class="anchored" data-anchor-id="code-to-produce-article-results"><span class="header-section-number">5.7</span> Code to produce article results</h2>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1508,7 +1640,7 @@ Provide code to process results into tables
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1541,8 +1673,8 @@ Provide code to process results into tables
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
@@ -1553,8 +1685,8 @@ Provide code to process results into tables
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. Had to write code to generate tables, which included correctly implementing calculation of excess e.g.&nbsp;deaths, scaling to population size, and identify which columns provide the operation outcomes.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable. No tables in scope.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not met.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>It can take a bit of time to do this processing, so very handy for it to be provided.</li>
@@ -1564,7 +1696,7 @@ Provide code to process results into tables
 </div>
 </div>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1573,7 +1705,7 @@ Provide code to process results into figures
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1606,8 +1738,8 @@ Provide code to process results into figures
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">🟡</td>
+<td style="text-align: center;">✅</td>
 </tr>
 </tbody>
 </table>
@@ -1615,8 +1747,8 @@ Provide code to process results into figures
 <p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. Had to write code from scratch. For one of the figures, it would have been handy if informed that plot was produced by a simmer function (as didn’t initially realise this). It also took a bit of time for me to work out how to transform the figure axes as this was not mentioned in the paper (and no code was provided for these). It was also unclear and a bit tricky to work out how to standardise the density in the figures (since it is only described in the text and no formula/calculations are provided there or in the code). <!-- TODO: Consider whether this should be split into another box (i.e. about providing the processing?) --></p>
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not met. However, the simplicity and repetition of the figures was handy.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially met. Provides a few example <code>ggplot</code>s, but these are not all the plots, nor exactly matching article, nor including any of the pre-processing required before the plots, and so could only serve as a starting point (though that was still really handy).</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Figures match article, with one minor exception that I had to add smoothing to the lines on one of the figures.</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>It can take a bit of time to do this processing, particularly if the figure involves any transformations (and less so if the figure is simple), so very handy for it to be provided.</li>
@@ -1626,7 +1758,7 @@ Provide code to process results into figures
 </div>
 </div>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1635,7 +1767,7 @@ Provide code to calculate in-text results
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>By “in-text results”, I am referred to results that are mentioned in the text but not included in/cannot be deduced from any of the tables or figures.</p>
 <table class="caption-top table">
@@ -1668,18 +1800,15 @@ Provide code to calculate in-text results
 <td style="text-align: center;">N/A</td>
 <td style="text-align: center;">❌</td>
 <td style="text-align: center;">N/A</td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">N/A</td>
+<td style="text-align: center;">N/A</td>
+<td style="text-align: center;">N/A</td>
 </tr>
 </tbody>
 </table>
 <p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met.</p>
-<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not applicable (no in-text results).</p>
-<p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>, <span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>, <span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not applicable (no in-text results).</p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Provide code to calculate in-text results</li>
 <li>Common issue</li>
@@ -1690,8 +1819,8 @@ Provide code to calculate in-text results
 </section>
 <section id="documentation" class="level2" data-number="5.8">
 <h2 data-number="5.8" class="anchored" data-anchor-id="documentation"><span class="header-section-number">5.8</span> Documentation</h2>
-<div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout callout-style-default callout-important no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1700,7 +1829,7 @@ Include instructions on how to run the model/script
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1733,8 +1862,8 @@ Include instructions on how to run the model/script
 <td style="text-align: center;">🟡</td>
 <td style="text-align: center;">✅</td>
 <td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
-<td style="text-align: center;"><!--TODO--></td>
+<td style="text-align: center;">❌</td>
+<td style="text-align: center;">❌</td>
 </tr>
 </tbody>
 </table>
@@ -1744,8 +1873,8 @@ Include instructions on how to run the model/script
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Partially met. README tells you which folder has the scripts you need, although nothing further. Although all you need to do is run them.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Clear README with instructions on how to run the model was really helpful.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: <!--TODO--></p>
-<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not met.</p>
+<p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not met. No instructions, although it was fairly self explanatory (single script <code>master.R</code> to run, then processing scripts named after items in article e.g.&nbsp;<code>fig7.R</code>).</p>
 <p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
 <ul>
 <li>Even if as simple as running a script, include instructions on how to do so</li>
@@ -1757,12 +1886,28 @@ Include instructions on how to run the model/script
 </section>
 <section id="other" class="level2" data-number="5.9">
 <h2 data-number="5.9" class="anchored" data-anchor-id="other"><span class="header-section-number">5.9</span> Other</h2>
-<p>Include tick marks/grid lines on figures, so it is easier to read across and judge whether a result is above or below a certain Y value.</p>
-<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Included data dictionary for input parameters. Although I didn’t need this, this would have been great if I needed to change the input parameters at all.</p>
+<!--TODO: Reflect whether any of these should be boxes above-->
+<p><strong>Grid lines</strong>. Include tick marks/grid lines on figures, so it is easier to read across and judge whether a result is above or below a certain Y value.</p>
+<p><strong>Data dictionaries</strong>. <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Included data dictionary for input parameters. Although I didn’t need this, this would have been great if I needed to change the input parameters at all.</p>
+<p><strong>Unsupported versions</strong>. <span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Due to the age of the work:</p>
+<ul>
+<li>Some packages were no longer available on Conda and had to be installed from PyPI</li>
+<li>The version of python was no longer supported which meant:
+<ul>
+<li>Not supported by Jupyter Lab and Jupyter Notebook (so no <code>.ipynb</code> files, or Jupyter Lab on Docker)</li>
+<li>Not supported by VSCode (so had to use “tricks” to run it, involving using a pre-release version of Python on VSCode)</li>
+<li>Had to create Docker image from scratch (i.e.&nbsp;couldn’t start from e.g.&nbsp;<code>miniconda3</code>)</li>
+</ul></li>
+</ul>
+<p>However, this is a slightly unavoidable problem unless you continue to maintain your code (which is ideal but not always feasible in a research environment). Realistically, if reusing this code for a new purpose, you would upgrade it to supported versions.</p>
+<p><strong>Original results files</strong>. <span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Included some original results files, which was invaluable in identifying some of the parameters in the code that needed to be fixed.</p>
+<p><strong>Classes</strong>. <span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Structured code into classes, which was nice to work with/amend.</p>
 <p><strong>Reflections:</strong></p>
 <ul>
 <li>Include grid lines</li>
 <li>Include data dictionaries</li>
+<li>If feasible, maintain code to avoid dependency on unsupported old versions of packages and languages</li>
+<li>Ideally, include copies of your results, so can (a) compare against, (b) use to run analysis on, and (c) use in troubleshooting</li>
 </ul>
 </section>
 <section id="references" class="level2" data-number="5.10">
