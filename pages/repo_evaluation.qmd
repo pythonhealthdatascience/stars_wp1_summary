@@ -19,7 +19,7 @@ Consider: **What criteria are people struggling to meet from the guidelines?**
 
 ## Summary
 
-<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021 -->
 
 **Unique badge criteria:**
 
@@ -36,8 +36,8 @@ criteria_dict = {
   'Kim et al. 2021': [5, 0, 7, 0],
   'Anagnostou et al. 2022': [10, 0, 2, 0],
   'Johnson et al. 2021': [0, 0, 0, 1],
-  'Hernandez et al. 2015': [0, 0, 0, 1],
-  'Wood et al. 2021': [0, 0, 0, 1]
+  'Hernandez et al. 2015': [3, 0, 9, 0],
+  'Wood et al. 2021': [4, 0, 8, 0]
 }
 criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 
@@ -56,8 +56,8 @@ badge_dict = {
   'Kim et al. 2021': [3, 0, 9, 0],
   'Anagnostou et al. 2022': [5, 0, 7, 0],
   'Johnson et al. 2021': [0, 0, 0, 1],
-  'Hernandez et al. 2015': [0, 0, 0, 1],
-  'Wood et al. 2021': [0, 0, 0, 1]
+  'Hernandez et al. 2015': [0, 0, 12, 0],
+  'Wood et al. 2021': [5, 0, 7, 0]
 }
 badge_wide = pd.DataFrame(badge_dict, index=col).T
 
@@ -76,8 +76,8 @@ essential_dict = {
   'Kim et al. 2021': [4, 1, 3, 0],
   'Anagnostou et al. 2022': [7, 0, 1, 0],
   'Johnson et al. 2021': [0, 0, 0, 1],
-  'Hernandez et al. 2015': [0, 0, 0, 1],
-  'Wood et al. 2021': [0, 0, 0, 1]
+  'Hernandez et al. 2015': [2, 0, 6, 0],
+  'Wood et al. 2021': [2, 0, 6, 0]
 }
 essential_wide = pd.DataFrame(essential_dict, index=col).T
 
@@ -95,8 +95,8 @@ optional_dict = {
   'Kim et al. 2021': [0, 0, 5, 0],
   'Anagnostou et al. 2022': [1, 1, 3, 0],
   'Johnson et al. 2021': [0, 0, 0, 1],
-  'Hernandez et al. 2015': [0, 0, 0, 1],
-  'Wood et al. 2021': [0, 0, 0, 1]
+  'Hernandez et al. 2015': [0, 0, 5, 0],
+  'Wood et al. 2021': [0, 0, 5, 0]
 }
 optional_wide = pd.DataFrame(optional_dict, index=col).T
 
@@ -116,7 +116,7 @@ Key:
 * **He:** @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/badges.html" target="_blank">link to evaluation</a>
 * **W:** @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/badges.html" target="_blank">link to evaluation</a>
 
-<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021 -->
 
 In this section and below, the criteria for each study are marked as either being fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A).
 
@@ -125,21 +125,21 @@ In this section and below, the criteria for each study are marked as either bein
 | Item | S | Hu | L | K | A | J | He | W |
 | - | - | - | - | - | - | - | - | - | - |
 | **Criteria related to how artefacts are shared** |
-| Stored in a permanent archive that is publicly and openly accessible | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Has a persistent identifier | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Includes an open license | ❌ | ✅ | ❌ | ✅ | ✅ |
+| Stored in a permanent archive that is publicly and openly accessible | ❌ | ❌ | ❌ | ❌ | ✅ | <!--TODO--> | ❌ | ❌ |
+| Has a persistent identifier | ❌ | ❌ | ❌ | ❌ | ✅ |<!--TODO--> | ❌ | ❌ |
+| Includes an open license | ❌ | ✅ | ❌ | ✅ | ✅ |<!--TODO--> | ❌ | ❌ |
 | **Criteria related to what artefacts are shared** |
-| Artefacts are relevant to and contribute to the article’s results | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Complete set of materials shared (as would be needed to fully reproduce article) | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Artefacts are relevant to and contribute to the article’s results | ✅ | ✅ | ✅ | ✅ | ✅ |<!--TODO--> | ✅ | ✅ |
+| Complete set of materials shared (as would be needed to fully reproduce article) | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ✅ |
 | **Criteria related to the structure and documentation of the artefacts** |
-| Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community) | ❌ | ❌ | ❌ | ✅ | ✅ |
-| Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions) | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Artefacts are carefully documented (more than sufficient - i.e. to the extent that reuse and repurposing is facilitated - e.g. changing parameters, reusing for own purpose) | ❌ | ❌ | ❌ | ❌ | ✅ |
-| Artefacts are clearly documented and accompanied by a README file with step-by-step instructions on how to reproduce results in the manuscript | ❌ | ❌ | ❌ | ❌ | ✅ |
+| Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community) | ❌ | ❌ | ❌ | ✅ | ✅ |<!--TODO--> | ✅ | ❌ |
+| Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions) | ❌ | ❌ | ❌ | ❌ | ✅ |<!--TODO--> | ❌ | ❌ |
+| Artefacts are carefully documented (more than sufficient - i.e. to the extent that reuse and repurposing is facilitated - e.g. changing parameters, reusing for own purpose) | ❌ | ❌ | ❌ | ❌ | ✅ |<!--TODO--> | ❌ | ❌ |
+| Artefacts are clearly documented and accompanied by a README file with step-by-step instructions on how to reproduce results in the manuscript | ❌ | ❌ | ❌ | ❌ | ✅ |<!--TODO--> | ❌ | ❌ |
 | **Criteria related to running and reproducing results** |
-| Scripts can be successfully executed | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |
-| Reproduced within approximately one hour (excluding compute time) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Scripts can be successfully executed | ✅ | ✅ | ✅ | ✅ | ✅ |<!--TODO--> | ✅ | ✅ |
+| Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |<!--TODO--> | ❌ | ✅ |
+| Reproduced within approximately one hour (excluding compute time) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 : {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
 
 \ 
@@ -157,20 +157,20 @@ The badges are grouped into three categories:
 | Item | S | Hu | L | K | A | J | He | W |
 | - | - | - | - | - | - | - | - | - | - |
 | **“Open objects” badges** |
-| **NISO "Open Research Objects (ORO)"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **NISO "Open Research Objects - All (ORO-A)"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license<br>• Complete set of materials shared (as would be needed to fully reproduce article) | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **ACM "Artifacts Available"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **COS "Open Code"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions) | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **IEEE "Code Available"**<br>• Complete set of materials shared (as would be needed to fully reproduce article) | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **NISO "Open Research Objects (ORO)"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license | ❌ | ❌ | ❌ | ❌ | ✅ |<!--TODO--> | ❌ | ❌ |
+| **NISO "Open Research Objects - All (ORO-A)"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license<br>• Complete set of materials shared (as would be needed to fully reproduce article) | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ❌ |
+| **ACM "Artifacts Available"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier | ❌ | ❌ | ❌ | ❌ | ✅ |<!--TODO--> | ❌ | ❌ |
+| **COS "Open Code"**<br>• Stored in a permanent archive that is publicly and openly accessible<br>• Has a persistent identifier<br>• Includes an open license<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions) | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ❌ |
+| **IEEE "Code Available"**<br>• Complete set of materials shared (as would be needed to fully reproduce article) | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ✅ |
 | **"Object review" badges** |
-| **ACM "Artifacts Evaluated - Functional"**<br>• Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions)<br>• Artefacts are relevant to and contribute to the article’s results<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **ACM "Artifacts Evaluated - Reusable"**<br>• Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions)<br>• Artefacts are carefully documented (more than sufficient - i.e. to the extent that reuse and repurposing is facilitated - e.g. changing parameters, reusing for own purpose)<br>• Artefacts are relevant to and contribute to the article's results<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed<br>• Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community) | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **IEEE "Code Reviewed"**<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **ACM "Artifacts Evaluated - Functional"**<br>• Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions)<br>• Artefacts are relevant to and contribute to the article’s results<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ❌ |
+| **ACM "Artifacts Evaluated - Reusable"**<br>• Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions)<br>• Artefacts are carefully documented (more than sufficient - i.e. to the extent that reuse and repurposing is facilitated - e.g. changing parameters, reusing for own purpose)<br>• Artefacts are relevant to and contribute to the article's results<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed<br>• Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community) | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ❌ |
+| **IEEE "Code Reviewed"**<br>• Complete set of materials shared (as would be needed to fully reproduce article)<br>• Scripts can be successfully executed | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ✅ |
 | **"Reproduced" badges** |
-| **NISO "Results Reproduced (ROR-R)"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |
-| **ACM "Results Reproduced"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |
-| **IEEE "Code Reproducible"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |
-| **Psychological Science "Computational Reproducibility"**<br>• Independent party regenerated results using the authors research artefacts<br>• Reproduced within approximately one hour (excluding compute time)<br>• Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community)<br>• Artefacts are clearly documented and accompanied by a README file with step-by-step instructions on how to reproduce results in the manuscript | ❌ | ❌ | ❌ | ❌ | ❌ |
+| **NISO "Results Reproduced (ROR-R)"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |<!--TODO--> | ❌ | ✅ |
+| **ACM "Results Reproduced"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |<!--TODO--> | ❌ | ✅ |
+| **IEEE "Code Reproducible"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |<!--TODO--> | ❌ | ✅ |
+| **Psychological Science "Computational Reproducibility"**<br>• Independent party regenerated results using the authors research artefacts<br>• Reproduced within approximately one hour (excluding compute time)<br>• Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community)<br>• Artefacts are clearly documented and accompanied by a README file with step-by-step instructions on how to reproduce results in the manuscript | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ❌ |
 : {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
 
 ## STARS framework
@@ -186,25 +186,25 @@ Key:
 * **He:** @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/artefacts.html" target="_blank">link to evaluation</a>
 * **W:** @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/artefacts.html" target="_blank">link to evaluation</a>
 
-<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021 -->
 
 | Item | S | Hu | L | K | A | J | He | W |
 | - | - | - | - | - | - | - | - | - | - |
 | **Essential components** |
-| **Open license**<br>Free and open-source software (FOSS) license (e.g. MIT, GNU Public License (GPL)) | ❌ | ✅ | ❌ | ✅ | ✅ |
-| **Dependency management**<br>Specify software libraries, version numbers and sources (e.g. dependency management tools like virtualenv, conda, poetry) | ❌ | ❌ | ❌ | 🟡 | ✅ |
-| **FOSS model**<br>Coded in FOSS language (e.g. R, Julia, Python) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Minimum documentation**<br>Minimal instructions (e.g. in README) that overview (a) what model does, (b) how to install and run model to obtain results, and (c) how to vary parameters to run new experiments | ❌ | ❌ | ❌ | ✅ | ✅ |
-| **ORCID**<br>ORCID for each study author | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **Citation information**<br>Instructions on how to cite the research artefact (e.g. CITATION.cff file) | ❌ | ❌ | ❌ | ❌ | ✅ |
-| **Remote code repository**<br>Code available in a remote code repository (e.g. GitHub, GitLab, BitBucket) | ✅ | ✅ | ✅ | ✅ | ✅ |
-| **Open science archive**<br>Code stored in an open science archive with FORCE11 compliant citation and guaranteed persistance of digital artefacts (e.g. Figshare, Zenodo, the Open Science Framework (OSF), and the Computational Modeling in the Social and Ecological Sciences Network (CoMSES Net)) | ❌ | ❌ | ❌ | ❌ | ✅ |
+| **Open license**<br>Free and open-source software (FOSS) license (e.g. MIT, GNU Public License (GPL)) | ❌ | ✅ | ❌ | ✅ | ✅ |<!--TODO--> | ❌ | ❌ |
+| **Dependency management**<br>Specify software libraries, version numbers and sources (e.g. dependency management tools like virtualenv, conda, poetry) | ❌ | ❌ | ❌ | 🟡 | ✅ |<!--TODO--> | ❌ | ❌ |
+| **FOSS model**<br>Coded in FOSS language (e.g. R, Julia, Python) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| **Minimum documentation**<br>Minimal instructions (e.g. in README) that overview (a) what model does, (b) how to install and run model to obtain results, and (c) how to vary parameters to run new experiments | ❌ | ❌ | ❌ | ✅ | ✅ |<!--TODO--> | ❌ | ❌ |
+| **ORCID**<br>ORCID for each study author | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ❌ |
+| **Citation information**<br>Instructions on how to cite the research artefact (e.g. CITATION.cff file) | ❌ | ❌ | ❌ | ❌ | ✅ |<!--TODO--> | ❌ | ❌ |
+| **Remote code repository**<br>Code available in a remote code repository (e.g. GitHub, GitLab, BitBucket) | ✅ | ✅ | ✅ | ✅ | ✅ |<!--TODO--> | ✅ | ✅ |
+| **Open science archive**<br>Code stored in an open science archive with FORCE11 compliant citation and guaranteed persistance of digital artefacts (e.g. Figshare, Zenodo, the Open Science Framework (OSF), and the Computational Modeling in the Social and Ecological Sciences Network (CoMSES Net)) | ❌ | ❌ | ❌ | ❌ | ✅ |<!--TODO--> | ❌ | ❌ |
 | **Optional components** |
-| **Enhanced documentation**<br>Open and high quality documentation on how the model is implemented and works  (e.g. via notebooks and markdown files, brought together using software like Quarto and Jupyter Book). Suggested content includes:<br>• Plain english summary of project and model<br>• Clarifying license<br>• Citation instructions<br>• Contribution instructions<br>• Model installation instructions<br>• Structured code walk through of model<br>• Documentation of modelling cycle using TRACE<br>• Annotated simulation reporting guidelines<br>• Clear description of model validation including its intended purpose | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **Documentation hosting**<br>Host documentation (e.g. with GitHub pages, GitLab pages, BitBucket Cloud, Quarto Pub) | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **Online coding environment**<br>Provide an online environment where users can run and change code (e.g. BinderHub, Google Colaboratory, Deepnote) | ❌ | ❌ | ❌ | ❌ | ❌ |
-| **Model interface**<br>Provide web application interface to the model so it is accessible to less technical simulation users | ❌ | ✅ | ❌ | ❌ | ✅ |
-| **Web app hosting**<br>Host web app online (e.g. Streamlit Community Cloud, ShinyApps hosting) | ❌ | ✅ | ❌ | ❌ | 🟡 |
+| **Enhanced documentation**<br>Open and high quality documentation on how the model is implemented and works  (e.g. via notebooks and markdown files, brought together using software like Quarto and Jupyter Book). Suggested content includes:<br>• Plain english summary of project and model<br>• Clarifying license<br>• Citation instructions<br>• Contribution instructions<br>• Model installation instructions<br>• Structured code walk through of model<br>• Documentation of modelling cycle using TRACE<br>• Annotated simulation reporting guidelines<br>• Clear description of model validation including its intended purpose | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ❌ |
+| **Documentation hosting**<br>Host documentation (e.g. with GitHub pages, GitLab pages, BitBucket Cloud, Quarto Pub) | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ❌ |
+| **Online coding environment**<br>Provide an online environment where users can run and change code (e.g. BinderHub, Google Colaboratory, Deepnote) | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ❌ |
+| **Model interface**<br>Provide web application interface to the model so it is accessible to less technical simulation users | ❌ | ✅ | ❌ | ❌ | ✅ |<!--TODO--> | ❌ | ❌ |
+| **Web app hosting**<br>Host web app online (e.g. Streamlit Community Cloud, ShinyApps hosting) | ❌ | ✅ | ❌ | ❌ | 🟡 |<!--TODO--> | ❌ | ❌ |
 : {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
 
 ## Timings
@@ -216,9 +216,9 @@ Key:
 * @lim_staff_2020 - 18m
 * @kim_modelling_2021 - 18m
 * @anagnostou_facs-charm_2022 - 19m
-* @johnson_cost_2021
-* @hernandez_optimal_2015 -
-* @wood_value_2021 -
+* @johnson_cost_2021 - <!--TODO-->
+* @hernandez_optimal_2015 - 13m
+* @wood_value_2021 - 14m
 
 ## Badge sources
 
