@@ -57,6 +57,23 @@ This process is captured in the diagram below:
 
 ![Workflow for STARS work package 1](../images/stars_wp1_workflow.png){.lightbox}
 
+## Inspiration
+
+As cited in @heather_protocol_2024, the protocol was informed by several prior studies assessing computational reproducibility:
+
+* @krafczyk_learning_2021: Assessed the reproducibility of seven articles published in the Journal of Computational Physics.
+* @wood_push_2018 and @wood_replication_2018: Assessed the reproducibility of 109 published impact evaluations in low- and middle-income countries. Conducted in association with the replication programme of the International Initiative for Impact Evaluation (3ie).
+* @schwander_replication_2021: Assessed the reproducibility of four health economic obesity models.
+* @laurinavichyute_share_2022: Assessed the reproducibility of 118 articles published in the Journal of Memory and Language.
+* @konkol_computational_2019: Assessed the reproducibility of 41 geoscientific articles from Copernicus Publications and the Journal of Statistical Software.
+
+It was also informed by:
+
+* @ayllon_keeping_2021: Article with recommendations on keeping modelling notebooks to support completion of TRACE (TRAnsparent and Comprehensive model Evaluation) documents.
+* @berkeley_initiative_for_transparency_in_the_social_sciences_guide_2022: Guidelines on conducting reproductions of published social science research.
+* @mcmanus_can_2019: Article proposing several possible definitions for success in reproducing or replicating models in health economics.
+* @marwick_packaging_2018: Article recommending how to structure data analytical work as research compendiums using the R package structure.
+
 ## Major deviations from the protocol
 
 There was one major deviation from the protocol...

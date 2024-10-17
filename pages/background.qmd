@@ -11,7 +11,21 @@ The project was funded for two years by the [Medical Research Council](https://g
 
 ## General context
 
-Examples of studies like @baker_1500_2016.
+@baker_1500_2016 - survey of 1576 researchers across disciplines, finding:
+
+* "More than 70% of researchers have tried and failed to reproduce another scientist's experiments"
+* "More than half have failed to reproduce their own experiments"
+* 52% "agree that there is a significant 'crisis' of reproducibility"
+* "Less than 31% think that failure to reproduce published results means that the result is probably wrong, and most say that they still trust the published literature"
+
+Differences between **reproduction** and **replication**
+
+* Reproduction - using their code
+* Replication - writing your own code 
+
+@korbmacher_replication_2023 - great discussion of the **replication** crisis
+
+On the [protocol page](protocol.qmd), several reproducibility studies are mentioned, which were used to help inform the methods in our reproducibility assessments.
 
 ## Pilot work
 
