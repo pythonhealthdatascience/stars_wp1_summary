@@ -46,7 +46,7 @@ Links to each study:
 
 @johnson_cost_2021: <!--TODO-->
 
-@hernandez_optimal_2015: Partially met. Some (but not all) of the required packages were listed in the paper.
+@hernandez_optimal_2015: Partially met. Some (but not all) of the required packages were listed in the paper. Of particular note, this depended on having a local package `myutils/`, which was another GitHub repository from the author. This was not mentioned anywhere, and so required to notice this was needed.
 
 @wood_value_2021: Not met. However, easily resolved based on imports to `.R` script.
 
@@ -55,6 +55,7 @@ Links to each study:
 * The `import` statements can be sufficient in indicating all the packages required but this is not always the case if there are "hidden"/unmentioned dependencies that don't get imported
 * There are various options for listing the packages (e.g. comprehensive import statements, installation lines in the script, environment files).
 * Ideally mention this in repository, not just the paper.
+* If there are local dependencies (e.g. other GitHub repositories), make sure to (a) mention and link to these repositories, so it is clear they are also required, and (b) include license/s in those repositories also, so they can be used.
 * This was a common issue.
 
 :::
