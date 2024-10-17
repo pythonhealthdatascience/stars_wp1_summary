@@ -641,6 +641,7 @@ Regarding file sizes in each study:
 
 * For most studies, this was not relevant, with outputs relatively small
 * I only really found this to be an issue when files exceeded GitHub threshold. [GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github) give warning over 50 MB, blocks files over 100 MB, requiring you to use GitHub LFS. Recommends repositories ideally <1 GB and for sure < 5GB. [GitHub LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage) has limits on storage and bandwith use (1GB of each).
+* **Reducing file size isn't the only solution**. In cases where you have large files, a good option can be storing it elsewhere and then pulling from there into your workflow - for example, storing in **zenodo** and fetching using [pooch](https://github.com/fatiando/pooch).
 
 :::
 
