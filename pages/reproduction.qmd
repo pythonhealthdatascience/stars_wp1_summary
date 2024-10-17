@@ -205,4 +205,20 @@ fig.layout.yaxis.fixedrange = True
 fig.show(config={'displayModeBar': False})
 ```
 
+::: {.callout icon=false collapse=false}
+
+## Reproduction reflections
+
+**TODO: Where possible, reflect on what I think to be the primary reason that didn't manage to fully reproduce despite troubleshooting, for the studies where this was the case**
+
+:::
+
+::: {.callout icon=false collapse=false}
+
+## Timing reflections
+
+**TODO: Reflect on these timings - what I think were the primary reason for things to be quicker or slower - and what I think was relevant/important** <!--e.g. models with run long times, experimenting with parameters to run it quicker, in order to more easily troubleshoot, else run for long time then discover xyz is wrong-->
+
+:::
+
 ## References

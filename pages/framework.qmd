@@ -3,6 +3,8 @@ title: "Modifying the framework"
 bibliography: ../references.bib
 ---
 
+<!--TODO: Move this to stars_wp2-->
+
 <!--TODO: Consider implications of:
 * Reproduction
 * Evaluation of the repository
