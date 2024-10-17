@@ -54,3 +54,20 @@ Starting points:
 * @hardwicke_analytic_2021
 * @monks_computer_2023 (although overlap - look at how many of mine are from the review - some were identified from that, but some were not)
 * @henderson_reproducibility_2024
+* @samuel_computational_2024
+    * Reproduction success:
+        * 27,271 jupyter notebooks (2660 GitHub repositories, 3467 publications, majority python)
+        * 15,817 included dependencies in standard requirement files
+        * Of those, 10,388 could be installed successfully
+        * Of those, 1203 ran without error
+        * Of those, 879 produced results identical to those reported in the original notebook
+    * References several other studies that have attempted to re-run jupyter notebooks
+    * ModuleNotFoundError, ImportError and FileNotFounderError were the top 3 common exceptions
+    * Also used `flakenb` to look for code styling errors
+    * Implications:
+        * Low reproducibility as in prior studies
+        * Review processes don't pay attention to journal reproducibiltiy
+        * Common errors around dependencies... Use exiting approaches like requirements, conda and poetry
+        * Some journals, article types, levels of documentation and research fields had more reproduced notebooks than others. Worth considering procedures at those journals with most reproduced (**iScience**). Also, notebooks combining computation and narrative.
+        * Things go out of data... importance of pre-prints...
+        * Reproducibility badges, reproducibility platforms like REScience, nanopublications
