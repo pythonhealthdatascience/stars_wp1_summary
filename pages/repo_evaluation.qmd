@@ -17,16 +17,20 @@ Consider: **What criteria are people struggling to meet from the guidelines?**
 
 <!-- TODO: Once complete, carefully go over again and check everything is correct -->
 
-## Summary
+```{python}
+# Imports and function
+import plotly.express as px
+import pandas as pd
+from functions import eval_chart, plot_scatter
+```
 
-<!-- TODO: Add Johnson et al. 2021 -->
+## Summary
 
 **Unique badge criteria:**
 
-```{python}
-import pandas as pd
-from functions import eval_chart
+<!-- TODO: Add Johnson et al. 2021 -->
 
+```{python}
 # Create dataframe of results
 col = ['fully', 'partially', 'not', 'na']
 criteria_dict = {
@@ -44,39 +48,34 @@ criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 eval_chart(criteria_wide)
 ```
 
-::: {.callout icon=false collapse=true}
+::: {.callout icon=false collapse=false}
 
 ## Reflections
 
-The studies meeting 33.3%, 41.7% and 83.3% of criteria were all fully reproduced.
+<!-- TODO: Add Johnson et al. 2021 -->
 
-The remaining four studies met 25% of criteria, and ranged from 12.5% to 100% reproduced.
+Four studies met 25% of criteria, and ranged from 12.5% to 100% reproduced.
+
+The remaining three studies were fully reproduced and met 33.3%, 41.7% and 83.3%.
 
 However, I think it is more meaningful to actually look at what criteria were and were not met.
 
 ```{python}
-import plotly.express as px
-
-# Percentage of items reproduced, and percentage of badge criteria met
-df = pd.DataFrame({
-  'Shoaib and Ramamohan 2021': [94, 25],
-  'Huang et al. 2019': [37.5, 25],
-  'Lim et al. 2020': [100, 25],
-  'Kim et al. 2021': [100, 41.7],
-  'Anagnostou et al. 2022': [100, 83.3],
-  #'Johnson et al. 2021': [],
-  'Hernandez et al. 2015': [12.5, 25],
-  'Wood et al. 2021': [100, 33.3]
-}).T.reset_index()
-df.columns = ['study', 'reproduce', 'criteria']
-
-px.scatter(df, x='criteria', y='reproduce',
-           hover_data={'study': True})
+plot_scatter('Unique badge criteria met',
+             sho = 25,
+             hua = 25,
+             lim = 25,
+             kim = 41.7,
+             ana = 83.3,
+             her = 25,
+             woo = 33.3)
 ```
 
 :::
 
 **Badges:**
+
+<!-- TODO: Add Johnson et al. 2021 -->
 
 ```{python}
 # Create dataframe of results
@@ -96,37 +95,32 @@ badge_wide = pd.DataFrame(badge_dict, index=col).T
 eval_chart(badge_wide)
 ```
 
-::: {.callout icon=false collapse=true}
+::: {.callout icon=false collapse=false}
 
 ## Reflections
+
+<!-- TODO: Add Johnson et al. 2021 -->
 
 Not certain how meaningful these numbers are, as we have imbalanced numbers of different types of badge, and meeting certain popular criteria will quite weight what is met v.s. not.
 
 Feel that looking at the criteria met is a bit more meaningful? And then specific examples of how that translates into badges - e.g. none meeting ACM "Artifacts Evaluated - Functional" as requires xyz and these are commonly not met.
 
 ```{python}
-import plotly.express as px
-
-# Percentage of items reproduced, and percentage of badges awarded
-df = pd.DataFrame({
-  'Shoaib and Ramamohan 2021': [94, 25],
-  'Huang et al. 2019': [37.5, 0],
-  'Lim et al. 2020': [100, 25],
-  'Kim et al. 2021': [100, 25],
-  'Anagnostou et al. 2022': [100, 41.7],
-  #'Johnson et al. 2021': [],
-  'Hernandez et al. 2015': [12.5, 0],
-  'Wood et al. 2021': [100, 41.7]
-}).T.reset_index()
-df.columns = ['study', 'reproduce', 'badges']
-
-px.scatter(df, x='badges', y='reproduce',
-           hover_data={'study': True})
+plot_scatter('Badges awarded',
+             sho = 25,
+             hua = 0,
+             lim = 25,
+             kim = 25,
+             ana = 41.7,
+             her = 0,
+             woo = 41.7)
 ```
 
 :::
 
 **Essential components of STARS framework:**
+
+<!-- TODO: Add Johnson et al. 2021 -->
 
 ```{python}
 # Create dataframe of results
@@ -146,7 +140,34 @@ essential_wide = pd.DataFrame(essential_dict, index=col).T
 eval_chart(essential_wide)
 ```
 
+::: {.callout icon=false collapse=false}
+
+## Reflections
+
+<!-- TODO: Add Johnson et al. 2021 -->
+
+Similar to journal criteria (unsurprisingly, as looking at similar things) - most studies meet very few and have range of reproduction success. Two met more, and both were reproduced.
+
+I think, if we were to draw anything from this, it would be to reflect on exactly what criteria were and were not met, and why/how that impacted reproduction, in any way (either success or time).
+
+*Note: Just considers those fully met, in plot*
+
+```{python}
+plot_scatter('Essential STARS components met',
+             sho = 25,
+             hua = 25,
+             lim = 25,
+             kim = 50,
+             ana = 87.5,
+             her = 25,
+             woo = 25)
+```
+
+:::
+
 **Optional components of STARS framework:**
+
+<!-- TODO: Add Johnson et al. 2021 -->
 
 ```{python}
 # Create dataframe of results
@@ -164,6 +185,29 @@ optional_wide = pd.DataFrame(optional_dict, index=col).T
 
 eval_chart(optional_wide)
 ```
+
+::: {.callout icon=false collapse=false}
+
+## Reflections
+
+<!-- TODO: Add Johnson et al. 2021 -->
+
+This highlights how Huang meets the most criteria, but is only partially reproduced - but I think it is most interesting to consider why this is.
+
+*Note: Just considers those fully met, in plot*
+
+```{python}
+plot_scatter('Optional STARS components met',
+             sho = 0,
+             hua = 40,
+             lim = 0,
+             kim = 0,
+             ana = 20,
+             her = 0,
+             woo = 0)
+```
+
+:::
 
 ## Journal badges
 
@@ -204,7 +248,59 @@ In this section and below, the criteria for each study are marked as either bein
 | Reproduced within approximately one hour (excluding compute time) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 : {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
 
-\ 
+::: {.callout icon=false collapse=false}
+
+## Reflections
+
+<!-- TODO: Update after Johnson et al. 2021 -->
+
+```{python}
+# Create dataframe of results
+col = ['fully', 'partially', 'not', 'na']
+criteria_dict = {
+  'Archive': [1, 0, 6, 0],
+  'ID': [1, 0, 6, 0],
+  'License': [3, 0, 4, 0],
+  'Relevant': [7, 0, 0, 0],
+  'Complete': [1, 0, 6, 0],
+  'Structured for reuse': [3, 0, 4, 0],
+  'Sufficient docs': [1, 0, 6, 0],
+  'Careful docs': [1, 0, 6, 0],
+  'Step-by-step README': [1, 0, 6, 0],
+  'Execute': [7, 0, 0, 0],
+  'Reproduced': [5, 0, 2, 0],
+  'One hour': [0, 0, 7, 0]
+}
+criteria_wide = pd.DataFrame(criteria_dict, index=col).T
+
+eval_chart(criteria_wide)
+```
+
+**Stored in a permanent archive that is publicly and openly accessible**: Fulfillment doesn't impact reproduction as I was able to get everything needed from the remote code repository (GitHub or GitLab). However, if these had been deleted from GitHub, it would have become invaluable.
+
+**Has a persistent identifier**: Fulfillment doesn't impact reproduction.
+
+**Includes an open license**: This had a big impact on our ability to complete reproductions, as we had to ask authors to add an open license to their work, to enable us to use it. Gladly, all authors we contacted kindly add these on request. However, it's worth noting that this was a relatively common issue, and one of the most important, since it completely prevents reuse if excluded.
+
+**Artefacts are relevant to and contribute to the article’s results**: All met (if not met, this would be a massive hindrance).
+
+**Complete set of materials shared (as would be needed to fully reproduce article)**: This had a really big impact on the reproduction. The main reason for longer times in reproduction was (a) code for scenarios not provided, and (b) code to process results into figures and tables not provided.
+
+**Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community)**: In cases where this was not met, this was often related to hard-coding of parameters, or set up of code in a way that - alike hard-coding - made it much harder to reuse the model (in this context, to reuse them between different scenarios).
+
+**Artefacts are sufficiently documented (i.e. to understand how it works, to enable it to be run, including package versions)**: Only two studies had any form of documentation - these were READMEs for @kim_modelling_2021 and @anagnostou_facs-charm_2022 - but this criteria also required "package versions" which were uncommon. However, focusing on the READMEs, in both these cases it was great to have these, guiding on how to run the scripts, or on what each folder/file in the repository is.
+
+**Artefacts are carefully documented (more than sufficient - i.e. to the extent that reuse and repurposing is facilitated - e.g. changing parameters, reusing for own purpose)**: In @anagnostou_facs-charm_2022, they include a file `CHARM_INFO.md` alongside their README which walks through the input parameters for the model. I didn't need to change any of these for the reproduction, but would imagine this is to be very helpful if someone were to reuse the model.
+
+**Artefacts are clearly documented and accompanied by a README file with step-by-step instructions on how to reproduce results in the manuscript**: Whilst this was true for @anagnostou_facs-charm_2022, it should be noted that this was a very simple example, just requiring to run one script which quickly reproduces everything! I had been a bit uncertain on it, since the README doesn’t explicitly say how to make the figure, but it does provide instructions that lead you to regenerate the exact model results from the paper, and so I feel that it does provide instructions to reproduce results sufficiently (although would be more complete to include instructions for figure too - so if it weren’t a yes/no decision for badges, I would’ve said this was partially met). Ideally, studies would clearly outline how to reproduce results in full.
+
+**Scripts can be successfully executed**: This is true, though I did allow troubleshooting, which sometimes took a while. Hence, the importance of e.g. environments and scripts being provided in a runnable format (both covered on the [reflections page](reflections.qmd)), since these are the hurdles to successfully executing scripts.
+
+**Independent party regenerated results using the authors research artefacts**: On the [reproduction page](reproduction.qmd), I reflected (where possible) on what I thought the primary reasons were, for cases where I didn't manage to reproduce results despite troubleshooting.
+
+**Reproduced within approximately one hour (excluding compute time)**: In this study, this was pretty much impossible, since I followed a protocol of first setting up, reading the article, and so on. It is worth noting however that there were two studies that were quite quick to run, which I reflect about on the [reproduction page](reproduction.qmd).
+
+:::
 
 **Badges:**
 
@@ -214,7 +310,7 @@ The badges are grouped into three categories:
 * "Object review" badges: These badges relate to the research artefacts being reviewed against criteria of the badge issuer.
 * "Reproduced" badges: These badges relate to an independent party regenerating the reuslts of the article using the author objects.
 
-<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021 -->
 
 | Item | S | Hu | L | K | A | J | He | W |
 | - | - | - | - | - | - | - | - | - | - |
@@ -234,6 +330,44 @@ The badges are grouped into three categories:
 | **IEEE "Code Reproducible"**<br>• Independent party regenerated results using the authors research artefacts | ✅ | ❌ | ✅ | ✅ | ✅ |<!--TODO--> | ❌ | ✅ |
 | **Psychological Science "Computational Reproducibility"**<br>• Independent party regenerated results using the authors research artefacts<br>• Reproduced within approximately one hour (excluding compute time)<br>• Artefacts are well structured/organised (e.g. to the extent that reuse and repurposing is facilitated, adhering to norms and standards of research community)<br>• Artefacts are clearly documented and accompanied by a README file with step-by-step instructions on how to reproduce results in the manuscript | ❌ | ❌ | ❌ | ❌ | ❌ |<!--TODO--> | ❌ | ❌ |
 : {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
+
+::: {.callout icon=false collapse=false}
+
+## Reflections
+
+<!-- TODO: Update after Johnson et al. 2021 -->
+
+```{python}
+# Create dataframe of results
+col = ['fully', 'partially', 'not', 'na']
+badges_dict = {
+  'NISO “Open Research<br>Objects (ORO)”': [1, 0, 6, 0],
+  'NISO “Open Research<br>Objects - All (ORO-A)”': [0, 0, 7, 0],
+  'ACM “Artifacts<br>Available”': [1, 0, 6, 0],
+  'COS “Open Code”': [0, 0, 7, 0],
+  'IEEE “Code Available”': [1, 0, 6, 0],
+  'ACM “Artifacts<br>Evaluated - Functional”': [0, 0, 7, 0],
+  'ACM “Artifacts<br>Evaluated - Reusable”': [0, 0, 7, 0],
+  'IEEE “Code Reviewed”': [1, 0, 6, 0],
+  'NISO “Results<br>Reproduced (ROR-R)”': [5, 0, 2, 0],
+  'ACM “Results Reproduced”': [5, 0, 2, 0],
+  'IEEE “Code Reproducible”': [5, 0, 2, 0],
+  'Psychological Science<br>“Computational Reproducibility”': [0, 0, 7, 0],
+}
+badges_wide = pd.DataFrame(badges_dict, index=col).T
+
+eval_chart(badges_wide)
+```
+
+Only one study had **permanent archive (with persistent identifier)**, hence one being awarded *NISO “Open Research Objects (ORO)”* and *ACM “Artifacts Available”*. This was required by two other badges **as well as** sufficient documentation and/or complete set of materials. Since the one permanently archived study didn't meet these criteria, none were awarded the two badges: *NISO “Open Research Objects - All (ORO-A)”* or *COS “Open Code”*.
+
+A **complete set of materials** was required by *IEEE “Code Available”* and *IEEE “Code Reviewed”* - but this was only met by one study, as studies commonly did not include code for scenarios or creation of figures and tables. It was also required by *ACM “Artifacts Evaluated - Functional and Reusable”* badges, but since that one study didn't meet their **documentation** requirements, none were awarded these badges.
+
+Three badges had one criteria: **reproduction of results** - and hence, several studies received these (*NISO “Results Reproduced (ROR-R)”*, *ACM “Results Reproduced”*, *IEEE “Code Reproducible”*). However, it's worth noting that we allowed troubleshooting (since that was how we approached the reproductions), and that some of these studies might not have received these badges, if they have any requirements that exclude troubleshooting (which is likely).
+
+Besides the reproduction and documentation criteria, the final badge *Psychological Science “Computational Reproducibility”* was somewhat impossible to award since it required **reproduction within an hour**, which was somewhat impossible in our procedures, since we read the article and set-up etc beforehand.
+
+:::
 
 ## STARS framework
 
@@ -269,9 +403,60 @@ Key:
 | **Web app hosting**<br>Host web app online (e.g. Streamlit Community Cloud, ShinyApps hosting) | ❌ | ✅ | ❌ | ❌ | 🟡 |<!--TODO--> | ❌ | ❌ |
 : {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
 
+::: {.callout icon=false collapse=false}
+
+## Reflections
+
+<!-- TODO: Update after Johnson et al. 2021 -->
+
+```{python}
+# Create dataframe of results
+col = ['fully', 'partially', 'not', 'na']
+stars_dict = {
+  'Open license': [3, 0, 4, 0],
+  'Dependency management': [1, 1, 5, 0],
+  'FOSS model': [8, 0, 0, 0],
+  'Minimum documentation': [2, 0, 5, 0],
+  'ORCID': [0, 0, 7, 0],
+  'Citation information': [1, 0, 6, 0],
+  'Remote code repository': [7, 0, 0, 0],
+  'Open science archive': [1, 0, 6, 0],
+  'Enhanced documentation': [0, 0, 7, 0],
+  'Documentation hosting': [0, 0, 7, 0],
+  'Online coding environment': [0, 0, 7, 0],
+  'Model interface': [2, 0, 5, 0],
+  'Web app hosting': [1, 1, 5, 0],
+}
+stars_wide = pd.DataFrame(stars_dict, index=col).T
+
+eval_chart(stars_wide)
+```
+
+As in badge criteria reflections: **open license**, **minimum documentation**, and **open science archive**. <!--TODO: Consider re minimum documentation: Kim met for STARS but not for badges. Double-check that decision-->
+
+**Dependency management**: This was pretty uncommon, and often took some troubleshooting at the start, to figure out which packages were needed, and certain versions.
+
+**FOSS model**: All met as requirement of our reproduction.
+
+**ORCID** and **citation information**: Doesn't impact reproduction in this case - but we do go to these from having found an article. In all cases, I emailed the authors, which requires finding contact information (generally via paper, sometimes from googling them to find new emails).
+
+**Remote code repository**: All met, most common way to share code.
+
+**Enhanced documentation**: Only two studies had any documentation, and neither met these extensive requirements. I anticipate - if any had met this - it would've made the reproduction very quick and easy!
+
+**Documentation hosting**: Not applicable, given only basic documentation.
+
+**Online coding environment**: None provided. I always intended to run on my own machine, so this might not have had much bearing in my case if provided, but would moreso for people who perhaps didn't have Python or R installed, and hopefully would have bypassed environment troubleshooting issues.
+
+**Model interface**: Two studies had applications, although in both cases, these weren't "outcomes" in scope of reproduction, nor did they produce them.
+
+**Web app hosting**: This was quite important. Both apps had been hosted, but one was hosted with a site that is no longer operational. In both cases, the app wasn't in "scope" although I did still view it and look into it for one as it was hosted and so could very easily - but for the other, I didn't view it, as I didn't go through the steps of running it locally, since it wasn't the focus.
+
+:::
+
 ## Timings
 
-<!-- TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 -->
+<!-- TODO: Add Johnson et al. 2021 -->
 
 * @shoaib_simulation_2021 - 30m
 * @huang_optimizing_2019 - 17m
@@ -281,6 +466,14 @@ Key:
 * @johnson_cost_2021 - <!--TODO-->
 * @hernandez_optimal_2015 - 13m
 * @wood_value_2021 - 14m
+
+::: {.callout icon=false collapse=false}
+
+## Reflections
+
+No particular comments, don't think we learn much from the timings here.
+
+:::
 
 ## Badge sources
 

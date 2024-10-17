@@ -255,3 +255,55 @@ def calculate_times(used_to_date, times, limit=True):
         # Find proportion out of 40 hours
         prop = round((total_min+used_to_date)/max*100, 1)
         print(f'Used {prop}% of 40 hours max')
+
+
+def plot_scatter(var, sho, hua, lim, kim, ana, her, woo):
+    '''
+    Create scatter plot of variable against reproduction success, with dot size
+    from time taken.
+
+    Parameters:
+    -----------
+    var: string
+        Name of variable to plot
+    sho: number
+        Value for Shoaib and Ramamohan 2021
+    hua: number
+        Value for Huang et al. 2019
+    lim: number
+        Value for Lim et al. 2020
+    kim: number
+        Value for Kim et al. 2021
+    ana: number
+        Value for Anagnostou et al. 2022
+    her: number
+        Value for Hernandez et al. 2015
+    woo: number
+        Value for Wood et al. 2021
+    '''
+    # Create data frame with columns for study, % items reproduced,
+    # time (minutes) spent on reproduction, and the input variable
+    df = pd.DataFrame({
+        'Shoaib and Ramamohan 2021': [94, 1694, sho],
+        'Huang et al. 2019': [37.5, 1450, hua],
+        'Lim et al. 2020': [100, 747, lim],
+        'Kim et al. 2021': [100, 875, kim],
+        'Anagnostou et al. 2022': [100, 130, ana],
+        # 'Johnson et al. 2021': [],
+        'Hernandez et al. 2015': [12.5, 1076, her],
+        'Wood et al. 2021': [100, 230, woo]
+    }).T.reset_index()
+    df.columns = ['study', 'reproduce', 'time', var]
+
+    # Create plot
+    fig = px.scatter(df, x=var, y='reproduce', size='time',
+                     hover_data={'study': True})
+    fig.update_layout(xaxis_range=[-10, 110],
+                      yaxis_range=[-10, 110],
+                      yaxis_title='Items reproduced',
+                      xaxis_ticksuffix='%',
+                      yaxis_ticksuffix='%')
+    fig['data'][0]['showlegend'] = True
+    fig['data'][0]['name'] = ('<b>Dot size:</b><br>Time spent<br>on ' +
+                              'reproduction<br>(smaller=quicker)')
+    return fig
