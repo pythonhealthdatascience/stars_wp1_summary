@@ -3,6 +3,8 @@ title: "Relationship between reproduction and evaluation"
 bibliography: ../references.bib
 ---
 
+TODO: Add somewhere in discussion comments about subjectivity and reproduction and how the nature of what is being plot and so on can impact - e.g. health economic costs and qalys look super similar, but when turn into incremental to calculate ICER and INMB, tiny different result in big changes.
+
 TODO: Add this page, to assess whether (and if so, how) there is a relationship between the evaluation (code and/or reporting) and how easy it was / able we were to reproduce
 
 TODO: I'm also interested actually particularly in relationship between "reflections" being met, and reproduction.
@@ -12,3 +14,17 @@ TODO: I'm also interested actually particularly in relationship between "reflect
 TODO: For reflections on evaluations, add reflection that a lack of provision of ORCID or citation information didn't have a big impact here, as I was choosing repositories that I had found from papers, so I already at least knew who the paper authors were. Although that doesn't mean that any attempted citation of the repository itself would've necessarily been correct, depending on whether the author list would be the same.
 
 *add some scatter plots to repo evaluation but not sure how helpful they are*
+
+TODO: Find right place for this reflection: The test-run stage after making compendium helped us to spot run issues that I hadn't noticed, mainly from having not completely tested absolutely everything before pushing. For example, Hernandez et al. 2015, and there was at least one other example too. Shows importance of having someone else check things - easy to leave in small mistakes that mean it doesn't run.
+
+TODO: Make a paper with STRESS specific reflections - so ensure these are incorporated in others, then have discussion page where I walk through STRESS and, based on what I have found, suggest what was helpful in framework, what was missing, and so on.
+
+* Consider: which of my reflections pertain to what is in the article, v.s. what is in the repository - e.g. the scenarios being used is important in both - but mine is actually referring more to the repository, hence relevant to STARS more-so than STARS
+
+TODO: Add reflection from doing evaluations that likely not perfect, can be hard to find things in a paper, may have made mistakes, did have second person check to try and help with this, but that is why it can be so helpful to actually provide a completed framework, that highlights key reporting points for a given study, and where to look, particularly as things get more complicated with appendices and prior papers to refer back to for information.
+
+TODO: Limitation of this work, not reuse, although did sometimes dig into some more than other to figure out how to code scenarios, which is similar to scenarios, but for some could just stay top level. Hence, in many cases, can't truly say if information provided was sufficient for that deep understanding of what it is doing and so on.
+
+TODO: Consider, would there be any relevant literature related to time spent to try and get someone elses code mentioned - like how Andy mentioned there would be a max amount of time that someone in the NHS would reasonably spend troubleshooting
+
+TODO: Include reflection that here is what was helpful for reuse, but some aspects of things are not helpful for reuse, but are helpful for other purposes - e.g. validity checks - e.g. web applications.
