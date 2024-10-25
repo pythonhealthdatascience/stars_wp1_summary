@@ -257,7 +257,7 @@ def calculate_times(used_to_date, times, limit=True):
         print(f'Used {prop}% of 40 hours max')
 
 
-def plot_scatter(var, sho, hua, lim, kim, ana, her, woo):
+def plot_scatter(var, sho, hua, lim, kim, ana, joh, her, woo):
     '''
     Create scatter plot of variable against reproduction success, with dot size
     from time taken.
@@ -276,6 +276,8 @@ def plot_scatter(var, sho, hua, lim, kim, ana, her, woo):
         Value for Kim et al. 2021
     ana: number
         Value for Anagnostou et al. 2022
+    joh: number
+        Value for Johnson et al. 2021
     her: number
         Value for Hernandez et al. 2015
     woo: number
@@ -289,7 +291,7 @@ def plot_scatter(var, sho, hua, lim, kim, ana, her, woo):
         'Lim et al. 2020': [100, 747, lim],
         'Kim et al. 2021': [100, 875, kim],
         'Anagnostou et al. 2022': [100, 130, ana],
-        # 'Johnson et al. 2021': [],
+        'Johnson et al. 2021': [80, 1189, joh],
         'Hernandez et al. 2015': [12.5, 1076, her],
         'Wood et al. 2021': [100, 230, woo]
     }).T.reset_index()
