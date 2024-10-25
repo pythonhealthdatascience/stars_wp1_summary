@@ -57,7 +57,7 @@ Although we can comment on how commonly or uncommonly something met a criteria, 
 
 From evaluation of repository:
 
-* Open license - available on about half, added on request for rest, a very important one as without it you technically cannot reuse someones code
+* Open licence - available on about half, added on request for rest, a very important one as without it you technically cannot reuse someones code
 * Complete materials - rarely, so alot of time spent on writing code and figuring out how best to do that
 * Dependency management - rarely done, and although not an issue in simpler cases, a big impact in more complex
 * Model interface - provided for two although not helpful as (1) host no longer operating, and as not focus, didn't try to run locally, and (2) other app was viewable but didn't produce the figures and outcomes from paper (was more general, whilst paper delved into scenarios beyond app)

@@ -55,7 +55,7 @@ Links to each study:
 * The `import` statements can be sufficient in indicating all the packages required but this is not always the case if there are "hidden"/unmentioned dependencies that don't get imported
 * There are various options for listing the packages (e.g. comprehensive import statements, installation lines in the script, environment files).
 * Ideally mention this in repository, not just the paper.
-* If there are local dependencies (e.g. other GitHub repositories), make sure to (a) mention and link to these repositories, so it is clear they are also required, and (b) include license/s in those repositories also, so they can be used.
+* If there are local dependencies (e.g. other GitHub repositories), make sure to (a) mention and link to these repositories, so it is clear they are also required, and (b) include licence/s in those repositories also, so they can be used.
 * This was a common issue.
 
 :::

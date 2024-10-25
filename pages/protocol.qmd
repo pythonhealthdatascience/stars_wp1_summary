@@ -11,11 +11,11 @@ These are summarised below, and deviations from the protocol are also described.
 
 ## Protocol summary
 
-For this work, six published healthcare DES models were selected. These were models with publicly available code under an open license (either already available or add on request from the STARS team). For each model, the follow stages of work were conducted:
+For this work, six published healthcare DES models were selected. These were models with publicly available code under an open licence (either already available or add on request from the STARS team). For each model, the follow stages of work were conducted:
 
 **Stage 1: Reproduction** - assessing the computational reproducibility of each study
 
-* Informed authors about study and, if not available, asked if they would be happy to add an open license to their code
+* Informed authors about study and, if not available, asked if they would be happy to add an open licence to their code
 * Set up repository for reproduction with the article and code
 * Read the article and defined the scope of the reproduction, archiving the scope (and repository) on Zenodo before proceeding
 * Looked over the model code, created a suitable environment with the software and packages required, and then ran the model. For each study, with any issues faced in running the model, troubleshooting was performed such as modifying or writing code. If troubleshooting was exhaused and there were still issues or discrepancies in the results, the original study authors were informed and provided the opportunity to advice on the reason for this (although with no pressure or requirement to do so)

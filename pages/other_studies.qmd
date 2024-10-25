@@ -23,7 +23,7 @@ Starting points:
     * be clear about hardware needed, e.g. if large amount of computing resources would be required. at least report hardware used. ideally include "small test case that can be run by users with conventional hardware"
     * list software dependencies and versions
     * use seeds, and report seed you used
-    * make all code and data available with an appropriate license
+    * make all code and data available with an appropriate licence
     * include master script that runs in computations in publication
     * use same terminology in code and article
     * use version control and specify the e.g. commit hash that identifies the version used

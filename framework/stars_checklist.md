@@ -5,7 +5,7 @@
 | Item | Implementation |
 | --- | --- |
 | **Essential components** | <!----> |
-| Open license | *Describe your implementation of this component* |
+| Open licence | *Describe your implementation of this component* |
 | Dependency management | <!----> |
 | FOSS model | <!----> |
 | Minimum documentation | <!----> |
@@ -24,9 +24,9 @@
 
 ### Essential components
 
-#### Open license
+#### Open licence
 
-Free and open-source software (FOSS) license (e.g. MIT, GNU Public License (GPL))
+Free and open-source software (FOSS) licence (e.g. MIT, GNU Public Licence (GPL))
 
 #### Dependency management
 
@@ -63,7 +63,7 @@ Code stored in an open science archive with FORCE11 compliant citation and guara
 Open and high quality documentation on how the model is implemented and works (e.g. via notebooks and markdown files, brought together using software like Quarto and Jupyter Book). Suggested content includes:
 
 * Plain english summary of project and model
-* Clarifying license
+* Clarifying licence
 * Citation instructions
 * Contribution instructions
 * Model installation instructions

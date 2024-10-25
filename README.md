@@ -13,7 +13,7 @@
     <!--<a href="#"><img src="https://img.shields.io/github/v/release/pythonhealthdatascience/stars_wp1_summary" alt="GitHub release" /></a>
     <a href="#"><img src="https://img.shields.io/github/release-date/pythonhealthdatascience/stars_wp1_summary" alt="GitHub release date" /></a>-->
     <a href="#"><img src="https://img.shields.io/github/last-commit/pythonhealthdatascience/stars_wp1_summary" alt="GitHub last commit" /></a>
-    <a target="_blank" href="https://github.com/pythonhealthdatascience/stars_wp1_summary/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-CC--BY--4.0-blue.svg" alt="MIT license"/></a>
+    <a target="_blank" href="https://github.com/pythonhealthdatascience/stars_wp1_summary/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-CC--BY--4.0-blue.svg" alt="MIT licence"/></a>
     <a href="#"><img src="https://github.com/pythonhealthdatascience/stars_wp1_summary/actions/workflows/cff_validation.yaml/badge.svg" alt="Valid CITATION.cff" /></a>
 </p>
 
