@@ -18,13 +18,11 @@ Consider: **What criteria are people struggling to meet from the guidelines?**
 
 ## Summary
 
-<!-- TODO: add charts and reflections like I did for repo evaluation -->
-
 **STRESS-DES:**
 
 ```{python}
 import pandas as pd
-from functions import eval_chart
+from functions import eval_chart, plot_scatter
 
 # Create dataframe of results
 col = ['fully', 'partially', 'not', 'na']
@@ -42,6 +40,30 @@ stress_wide = pd.DataFrame(stress_dict, index=col).T
 
 eval_chart(stress_wide)
 ```
+
+::: {.callout icon=false collapse=false}
+
+## Reflections
+
+Of the applicable criteria, all studies fully met at least 60% (and many others still partially met).
+
+I don't think we learn much in relation to items reproduced, and that it is more interesting to consider which criteria were met and whether this aided the reproduction or not.
+
+*Note. This plots the proportion of **applicable** criteria that were **fully met***.
+
+```{python}
+plot_scatter('STRESS-DES criteria met',
+             sho = (17/24)*100,
+             hua = (14/23)*100,
+             lim = (16/21)*100,
+             kim = (15/22)*100,
+             ana = (14/21)*100,
+             joh = (16/19)*100,
+             her = (18/23)*100,
+             woo = (22/24)*100)
+```
+
+:::
 
 **DES checklist derived from ISPOR-SDM:**
 
@@ -62,6 +84,30 @@ ispor_wide = pd.DataFrame(ispor_dict, index=col).T
 
 eval_chart(ispor_wide)
 ```
+
+::: {.callout icon=false collapse=false}
+
+## Reflections
+
+The proportion of applicable criteria met was lower for this checklist.
+
+However, I again think it's most relevant to consider which criteria were met, rather than draw conclusions from this chart.
+
+*Note. This plots the proportion of **applicable** criteria that were **fully met***.
+
+```{python}
+plot_scatter('STRESS-DES criteria met',
+             sho = (11/15)*100,
+             hua = (7/16)*100,
+             lim = (12/16)*100,
+             kim = (12/17)*100,
+             ana = (8/15)*100,
+             joh = (15/17)*100,
+             her = (10/17)*100,
+             woo = (13/17)*100)
+```
+
+:::
 
 ## STRESS-DES
 
@@ -115,6 +161,162 @@ In this section and below, the criteria for each study are marked as either bein
 | **Code access** |
 | **6.1 Computer model sharing statement**<br>Describe how someone could obtain the model described in the paper, the simulation software and any other associated software (or hardware) needed to reproduce the results.  Provide, where possible, the link and DOIs to these. | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 : {tbl-colwidths="[60, 5, 5, 5, 5, 5, 5, 5, 5]"}
+
+::: {.callout icon=false collapse=false}
+
+## Reflections
+
+```{python}
+# Create dataframe of results
+col = ['fully', 'partially', 'not', 'na']
+criteria_dict = {
+  '1.1 Purpose': [8, 0, 0, 0],
+  '1.2 Outputs': [7, 1, 0, 0],
+  '1.3 Aims': [7, 0, 0, 1],
+  '2.1 Diagram': [8, 0, 0, 0],
+  '2.2 Base logic': [8, 0, 0, 0],
+  '2.3 Scenarios': [7, 0, 0, 1],
+  '2.4 Algorithms': [6, 2, 0, 0],
+  '2.5.1 Entities': [8, 0, 0, 0],
+  '2.5.2 Activities': [8, 0, 0, 0],
+  '2.5.3 Resources': [5, 0, 0, 3],
+  '2.5.4 Queues': [5, 0, 0, 3],
+  '2.5.5 Entry/Exit': [8, 0, 0, 0],
+  '3.1 Data sources': [8, 0, 0, 0],
+  '3.2 Pre-processing': [3, 0, 0, 5],
+  '3.3 Inputs': [5, 3, 0, 0],
+  '3.4 Assumptions': [6, 0, 2, 0],
+  '4.1 Initialisation': [2, 2, 4, 0],
+  '4.2 Run length': [7, 1, 0, 0],
+  '4.3 Estimation': [5, 2, 0, 1],
+  '5.1 Language': [0, 8, 0, 0],
+  '5.2 Random': [1, 1, 5, 1],
+  '5.3 Execution': [1, 1, 6, 0],
+  '5.4 System': [1, 4, 3, 0],
+  '6.1 Sharing': [8, 0, 0, 0]
+}
+criteria_wide = pd.DataFrame(criteria_dict, index=col).T
+
+eval_chart(criteria_wide)
+```
+
+I find this chart a really helpful visualisation, to see what is commonly being met, things that are often not applicable, and things often not met.
+
+Below, I've reflected on the impact of each criteria being fulfilled, on the reproduction. I've also identified where I feel I've been a bit more lax in my evaluation. <!-- TODO: Consider - is this an issue? Should I revisit those and be more strict? -->
+
+**1.1 Purpose of the model**<br>Explain the background and objectives for the model.
+
+* Pretty basic requirement that all meet (unsurprisingly).
+
+**1.2 Model outputs**<br>Define all quantitative performance measures that are reported, using equations where necessary.  Specify how and when they are calculated during the model run along with how any measures of error such as confidence intervals are calculated.
+
+* One paper was rated as "partially met" as many of the outcomes used were not defined.
+* For those marked fully met, this was mainly based on them mentioning or being pretty clear about what the outcomes were, but wasn't super strict - ie. didn't require equations, or to specify how and when they were calculated.
+* Whilst this is important, the raw/basic outcomes themselves were generally pretty straightforward, and issues with outputs more-so related to:
+  * Which output to use from the results table (if unclear names, or similar names)
+  * How to apply any required transformations
+
+**1.3 Experimentation aims**<br>If the model has been used for experimentation, state the objectives that it was used to investigate.<br>(A) Scenario based analysis – Provide a name and description for each scenario, providing a rationale for the choice of scenarios and ensure that item 2.3 (below) is completed.<br>(B) Design of experiments – Provide details of the overall design of the experiments with reference to performance measures and their parameters (provide further details in data below).<br>(C) Simulation Optimisation – (if appropriate) Provide full details of what is to be optimised, the parameters that were included and the algorithm(s) that was be used.  Where possible provide a citation of the algorithm(s).
+
+* In all seven papers with scenarios, these were described. Didn't necessarily provide a "name" for each scenario, nor a "rationale" for the choice of scenarios, but did describe them.
+* Although the description of the scenario can feel clear from the paper, when the code was not provided, it could be quick tricky and time-consuming to work out how to appropriately change the code, in order to implement the scenario.
+
+**2.1 Base model overview diagram**<br>Describe the base model using appropriate diagrams and description.  This could include one or more process flow, activity cycle or equivalent diagrams sufficient to describe the model to readers.  Avoid complicated diagrams in the main text.  The goal is to describe the breadth and depth of the model with respect to the system being studied.
+
+* All papers included a diagram, which was great.
+
+**2.2 Base model logic**<br>Give details of the base model logic. Give additional model logic details sufficient to communicate to the reader how the model works.
+
+* Pretty basic requirement that all meet (unsurprisingly).
+
+**2.3 Scenario logic**<br>Give details of the logical difference between the base case model and scenarios (if any).  This could be incorporated as text or where differences are substantial could be incorporated in the same manner as 2.2.
+
+* Overlap with 1.3 (implicit in describing 1.3, that would describe this).
+
+**2.4 Algorithms**<br>Provide further detail on any algorithms in the model that (for example) mimic complex or manual processes in the real world (i.e.  scheduling of arrivals/ appointments/ operations/ maintenance, operation of a conveyor system, machine breakdowns, etc.). Sufficient detail should be included (or referred to in other published work) for the algorithms to be reproducible.  Pseudo-code may be used to describe an algorithm.
+
+* Those partially met are for describing some but not all of the algorithms. However, it is worth noting that it could be hard to actually ensure all relevant algorithms were described, if I hadn't identified them in the more complex models.
+
+**2.5.1 Components - entities**<br>Give details of all entities within the simulation including a description of their role in the model and a description of all their attributes.
+
+* Pretty basic requirement that all meet (unsurprisingly, as implicit in description of model / logic)
+
+**2.5.2 Components - activities**<br>Describe the activities that entities engage in within the model. Provide details of entity routing into and out of the activity.
+
+* Pretty basic requirement that all meet (unsurprisingly, as implicit in description of model / logic)
+* Didn't necessarily require explicit description of routing.
+
+**2.5.3 Components - resources**<br>List all the resources included within the model and which activities make use of them.
+
+* Generally seem to be mentioned when included, particularly as often form part of output (e.g. resource utilisation)
+* When not mentioned (and based on known structure of model), assume not relevant.
+
+**2.5.4 Components - queues**<br>Give details of the assumed queuing discipline used in the model (e.g. First in First Out, Last in First Out, prioritisation, etc.). Where one or more queues have a different discipline from the rest, provide a list of queues, indicating the queuing discipline used for each.  If reneging, balking or jockeying occur, etc., provide details of the rules. Detail any delays or capacity constraints on the queues.
+
+* As for 2.5.3
+
+**2.5.5 Components - entry/exit points**<br>Give details of the model boundaries i.e. all arrival and exit points of entities.  Detail the arrival mechanism (e.g. ‘thinning’ to mimic a non-homogenous Poisson process or balking).
+
+* Generally fairly implicit
+* Overlap with 2.4 algorithms, and hence didn't necessarily mark this down if not full detail of arrival mechanism.
+
+**3.1 Data sources**<br>List and detail all data sources. Sources may include:<br>• Interviews with stakeholders,<br>• Samples of routinely collected data,<br>• Prospectively collected samples for the purpose of the simulation study,<br>• Public domain data published in either academic or organisational literature.   Provide, where possible, the link and DOI to the data or reference to published literature.<br>All data source descriptions should include details of the sample size, sample date ranges and use within the study.
+
+* All meet.
+
+**3.2 Pre-processing**<br>Provide details of any data manipulation that has taken place before its use in the simulation, e.g. interpolation to account for missing data or the removal of outliers.
+
+* Often had to assume that none occurred if none described.
+
+**3.3 Input parameters**<br>List all input variables in the model. Provide a description of their use and include parameter values.  For stochastic inputs provide details of any continuous, discrete or empirical distributions used along with all associated parameters.  Give details of all time dependent parameters and correlation.<br>Clearly state:<br>• Base case data<br>• Data use in experimentation, where different from the base case.<br>• Where optimisation or design of experiments has been used, state the range of values that parameters can take.<br>• Where theoretical distributions are used, state how these were selected and prioritised above other candidate distributions.
+
+* This was very important as it allows to check that the code parameters were correct as - in several cases - the provided code did not include the base case parameters as described. When missing from the paper, it was not possible to check them.
+
+**3.4 Assumptions**<br>Where data or knowledge of the real system is unavailable what assumptions are included in the model?  This might include parameter values, distributions or routing logic within the model.
+
+* Although not relevant for reproduction, would be very relevant for reuse and validity 
+
+**4.1 Initialisation**<br>Report if the system modelled is terminating or non-terminating.  State if a warm-up period has been used, its length and the analysis method used to select it.  For terminating systems state the stopping condition.<br>State what if any initial model conditions have been included, e.g., pre-loaded queues and activities.  Report whether initialisation of these variables is deterministic or stochastic.
+
+* Often not reported, and would be handy as it's a pretty basic/fundamental aspect to the model that would help readers to have better understanding of how the model is working.
+
+**4.2 Run length**<br>Detail the run length of the simulation model and time units.
+
+* Important to mention for same reasons as 3.3
+
+**4.3 Estimation approach**<br>State the method used to account for the stochasticity: For example, two common methods are multiple replications or batch means. Where multiple replications have been used, state the number of replications and for batch means, indicate the batch length and whether the batch means procedure is standard, spaced or overlapping. For both procedures provide a justification for the methods used and the number of replications/size of batches.
+
+* The description of this criteria is quite confusing - generally just focussed on identifying whether it was multiple replications or a big run, and then if the numbers used were justified.
+* Partially met cases are those with replications that are not justified.
+
+<!--TODO: Check Lim 2020 - think it should be changed to partially met, as no justification mentioned -->
+
+**5.1 Software or programming language**<br>State the operating system and version and build number.<br>State the name, version and build number of commercial or open source DES software that the model is implemented in.<br>State the name and version of general-purpose programming languages used (e.g. Python 3.5).<br>Where frameworks and libraries have been used provide all details including version numbers.
+
+* Will often mentioned the programming language, but not operating system or version numbers
+* This was pretty handy, when versions were given, for cases where no versions were given in the repository itself - although ideally, versions could just simply be there.
+
+**5.2 Random sampling**<br>State the algorithm used to generate random samples in the software/programming language used e.g. Mersenne Twister.<br>If common random numbers are used, state how seeds (or random number streams) are distributed among sampling processes.
+
+* Frequently not described, despite some of the studies having implemented and used seeds.
+
+<!--TODO: Check Huang 2019, looks like I've answered with arrival sampling, but that is not relevant here - but does indicate that the wording here is a little confusing perhaps -->
+
+**5.3 Model execution**<br>State the event processing mechanism used e.g. three phase, event, activity, process interaction.<br>*Note that in some commercial software the event processing mechanism may not be published. In these cases authors should adhere to item 5.1 software recommendations.*<br>State all priority rules included if entities/activities compete for resources.<br>If the model is parallel, distributed and/or use grid or cloud computing, etc., state and preferably reference the technology used.  For parallel and distributed simulations the time management algorithms used.  If the HLA is used then state the version of the standard, which run-time infrastructure (and version), and any supporting documents (FOMs, etc.)
+
+* Often not mentioned event processing machnism
+* This is a very long list of requirements in one category, and I found a bit difficult to evaluate, e.g. to check against all criteria
+
+**5.4 System specification**<br>State the model run time and specification of hardware used.  This is particularly important for large scale models that require substantial computing power.  For parallel, distributed and/or use grid or cloud computing, etc. state the details of all systems used in the implementation (processors, network, etc.)
+
+* Model run time was really important to mention, but often not given. Particularly important for the models with longer run times, to know what to expect - including in light of reuse, and perhaps short times being necessary in certain contexts - or here, when troubleshooting, to know I might need to try lower numbers first while getting it working
+* Overlaps with 5.3 parallel and 5.1 operating system.
+
+**6.1 Computer model sharing statement**<br>Describe how someone could obtain the model described in the paper, the simulation software and any other associated software (or hardware) needed to reproduce the results.  Provide, where possible, the link and DOIs to these.
+
+* This is inevitable/selection bias, given we chose papers that had links to code.
+
+:::
 
 ## DES checklist derived from ISPOR-SDM
 
