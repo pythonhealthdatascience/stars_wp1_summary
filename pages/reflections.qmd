@@ -1,5 +1,6 @@
 ---
 title: "Reflections from reproductions"
+echo: False
 bibliography: ../references.bib
 ---
 
@@ -24,6 +25,49 @@ Links to each study:
 
 <!-- TODO: Once complete, carefully go over again and check everything is correct -->
 
+## Summary
+
+<!--TODO: Add stacked bar summary chart -->
+
+```{python}
+import pandas as pd
+from functions import eval_chart
+
+# Create dataframe of results
+col = ['fully', 'partially', 'not', 'na']
+criteria_dict = {
+  'List packages': [2, 3, 3, 0],
+  'Provide versions': [0, 6, 2, 0],
+  'Model in "runnable" format': [7, 0, 1, 0],
+  'Run programmatically': [0, 0, 0, 0],
+  '''Don't hard code scenario param.''': [0, 0, 0, 0],
+  'Relative file paths': [0, 0, 0, 0],
+  'Avoid duplication': [0, 0, 0, 0],
+  'Sufficient comments': [0, 0, 0, 0],
+  'Quicker (?)': [0, 0, 0, 1],
+  'If slow, state run time': [0, 0, 0, 0],
+  'If comp. exp., state usage + alt.': [0, 0, 0, 0],
+  'Provide scenario code': [0, 0, 0, 0],
+  'Provide all required outputs': [0, 0, 0, 0],
+  'Include correct parameters': [0, 0, 0, 0],
+  'Provide all required parameters': [0, 0, 0, 0],
+  'If not, clearly state in paper': [0, 0, 0, 0],
+  'If process param., provide calc.': [0, 0, 0, 0],
+  'Save output to file': [0, 0, 0, 0],
+  'Understandable output tables': [0, 0, 0, 0],
+  'Avoid large files (?)': [0, 0, 0, 1],
+  'Not excessive output files': [0, 0, 0, 0],
+  'Use seeds': [0, 0, 0, 0],
+  'Code to make tables': [0, 0, 0, 0],
+  'Code to make figures': [0, 0, 0, 0],
+  'Code to process in-text results': [0, 0, 0, 0],
+  'Run instructions': [0, 0, 0, 0],
+}
+criteria_wide = pd.DataFrame(criteria_dict, index=col).T
+
+eval_chart(criteria_wide)
+```
+
 ## Environment
 
 ::: {.callout-note icon=false collapse=true}
@@ -32,7 +76,7 @@ Links to each study:
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | 🟡 | ✅ | ✅ | <!--TODO--> | 🟡 | ❌ |
+| ❌ | ❌ | 🟡 | ✅ | ✅ | 🟡 | 🟡 | ❌ |
 
 @shoaib_simulation_2021: Not met. This became a time-consuming issue as it took a while to identify a dependency that was needed for the code to work (`greenlet`) (based on reading the documentation for `salabim`), and a while longer to realise I had installed another package when the package I needed was in base (`statistics`).
 
@@ -44,7 +88,7 @@ Links to each study:
 
 @anagnostou_facs-charm_2022: Fully met. Provides `requirements.txt`
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Partially met. `DESCRIPTION` file accompanying `epicR` package contained some but not all dependencies.
 
 @hernandez_optimal_2015: Partially met. Some (but not all) of the required packages were listed in the paper. Of particular note, this depended on having a local package `myutils/`, which was another GitHub repository from the author. This was not mentioned anywhere, and so required to notice this was needed.
 
@@ -66,7 +110,7 @@ Links to each study:
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | 🟡 | 🟡 | 🟡 | <!--TODO--> | 🟡 | 🟡 |
+| ❌ | ❌ | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
 
 @shoaib_simulation_2021: Not met. I had to backdate the package versions as the model didn't work with the latest.
 
@@ -81,7 +125,7 @@ Links to each study:
 
 @anagnostou_facs-charm_2022: Partially met (depending on how strict you are being). The Python version was stated in the paper, and the SimPy version was stated in the complementary app repository (although neither were mentioned in the model repository itself).
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Partially met. R version given in paper. `DESCRIPTION` file contains minimum versions for some but not all packages.
 
 @hernandez_optimal_2015: Partially. Versions of Python, R and some (but not all) packages given in the paper. Some versions weren't very specific (e.g. Python 2.7 v.s. something specific like 2.7.12)
 
@@ -105,7 +149,7 @@ Links to each study:
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ✅ | ❌ | ✅ | ✅ | ✅ | <!--TODO--> | ✅ | ✅ |
+| ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 @shoaib_simulation_2021: Fully met. Provided as a single `.py` file which ran model with function `main()`.
 
