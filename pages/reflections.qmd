@@ -691,31 +691,6 @@ Regarding file sizes in each study:
 
 :::
 
-::: {.callout-caution icon=false collapse=true}
-
-<!--TODO: Move this to other, or move things from other up here into their own boxes -->
-
-## Do not output excessive numbers of files
-
-I have not evaluated this as a criteria, as a large number of files is not inherently a bad thing, and might be difficult to avoid.
-
-Regarding number of files:
-
-* @shoaib_simulation_2021: Not relevant.
-* @huang_optimizing_2019: Not relevant.
-* @lim_staff_2020: Not relevant.
-* @kim_modelling_2021: Not relevant.
-* @anagnostou_facs-charm_2022: Not relevant.
-* @johnson_cost_2021: Not relevant.
-* @hernandez_optimal_2015: The default behaviour of the script was to output **lots of files** from each round (so you could easily have 90, 100, 200+ files), which were then **not** used in analysis (as it just depended on an aggregate results file). Although these individual files might be useful during quality control, as a default behaviour of the script, it could easily make the repository quite busy/littered with files.
-* @wood_value_2021: Not relevant.
-
-**Reflections:**
-
-* Outputting hundreds of files - particularly if they are not then used normally in analysis - can easily make repository cluttered/busy
-
-:::
-
 ## Seeds
 
 ::: {.callout-note icon=false collapse=true}
@@ -883,6 +858,8 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 However, this is a slightly unavoidable problem unless you continue to maintain your code (which is ideal but not always feasible in a research environment). Realistically, if reusing this code for a new purpose, you would upgrade it to supported versions.
 
 **Original results files**. @hernandez_optimal_2015: Included some original results files, which was invaluable in identifying some of the parameters in the code that needed to be fixed.
+
+**Excessive number of files**. For @hernandez_optimal_2015 the default behaviour of the script was to output lots of files from each round (so you could easily have 90, 100, 200+ files), which were then not used in analysis (as it just depended on an aggregate results file). Although these individual files might be useful during quality control, as a default behaviour of the script, it could easily make the repository quite busy/littered with files.
 
 **Classes**. @hernandez_optimal_2015: Structured code into classes, which was nice to work with/amend.
 
