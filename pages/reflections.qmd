@@ -6,10 +6,6 @@ bibliography: ../references.bib
 
 This page describes the facilitators for each reproduction (and, conversely, the barriers to the reproduction, in their absence). With each section, I have created a table which evaluates whether the facilitators were fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A) for each study.
 
-<!--TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 reflections once have finished reproduction -->
-
-<!--TODO: Check all the notes on Johnson's reflections page are captured below, and that there weren't any new categories to add-->
-
 Links to each study:
 
 * @shoaib_simulation_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reflections.html" target="_blank">link to reflections</a>
@@ -27,15 +23,21 @@ Links to each study:
 
 <!-- TODO: Once complete, carefully go over again and check everything is correct -->
 
+<!-- TODO: From Tom - So much great work and interesting findings. We need to move towards some headlines and take aways for the community. Mayybe there are some high level groupings of your findings? e.g.
+
+* Study reporting
+* Model structuring and functionality
+* Analysis pipeline
+
+Or perhaps:
+
+* Evidence supporting the use of reporting guidelines
+    * as in - reporting guidelines state this should info be included and you found it v.difficult or impossible to reproduce without it.?
+-->
+
 ## Summary
 
-This summary excludes:
-
-* "Quicker models are easier to work with"
-* "For computationally expensive models, state memory usage and provide alternatives for lower spec machines"
-* "Avoid large file sizes if possible"
-* "Do not output excessive numbers of files"
-* "Other"
+This is a summary of all the items that were evaluated (with ✅🟡❌) below.
 
 ```{python}
 import pandas as pd
@@ -98,10 +100,10 @@ eval_chart(criteria_wide)
 
 @wood_value_2021: Not met. However, easily resolved based on imports to `.R` script.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * The `import` statements can be sufficient in indicating all the packages required but this is not always the case if there are "hidden"/unmentioned dependencies that don't get imported
-* There are various options for listing the packages (e.g. comprehensive import statements, installation lines in the script, environment files).
+* There are various options for listing the packages (e.g. comprehensive import statements, installation lines in the script, environment files, package DESCRIPTION file).
 * Ideally mention this in repository, not just the paper.
 * If there are local dependencies (e.g. other GitHub repositories), make sure to (a) mention and link to these repositories, so it is clear they are also required, and (b) include licence/s in those repositories also, so they can be used.
 * This was a common issue.
@@ -135,7 +137,7 @@ eval_chart(criteria_wide)
 
 @wood_value_2021: Partially met. States version of R but not package. Due to prior issues with backdating R, used latest versions. There were no issues using the latest versions of R and packages, but if there had been, it would be important to know what versions had previously been used and worked.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Models will sometimes work with the latest versions of packages, but likewise, you will sometimes need to backdate as it no longer works with the latest
 * For Python, it was very easy to "backdate" the python and package versions. However, I found this very difficult to in R, and ended up always using the latest versions.
@@ -165,20 +167,18 @@ eval_chart(criteria_wide)
 
 @anagnostou_facs-charm_2022: Fully met. Can run model from command line.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Fully met. Model provided as a package (which is an R interface for the C++ model).
 
 @hernandez_optimal_2015: Fully met. The model (python code) can be run from `main.py`.
 
 @wood_value_2021: Fully met. Provided as a single `.R` file which ran the model with a for loop.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * If you are presenting the results of a model, then provide the code for that model in a "runnable" format.
 * This was an uncommon issue.
 
 :::
-
-<!--TODO: Consider overlap between some of these and how clear it is. I seperated to seperate out the script structure v.s. hard coding v.s. providing parameters and scenarios later. Consider whether evaluation for Shoaib below feels correct or not. -->
 
 ::: {.callout-warning icon=false collapse=true}
 
@@ -204,12 +204,13 @@ eval_chart(criteria_wide)
 
 @wood_value_2021: Fully met. Changes inputs to run all scenarios from a single `.R` file.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Design model so that you can re-run it with different parameters without needing to make changes to the model code itself.
     * This allows you to run multiple versions of the model with the same script.
     * It also reduces the likelihood of missing errors (e.g. if miss changing an input parameter somewhere, or input the wrong parameters and don't realise).
 * This was an uncommon issue.
+* Note, this just refers to the basic set-up, with items below like hard coding parameters also being very important in this context.
 
 :::
 
@@ -233,14 +234,14 @@ eval_chart(criteria_wide)
 
 @johnson_cost_2021: Fully met. All model parameters could be varied from "outside" the model code itself, as they were provided as changeable inputs to the model.
 
-@hernandez_optimal_2015: Partially met. Did not hard code, runs, population, generations, and percent pre-screened. However, did hard code other parameters like bi-objective v.s tri-objective model and bounding. Also, it was pretty tricky to change percent pre-screened, as it assumed you provided a `.txt` file for each %.
+@hernandez_optimal_2015: Partially met. Did not hard code runs, population, generations, and percent pre-screened. However, did hard code other parameters like bi-objective v.s tri-objective model and bounding. Also, it was pretty tricky to change percent pre-screened, as it assumed you provided a `.txt` file for each %.
 
 @wood_value_2021: Fully met. All model parameters for the scenarios/sensitivity analysis could be varied from "outside" the model code itself.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * It can be quite difficult to change parameters that are hard coded into the model. Ideally, all the parameters that a user might want to change should be easily changeable and not hard coded.
-* This is a somewhat common issue.
+* This is a relatively common issue.
 * There is overlap between this and whether the code for scenarios is provided (as typically, the code for scenario is conditionally changing parameter values, although this can be facilitated by not hard coding the parameters, so you call need to change the values from "outside" the model code, rather than making changes to the model functions themselves). Hence, have included as two seperate reflections.
 * Important to note that we evaluate this in the context of reproduction - and have not checked for hard-coded parameters outside the specified scenario analyses, but that someone may wish to alter if reusing the model for a different analysis/context/purpose.
 
@@ -249,8 +250,6 @@ eval_chart(criteria_wide)
 ::: {.callout-warning icon=false collapse=true}
 
 ## Use relative file paths
-
-<!--TODO: Consider whether this is something to keep? Did any have an issue with relative file paths? Or was it more that I saw an issue with relative file paths that were tricky to change? Have mentioned this is a bit under "Saves output to a file". Although maybe it doesn't have to be an issue to mention it - can just be a positive, that noticed all used?-->
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -272,7 +271,9 @@ eval_chart(criteria_wide)
 
 @wood_value_2021: Fully met. Although I then changed things a bit as reorganised repository and prefer not to work with `setwd()`, these were set up in such a way that it would be really easy to correct file path, just by setting working directory at start of script.
 
-**Reflections:** <!--TODO: Update reflections (when add Shoaib, Huang, Lim, Kim and Wood) and then (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
+
+* This was not an issue for any studies - but included to note this was a "facilitator", as would have needed to amend if they weren't.
 
 :::
 
@@ -300,11 +301,12 @@ eval_chart(criteria_wide)
 
 @wood_value_2021: Fully met.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --> Large amounts of code duplication are non-ideal as they can:
+**Reflections:** Large amounts of code duplication are non-ideal as they can:
 
 * Make code less readable
 * Make it trickier to change universal parameters
 * Increase the likelihood of introducing mistakes
+* Make it trickier to set up scenarios/sensitivity analyses
 
 :::
 
@@ -330,11 +332,12 @@ eval_chart(criteria_wide)
 
 @wood_value_2021: Not met. Very few comments, so for the small bit of the code that I did delve into, took a bit of working out what different variables referred to.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * With increasing code complexity, the inclusion of sufficient comments becomes increasingly important, as it can otherwise be quite time consuming to figure out how to fix and change sections of code
 * Define abbreviations used within the code
 * Good to have consistent comments and docstrings throughout (i.e. on all scripts, on not just some of them)
+* Common issue
 
 :::
 
@@ -359,11 +362,11 @@ The studies where I made adjustments were:
 
 For @kim_modelling_2021, an error appears to have been introduced with the aoorta diameter thresholds by switching between nested and unnested lists, which I’m anticipating was unresolved due to the long run times of the model meaning they weren’t all run in sequence at the end.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Reduce model run time if possible as it makes it easier to work with, and facilitates doing full re-runs of all scenarios (which can be important with code changes, etc).
     * Relatedly, it is good practice to re-run all scripts before finishing up, as then you can spot any errors like the one mentioned for @kim_modelling_2021
-* Common issue (to varying degrees - i.e. taking 20 minutes, up to taking several hours).
+* Common issue (to varying degrees - i.e. taking 20 minutes, up to taking several hours or even day/s).
 
 :::
 
@@ -391,7 +394,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @wood_value_2021: Partially met. In the paper, they state that it takes less than five minutes for each scenario, but this feels like half the picture, given the total run time was 48 hours.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * For long models with no statement, it can take a while to realise that it's not an error in the code or anything, but actually just a long run time! And hard to know how long to expect, and whether it is without the capacities of your machine and so on.
 * Ideally include statement of run time in repository as well as paper.
@@ -413,9 +416,10 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 * @hernandez_optimal_2015: This had long run times but I don't know if it was computationally expensive or not - I just know that I didn't run into any issues (but I didn't record memory usage, so its possible a lower-specced machine might).
 * @wood_value_2021: Not applicable. As stated in their prior paper, the model is constrained by processing time, not computer memory.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Some models are so computationally expensive that it may be simply impossible to run it a feasible length of time without a high powered machine.
+* Handy to mention memory requirements so someone with lower spec machine can ensure they would be able to run it.
 * If a model is computationally expensive, it would be good to provide suggested alternatives that allow it to be run on lower spec machines
 * Not a common problem - only relevant to computationally expensive models
 
@@ -447,7 +451,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 
 @wood_value_2021: Fully met.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Common issue
 * Time consuming and tricky to resolve
@@ -478,7 +482,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 
 @wood_value_2021: Fully met.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Calculate and provide all the outputs required
 * Appreicate this can be a bit "ambiguous" (e.g. if its just plotting a mean or simple calculation, then didn't consider that here) (however, combined with other criteria, we do want them to provide code to calculate outputs, so we would want them to provide that anyway)
@@ -509,7 +513,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 
 @wood_value_2021: Fully met.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * At least provide a script that can run the baseline model as in the paper (even if not providing the scenarios)
 * This can introduce difficulties - when some parameters are wrong, you rely on the paper to check which parameters are correct or not, but if the paper doesn't mention every single parameter (which is reasonably likely, as this includes those not varied by scenarios), then you aren't able to be sure that the model you are running is correct.
@@ -535,13 +539,13 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 
 @anagnostou_facs-charm_2022: Fully met.
 
-@johnson_cost_2021: Fully met. Could determine appropriate parameters for sensitivity analysis from description in article.
+@johnson_cost_2021: Fully met. Could determine appropriate parameters for sensitivity analysis from figures in article.
 
 @hernandez_optimal_2015: Not met. The results have a large impact by the bounding set, but this was not mentioned in the paper or repository, and required me looking at the numbers in results and GitHub commit history to estimate the appropriate bounds to use.
 
 @wood_value_2021: Fully met.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Provide all required parameters
 
@@ -569,7 +573,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 
 @wood_value_2021: Not applicable. All provided.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Provide parameters in a table (including for each scenario), as it can be difficult/ambiguous to interpret them from the text, and hard to spot them too.
 * Be sure to mention every parameter that gets changed (e.g. for @lim_staff_2020, as there wasn't a default `staff_per_shift` across all scenarios, but not stated for the scenario, had to guess it).
@@ -598,7 +602,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 
 @wood_value_2021: Not applicable. All provided.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * If you are going to be mentioning the "pre-processed" values at all, then its important to include the calculation (ideally in the code, as that is the clearest demonstration of exactly what you did)
 
@@ -626,7 +630,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 
 @wood_value_2021: Fully met. Outputs to `.csv` files.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Common issue
 * Particularly important if model run time is even slightly long (even just minutes long, but even more so as becomes many minutes / hours), so don't always have to re-run it each time to get results
@@ -654,10 +658,11 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 
 @wood_value_2021: Fully met. I didn't need to work with the output tables, but from looking at them now, they make sense.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Don't provide alternative results for the same metrics
 * Make it clear what each colum/category in the results table means, if it might not be immediately clear.
+* Make differences between seperate results tables clear.
 
 :::
 
@@ -678,9 +683,9 @@ Regarding file sizes in each study:
 * @hernandez_optimal_2015: Not relevant (aggregate results files **<10 kB**).
 * @wood_value_2021: Aggregate results files are small (**327 kB**), but raw results files are very large (**2.38 GB**), and even when compressed to `.csv.gz` (**128 MB**) require using of GitHub LFS
 
-**Reflections:** <!--TODO: Update reflections once add Johnson -->
+**Reflections:**
 
-* For most studies, this was not relevant, with outputs relatively small
+* For most studies, this was not relevant, with outputs relatively small.
 * I only really found this to be an issue when files exceeded GitHub threshold. [GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github) give warning over 50 MB, blocks files over 100 MB, requiring you to use GitHub LFS. Recommends repositories ideally <1 GB and for sure < 5GB. [GitHub LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage) has limits on storage and bandwith use (1GB of each).
 * **Reducing file size isn't the only solution**. In cases where you have large files, a good option can be storing it elsewhere and then pulling from there into your workflow - for example, storing in **zenodo** and fetching using [pooch](https://github.com/fatiando/pooch).
 
@@ -688,9 +693,11 @@ Regarding file sizes in each study:
 
 ::: {.callout-caution icon=false collapse=true}
 
+<!--TODO: Move this to other, or move things from other up here into their own boxes -->
+
 ## Do not output excessive numbers of files
 
-I have not evaluated like as a criteria, as a large number of files is not inherently a bad thing, and might be difficult to avoid.
+I have not evaluated this as a criteria, as a large number of files is not inherently a bad thing, and might be difficult to avoid.
 
 Regarding number of files:
 
@@ -703,7 +710,7 @@ Regarding number of files:
 * @hernandez_optimal_2015: The default behaviour of the script was to output **lots of files** from each round (so you could easily have 90, 100, 200+ files), which were then **not** used in analysis (as it just depended on an aggregate results file). Although these individual files might be useful during quality control, as a default behaviour of the script, it could easily make the repository quite busy/littered with files.
 * @wood_value_2021: Not relevant.
 
-**Reflections:** <!--TODO: Update reflections once add Johnson -->
+**Reflections:**
 
 * Outputting hundreds of files - particularly if they are not then used normally in analysis - can easily make repository cluttered/busy
 
@@ -735,10 +742,11 @@ Regarding number of files:
 
 @wood_value_2021: Fully met. Sets seed based on replication number.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Depending on your model and the outputs/type of output you are looking at, the lack of seeds can have varying impacts on the appearance of your results, and can make the subjective judgement of whether results are consistent harder (if discrepancies could be attributed to not having consistent seeds or not).
 * It can be really quite simple to include seeds.
+* Over half of the studies did include seed control in their code.
 
 :::
 
@@ -751,8 +759,6 @@ Regarding number of files:
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | ❌ | N/A | 🟡 | ❌ | N/A | ❌ | ❌ | ✅ |
-
-<!--TODO: Lim 2020... I think from memory that this output tables  similar to the paper, but I then changed them as that format was difficult to compare/work with -->
 
 @shoaib_simulation_2021: Not met.
 
@@ -770,9 +776,9 @@ Regarding number of files:
 
 @wood_value_2021: Fully met.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
-* It can take a bit of time to do this processing, so very handy for it to be provided.
+* It can take a bit of time to do this processing, and it can be tricky/confusing to do correctly, so very handy for it to be provided.
 * Common issue.
 
 :::
@@ -787,7 +793,7 @@ Regarding number of files:
 
 @shoaib_simulation_2021: Not met.
 
-@huang_optimizing_2019: Not met. Had to write code from scratch. For one of the figures, it would have been handy if informed that plot was produced by a simmer function (as didn’t initially realise this). It also took a bit of time for me to work out how to transform the figure axes as this was not mentioned in the paper (and no code was provided for these). It was also unclear and a bit tricky to work out how to standardise the density in the figures (since it is only described in the text and no formula/calculations are provided there or in the code). <!-- TODO: Consider whether this should be split into another box (i.e. about providing the processing?) -->
+@huang_optimizing_2019: Not met. Had to write code from scratch. For one of the figures, it would have been handy if informed that plot was produced by a simmer function (as didn’t initially realise this). It also took a bit of time for me to work out how to transform the figure axes as this was not mentioned in the paper (and no code was provided for these). It was also unclear and a bit tricky to work out how to standardise the density in the figures (since it is only described in the text and no formula/calculations are provided there or in the code).
 
 @lim_staff_2020, @kim_modelling_2021 and @anagnostou_facs-charm_2022: Not met. However, the simplicity and repetition of the figures was handy.
 
@@ -797,9 +803,10 @@ Regarding number of files:
 
 @wood_value_2021: Fully met. Figures match article, with one minor exception that I had to add smoothing to the lines on one of the figures.
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * It can take a bit of time to do this processing, particularly if the figure involves any transformations (and less so if the figure is simple), so very handy for it to be provided.
+* Also, handy if the full code can be provided for all figures (although partial code is more helpful than none at all).
 * Common issue.
 
 :::
@@ -821,7 +828,7 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 **Reflections:**
 
 * Provide code to calculate in-text results
-* Common issue
+* Universal issue, for those with in-text results not otherwise captured in tables and figures
 
 :::
 
@@ -851,16 +858,15 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 
 @wood_value_2021: Not met. No instructions, although it was fairly self explanatory (single script `master.R` to run, then processing scripts named after items in article e.g. `fig7.R`).
 
-**Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
+**Reflections:**
 
 * Even if as simple as running a script, include instructions on how to do so
+* In simpler projects (e.g. single script), this can be less of a problem.
 * Common issue
 
 :::
 
 ## Other
-
-<!--TODO: Reflect whether any of these should be boxes above-->
 
 **Grid lines**. Include tick marks/grid lines on figures, so it is easier to read across and judge whether a result is above or below a certain Y value.
 
@@ -881,14 +887,5 @@ However, this is a slightly unavoidable problem unless you continue to maintain 
 **Classes**. @hernandez_optimal_2015: Structured code into classes, which was nice to work with/amend.
 
 **Version history and releases**. @johnson_cost_2021 had commits to their GitHub repository after the publication date. It wasn't clear which version aligned with the publication. However, the most recent commits add clear README instructions to the repository. We decided to use the latest version of the repository, but it would have beneficial to have releases/versions/a change log that would help to outline the commit history in relation to the publication and any subsequent changes.
-
-<!--TODO: update or remove this summary-->
-
-**Reflections:**
-
-* Include grid lines
-* Include data dictionaries
-* If feasible, maintain code to avoid dependency on unsupported old versions of packages and languages
-* Ideally, include copies of your results, so can (a) compare against, (b) use to run analysis on, and (c) use in troubleshooting
 
 ## References
