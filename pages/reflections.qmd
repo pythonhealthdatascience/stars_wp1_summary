@@ -103,12 +103,30 @@ eval_chart(criteria_wide)
 **Reflections:**
 
 * The `import` statements can be sufficient in indicating all the packages required but this is not always the case if there are "hidden"/unmentioned dependencies that don't get imported
+    * Tom: Given that import statements are not always enough, then I would argue more is needed.
+    * Tom: Useful to know that `renv` "detects" dependencies listed as imports in scripts.
 * There are various options for listing the packages (e.g. comprehensive import statements, installation lines in the script, environment files, package DESCRIPTION file).
 * Ideally mention this in repository, not just the paper.
 * If there are local dependencies (e.g. other GitHub repositories), make sure to (a) mention and link to these repositories, so it is clear they are also required, and (b) include licence/s in those repositories also, so they can be used.
 * This was a common issue.
 
 :::
+
+::: {.callout-note icon=false collapse=true}
+
+## Be aware of potential system dependencies
+
+There can also be system dependencies, which will vary between systems, and may not be obvious if researchers already have these installed. We identified these when setting up the docker environments (which act like "fresh installs"):
+
+* @shoaib_simulation_2021, @lim_staff_2020, @anagnostou_facs-charm_2022 - no dependencies
+* @huang_optimizing_2019, @kim_modelling_2021, @johnson_cost_2021 and @wood_value_2021 - libcurl4-openssl-dev, libssl-dev, libxml2-dev, libglpk-dev, libicu-dev - as well as `tk` for Johnson et al. 2021
+* @hernandez_optimal_2015 - wget, build-essential, libssl-dev, libffi-dev, libbz2-dev, libreadline-dev, libsqlite3-dev, zlib1g-dev, libncurses5-dev, libgdbm-de, libnss3-dev, tk-dev, liblzma-dev, libsqlite3-dev, lzma, ca-certificates, curl, git
+
+Although it would be unreasonable for authors to be aware of and list all system dependencies, given they may not be aware of them, this does show the benefit of creating something like docker in identifying them and making note of them within the docker files.
+
+This issue was specific to (a) R studies, and (b) the study with an unsupported version of Python that required building it from source in the docker file.
+
+::: 
 
 ::: {.callout-note icon=false collapse=true}
 
@@ -129,7 +147,7 @@ eval_chart(criteria_wide)
 
 @kim_modelling_2021: Partially met. States version of R but not package. Due to prior issues with backdating R, used latest versions. There were no issues using the latest versions of R and packages, but if there had been, it would be important to know what versions had previously been used and worked.
 
-@anagnostou_facs-charm_2022: Partially met (depending on how strict you are being). The Python version was stated in the paper, and the SimPy version was stated in the complementary app repository (although neither were mentioned in the model repository itself).
+@anagnostou_facs-charm_2022: Partially met (depending on how strict you are being). The Python version was stated in the paper, and the SimPy version was stated in the complementary app repository (although neither were mentioned in the model repository itself). Requirements file just contains one thing - `simpy` - with no version.
 
 @johnson_cost_2021: Partially met. R version given in paper. `DESCRIPTION` file contains minimum versions for some but not all packages.
 
@@ -144,6 +162,8 @@ eval_chart(criteria_wide)
 * Versions are sometimes provided elsewhere (e.g. in paper, in other repositories), but would be handy to be in model repository itself.
 * Handy to provide specific versions too, particularly when there can be reasonably large changes between minor versions.
 * This was a very common issue.
+* Tom: For R, we are sort of moving towards a pre-built container for an R reproducible pipeline
+    * Response: Though being aware that it is possible to successfully reproduce without backdating - didn't run into issues with it for the R models - though that doesn't mean you wouldn't - but it is a sort of "characteristic" of R, that it is *supposed* to be less changeable than Python in this regard. Though obviously no guarantees. And not a fair comparison, as I didn't try to run the Python ones without backdating.
 
 :::
 
@@ -176,7 +196,7 @@ eval_chart(criteria_wide)
 **Reflections:**
 
 * If you are presenting the results of a model, then provide the code for that model in a "runnable" format.
-* This was an uncommon issue.
+* This was an **uncommon** issue.
 
 :::
 
@@ -273,7 +293,7 @@ eval_chart(criteria_wide)
 
 **Reflections:**
 
-* This was not an issue for any studies - but included to note this was a "facilitator", as would have needed to amend if they weren't.
+* This was not an issue for any studies - but included to note this was a "facilitator", as would have needed to amend if they weren't (and Tom noted that this is a common problem that he runs into elsewhere).
 
 :::
 
@@ -285,7 +305,7 @@ eval_chart(criteria_wide)
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ |
 
-@shoaib_simulation_2021: Not met. The model often contained very similar blocks of code before or after warm-up. This has the potential to introduce mistakes - with a suspected (although unconfirmed) mistake being that the lower boundary for the doctor consultation times in configuration 1 differed before and after warm-up.
+@shoaib_simulation_2021: Not met. The model often contained very similar blocks of code before or after warm-up.
 
 @huang_optimizing_2019: Fully met.
 
@@ -338,6 +358,7 @@ eval_chart(criteria_wide)
 * Define abbreviations used within the code
 * Good to have consistent comments and docstrings throughout (i.e. on all scripts, on not just some of them)
 * Common issue
+* Tom: I guess this one isn't strictly necessary for reproducibility. The main issue was that the studies required a fair bit of manual work to get them to reproduce the results from teh mixed issues you listed above. This is sort of a "failsafe option" for reproducibility or perhaps more relevant for reuse/adaptation.
 
 :::
 
@@ -360,13 +381,14 @@ The studies where I made adjustments were:
 * @hernandez_optimal_2015: Add parallel processing, did not run one of the scenarios (it was very long, and hadn't managed to reproduce other parts of same figure regardless), and experimented with reducing parameters for evolutionary algorithm (but, in the end, ran with full parameters, though lower were helpful while working through and troubleshooting).
 * @wood_value_2021: No changes made, but unlike other reproduction, didn't try to run at smaller amounts - just set it to run as-is over the weekend.
 
-For @kim_modelling_2021, an error appears to have been introduced with the aoorta diameter thresholds by switching between nested and unnested lists, which I’m anticipating was unresolved due to the long run times of the model meaning they weren’t all run in sequence at the end.
+In one of the studies, there was a minor error which needed fixing, which we anticipated to likely be present due to long run times meaning the model wasn't all run in sequence at the end.
 
 **Reflections:**
 
 * Reduce model run time if possible as it makes it easier to work with, and facilitates doing full re-runs of all scenarios (which can be important with code changes, etc).
     * Relatedly, it is good practice to re-run all scripts before finishing up, as then you can spot any errors like the one mentioned for @kim_modelling_2021
 * Common issue (to varying degrees - i.e. taking 20 minutes, up to taking several hours or even day/s).
+* Tom: Long run times are inevitable for some models, but this does suggest that some extra work to build confidence the model is working is expected is beneficial, like one or a small set of verification scenarios that are quick to run.
 
 :::
 
@@ -400,6 +422,8 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 * Ideally include statement of run time in repository as well as paper.
 * Ideally include run time of all components of analysis (e.g. all scenarios).
 * Common issue.
+* Tom: This supports the inclusion of section 5.4 in the STRESS-DES guidelines
+    * Response: But think it is also important that this is in the repository itself, and not just the paper.
 
 :::
 
@@ -422,6 +446,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 * Handy to mention memory requirements so someone with lower spec machine can ensure they would be able to run it.
 * If a model is computationally expensive, it would be good to provide suggested alternatives that allow it to be run on lower spec machines
 * Not a common problem - only relevant to computationally expensive models
+* Tom: Agree it makes sense to report this, and is captured in reporting guidelines like STRESS-DES.
 
 :::
 
@@ -455,6 +480,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 
 * Common issue
 * Time consuming and tricky to resolve
+* Tom: This is a headline. Also, links to importance of reproducible analytical pipelines (RAP) for simulation.
 
 :::
 
@@ -486,6 +512,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 
 * Calculate and provide all the outputs required
 * Appreicate this can be a bit "ambiguous" (e.g. if its just plotting a mean or simple calculation, then didn't consider that here) (however, combined with other criteria, we do want them to provide code to calculate outputs, so we would want them to provide that anyway)
+* Tom: This is a headline. I suspect we can find supporting citations elsewhere from other fields. Its a reporting guideline thing too, but in natural language things can get very ambiguous still! Would be good to make that point as well I think.
 
 :::
 
@@ -518,6 +545,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 * At least provide a script that can run the baseline model as in the paper (even if not providing the scenarios)
 * This can introduce difficulties - when some parameters are wrong, you rely on the paper to check which parameters are correct or not, but if the paper doesn't mention every single parameter (which is reasonably likely, as this includes those not varied by scenarios), then you aren't able to be sure that the model you are running is correct.
 * This can make a really big difference, and be likely cause of managing to reproduce everything v.s. nothing, if it impacts all aspects of the results.
+* Tom: I think this comes back to minimum verification as well. I think the "at least for one scenario" idea of yours is excellent.
 
 :::
 
@@ -548,6 +576,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 **Reflections:**
 
 * Provide all required parameters
+* Tom: Evidence to support STRESS-DES 3.3
 
 :::
 
@@ -576,7 +605,9 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 **Reflections:**
 
 * Provide parameters in a table (including for each scenario), as it can be difficult/ambiguous to interpret them from the text, and hard to spot them too.
+    * Tom: The ambiguity of the natural language for scenarios was an important finding.
 * Be sure to mention every parameter that gets changed (e.g. for @lim_staff_2020, as there wasn't a default `staff_per_shift` across all scenarios, but not stated for the scenario, had to guess it).
+* Tom: Evidence to support STRESS-DES 3.3
 
 :::
 
@@ -605,6 +636,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 **Reflections:**
 
 * If you are going to be mentioning the "pre-processed" values at all, then its important to include the calculation (ideally in the code, as that is the clearest demonstration of exactly what you did)
+* Tom: This is a very good point for RAP.
 
 :::
 
@@ -663,6 +695,7 @@ As I felt this was relatively subjective, as depending on what I felt to be "com
 * Don't provide alternative results for the same metrics
 * Make it clear what each colum/category in the results table means, if it might not be immediately clear.
 * Make differences between seperate results tables clear.
+* Tom: In a RAP for simulation world we have a env + model + script that gets you to the exact results table you see in the paper and this isn't a problem (although more time consuiming to setup).
 
 :::
 
@@ -688,6 +721,7 @@ Regarding file sizes in each study:
 * For most studies, this was not relevant, with outputs relatively small.
 * I only really found this to be an issue when files exceeded GitHub threshold. [GitHub](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github) give warning over 50 MB, blocks files over 100 MB, requiring you to use GitHub LFS. Recommends repositories ideally <1 GB and for sure < 5GB. [GitHub LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage) has limits on storage and bandwith use (1GB of each).
 * **Reducing file size isn't the only solution**. In cases where you have large files, a good option can be storing it elsewhere and then pulling from there into your workflow - for example, storing in **zenodo** and fetching using [pooch](https://github.com/fatiando/pooch).
+    * Tom: Approach with zenodo seems sensible. There's a simple workflow for submitting to a journal with this approach as well. Plus scenarios/scripts can link to raw datafiles on zenodo for comparion.
 
 :::
 
@@ -722,10 +756,15 @@ Regarding file sizes in each study:
 * Depending on your model and the outputs/type of output you are looking at, the lack of seeds can have varying impacts on the appearance of your results, and can make the subjective judgement of whether results are consistent harder (if discrepancies could be attributed to not having consistent seeds or not).
 * It can be really quite simple to include seeds.
 * Over half of the studies did include seed control in their code.
+* Tom: There seems little argument against doing this. worth noting that commerical software does this for you and possibly explains why authors didn't do this themselves if that was their background (lack of knowledge?).
+* Tom: Note simpy is independent of any sampling mechanism. We could just use python's random module and set a single seed if needed (although you lose CRN) and we can setup our models so that we only need to set a single seed.
+* Tom: A key part of STARS 2.0 for reproducibility
 
 :::
 
 ## Code to produce article results
+
+This is a common problem across all item types, and a key part of STARS 2.0 for reproducibility.
 
 ::: {.callout-warning icon=false collapse=true}
 
@@ -838,6 +877,7 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 * Even if as simple as running a script, include instructions on how to do so
 * In simpler projects (e.g. single script), this can be less of a problem.
 * Common issue
+* Tom: Evidence for STARS essential component of minimum documentation.
 
 :::
 
@@ -857,9 +897,13 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 
 However, this is a slightly unavoidable problem unless you continue to maintain your code (which is ideal but not always feasible in a research environment). Realistically, if reusing this code for a new purpose, you would upgrade it to supported versions.
 
+Tom: This is interesting - and you wonder if it would still be possible (given the "tricks" I followed) in another 10 years time.
+
 **Original results files**. @hernandez_optimal_2015: Included some original results files, which was invaluable in identifying some of the parameters in the code that needed to be fixed.
 
 **Excessive number of files**. For @hernandez_optimal_2015 the default behaviour of the script was to output lots of files from each round (so you could easily have 90, 100, 200+ files), which were then not used in analysis (as it just depended on an aggregate results file). Although these individual files might be useful during quality control, as a default behaviour of the script, it could easily make the repository quite busy/littered with files.
+
+* Tom reflected that this is more of a general housekeeping issue. He agrees and says its ok to do this, but perhaps they need a run mode that does not produce these verification files
 
 **Classes**. @hernandez_optimal_2015: Structured code into classes, which was nice to work with/amend.
 

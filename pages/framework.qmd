@@ -47,6 +47,8 @@ bibliography: ../references.bib
 
 **Interactive web app**: Could make a web app that serves as a "form" for people to complete and then downloaded their completed framework like there is set up for the [PRISMA checklist](https://prisma.shinyapps.io/checklist/).
 
+* Tom: Agree this is a good idea
+
 ## Reflections from the evaluations
 
 <!-- TODO: Restructure this into implications for framework, and implications for STRESS-DES-->
