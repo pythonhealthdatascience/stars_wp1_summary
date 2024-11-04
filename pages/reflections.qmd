@@ -8,6 +8,8 @@ This page describes the facilitators for each reproduction (and, conversely, the
 
 <!--TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 reflections once have finished reproduction -->
 
+<!--TODO: Check all the notes on Johnson's reflections page are captured below, and that there weren't any new categories to add-->
+
 Links to each study:
 
 * @shoaib_simulation_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reflections.html" target="_blank">link to reflections</a>
@@ -182,7 +184,7 @@ eval_chart(criteria_wide)
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ✅ | ✅ | ✅ | ✅ | <!--TODO--> | ✅ | ✅ |
+| ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 @shoaib_simulation_2021: Not met. The model is set up as classes and run using a function. However, it is not designed to allow any variation in inputs. Everything uses default inputs, and it designed in such a way that - if you wish to vary model parameters - you need to directly change these in the script itself.
 
@@ -194,7 +196,7 @@ eval_chart(criteria_wide)
 
 @anagnostou_facs-charm_2022: Fully met. Change inputs in input `.csv` files.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Fully met. Creates a list of `input` which are then used by a `run()` function.
 
 @hernandez_optimal_2015: Fully met. Model created from classes, which accept some inputs and can run the model.
 
@@ -215,7 +217,7 @@ eval_chart(criteria_wide)
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | 🟡 | ❌ | ✅ | N/A | <!--TODO--> | 🟡 | ✅ |
+| ❌ | 🟡 | ❌ | ✅ | N/A | ✅ | 🟡 | ✅ |
 
 @shoaib_simulation_2021: Not met. Although some parameters sat "outside" of the model within the `main()` function (and hence were more "changeable", even if not "changeable" inputs to that function, but changed directly in script). However, many of the other parameters were hard-coded within the model itself. It took time to spot where these were and correctly adjust them to be modifiable inputs.
 
@@ -227,7 +229,7 @@ eval_chart(criteria_wide)
 
 @anagnostou_facs-charm_2022: N/A as no scenarios.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Fully met. All model parameters could be varied from "outside" the model code itself, as they were provided as changeable inputs to the model.
 
 @hernandez_optimal_2015: Partially met. Did not hard code, runs, population, generations, and percent pre-screened. However, did hard code other parameters like bi-objective v.s tri-objective model and bounding. Also, it was pretty tricky to change percent pre-screened, as it assumed you provided a `.txt` file for each %.
 
@@ -250,7 +252,7 @@ eval_chart(criteria_wide)
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| <!--TODO--> | <!--TODO--> | <!--TODO--> | <!--TODO--> | <!--TODO--> | <!--TODO--> | ✅ | ✅ |
+| <!--TODO--> | <!--TODO--> | <!--TODO--> | <!--TODO--> | <!--TODO--> | N/A | ✅ | ✅ |
 
 @shoaib_simulation_2021: <!--TODO-->
 
@@ -262,7 +264,7 @@ eval_chart(criteria_wide)
 
 @anagnostou_facs-charm_2022: <!--TODO-->
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Not applicable. All inputs defined within script. Outputs are not specifically saved to a file (just that the .md and image files were automatically saved when the .Rmd file was knit).
 
 @hernandez_optimal_2015: Fully met. Creates folder in current working directory based on date/time to store results.
 
@@ -278,7 +280,7 @@ eval_chart(criteria_wide)
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ✅ | ✅ | ❌ | ✅ | <!--TODO--> | ✅ | ✅ |
+| ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ |
 
 @shoaib_simulation_2021: Not met. The model often contained very similar blocks of code before or after warm-up. This has the potential to introduce mistakes - with a suspected (although unconfirmed) mistake being that the lower boundary for the doctor consultation times in configuration 1 differed before and after warm-up.
 
@@ -290,7 +292,7 @@ eval_chart(criteria_wide)
 
 @anagnostou_facs-charm_2022: Fully met.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Not met. There was alot of duplication when running each scenario. This meant, when amending these for the sensitivity analysis, I would need to change the same parameter 12 times within the script, and for changes to all, changing it 12 times in 14 duplicate scripts. Hence, it was simpler to write an R script to do this than change it directly, but for base case, I had to make sure I carefully changed everything in both files.
 
 @hernandez_optimal_2015: Fully met.
 
@@ -310,7 +312,7 @@ eval_chart(criteria_wide)
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ✅ | 🟡 | 🟡 | <!--TODO--> | 🟡 | ❌ |
+| ❌ | ❌ | ✅ | 🟡 | 🟡 | ❌ | 🟡 | ❌ |
 
 @shoaib_simulation_2021 and @huang_optimizing_2019: Not met. Would have benefitted from more comments, as it took some time to ensure I have correctly understood code, particularly if they used lots of abbreviations.
 
@@ -320,7 +322,7 @@ eval_chart(criteria_wide)
 
 @anagnostou_facs-charm_2022: Partially met. Didn't have to delve into the code much, so can't speak from experience as to whether the comments were sufficient. From looking through the model code, several scripts have lots of comments and docstrings for each function, but some do not.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Not met. Very few comments in the `Case_Detection_Results...Rmd` files, which were the code files provided.
 
 @hernandez_optimal_2015: Partially met. There are some comments and doc-strings, but not comprehensively.
 
@@ -349,7 +351,7 @@ The studies where I made adjustments were:
 * @lim_staff_2020: Add parallel processing
 * @kim_modelling_2021: Reduced number of people in simulation, and switched from serial to the provided parallel option.
 * @anagnostou_facs-charm_2022: Model was super quick which made it really easy to run and re-run each time
-* @johnson_cost_2021: <!--TODO-->
+* @johnson_cost_2021: Experimented with using a fewer number of agents for troubleshooting (although ultimately had to run with full number to reproduce results), and ran the scripts in parallel by opening seperate terminals simultaneously. Note: Long run time also meant it took a longer time to do this reproduction - although we excluded computation time in our timings, it just meant e.g. when I made a mistake in coding of scenario analysis and had to re-run, I had to wait another day or two for that to finish before I could resume.
 * @hernandez_optimal_2015: Add parallel processing, did not run one of the scenarios (it was very long, and hadn't managed to reproduce other parts of same figure regardless), and experimented with reducing parameters for evolutionary algorithm (but, in the end, ran with full parameters, though lower were helpful while working through and troubleshooting).
 * @wood_value_2021: No changes made, but unlike other reproduction, didn't try to run at smaller amounts - just set it to run as-is over the weekend.
 
@@ -369,7 +371,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ✅ | ❌ | ❌ | ❌ | N/A | <!--TODO--> | 🟡 | 🟡 |
+| ✅ | ❌ | ❌ | ❌ | N/A | ✅ | 🟡 | 🟡 |
 
 @shoaib_simulation_2021: Fully met. Run time stated in paper (but not repository).
 
@@ -381,7 +383,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @anagnostou_facs-charm_2022: Not applicable. Very quick! Seconds! So not particularly relevant - although, you could argue, potentially still important if there were some error that made it look like the model were running continuously (e.g. stuck in a loop) - although this is relatively unlikely.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Fully met. In the README, they state the the run time with 100 million agents is 16 hours, which was very handy to know, as I then just got stuck in running with fewer agents while troubleshooting.
 
 @hernandez_optimal_2015: Partially met. Some of the run times are mentioned in the paper, but not all, although this did help indicate that we would anticipate other s scenarios to similarly take hours to run.
 
@@ -400,9 +402,11 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## For computationally expensive models, state memory usage and provide alternatives for lower spec machines
 
+<!--TODO: Consider whether this should be done like a checklist like this? As actually, I could run a simple version (e.g. serial or one at a time) without issue, but starts taking up more memory with parallel stuff.-->
+
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| N/A | N/A | N/A | ❌ | N/A | <!--TODO--> | <!--TODO--> | N/A |
+| N/A | N/A | N/A | ❌ | N/A | ❌ | <!--TODO--> | N/A |
 
 @shoaib_simulation_2021, @huang_optimizing_2019, and @lim_staff_2020: Not applicable. Didn't find it to be too computationally expensive for my machine.
 
@@ -410,7 +414,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @anagnostou_facs-charm_2022: Not applicable. Runs in seconds.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Not met. It becomes more computationally expensive if try to run lots at once in simultaneous terminals. Didn't try running one on local machine with full parameter due to long run time making it infeasible, but knowing my system specs, it should have been able to if did.
 
 @hernandez_optimal_2015: <!--TODO: This had long run times but I don't know if it was computationally expensive or not. May need to run again for a while and see what memory usage is-->
 
@@ -432,7 +436,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | ❌ | N/A | <!--TODO--> | ❌ | ✅ |
+| ❌ | ❌ | ❌ | ❌ | N/A | 🟡 | ❌ | ✅ |
 
 @shoaib_simulation_2021: Not met. There were several instances where it took quite a while to understand how and where to modify the code in order to run scenarios (e.g. no arrivals, transferring admin work, reducing doctor intervention in deliveries).
 
@@ -444,7 +448,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @anagnostou_facs-charm_2022: Not applicable. No scenarios.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Partially met. Has all base case scenarios, but not sensitivity analysis.
 
 @hernandez_optimal_2015: Not met. Took a while to figure out how to implement scenarios.
 
@@ -463,7 +467,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | ❌ | ✅ | <!--TODO--> | ✅ | ✅ |
+| ❌ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ | ✅ |
 
 @shoaib_simulation_2021: Not met. Had to add some outputs and calculations (e.g. proportion of childbirth cases referred, standard deviation)
 
@@ -475,7 +479,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @anagnostou_facs-charm_2022: Fully met. Although worth noting this only had one scenario/version of model and one output to reproduce.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Note met. It has an output that is in "per 1000" and, although it outputs the columns required to calculate this, I found it very tricky to work out which columns to use and how to transform them to get this output, and so feel this is not met (as feels like a seperate output, and not something simple like a mean, and as it felt so tricky to work out).
 
 @hernandez_optimal_2015: Fully met.
 
@@ -494,7 +498,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| 🟡 | ❌ | 🟡 | ✅ | ✅ | <!--TODO--> | ❌ | ✅ |
+| 🟡 | ❌ | 🟡 | ✅ | ✅ | ✅ | ❌ | ✅ |
 
 @shoaib_simulation_2021: Partially met. Script is set with parameters for base configuration 1, with the exception of number of replications.
 
@@ -506,7 +510,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @anagnostou_facs-charm_2022: Fully met.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Fully met. Base case parameters all correct.
 
 @hernandez_optimal_2015: Not met. As agreed with the author, this is likely the primary reason for the discrepancy in these results - they are very close, and we see similar patterns, but not reproduced. Unfortunately, several parameters were wrong, and although we changed those we spotted, we anticipate there could be others we hadn't spotted that might explain the remaining discrepancies.
 
@@ -526,7 +530,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | ✅ | ✅ | <!--TODO--> | ❌ | ✅ |
+| ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ❌ | ✅ |
 
 @shoaib_simulation_2021: Some parameters that could not be calculated were not provided - ie. what consultation boundaries to use when mean length of doctor consultation was 2.5 minutes
 
@@ -538,7 +542,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @anagnostou_facs-charm_2022: Fully met.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Fully met. Could determine appropriate parameters for sensitivity analysis from description in article.
 
 @hernandez_optimal_2015: Not met. The results have a large impact by the bounding set, but this was not mentioned in the paper or repository, and required me looking at the numbers in results and GitHub commit history to estimate the appropriate bounds to use.
 
@@ -556,7 +560,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | 🟡 | N/A | N/A | <!--TODO--> | 🟡 | N/A |
+| ❌ | ❌ | 🟡 | N/A | N/A | ✅ | 🟡 | N/A |
 
 @shoaib_simulation_2021: Not met. Although there was a scenario table, this did not include all the parameters I would need to change. It was more challenging to identify parameters that were only described in the body of the article. There were also some discrepancies in parameters between the main text of the article, and the tables and figures. Some scenarios were quite ambiguous/unclear from their description in the text, and I initially misunderstood the required parameters for the scenarios.
 
@@ -566,7 +570,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @kim_modelling_2021 and @anagnostou_facs-charm_2022: Not applicable. All provided.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Fully met. All parameters clearly in the two figures presenting the sensitivity analysis, and didn't have to look elsewhere beyond that.
 
 @hernandez_optimal_2015: Most parameters are relatively easily identified from the text or figure legends (though would be easier if provided in a table or similar). Parameter for bounding was not provided in paper.
 
@@ -585,7 +589,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ✅ | N/A | N/A | N/A | <!--TODO--> | N/A | N/A |
+| ❌ | ✅ | N/A | N/A | N/A | N/A | N/A | N/A |
 
 @shoaib_simulation_2021: Not met. It was unclear how to estimate inter-arrival time.
 
@@ -595,7 +599,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @kim_modelling_2021 and @anagnostou_facs-charm_2022: Not applicable. All provided.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Not applicable. No processing of parameters required.
 
 @hernandez_optimal_2015: Not applicable.
 
@@ -615,7 +619,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ✅ | ❌ | ❌ | ❌ | ✅ | <!--TODO--> | ✅ | ✅ |
+| ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ✅ | ✅ |
 
 @shoaib_simulation_2021: Fully met. Outputs to `.xlsx` files
 
@@ -623,7 +627,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @anagnostou_facs-charm_2022: Outputs to `OUT_STATS.csv`. Note: Although not needed for the reproduction itself, when I tried to amend the name and location of the csv file output the model for use in tests, this was very tricky to do as it was hard coded into the scripts and I found difficult to amend due to how the model is run and set up.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Not met. Outputs to dataframe/s that are not saved as files (although can see within the kept `.md` file from knitting).
 
 @hernandez_optimal_2015: Fully met. Outputs to `.txt` files.
 
@@ -643,7 +647,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ✅ | ✅ | ❌ | ✅ | <!--TODO--> | ✅ | ✅ |
+| ❌ | ✅ | ✅ | ❌ | ✅ | ❌ | ✅ | ✅ |
 
 @shoaib_simulation_2021: Not met. There were two alternative results spreadsheets with some duplicate metrics but sometimes differing results between them, which made it a bit confusing to work out what to use.
 
@@ -651,7 +655,7 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 @kim_modelling_2021: Not met. It took me a little while to work out what surgery columns I needed, and to realise I needed to combine two of them. This required looking at what inputs genreated this, and referring to a input data dictionary.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Not met. I had mistakes and confusion figuring out which results tables I needed, which columns to use, and which scenarios to use from the tables.
 
 @hernandez_optimal_2015: Fully met. Straightforward with key information provided.
 
@@ -677,7 +681,7 @@ Regarding file sizes in each study:
 * @lim_staff_2020: Provided code didn't save results to file. When I saved to file, these were small, so not relevant (results files **<60 kB**)
 * @kim_modelling_2021: Provided code didn't save results to file. When I saved to file, these were small, so not relevant (results files **<1 kB**)
 * @anagnostou_facs-charm_2022: Not relevant (results file **34 kB**)
-* @johnson_cost_2021: <!--TODO-->
+* @johnson_cost_2021: Provided code didn't save results to file. When I saved to `.csv` files, these were small, so not relevant (results files **<3.6kB**)
 * @hernandez_optimal_2015: Not relevant (aggregate results files **<10 kB**).
 * @wood_value_2021: Aggregate results files are small (**327 kB**), but raw results files are very large (**2.38 GB**), and even when compressed to `.csv.gz` (**128 MB**) require using of GitHub LFS
 
@@ -702,7 +706,7 @@ Regarding number of files:
 * @lim_staff_2020: Not relevant.
 * @kim_modelling_2021: Not relevant.
 * @anagnostou_facs-charm_2022: Not relevant.
-* @johnson_cost_2021: <!--TODO-->
+* @johnson_cost_2021: Not relevant.
 * @hernandez_optimal_2015: The default behaviour of the script was to output **lots of files** from each round (so you could easily have 90, 100, 200+ files), which were then **not** used in analysis (as it just depended on an aggregate results file). Although these individual files might be useful during quality control, as a default behaviour of the script, it could easily make the repository quite busy/littered with files.
 * @wood_value_2021: Not relevant.
 
@@ -720,7 +724,7 @@ Regarding number of files:
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | ✅ | ✅ | <!--TODO--> | ✅ | ✅ |
+| ❌ | ❌ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 @shoaib_simulation_2021: Not met. The lack of seeds wasn't actually a barrier to the reproduction though due to the replication number. I later add seeds so my results could be reproduced, and found that the ease of setting seeds with salabim was a greater facilitator to the work. I only had to change one or two lines of code to then get consistent results between runs (unlike other simulation software like SimPy where you have to consider the use of seeds by different sampling functions). Moreover, by default, salabim would have set a seed (although overridden by original authors to enable them to run replications).
 
@@ -732,7 +736,7 @@ Regarding number of files:
 
 @anagnostou_facs-charm_2022: Fully met. The authors included a random seed so the results I got were identical to the original (so no need for any subjectivity in deciding whether its similar enough, as I could perfectly reproduce).
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Fully met. At start of script, authors `set.seed(333)`.
 
 @hernandez_optimal_2015: Fully met. This ensured consistent results between runs of the script, which was really helpful.
 
@@ -753,7 +757,7 @@ Regarding number of files:
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | N/A | 🟡 | ❌ | N/A | <!--TODO--> | ❌ | ✅ |
+| ❌ | N/A | 🟡 | ❌ | N/A | ❌ | ❌ | ✅ |
 
 <!--TODO: Lim 2020... I think from memory that this output tables  similar to the paper, but I then changed them as that format was difficult to compare/work with -->
 
@@ -767,7 +771,7 @@ Regarding number of files:
 
 @anagnostou_facs-charm_2022: Not applicable. No tables in scope.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Not met. Had to write code to generate tables, which took me a while as I got confused over thinks like which tables / columns / scenarios to use.
 
 @hernandez_optimal_2015: Not met.
 
@@ -786,7 +790,7 @@ Regarding number of files:
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | ❌ | ❌ | <!--TODO--> | 🟡 | ✅ |
+| ❌ | ❌ | ❌ | ❌ | ❌ | 🟡 | 🟡 | ✅ |
 
 @shoaib_simulation_2021: Not met.
 
@@ -794,7 +798,7 @@ Regarding number of files:
 
 @lim_staff_2020, @kim_modelling_2021 and @anagnostou_facs-charm_2022: Not met. However, the simplicity and repetition of the figures was handy.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Partially met. For Figure 3, most of the required code for the figure was provided, which was super helpful. However, this wasn't complete, and for all others figures, I had to start from scratch writing the code.
 
 @hernandez_optimal_2015: Partially met. Provides a few example `ggplot`s, but these are not all the plots, nor exactly matching article, nor including any of the pre-processing required before the plots, and so could only serve as a starting point (though that was still really handy).
 
@@ -836,7 +840,7 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ❌ | ❌ | ❌ | 🟡 | ✅ | <!--TODO--> | ❌ | ❌ |
+| ❌ | ❌ | ❌ | 🟡 | ✅ | ✅ | ❌ | ❌ |
 
 @shoaib_simulation_2021: Not met. No instructions, although is just a single script that you run.
 
@@ -848,7 +852,7 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 
 @anagnostou_facs-charm_2022: Fully met. Clear README with instructions on how to run the model was really helpful.
 
-@johnson_cost_2021: <!--TODO-->
+@johnson_cost_2021: Fully met. README has mini description of model and clear instructions on how to install and run the model.
 
 @hernandez_optimal_2015: Not met.
 
@@ -882,6 +886,10 @@ However, this is a slightly unavoidable problem unless you continue to maintain 
 **Original results files**. @hernandez_optimal_2015: Included some original results files, which was invaluable in identifying some of the parameters in the code that needed to be fixed.
 
 **Classes**. @hernandez_optimal_2015: Structured code into classes, which was nice to work with/amend.
+
+**Version history and releases**. @johnson_cost_2021 had commits to their GitHub repository after the publication date. It wasn't clear which version aligned with the publication. However, the most recent commits add clear README instructions to the repository. We decided to use the latest version of the repository, but it would have beneficial to have releases/versions/a change log that would help to outline the commit history in relation to the publication and any subsequent changes.
+
+<!--TODO: update or remove this summary-->
 
 **Reflections:**
 
