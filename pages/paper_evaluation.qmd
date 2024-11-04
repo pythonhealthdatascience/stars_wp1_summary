@@ -28,8 +28,8 @@ from functions import eval_chart, plot_scatter
 col = ['fully', 'partially', 'not', 'na']
 stress_dict = {
   'Shoaib and<br>Ramamohan 2021': [17, 6, 1, 0],
-  'Huang et al. 2019': [14, 6, 3, 1],
-  'Lim et al. 2020': [16, 2, 3, 3],
+  'Huang et al. 2019': [14, 5, 4, 1],
+  'Lim et al. 2020': [15, 3, 3, 3],
   'Kim et al. 2021': [15, 5, 2, 2],
   'Anagnostou et al. 2022': [14, 2, 5, 3],
   'Johnson et al. 2021': [16, 1, 2, 5],
@@ -55,7 +55,7 @@ I don't think we learn much in relation to items reproduced, and that it is more
 plot_scatter('STRESS-DES criteria met',
              sho = (17/24)*100,
              hua = (14/23)*100,
-             lim = (16/21)*100,
+             lim = (15/21)*100,
              kim = (15/22)*100,
              ana = (14/21)*100,
              joh = (16/19)*100,
@@ -126,8 +126,6 @@ Key:
 
 In this section and below, the criteria for each study are marked as either being fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A).
 
-<!-- TODO: update after discussion of Kim et al. 2021 -->
-
 | Item | S | Hu | L | K | A | J | He | W |
 | - | - | - | - | - | - | - | - | - | - |
 | **Objectives** | 
@@ -152,10 +150,10 @@ In this section and below, the criteria for each study are marked as either bein
 | **Experimentation** |
 | **4.1 Initialisation**<br>Report if the system modelled is terminating or non-terminating.  State if a warm-up period has been used, its length and the analysis method used to select it.  For terminating systems state the stopping condition.<br>State what if any initial model conditions have been included, e.g., pre-loaded queues and activities.  Report whether initialisation of these variables is deterministic or stochastic. | 🟡 | ❌ | ❌ | 🟡 | ❌ | ✅  | ❌ | ✅ |
 | **4.2 Run length**<br>Detail the run length of the simulation model and time units. | ✅ | ✅ | ✅ | ✅ | 🟡 | ✅  | ✅ | ✅ |
-| **4.3 Estimation approach**<br>State the method used to account for the stochasticity: For example, two common methods are multiple replications or batch means. Where multiple replications have been used, state the number of replications and for batch means, indicate the batch length and whether the batch means procedure is standard, spaced or overlapping. For both procedures provide a justification for the methods used and the number of replications/size of batches. | 🟡 | 🟡 | ✅ | ✅ | ✅ | N/A | ✅ | ✅ |
+| **4.3 Estimation approach**<br>State the method used to account for the stochasticity: For example, two common methods are multiple replications or batch means. Where multiple replications have been used, state the number of replications and for batch means, indicate the batch length and whether the batch means procedure is standard, spaced or overlapping. For both procedures provide a justification for the methods used and the number of replications/size of batches. | 🟡 | 🟡 | 🟡 | ✅ | ✅ | N/A | ✅ | ✅ |
 | **Implementation** |
 | **5.1 Software or programming language**<br>State the operating system and version and build number.<br>State the name, version and build number of commercial or open source DES software that the model is implemented in.<br>State the name and version of general-purpose programming languages used (e.g. Python 3.5).<br>Where frameworks and libraries have been used provide all details including version numbers. | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
-| **5.2 Random sampling**<br>State the algorithm used to generate random samples in the software/programming language used e.g. Mersenne Twister.<br>If common random numbers are used, state how seeds (or random number streams) are distributed among sampling processes. | ❌ | 🟡 | ❌ | ❌ | ❌ | N/A | ❌ | ✅ |
+| **5.2 Random sampling**<br>State the algorithm used to generate random samples in the software/programming language used e.g. Mersenne Twister.<br>If common random numbers are used, state how seeds (or random number streams) are distributed among sampling processes. | ❌ | ❌ | ❌ | ❌ | ❌ | N/A | ❌ | ✅ |
 | **5.3 Model execution**<br>State the event processing mechanism used e.g. three phase, event, activity, process interaction.<br>*Note that in some commercial software the event processing mechanism may not be published. In these cases authors should adhere to item 5.1 software recommendations.*<br>State all priority rules included if entities/activities compete for resources.<br>If the model is parallel, distributed and/or use grid or cloud computing, etc., state and preferably reference the technology used.  For parallel and distributed simulations the time management algorithms used.  If the HLA is used then state the version of the standard, which run-time infrastructure (and version), and any supporting documents (FOMs, etc.) | 🟡 |❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ✅ |
 | **5.4 System specification**<br>State the model run time and specification of hardware used.  This is particularly important for large scale models that require substantial computing power.  For parallel, distributed and/or use grid or cloud computing, etc. state the details of all systems used in the implementation (processors, network, etc.) | ✅ | ❌ | 🟡 | 🟡 | ❌ | ❌ | 🟡 | 🟡 |
 | **Code access** |
@@ -188,9 +186,9 @@ criteria_dict = {
   '3.4 Assumptions': [6, 0, 2, 0],
   '4.1 Initialisation': [2, 2, 4, 0],
   '4.2 Run length': [7, 1, 0, 0],
-  '4.3 Estimation': [5, 2, 0, 1],
+  '4.3 Estimation': [4, 3, 0, 1],
   '5.1 Language': [0, 8, 0, 0],
-  '5.2 Random': [1, 1, 5, 1],
+  '5.2 Random': [1, 0, 6, 1],
   '5.3 Execution': [1, 1, 6, 0],
   '5.4 System': [1, 4, 3, 0],
   '6.1 Sharing': [8, 0, 0, 0]
@@ -202,7 +200,7 @@ eval_chart(criteria_wide)
 
 I find this chart a really helpful visualisation, to see what is commonly being met, things that are often not applicable, and things often not met.
 
-Below, I've reflected on the impact of each criteria being fulfilled, on the reproduction. I've also identified where I feel I've been a bit more lax in my evaluation. <!-- TODO: Consider - is this an issue? Should I revisit those and be more strict? -->
+Below, I've reflected on the impact of each criteria being fulfilled, on the reproduction. I've also identified where I feel I've been a bit more lax in my evaluation - indeed, the "subjective" nature of this evaluation is a limitation - although did (a) get consensus on uncertainties and unmet, and (b) revisit alongside other evaluations when writing this section, which helped me identify a few inconsistent decisions between studies within the evaluation, which I then addressed.
 
 **1.1 Purpose of the model**<br>Explain the background and objectives for the model.
 
@@ -289,8 +287,6 @@ Below, I've reflected on the impact of each criteria being fulfilled, on the rep
 * The description of this criteria is quite confusing - generally just focussed on identifying whether it was multiple replications or a big run, and then if the numbers used were justified.
 * Partially met cases are those with replications that are not justified.
 
-<!--TODO: Check Lim 2020 - think it should be changed to partially met, as no justification mentioned -->
-
 **5.1 Software or programming language**<br>State the operating system and version and build number.<br>State the name, version and build number of commercial or open source DES software that the model is implemented in.<br>State the name and version of general-purpose programming languages used (e.g. Python 3.5).<br>Where frameworks and libraries have been used provide all details including version numbers.
 
 * Will often mentioned the programming language, but not operating system or version numbers
@@ -299,8 +295,7 @@ Below, I've reflected on the impact of each criteria being fulfilled, on the rep
 **5.2 Random sampling**<br>State the algorithm used to generate random samples in the software/programming language used e.g. Mersenne Twister.<br>If common random numbers are used, state how seeds (or random number streams) are distributed among sampling processes.
 
 * Frequently not described, despite some of the studies having implemented and used seeds.
-
-<!--TODO: Check Huang 2019, looks like I've answered with arrival sampling, but that is not relevant here - but does indicate that the wording here is a little confusing perhaps -->
+* Initially incorrectly addressed this in one of my evaluations, accidentally adding notes on the sampling of arrivals, rather than specifically on random samples. Have noted this to be clear that it was possible to misinterpret (although that may be more a mistake of my own! and not one others would necessarily make.)
 
 **5.3 Model execution**<br>State the event processing mechanism used e.g. three phase, event, activity, process interaction.<br>*Note that in some commercial software the event processing mechanism may not be published. In these cases authors should adhere to item 5.1 software recommendations.*<br>State all priority rules included if entities/activities compete for resources.<br>If the model is parallel, distributed and/or use grid or cloud computing, etc., state and preferably reference the technology used.  For parallel and distributed simulations the time management algorithms used.  If the HLA is used then state the version of the standard, which run-time infrastructure (and version), and any supporting documents (FOMs, etc.)
 
@@ -330,8 +325,6 @@ Key:
 * **J:** @johnson_cost_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
 * **He:** @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
 * **W:** @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/reporting.html#des-checklist-derived-from-ispor-sdm" target="_blank">link to evaluation</a>
-
-<!-- TODO: update after discussion of Kim et al. 2021 -->
 
 | Item | S | Hu | L | K | A | J | He | W |
 | - | - | - | - | - | - | - | - | - | - |
