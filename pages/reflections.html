@@ -291,8 +291,6 @@ require(['plotly'], function(Plotly) {
 
 
 <p>This page describes the facilitators for each reproduction (and, conversely, the barriers to the reproduction, in their absence). With each section, I have created a table which evaluates whether the facilitators were fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A) for each study.</p>
-<!--TODO: Add Johnson et al. 2021, Hernandez et al. 2015 and Wood et al. 2021 reflections once have finished reproduction -->
-<!--TODO: Check all the notes on Johnson's reflections page are captured below, and that there weren't any new categories to add-->
 <p>Links to each study:</p>
 <ul>
 <li><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span> - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reflections.html" target="_blank">link to reflections</a></li>
@@ -307,21 +305,25 @@ require(['plotly'], function(Plotly) {
 <!-- TODO: Consider whether to make further attempts at managing to backdate R. Didn't manage before. E.g. `containerit` package. Although - is it necessary, if I succeeded without? Note, I always backdated the python environments. So, relatedly, TODO: Is it worth checking/trying with newest Python and seeing if they would work?</mark -->
 <!-- TODO: Add reflections related specifically to the reproduction package and second reproduction test parts of the work (i.e. after the reproduction) -->
 <!-- TODO: Once complete, carefully go over again and check everything is correct -->
+<!-- TODO: From Tom - So much great work and interesting findings. We need to move towards some headlines and take aways for the community. Mayybe there are some high level groupings of your findings? e.g.
+
+* Study reporting
+* Model structuring and functionality
+* Analysis pipeline
+
+Or perhaps:
+
+* Evidence supporting the use of reporting guidelines
+    * as in - reporting guidelines state this should info be included and you found it v.difficult or impossible to reproduce without it.?
+-->
 <section id="summary" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">5.1</span> Summary</h2>
-<p>This summary excludes:</p>
-<ul>
-<li>“Quicker models are easier to work with”</li>
-<li>“For computationally expensive models, state memory usage and provide alternatives for lower spec machines”</li>
-<li>“Avoid large file sizes if possible”</li>
-<li>“Do not output excessive numbers of files”</li>
-<li>“Other”</li>
-</ul>
-<div id="b3aa42e1" class="cell" data-execution_count="1">
+<p>This is a summary of all the items that were evaluated (with ✅🟡❌) below.</p>
+<div id="c6637060" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-display">
-<div>                            <div id="08404ab1-3c25-428c-8fd7-38f37c32cc6d" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("08404ab1-3c25-428c-8fd7-38f37c32cc6d")) {                    Plotly.newPlot(                        "08404ab1-3c25-428c-8fd7-38f37c32cc6d",                        [{"alignmentgroup":"True","customdata":[[2,"25.0%","fully"],[0,"0.0%","fully"],[7,"87.5%","fully"],[7,"87.5%","fully"],[3,"37.5%","fully"],[5,"62.5%","fully"],[5,"62.5%","fully"],[1,"12.5%","fully"],[2,"25.0%","fully"],[1,"12.5%","fully"],[3,"37.5%","fully"],[4,"50.0%","fully"],[4,"50.0%","fully"],[1,"12.5%","fully"],[1,"12.5%","fully"],[4,"50.0%","fully"],[5,"62.5%","fully"],[5,"62.5%","fully"],[1,"12.5%","fully"],[1,"12.5%","fully"],[0,"0.0%","fully"],[2,"25.0%","fully"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"fully","marker":{"color":"#06a94d","pattern":{"shape":""}},"name":"Fully met","offsetgroup":"fully","orientation":"h","showlegend":true,"textposition":"auto","x":[0.25,0.0,0.875,0.875,0.375,0.625,0.625,0.125,0.25,0.125,0.375,0.5,0.5,0.125,0.125,0.5,0.625,0.625,0.125,0.125,0.0,0.25],"xaxis":"x","y":["List packages","Provide versions","Model in \"runnable\" format","Can run some programmatically","Don't hard code scenario param.","Relative file paths","Avoid duplication","Sufficient comments","If slow, state run time","Provide scenario code","Provide all required outputs","Include correct parameters","Provide all required parameters","If not, clearly state in paper","If process param., provide calc.","Save output to file","Understandable output tables","Use seeds","Code to make tables","Code to make figures","Code to process in-text results","Run instructions"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[3,"37.5%","partially"],[6,"75.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[2,"25.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[3,"37.5%","partially"],[2,"25.0%","partially"],[1,"12.5%","partially"],[0,"0.0%","partially"],[2,"25.0%","partially"],[0,"0.0%","partially"],[2,"25.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[1,"12.5%","partially"],[2,"25.0%","partially"],[0,"0.0%","partially"],[1,"12.5%","partially"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"partially","marker":{"color":"#ffd68c","pattern":{"shape":""}},"name":"Partially met","offsetgroup":"partially","orientation":"h","showlegend":true,"textposition":"auto","x":[0.375,0.75,0.0,0.0,0.25,0.0,0.0,0.375,0.25,0.125,0.0,0.25,0.0,0.25,0.0,0.0,0.0,0.0,0.125,0.25,0.0,0.125],"xaxis":"x","y":["List packages","Provide versions","Model in \"runnable\" format","Can run some programmatically","Don't hard code scenario param.","Relative file paths","Avoid duplication","Sufficient comments","If slow, state run time","Provide scenario code","Provide all required outputs","Include correct parameters","Provide all required parameters","If not, clearly state in paper","If process param., provide calc.","Save output to file","Understandable output tables","Use seeds","Code to make tables","Code to make figures","Code to process in-text results","Run instructions"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[3,"37.5%","not"],[2,"25.0%","not"],[1,"12.5%","not"],[1,"12.5%","not"],[2,"25.0%","not"],[0,"0.0%","not"],[3,"37.5%","not"],[4,"50.0%","not"],[3,"37.5%","not"],[5,"62.5%","not"],[5,"62.5%","not"],[2,"25.0%","not"],[4,"50.0%","not"],[2,"25.0%","not"],[1,"12.5%","not"],[4,"50.0%","not"],[3,"37.5%","not"],[3,"37.5%","not"],[4,"50.0%","not"],[5,"62.5%","not"],[3,"37.5%","not"],[5,"62.5%","not"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"not","marker":{"color":"#ff9999","pattern":{"shape":""}},"name":"Not met","offsetgroup":"not","orientation":"h","showlegend":true,"textposition":"auto","x":[0.375,0.25,0.125,0.125,0.25,0.0,0.375,0.5,0.375,0.625,0.625,0.25,0.5,0.25,0.125,0.5,0.375,0.375,0.5,0.625,0.375,0.625],"xaxis":"x","y":["List packages","Provide versions","Model in \"runnable\" format","Can run some programmatically","Don't hard code scenario param.","Relative file paths","Avoid duplication","Sufficient comments","If slow, state run time","Provide scenario code","Provide all required outputs","Include correct parameters","Provide all required parameters","If not, clearly state in paper","If process param., provide calc.","Save output to file","Understandable output tables","Use seeds","Code to make tables","Code to make figures","Code to process in-text results","Run instructions"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[1,"12.5%","na"],[3,"37.5%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[1,"12.5%","na"],[1,"12.5%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[3,"37.5%","na"],[6,"75.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[2,"25.0%","na"],[0,"0.0%","na"],[5,"62.5%","na"],[0,"0.0%","na"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"na","marker":{"color":"#d1dcea","pattern":{"shape":""}},"name":"Not applicable","offsetgroup":"na","orientation":"h","showlegend":true,"textposition":"auto","x":[0.0,0.0,0.0,0.0,0.125,0.375,0.0,0.0,0.125,0.125,0.0,0.0,0.0,0.375,0.75,0.0,0.0,0.0,0.25,0.0,0.625,0.0],"xaxis":"x","y":["List packages","Provide versions","Model in \"runnable\" format","Can run some programmatically","Don't hard code scenario param.","Relative file paths","Avoid duplication","Sufficient comments","If slow, state run time","Provide scenario code","Provide all required outputs","Include correct parameters","Provide all required parameters","If not, clearly state in paper","If process param., provide calc.","Save output to file","Understandable output tables","Use seeds","Code to make tables","Code to make figures","Code to process in-text results","Run instructions"],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":""},"range":[0,1],"tickmode":"array","tickvals":[0,0.2,0.4,0.6,0.8,1],"ticktext":["0%","20%","40%","60%","80%","100%"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":""},"autorange":"reversed","ticksuffix":"  "},"legend":{"title":{"text":"Result"},"tracegroupgap":0},"barmode":"relative"},                        {"displayModeBar": false, "responsive": true}                    ).then(function(){
+<div>                            <div id="479504d9-2cf2-4296-83b9-34cbc7e3fd83" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("479504d9-2cf2-4296-83b9-34cbc7e3fd83")) {                    Plotly.newPlot(                        "479504d9-2cf2-4296-83b9-34cbc7e3fd83",                        [{"alignmentgroup":"True","customdata":[[2,"25.0%","fully"],[0,"0.0%","fully"],[7,"87.5%","fully"],[7,"87.5%","fully"],[3,"37.5%","fully"],[5,"62.5%","fully"],[5,"62.5%","fully"],[1,"12.5%","fully"],[2,"25.0%","fully"],[1,"12.5%","fully"],[3,"37.5%","fully"],[4,"50.0%","fully"],[4,"50.0%","fully"],[1,"12.5%","fully"],[1,"12.5%","fully"],[4,"50.0%","fully"],[5,"62.5%","fully"],[5,"62.5%","fully"],[1,"12.5%","fully"],[1,"12.5%","fully"],[0,"0.0%","fully"],[2,"25.0%","fully"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"fully","marker":{"color":"#06a94d","pattern":{"shape":""}},"name":"Fully met","offsetgroup":"fully","orientation":"h","showlegend":true,"textposition":"auto","x":[0.25,0.0,0.875,0.875,0.375,0.625,0.625,0.125,0.25,0.125,0.375,0.5,0.5,0.125,0.125,0.5,0.625,0.625,0.125,0.125,0.0,0.25],"xaxis":"x","y":["List packages","Provide versions","Model in \"runnable\" format","Can run some programmatically","Don't hard code scenario param.","Relative file paths","Avoid duplication","Sufficient comments","If slow, state run time","Provide scenario code","Provide all required outputs","Include correct parameters","Provide all required parameters","If not, clearly state in paper","If process param., provide calc.","Save output to file","Understandable output tables","Use seeds","Code to make tables","Code to make figures","Code to process in-text results","Run instructions"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[3,"37.5%","partially"],[6,"75.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[2,"25.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[3,"37.5%","partially"],[2,"25.0%","partially"],[1,"12.5%","partially"],[0,"0.0%","partially"],[2,"25.0%","partially"],[0,"0.0%","partially"],[2,"25.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[0,"0.0%","partially"],[1,"12.5%","partially"],[2,"25.0%","partially"],[0,"0.0%","partially"],[1,"12.5%","partially"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"partially","marker":{"color":"#ffd68c","pattern":{"shape":""}},"name":"Partially met","offsetgroup":"partially","orientation":"h","showlegend":true,"textposition":"auto","x":[0.375,0.75,0.0,0.0,0.25,0.0,0.0,0.375,0.25,0.125,0.0,0.25,0.0,0.25,0.0,0.0,0.0,0.0,0.125,0.25,0.0,0.125],"xaxis":"x","y":["List packages","Provide versions","Model in \"runnable\" format","Can run some programmatically","Don't hard code scenario param.","Relative file paths","Avoid duplication","Sufficient comments","If slow, state run time","Provide scenario code","Provide all required outputs","Include correct parameters","Provide all required parameters","If not, clearly state in paper","If process param., provide calc.","Save output to file","Understandable output tables","Use seeds","Code to make tables","Code to make figures","Code to process in-text results","Run instructions"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[3,"37.5%","not"],[2,"25.0%","not"],[1,"12.5%","not"],[1,"12.5%","not"],[2,"25.0%","not"],[0,"0.0%","not"],[3,"37.5%","not"],[4,"50.0%","not"],[3,"37.5%","not"],[5,"62.5%","not"],[5,"62.5%","not"],[2,"25.0%","not"],[4,"50.0%","not"],[2,"25.0%","not"],[1,"12.5%","not"],[4,"50.0%","not"],[3,"37.5%","not"],[3,"37.5%","not"],[4,"50.0%","not"],[5,"62.5%","not"],[3,"37.5%","not"],[5,"62.5%","not"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"not","marker":{"color":"#ff9999","pattern":{"shape":""}},"name":"Not met","offsetgroup":"not","orientation":"h","showlegend":true,"textposition":"auto","x":[0.375,0.25,0.125,0.125,0.25,0.0,0.375,0.5,0.375,0.625,0.625,0.25,0.5,0.25,0.125,0.5,0.375,0.375,0.5,0.625,0.375,0.625],"xaxis":"x","y":["List packages","Provide versions","Model in \"runnable\" format","Can run some programmatically","Don't hard code scenario param.","Relative file paths","Avoid duplication","Sufficient comments","If slow, state run time","Provide scenario code","Provide all required outputs","Include correct parameters","Provide all required parameters","If not, clearly state in paper","If process param., provide calc.","Save output to file","Understandable output tables","Use seeds","Code to make tables","Code to make figures","Code to process in-text results","Run instructions"],"yaxis":"y","type":"bar"},{"alignmentgroup":"True","customdata":[[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[1,"12.5%","na"],[3,"37.5%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[1,"12.5%","na"],[1,"12.5%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[3,"37.5%","na"],[6,"75.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[0,"0.0%","na"],[2,"25.0%","na"],[0,"0.0%","na"],[5,"62.5%","na"],[0,"0.0%","na"]],"hovertemplate":"count=%{customdata[0]}\u003cbr\u003epercentage=%{customdata[1]}\u003cextra\u003e\u003c\u002fextra\u003e","legendgroup":"na","marker":{"color":"#d1dcea","pattern":{"shape":""}},"name":"Not applicable","offsetgroup":"na","orientation":"h","showlegend":true,"textposition":"auto","x":[0.0,0.0,0.0,0.0,0.125,0.375,0.0,0.0,0.125,0.125,0.0,0.0,0.0,0.375,0.75,0.0,0.0,0.0,0.25,0.0,0.625,0.0],"xaxis":"x","y":["List packages","Provide versions","Model in \"runnable\" format","Can run some programmatically","Don't hard code scenario param.","Relative file paths","Avoid duplication","Sufficient comments","If slow, state run time","Provide scenario code","Provide all required outputs","Include correct parameters","Provide all required parameters","If not, clearly state in paper","If process param., provide calc.","Save output to file","Understandable output tables","Use seeds","Code to make tables","Code to make figures","Code to process in-text results","Run instructions"],"yaxis":"y","type":"bar"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"},"margin":{"b":0,"l":0,"r":0,"t":30}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":""},"range":[0,1],"tickmode":"array","tickvals":[0,0.2,0.4,0.6,0.8,1],"ticktext":["0%","20%","40%","60%","80%","100%"]},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":""},"autorange":"reversed","ticksuffix":"  "},"legend":{"title":{"text":"Result"},"tracegroupgap":0},"barmode":"relative"},                        {"displayModeBar": false, "responsive": true}                    ).then(function(){
                             
-var gd = document.getElementById('08404ab1-3c25-428c-8fd7-38f37c32cc6d');
+var gd = document.getElementById('479504d9-2cf2-4296-83b9-34cbc7e3fd83');
 var x = new MutationObserver(function (mutations, observer) {{
         var display = window.getComputedStyle(gd).display;
         if (!display || display === 'none') {{
@@ -405,10 +407,14 @@ List required packages
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Partially met. <code>DESCRIPTION</code> file accompanying <code>epicR</code> package contained some but not all dependencies.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially met. Some (but not all) of the required packages were listed in the paper. Of particular note, this depended on having a local package <code>myutils/</code>, which was another GitHub repository from the author. This was not mentioned anywhere, and so required to notice this was needed.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not met. However, easily resolved based on imports to <code>.R</code> script.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
-<li>The <code>import</code> statements can be sufficient in indicating all the packages required but this is not always the case if there are “hidden”/unmentioned dependencies that don’t get imported</li>
-<li>There are various options for listing the packages (e.g.&nbsp;comprehensive import statements, installation lines in the script, environment files).</li>
+<li>The <code>import</code> statements can be sufficient in indicating all the packages required but this is not always the case if there are “hidden”/unmentioned dependencies that don’t get imported
+<ul>
+<li>Tom: Given that import statements are not always enough, then I would argue more is needed.</li>
+<li>Tom: Useful to know that <code>renv</code> “detects” dependencies listed as imports in scripts.</li>
+</ul></li>
+<li>There are various options for listing the packages (e.g.&nbsp;comprehensive import statements, installation lines in the script, environment files, package DESCRIPTION file).</li>
 <li>Ideally mention this in repository, not just the paper.</li>
 <li>If there are local dependencies (e.g.&nbsp;other GitHub repositories), make sure to (a) mention and link to these repositories, so it is clear they are also required, and (b) include licence/s in those repositories also, so they can be used.</li>
 <li>This was a common issue.</li>
@@ -422,11 +428,34 @@ List required packages
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Provide versions
+Be aware of potential system dependencies
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>There can also be system dependencies, which will vary between systems, and may not be obvious if researchers already have these installed. We identified these when setting up the docker environments (which act like “fresh installs”):</p>
+<ul>
+<li><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span> - no dependencies</li>
+<li><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>, <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>, <span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span> - libcurl4-openssl-dev, libssl-dev, libxml2-dev, libglpk-dev, libicu-dev - as well as <code>tk</code> for Johnson et al.&nbsp;2021</li>
+<li><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span> - wget, build-essential, libssl-dev, libffi-dev, libbz2-dev, libreadline-dev, libsqlite3-dev, zlib1g-dev, libncurses5-dev, libgdbm-de, libnss3-dev, tk-dev, liblzma-dev, libsqlite3-dev, lzma, ca-certificates, curl, git</li>
+</ul>
+<p>Although it would be unreasonable for authors to be aware of and list all system dependencies, given they may not be aware of them, this does show the benefit of creating something like docker in identifying them and making note of them within the docker files.</p>
+<p>This issue was specific to (a) R studies, and (b) the study with an unsupported version of Python that required building it from source in the docker file.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Provide versions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -472,17 +501,21 @@ Provide versions
 </ul>
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Partially met. Provides major Python version, but chose minor and the package versions based on article publication date.</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Partially met. States version of R but not package. Due to prior issues with backdating R, used latest versions. There were no issues using the latest versions of R and packages, but if there had been, it would be important to know what versions had previously been used and worked.</p>
-<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Partially met (depending on how strict you are being). The Python version was stated in the paper, and the SimPy version was stated in the complementary app repository (although neither were mentioned in the model repository itself).</p>
+<p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Partially met (depending on how strict you are being). The Python version was stated in the paper, and the SimPy version was stated in the complementary app repository (although neither were mentioned in the model repository itself). Requirements file just contains one thing - <code>simpy</code> - with no version.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Partially met. R version given in paper. <code>DESCRIPTION</code> file contains minimum versions for some but not all packages.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially. Versions of Python, R and some (but not all) packages given in the paper. Some versions weren’t very specific (e.g.&nbsp;Python 2.7 v.s. something specific like 2.7.12)</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Partially met. States version of R but not package. Due to prior issues with backdating R, used latest versions. There were no issues using the latest versions of R and packages, but if there had been, it would be important to know what versions had previously been used and worked.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Models will sometimes work with the latest versions of packages, but likewise, you will sometimes need to backdate as it no longer works with the latest</li>
 <li>For Python, it was very easy to “backdate” the python and package versions. However, I found this very difficult to in R, and ended up always using the latest versions.</li>
 <li>Versions are sometimes provided elsewhere (e.g.&nbsp;in paper, in other repositories), but would be handy to be in model repository itself.</li>
 <li>Handy to provide specific versions too, particularly when there can be reasonably large changes between minor versions.</li>
 <li>This was a very common issue.</li>
+<li>Tom: For R, we are sort of moving towards a pre-built container for an R reproducible pipeline
+<ul>
+<li>Response: Though being aware that it is possible to successfully reproduce without backdating - didn’t run into issues with it for the R models - though that doesn’t mean you wouldn’t - but it is a sort of “characteristic” of R, that it is <em>supposed</em> to be less changeable than Python in this regard. Though obviously no guarantees. And not a fair comparison, as I didn’t try to run the Python ones without backdating.</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -491,7 +524,7 @@ Provide versions
 <section id="structure-of-code-and-scripts" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="structure-of-code-and-scripts"><span class="header-section-number">5.3</span> Structure of code and scripts</h2>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -500,7 +533,7 @@ Model is provided in a “runnable” format
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -543,20 +576,19 @@ Model is provided in a “runnable” format
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Fully met. Provided as a single <code>.py</code> file which ran the model with a for loop.</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Has seperate <code>.R</code> scripts for each scenario which ran the model by calling functions from elsewhere in repository.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met. Can run model from command line.</p>
-<p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: <!--TODO--></p>
+<p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Model provided as a package (which is an R interface for the C++ model).</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. The model (python code) can be run from <code>main.py</code>.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Provided as a single <code>.R</code> file which ran the model with a for loop.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>If you are presenting the results of a model, then provide the code for that model in a “runnable” format.</li>
-<li>This was an uncommon issue.</li>
+<li>This was an <strong>uncommon</strong> issue.</li>
 </ul>
 </div>
 </div>
 </div>
-<!--TODO: Consider overlap between some of these and how clear it is. I seperated to seperate out the script structure v.s. hard coding v.s. providing parameters and scenarios later. Consider whether evaluation for Shoaib below feels correct or not. -->
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -565,7 +597,7 @@ Model is designed to be run programmatically (i.e.&nbsp;can run model with diffe
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -611,7 +643,7 @@ Model is designed to be run programmatically (i.e.&nbsp;can run model with diffe
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Creates a list of <code>input</code> which are then used by a <code>run()</code> function.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. Model created from classes, which accept some inputs and can run the model.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Changes inputs to run all scenarios from a single <code>.R</code> file.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Design model so that you can re-run it with different parameters without needing to make changes to the model code itself.
 <ul>
@@ -619,12 +651,13 @@ Model is designed to be run programmatically (i.e.&nbsp;can run model with diffe
 <li>It also reduces the likelihood of missing errors (e.g.&nbsp;if miss changing an input parameter somewhere, or input the wrong parameters and don’t realise).</li>
 </ul></li>
 <li>This was an uncommon issue.</li>
+<li>Note, this just refers to the basic set-up, with items below like hard coding parameters also being very important in this context.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -633,7 +666,7 @@ Don’t hard code parameters that you will want to change for scenario analyses
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -677,12 +710,12 @@ Don’t hard code parameters that you will want to change for scenario analyses
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met. All model parameters could be varied from “outside” the model code itself, as they were provided as changeable inputs to the model.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: N/A as no scenarios.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met. All model parameters could be varied from “outside” the model code itself, as they were provided as changeable inputs to the model.</p>
-<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially met. Did not hard code, runs, population, generations, and percent pre-screened. However, did hard code other parameters like bi-objective v.s tri-objective model and bounding. Also, it was pretty tricky to change percent pre-screened, as it assumed you provided a <code>.txt</code> file for each %.</p>
+<p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially met. Did not hard code runs, population, generations, and percent pre-screened. However, did hard code other parameters like bi-objective v.s tri-objective model and bounding. Also, it was pretty tricky to change percent pre-screened, as it assumed you provided a <code>.txt</code> file for each %.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. All model parameters for the scenarios/sensitivity analysis could be varied from “outside” the model code itself.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>It can be quite difficult to change parameters that are hard coded into the model. Ideally, all the parameters that a user might want to change should be easily changeable and not hard coded.</li>
-<li>This is a somewhat common issue.</li>
+<li>This is a relatively common issue.</li>
 <li>There is overlap between this and whether the code for scenarios is provided (as typically, the code for scenario is conditionally changing parameter values, although this can be facilitated by not hard coding the parameters, so you call need to change the values from “outside” the model code, rather than making changes to the model functions themselves). Hence, have included as two seperate reflections.</li>
 <li>Important to note that we evaluate this in the context of reproduction - and have not checked for hard-coded parameters outside the specified scenario analyses, but that someone may wish to alter if reusing the model for a different analysis/context/purpose.</li>
 </ul>
@@ -690,7 +723,7 @@ Don’t hard code parameters that you will want to change for scenario analyses
 </div>
 </div>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -699,9 +732,8 @@ Use relative file paths
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<!--TODO: Consider whether this is something to keep? Did any have an issue with relative file paths? Or was it more that I saw an issue with relative file paths that were tricky to change? Have mentioned this is a bit under "Saves output to a file". Although maybe it doesn't have to be an issue to mention it - can just be a positive, that noticed all used?-->
 <table class="caption-top table">
 <colgroup>
 <col style="width: 12%">
@@ -746,12 +778,15 @@ Use relative file paths
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Not applicable. All inputs defined within script. Outputs are not specifically saved to a file (just that the .md and image files were automatically saved when the .Rmd file was knit). EpicR is package import.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. Creates folder in current working directory based on date/time to store results.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Although I then changed things a bit as reorganised repository and prefer not to work with <code>setwd()</code>, these were set up in such a way that it would be really easy to correct file path, just by setting working directory at start of script.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (when add Shoaib, Huang, Lim, Kim and Wood) and then (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
+<ul>
+<li>This was not an issue for any studies - but included to note this was a “facilitator”, as would have needed to amend if they weren’t (and Tom noted that this is a common problem that he runs into elsewhere).</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -760,7 +795,7 @@ Avoid large amounts of code duplication
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -798,7 +833,7 @@ Avoid large amounts of code duplication
 </tr>
 </tbody>
 </table>
-<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. The model often contained very similar blocks of code before or after warm-up. This has the potential to introduce mistakes - with a suspected (although unconfirmed) mistake being that the lower boundary for the doctor consultation times in configuration 1 differed before and after warm-up.</p>
+<p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met. The model often contained very similar blocks of code before or after warm-up.</p>
 <p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not met. There was alot of duplication when running each scenario (e.g.&nbsp;repeated calls to <code>Eventsandcosts</code>, and repeatedly defining the same parameters). This meant, if changing a parameter that you want to be consistent between all the scripts (e.g.&nbsp;number of persons), you had to change each of the scripts one by one.</p>
@@ -806,17 +841,18 @@ Avoid large amounts of code duplication
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Not met. There was alot of duplication when running each scenario. This meant, when amending these for the sensitivity analysis, I would need to change the same parameter 12 times within the script, and for changes to all, changing it 12 times in 14 duplicate scripts. Hence, it was simpler to write an R script to do this than change it directly, but for base case, I had to make sure I carefully changed everything in both files.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --> Large amounts of code duplication are non-ideal as they can:</p>
+<p><strong>Reflections:</strong> Large amounts of code duplication are non-ideal as they can:</p>
 <ul>
 <li>Make code less readable</li>
 <li>Make it trickier to change universal parameters</li>
 <li>Increase the likelihood of introducing mistakes</li>
+<li>Make it trickier to set up scenarios/sensitivity analyses</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -825,7 +861,7 @@ Include sufficient comments in the code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -870,11 +906,13 @@ Include sufficient comments in the code
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Not met. Very few comments in the <code>Case_Detection_Results...Rmd</code> files, which were the code files provided.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially met. There are some comments and doc-strings, but not comprehensively.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not met. Very few comments, so for the small bit of the code that I did delve into, took a bit of working out what different variables referred to.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>With increasing code complexity, the inclusion of sufficient comments becomes increasingly important, as it can otherwise be quite time consuming to figure out how to fix and change sections of code</li>
 <li>Define abbreviations used within the code</li>
 <li>Good to have consistent comments and docstrings throughout (i.e.&nbsp;on all scripts, on not just some of them)</li>
+<li>Common issue</li>
+<li>Tom: I guess this one isn’t strictly necessary for reproducibility. The main issue was that the studies required a fair bit of manual work to get them to reproduce the results from teh mixed issues you listed above. This is sort of a “failsafe option” for reproducibility or perhaps more relevant for reuse/adaptation.</li>
 </ul>
 </div>
 </div>
@@ -883,7 +921,7 @@ Include sufficient comments in the code
 <section id="run-time-and-memory-usage" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="run-time-and-memory-usage"><span class="header-section-number">5.4</span> Run time and memory usage</h2>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -892,7 +930,7 @@ Quicker models are easier to work with
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>I have not evaluated like as a criteria, as a long run time is not inherently a bad thing. However, I definitely found that the run time of models had a big impact on how easy it was to reproduce results as longer run times meant it was tricky (or even impossible) to run in the first place, or tricky to re-run.</p>
 <p>The studies where I made adjustments were:</p>
@@ -906,20 +944,21 @@ Quicker models are easier to work with
 <li><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Add parallel processing, did not run one of the scenarios (it was very long, and hadn’t managed to reproduce other parts of same figure regardless), and experimented with reducing parameters for evolutionary algorithm (but, in the end, ran with full parameters, though lower were helpful while working through and troubleshooting).</li>
 <li><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: No changes made, but unlike other reproduction, didn’t try to run at smaller amounts - just set it to run as-is over the weekend.</li>
 </ul>
-<p>For <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>, an error appears to have been introduced with the aoorta diameter thresholds by switching between nested and unnested lists, which I’m anticipating was unresolved due to the long run times of the model meaning they weren’t all run in sequence at the end.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p>In one of the studies, there was a minor error which needed fixing, which we anticipated to likely be present due to long run times meaning the model wasn’t all run in sequence at the end.</p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Reduce model run time if possible as it makes it easier to work with, and facilitates doing full re-runs of all scenarios (which can be important with code changes, etc).
 <ul>
 <li>Relatedly, it is good practice to re-run all scripts before finishing up, as then you can spot any errors like the one mentioned for <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span></li>
 </ul></li>
-<li>Common issue (to varying degrees - i.e.&nbsp;taking 20 minutes, up to taking several hours).</li>
+<li>Common issue (to varying degrees - i.e.&nbsp;taking 20 minutes, up to taking several hours or even day/s).</li>
+<li>Tom: Long run times are inevitable for some models, but this does suggest that some extra work to build confidence the model is working is expected is beneficial, like one or a small set of verification scenarios that are quick to run.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -928,7 +967,7 @@ For slow models, state the expected run time
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -974,18 +1013,22 @@ For slow models, state the expected run time
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met. In the README, they state the the run time with 100 million agents is 16 hours, which was very handy to know, as I then just got stuck in running with fewer agents while troubleshooting.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially met. Some of the run times are mentioned in the paper, but not all, although this did help indicate that we would anticipate other s scenarios to similarly take hours to run.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Partially met. In the paper, they state that it takes less than five minutes for each scenario, but this feels like half the picture, given the total run time was 48 hours.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>For long models with no statement, it can take a while to realise that it’s not an error in the code or anything, but actually just a long run time! And hard to know how long to expect, and whether it is without the capacities of your machine and so on.</li>
 <li>Ideally include statement of run time in repository as well as paper.</li>
 <li>Ideally include run time of all components of analysis (e.g.&nbsp;all scenarios).</li>
 <li>Common issue.</li>
+<li>Tom: This supports the inclusion of section 5.4 in the STRESS-DES guidelines
+<ul>
+<li>Response: But think it is also important that this is in the repository itself, and not just the paper.</li>
+</ul></li>
 </ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-important no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -994,7 +1037,7 @@ For computationally expensive models, state memory usage and provide alternative
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>As I felt this was relatively subjective, as depending on what I felt to be “computationally expensive”, as I didn’t record the memory usage of all models, it felt unfair to do this as a checklist, and so have just informally noted below:</p>
 <ul>
@@ -1005,11 +1048,13 @@ For computationally expensive models, state memory usage and provide alternative
 <li><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: This had long run times but I don’t know if it was computationally expensive or not - I just know that I didn’t run into any issues (but I didn’t record memory usage, so its possible a lower-specced machine might).</li>
 <li><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not applicable. As stated in their prior paper, the model is constrained by processing time, not computer memory.</li>
 </ul>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Some models are so computationally expensive that it may be simply impossible to run it a feasible length of time without a high powered machine.</li>
+<li>Handy to mention memory requirements so someone with lower spec machine can ensure they would be able to run it.</li>
 <li>If a model is computationally expensive, it would be good to provide suggested alternatives that allow it to be run on lower spec machines</li>
 <li>Not a common problem - only relevant to computationally expensive models</li>
+<li>Tom: Agree it makes sense to report this, and is captured in reporting guidelines like STRESS-DES.</li>
 </ul>
 </div>
 </div>
@@ -1018,7 +1063,7 @@ For computationally expensive models, state memory usage and provide alternative
 <section id="parameters-scenarios-and-outputs" class="level2" data-number="5.5">
 <h2 data-number="5.5" class="anchored" data-anchor-id="parameters-scenarios-and-outputs"><span class="header-section-number">5.5</span> Parameters, scenarios and outputs</h2>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1027,7 +1072,7 @@ Provide code for all scenarios
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1073,16 +1118,17 @@ Provide code for all scenarios
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Partially met. Has all base case scenarios, but not sensitivity analysis.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not met. Took a while to figure out how to implement scenarios.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Common issue</li>
 <li>Time consuming and tricky to resolve</li>
+<li>Tom: This is a headline. Also, links to importance of reproducible analytical pipelines (RAP) for simulation.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1091,7 +1137,7 @@ All the required outputs are calculated/provided
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1137,16 +1183,17 @@ All the required outputs are calculated/provided
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Note met. It has an output that is in “per 1000” and, although it outputs the columns required to calculate this, I found it very tricky to work out which columns to use and how to transform them to get this output, and so feel this is not met (as feels like a seperate output, and not something simple like a mean, and as it felt so tricky to work out).</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Calculate and provide all the outputs required</li>
 <li>Appreicate this can be a bit “ambiguous” (e.g.&nbsp;if its just plotting a mean or simple calculation, then didn’t consider that here) (however, combined with other criteria, we do want them to provide code to calculate outputs, so we would want them to provide that anyway)</li>
+<li>Tom: This is a headline. I suspect we can find supporting citations elsewhere from other fields. Its a reporting guideline thing too, but in natural language things can get very ambiguous still! Would be good to make that point as well I think.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1155,7 +1202,7 @@ Include correct parameters in the script (even if just for one scenario)
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1201,17 +1248,18 @@ Include correct parameters in the script (even if just for one scenario)
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Base case parameters all correct.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not met. As agreed with the author, this is likely the primary reason for the discrepancy in these results - they are very close, and we see similar patterns, but not reproduced. Unfortunately, several parameters were wrong, and although we changed those we spotted, we anticipate there could be others we hadn’t spotted that might explain the remaining discrepancies.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>At least provide a script that can run the baseline model as in the paper (even if not providing the scenarios)</li>
 <li>This can introduce difficulties - when some parameters are wrong, you rely on the paper to check which parameters are correct or not, but if the paper doesn’t mention every single parameter (which is reasonably likely, as this includes those not varied by scenarios), then you aren’t able to be sure that the model you are running is correct.</li>
 <li>This can make a really big difference, and be likely cause of managing to reproduce everything v.s. nothing, if it impacts all aspects of the results.</li>
+<li>Tom: I think this comes back to minimum verification as well. I think the “at least for one scenario” idea of yours is excellent.</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1220,7 +1268,7 @@ Provide all the required parameters
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1263,18 +1311,19 @@ Provide all the required parameters
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not met. For Figure 5, had to guess the value for <code>staff_per_shift</code>.</p>
 <p><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
 <p><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Fully met.</p>
-<p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Could determine appropriate parameters for sensitivity analysis from description in article.</p>
+<p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Could determine appropriate parameters for sensitivity analysis from figures in article.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not met. The results have a large impact by the bounding set, but this was not mentioned in the paper or repository, and required me looking at the numbers in results and GitHub commit history to estimate the appropriate bounds to use.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Provide all required parameters</li>
+<li>Tom: Evidence to support STRESS-DES 3.3</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1283,7 +1332,7 @@ If not provided in the script, then <em>clearly</em> present all parameters in t
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1328,16 +1377,20 @@ If not provided in the script, then <em>clearly</em> present all parameters in t
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met. All parameters clearly in the two figures presenting the sensitivity analysis, and didn’t have to look elsewhere beyond that.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Most parameters are relatively easily identified from the text or figure legends (though would be easier if provided in a table or similar). Parameter for bounding was not provided in paper.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not applicable. All provided.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
-<li>Provide parameters in a table (including for each scenario), as it can be difficult/ambiguous to interpret them from the text, and hard to spot them too.</li>
+<li>Provide parameters in a table (including for each scenario), as it can be difficult/ambiguous to interpret them from the text, and hard to spot them too.
+<ul>
+<li>Tom: The ambiguity of the natural language for scenarios was an important finding.</li>
+</ul></li>
 <li>Be sure to mention every parameter that gets changed (e.g.&nbsp;for <span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, as there wasn’t a default <code>staff_per_shift</code> across all scenarios, but not stated for the scenario, had to guess it).</li>
+<li>Tom: Evidence to support STRESS-DES 3.3</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1346,7 +1399,7 @@ If will need to process parameters, provide required calculations
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1391,9 +1444,10 @@ If will need to process parameters, provide required calculations
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Not applicable. No processing of parameters required.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not applicable.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not applicable. All provided.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>If you are going to be mentioning the “pre-processed” values at all, then its important to include the calculation (ideally in the code, as that is the clearest demonstration of exactly what you did)</li>
+<li>Tom: This is a very good point for RAP.</li>
 </ul>
 </div>
 </div>
@@ -1402,7 +1456,7 @@ If will need to process parameters, provide required calculations
 <section id="output-format" class="level2" data-number="5.6">
 <h2 data-number="5.6" class="anchored" data-anchor-id="output-format"><span class="header-section-number">5.6</span> Output format</h2>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1411,7 +1465,7 @@ Saves output to a file
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1455,7 +1509,7 @@ Saves output to a file
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Not met. Outputs to dataframe/s that are not saved as files (although can see within the kept <code>.md</code> file from knitting).</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. Outputs to <code>.txt</code> files.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Outputs to <code>.csv</code> files.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Common issue</li>
 <li>Particularly important if model run time is even slightly long (even just minutes long, but even more so as becomes many minutes / hours), so don’t always have to re-run it each time to get results</li>
@@ -1465,7 +1519,7 @@ Saves output to a file
 </div>
 </div>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1474,7 +1528,7 @@ Understandable output tables
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <table class="caption-top table">
 <colgroup>
@@ -1518,16 +1572,18 @@ Understandable output tables
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Not met. I had mistakes and confusion figuring out which results tables I needed, which columns to use, and which scenarios to use from the tables.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. Straightforward with key information provided.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. I didn’t need to work with the output tables, but from looking at them now, they make sense.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Don’t provide alternative results for the same metrics</li>
 <li>Make it clear what each colum/category in the results table means, if it might not be immediately clear.</li>
+<li>Make differences between seperate results tables clear.</li>
+<li>Tom: In a RAP for simulation world we have a env + model + script that gets you to the exact results table you see in the paper and this isn’t a problem (although more time consuiming to setup).</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1536,7 +1592,7 @@ Avoid large file sizes if possible
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>I have not evaluated like as a criteria, as a large file size is not inherently a bad thing, and might be difficult to avoid. However, when files are very large, this can make things trickier, such as with requiring compression and use of GitHub Large File Storage (LFS) for tracking, which has limits on the free tier.</p>
 <p>Regarding file sizes in each study:</p>
@@ -1550,42 +1606,14 @@ Avoid large file sizes if possible
 <li><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not relevant (aggregate results files <strong>&lt;10 kB</strong>).</li>
 <li><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Aggregate results files are small (<strong>327 kB</strong>), but raw results files are very large (<strong>2.38 GB</strong>), and even when compressed to <code>.csv.gz</code> (<strong>128 MB</strong>) require using of GitHub LFS</li>
 </ul>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections once add Johnson --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
-<li>For most studies, this was not relevant, with outputs relatively small</li>
+<li>For most studies, this was not relevant, with outputs relatively small.</li>
 <li>I only really found this to be an issue when files exceeded GitHub threshold. <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github">GitHub</a> give warning over 50 MB, blocks files over 100 MB, requiring you to use GitHub LFS. Recommends repositories ideally &lt;1 GB and for sure &lt; 5GB. <a href="https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-storage-and-bandwidth-usage">GitHub LFS</a> has limits on storage and bandwith use (1GB of each).</li>
-<li><strong>Reducing file size isn’t the only solution</strong>. In cases where you have large files, a good option can be storing it elsewhere and then pulling from there into your workflow - for example, storing in <strong>zenodo</strong> and fetching using <a href="https://github.com/fatiando/pooch">pooch</a>.</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-caution no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Do not output excessive numbers of files
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>I have not evaluated like as a criteria, as a large number of files is not inherently a bad thing, and might be difficult to avoid.</p>
-<p>Regarding number of files:</p>
+<li><strong>Reducing file size isn’t the only solution</strong>. In cases where you have large files, a good option can be storing it elsewhere and then pulling from there into your workflow - for example, storing in <strong>zenodo</strong> and fetching using <a href="https://github.com/fatiando/pooch">pooch</a>.
 <ul>
-<li><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not relevant.</li>
-<li><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not relevant.</li>
-<li><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Not relevant.</li>
-<li><span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span>: Not relevant.</li>
-<li><span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not relevant.</li>
-<li><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Not relevant.</li>
-<li><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: The default behaviour of the script was to output <strong>lots of files</strong> from each round (so you could easily have 90, 100, 200+ files), which were then <strong>not</strong> used in analysis (as it just depended on an aggregate results file). Although these individual files might be useful during quality control, as a default behaviour of the script, it could easily make the repository quite busy/littered with files.</li>
-<li><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not relevant.</li>
-</ul>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections once add Johnson --></p>
-<ul>
-<li>Outputting hundreds of files - particularly if they are not then used normally in analysis - can easily make repository cluttered/busy</li>
+<li>Tom: Approach with zenodo seems sensible. There’s a simple workflow for submitting to a journal with this approach as well. Plus scenarios/scripts can link to raw datafiles on zenodo for comparion.</li>
+</ul></li>
 </ul>
 </div>
 </div>
@@ -1649,10 +1677,14 @@ Use seeds to control stochasticity
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met. At start of script, authors <code>set.seed(333)</code>.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Fully met. This ensured consistent results between runs of the script, which was really helpful.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Sets seed based on replication number.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Depending on your model and the outputs/type of output you are looking at, the lack of seeds can have varying impacts on the appearance of your results, and can make the subjective judgement of whether results are consistent harder (if discrepancies could be attributed to not having consistent seeds or not).</li>
 <li>It can be really quite simple to include seeds.</li>
+<li>Over half of the studies did include seed control in their code.</li>
+<li>Tom: There seems little argument against doing this. worth noting that commerical software does this for you and possibly explains why authors didn’t do this themselves if that was their background (lack of knowledge?).</li>
+<li>Tom: Note simpy is independent of any sampling mechanism. We could just use python’s random module and set a single seed if needed (although you lose CRN) and we can setup our models so that we only need to set a single seed.</li>
+<li>Tom: A key part of STARS 2.0 for reproducibility</li>
 </ul>
 </div>
 </div>
@@ -1660,6 +1692,7 @@ Use seeds to control stochasticity
 </section>
 <section id="code-to-produce-article-results" class="level2" data-number="5.8">
 <h2 data-number="5.8" class="anchored" data-anchor-id="code-to-produce-article-results"><span class="header-section-number">5.8</span> Code to produce article results</h2>
+<p>This is a common problem across all item types, and a key part of STARS 2.0 for reproducibility.</p>
 <div class="callout callout-style-default callout-warning no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1708,7 +1741,6 @@ Provide code to process results into tables
 </tr>
 </tbody>
 </table>
-<!--TODO: Lim 2020... I think from memory that this output tables  similar to the paper, but I then changed them as that format was difficult to compare/work with -->
 <p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met.</p>
 <p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not applicable. No tables in scope.</p>
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>: Partially met. It outputs the results in a similar structure to the paper (like a section of a table). However, it doesn’t have the full code to produce a table outright, for any of the tables, so additional processing still required.</p>
@@ -1717,9 +1749,9 @@ Provide code to process results into tables
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Not met. Had to write code to generate tables, which took me a while as I got confused over thinks like which tables / columns / scenarios to use.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not met.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
-<li>It can take a bit of time to do this processing, so very handy for it to be provided.</li>
+<li>It can take a bit of time to do this processing, and it can be tricky/confusing to do correctly, so very handy for it to be provided.</li>
 <li>Common issue.</li>
 </ul>
 </div>
@@ -1774,14 +1806,15 @@ Provide code to process results into figures
 </tbody>
 </table>
 <p><span class="citation" data-cites="shoaib_simulation_2021">Shoaib and Ramamohan (<a href="#ref-shoaib_simulation_2021" role="doc-biblioref">2021</a>)</span>: Not met.</p>
-<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. Had to write code from scratch. For one of the figures, it would have been handy if informed that plot was produced by a simmer function (as didn’t initially realise this). It also took a bit of time for me to work out how to transform the figure axes as this was not mentioned in the paper (and no code was provided for these). It was also unclear and a bit tricky to work out how to standardise the density in the figures (since it is only described in the text and no formula/calculations are provided there or in the code). <!-- TODO: Consider whether this should be split into another box (i.e. about providing the processing?) --></p>
+<p><span class="citation" data-cites="huang_optimizing_2019">Huang et al. (<a href="#ref-huang_optimizing_2019" role="doc-biblioref">2019</a>)</span>: Not met. Had to write code from scratch. For one of the figures, it would have been handy if informed that plot was produced by a simmer function (as didn’t initially realise this). It also took a bit of time for me to work out how to transform the figure axes as this was not mentioned in the paper (and no code was provided for these). It was also unclear and a bit tricky to work out how to standardise the density in the figures (since it is only described in the text and no formula/calculations are provided there or in the code).</p>
 <p><span class="citation" data-cites="lim_staff_2020">Lim et al. (<a href="#ref-lim_staff_2020" role="doc-biblioref">2020</a>)</span>, <span class="citation" data-cites="kim_modelling_2021">Kim et al. (<a href="#ref-kim_modelling_2021" role="doc-biblioref">2021</a>)</span> and <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Not met. However, the simplicity and repetition of the figures was handy.</p>
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Partially met. For Figure 3, most of the required code for the figure was provided, which was super helpful. However, this wasn’t complete, and for all others figures, I had to start from scratch writing the code.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Partially met. Provides a few example <code>ggplot</code>s, but these are not all the plots, nor exactly matching article, nor including any of the pre-processing required before the plots, and so could only serve as a starting point (though that was still really handy).</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Fully met. Figures match article, with one minor exception that I had to add smoothing to the lines on one of the figures.</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>It can take a bit of time to do this processing, particularly if the figure involves any transformations (and less so if the figure is simple), so very handy for it to be provided.</li>
+<li>Also, handy if the full code can be provided for all figures (although partial code is more helpful than none at all).</li>
 <li>Common issue.</li>
 </ul>
 </div>
@@ -1841,7 +1874,7 @@ Provide code to calculate in-text results
 <p><strong>Reflections:</strong></p>
 <ul>
 <li>Provide code to calculate in-text results</li>
-<li>Common issue</li>
+<li>Universal issue, for those with in-text results not otherwise captured in tables and figures</li>
 </ul>
 </div>
 </div>
@@ -1905,10 +1938,12 @@ Include instructions on how to run the model/script
 <p><span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span>: Fully met. README has mini description of model and clear instructions on how to install and run the model.</p>
 <p><span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Not met.</p>
 <p><span class="citation" data-cites="wood_value_2021">Wood et al. (<a href="#ref-wood_value_2021" role="doc-biblioref">2021</a>)</span>: Not met. No instructions, although it was fairly self explanatory (single script <code>master.R</code> to run, then processing scripts named after items in article e.g.&nbsp;<code>fig7.R</code>).</p>
-<p><strong>Reflections:</strong> <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) --></p>
+<p><strong>Reflections:</strong></p>
 <ul>
 <li>Even if as simple as running a script, include instructions on how to do so</li>
+<li>In simpler projects (e.g.&nbsp;single script), this can be less of a problem.</li>
 <li>Common issue</li>
+<li>Tom: Evidence for STARS essential component of minimum documentation.</li>
 </ul>
 </div>
 </div>
@@ -1916,7 +1951,6 @@ Include instructions on how to run the model/script
 </section>
 <section id="other" class="level2" data-number="5.10">
 <h2 data-number="5.10" class="anchored" data-anchor-id="other"><span class="header-section-number">5.10</span> Other</h2>
-<!--TODO: Reflect whether any of these should be boxes above-->
 <p><strong>Grid lines</strong>. Include tick marks/grid lines on figures, so it is easier to read across and judge whether a result is above or below a certain Y value.</p>
 <p><strong>Data dictionaries</strong>. <span class="citation" data-cites="anagnostou_facs-charm_2022">Anagnostou et al. (<a href="#ref-anagnostou_facs-charm_2022" role="doc-biblioref">2022</a>)</span>: Included data dictionary for input parameters. Although I didn’t need this, this would have been great if I needed to change the input parameters at all.</p>
 <p><strong>Unsupported versions</strong>. <span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Due to the age of the work:</p>
@@ -1930,17 +1964,14 @@ Include instructions on how to run the model/script
 </ul></li>
 </ul>
 <p>However, this is a slightly unavoidable problem unless you continue to maintain your code (which is ideal but not always feasible in a research environment). Realistically, if reusing this code for a new purpose, you would upgrade it to supported versions.</p>
+<p>Tom: This is interesting - and you wonder if it would still be possible (given the “tricks” I followed) in another 10 years time.</p>
 <p><strong>Original results files</strong>. <span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Included some original results files, which was invaluable in identifying some of the parameters in the code that needed to be fixed.</p>
+<p><strong>Excessive number of files</strong>. For <span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span> the default behaviour of the script was to output lots of files from each round (so you could easily have 90, 100, 200+ files), which were then not used in analysis (as it just depended on an aggregate results file). Although these individual files might be useful during quality control, as a default behaviour of the script, it could easily make the repository quite busy/littered with files.</p>
+<ul>
+<li>Tom reflected that this is more of a general housekeeping issue. He agrees and says its ok to do this, but perhaps they need a run mode that does not produce these verification files</li>
+</ul>
 <p><strong>Classes</strong>. <span class="citation" data-cites="hernandez_optimal_2015">Hernandez et al. (<a href="#ref-hernandez_optimal_2015" role="doc-biblioref">2015</a>)</span>: Structured code into classes, which was nice to work with/amend.</p>
 <p><strong>Version history and releases</strong>. <span class="citation" data-cites="johnson_cost_2021">Johnson et al. (<a href="#ref-johnson_cost_2021" role="doc-biblioref">2021</a>)</span> had commits to their GitHub repository after the publication date. It wasn’t clear which version aligned with the publication. However, the most recent commits add clear README instructions to the repository. We decided to use the latest version of the repository, but it would have beneficial to have releases/versions/a change log that would help to outline the commit history in relation to the publication and any subsequent changes.</p>
-<!--TODO: update or remove this summary-->
-<p><strong>Reflections:</strong></p>
-<ul>
-<li>Include grid lines</li>
-<li>Include data dictionaries</li>
-<li>If feasible, maintain code to avoid dependency on unsupported old versions of packages and languages</li>
-<li>Ideally, include copies of your results, so can (a) compare against, (b) use to run analysis on, and (c) use in troubleshooting</li>
-</ul>
 </section>
 <section id="references" class="level2" data-number="5.11">
 <h2 data-number="5.11" class="anchored" data-anchor-id="references"><span class="header-section-number">5.11</span> References</h2>
