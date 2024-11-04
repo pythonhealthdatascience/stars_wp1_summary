@@ -29,7 +29,13 @@ Links to each study:
 
 ## Summary
 
-<!--TODO: Add stacked bar summary chart -->
+This summary excludes:
+
+* "Quicker models are easier to work with"
+* "For computationally expensive models, state memory usage and provide alternatives for lower spec machines"
+* "Avoid large file sizes if possible"
+* "Do not output excessive numbers of files"
+* "Other"
 
 ```{python}
 import pandas as pd
@@ -41,29 +47,25 @@ criteria_dict = {
   'List packages': [2, 3, 3, 0],
   'Provide versions': [0, 6, 2, 0],
   'Model in "runnable" format': [7, 0, 1, 0],
-  'Run programmatically': [0, 0, 0, 0],
-  '''Don't hard code scenario param.''': [0, 0, 0, 0],
-  'Relative file paths': [0, 0, 0, 0],
-  'Avoid duplication': [0, 0, 0, 0],
-  'Sufficient comments': [0, 0, 0, 0],
-  'Quicker (?)': [0, 0, 0, 1],
-  'If slow, state run time': [0, 0, 0, 0],
-  'If comp. exp., state usage + alt.': [0, 0, 0, 0],
-  'Provide scenario code': [0, 0, 0, 0],
-  'Provide all required outputs': [0, 0, 0, 0],
-  'Include correct parameters': [0, 0, 0, 0],
-  'Provide all required parameters': [0, 0, 0, 0],
-  'If not, clearly state in paper': [0, 0, 0, 0],
-  'If process param., provide calc.': [0, 0, 0, 0],
-  'Save output to file': [0, 0, 0, 0],
-  'Understandable output tables': [0, 0, 0, 0],
-  'Avoid large files (?)': [0, 0, 0, 1],
-  'Not excessive output files': [0, 0, 0, 0],
-  'Use seeds': [0, 0, 0, 0],
-  'Code to make tables': [0, 0, 0, 0],
-  'Code to make figures': [0, 0, 0, 0],
-  'Code to process in-text results': [0, 0, 0, 0],
-  'Run instructions': [0, 0, 0, 0],
+  'Can run some programmatically': [7, 0, 1, 0],
+  '''Don't hard code scenario param.''': [3, 2, 2, 1],
+  'Relative file paths': [5, 0, 0, 3],
+  'Avoid duplication': [5, 0, 3, 0],
+  'Sufficient comments': [1, 3, 4, 0],
+  'If slow, state run time': [2, 2, 3, 1],
+  'Provide scenario code': [1, 1, 5, 1],
+  'Provide all required outputs': [3, 0, 5, 0],
+  'Include correct parameters': [4, 2, 2, 0],
+  'Provide all required parameters': [4, 0, 4, 0],
+  'If not, clearly state in paper': [1, 2, 2, 3],
+  'If process param., provide calc.': [1, 0, 1, 6],
+  'Save output to file': [4, 0, 4, 0],
+  'Understandable output tables': [5, 0, 3, 0],
+  'Use seeds': [5, 0, 3, 0],
+  'Code to make tables': [1, 1, 4, 2],
+  'Code to make figures': [1, 2, 5, 0],
+  'Code to process in-text results': [0, 0, 3, 5],
+  'Run instructions': [2, 1, 5, 0],
 }
 criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 
@@ -248,23 +250,23 @@ eval_chart(criteria_wide)
 
 ## Use relative file paths
 
-<!--TODO: Consider whether this is something to keep? Did any have an issue with relative file paths? Or was it more that I saw an issue with relative file paths that were tricky to change? Have mentioned this is a bit under "Saves output to a file"-->
+<!--TODO: Consider whether this is something to keep? Did any have an issue with relative file paths? Or was it more that I saw an issue with relative file paths that were tricky to change? Have mentioned this is a bit under "Saves output to a file". Although maybe it doesn't have to be an issue to mention it - can just be a positive, that noticed all used?-->
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| <!--TODO--> | <!--TODO--> | <!--TODO--> | <!--TODO--> | <!--TODO--> | N/A | ✅ | ✅ |
+| ✅ | N/A | N/A | ✅ | ✅ | N/A | ✅ | ✅ |
 
-@shoaib_simulation_2021: <!--TODO-->
+@shoaib_simulation_2021: Fully met. Just provides file path, so file is saved into current/run directory.
 
-@huang_optimizing_2019: <!--TODO-->
+@huang_optimizing_2019: Not applicable. All inputs defined within script. Outputs were not saved to file/s.
 
-@lim_staff_2020: <!--TODO-->
+@lim_staff_2020: Not applicable. All inputs defined within script. Outputs were not saved to file/s.
 
-@kim_modelling_2021: <!--TODO-->
+@kim_modelling_2021: Fully met. Uses relative file paths for sourcing model and input parameters (gets current directory, then navigates from there).
 
-@anagnostou_facs-charm_2022: <!--TODO-->
+@anagnostou_facs-charm_2022: Fully met. Uses relative imports of local code files.
 
-@johnson_cost_2021: Not applicable. All inputs defined within script. Outputs are not specifically saved to a file (just that the .md and image files were automatically saved when the .Rmd file was knit).
+@johnson_cost_2021: Not applicable. All inputs defined within script. Outputs are not specifically saved to a file (just that the .md and image files were automatically saved when the .Rmd file was knit). EpicR is package import.
 
 @hernandez_optimal_2015: Fully met. Creates folder in current working directory based on date/time to store results.
 
@@ -402,23 +404,14 @@ For @kim_modelling_2021, an error appears to have been introduced with the aoort
 
 ## For computationally expensive models, state memory usage and provide alternatives for lower spec machines
 
-<!--TODO: Consider whether this should be done like a checklist like this? As actually, I could run a simple version (e.g. serial or one at a time) without issue, but starts taking up more memory with parallel stuff.-->
+As I felt this was relatively subjective, as depending on what I felt to be "computationally expensive", as I didn't record the memory usage of all models, it felt unfair to do this as a checklist, and so have just informally noted below:
 
-| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
-| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| N/A | N/A | N/A | ❌ | N/A | ❌ | <!--TODO--> | N/A |
-
-@shoaib_simulation_2021, @huang_optimizing_2019, and @lim_staff_2020: Not applicable. Didn't find it to be too computationally expensive for my machine.
-
-@kim_modelling_2021: Not met. Unable to run on my machine (`serial` took too long to run (would have to leave laptop on for many many hours which isn't feasible), and `parallel` was too computationally expensive and crashed the machine (with the original number of people)). This is not mentioned in the repository or paper, but only referred to in a prior publication. Would've been handy if it included suggestions like reducing number of people and so on (which is what I had to do to feasibly run it).
-
-@anagnostou_facs-charm_2022: Not applicable. Runs in seconds.
-
-@johnson_cost_2021: Not met. It becomes more computationally expensive if try to run lots at once in simultaneous terminals. Didn't try running one on local machine with full parameter due to long run time making it infeasible, but knowing my system specs, it should have been able to if did.
-
-@hernandez_optimal_2015: <!--TODO: This had long run times but I don't know if it was computationally expensive or not. May need to run again for a while and see what memory usage is-->
-
-@wood_value_2021: Not applicable. As stated in their prior paper, the model is constrained by processing time, not computer memory.
+* @shoaib_simulation_2021, @huang_optimizing_2019, and @lim_staff_2020: Not applicable. Didn't find it to be too computationally expensive for my machine.
+* @kim_modelling_2021: Unable to run on my machine (`serial` took too long to run (would have to leave laptop on for many many hours which isn't feasible), and `parallel` was too computationally expensive and crashed the machine (with the original number of people)). This is not mentioned in the repository or paper, but only referred to in a prior publication. Would've been handy if it included suggestions like reducing number of people and so on (which is what I had to do to feasibly run it).
+* @anagnostou_facs-charm_2022: Not applicable. Runs in seconds.
+* @johnson_cost_2021: It becomes more computationally expensive if try to run lots at once in simultaneous terminals. Didn't try running one on local machine with full parameter due to long run time making it infeasible, but knowing my system specs, it should have been able to if did.
+* @hernandez_optimal_2015: This had long run times but I don't know if it was computationally expensive or not - I just know that I didn't run into any issues (but I didn't record memory usage, so its possible a lower-specced machine might).
+* @wood_value_2021: Not applicable. As stated in their prior paper, the model is constrained by processing time, not computer memory.
 
 **Reflections:** <!--TODO: Update reflections (since have added Johnson, Hernandez and Wood) -->
 
