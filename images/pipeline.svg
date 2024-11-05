@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="474mm"
+   height="100mm"
+   viewBox="0 0 474 100"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="pipeline.svg"
+   inkscape:export-filename="pipeline.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="1.0503157"
+     inkscape:cx="917.34327"
+     inkscape:cy="256.58953"
+     inkscape:window-width="2560"
+     inkscape:window-height="1403"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#666666;stroke-width:2.47"
+       id="rect23"
+       width="403.88519"
+       height="76.171196"
+       x="34.564693"
+       y="13.201528"
+       ry="17.808352"
+       rx="0" />
+    <rect
+       style="fill:#4d4d4d;stroke-width:6.51309"
+       id="rect25-33-9"
+       width="396.35767"
+       height="7.2745476"
+       x="37.073933"
+       y="44.030098"
+       rx="0"
+       ry="7.2745476" />
+    <rect
+       style="fill:#4d4d4d;stroke-width:8.91283"
+       id="rect25-3"
+       width="398.47751"
+       height="13.550317"
+       x="36.936806"
+       y="63.660698"
+       rx="0"
+       ry="13.550317" />
+    <rect
+       style="fill:#b3b3b3;stroke-width:8.94254"
+       id="rect25-1-6"
+       width="401.13745"
+       height="13.550317"
+       x="35.341087"
+       y="23.190784"
+       rx="0"
+       ry="13.550317" />
+    <rect
+       style="fill:#ececec;stroke-width:3.98846;opacity:0.82"
+       id="rect1-2"
+       width="87.751572"
+       height="69.971634"
+       x="335.27484"
+       y="15.295049"
+       ry="17.808353" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';text-align:center;letter-spacing:0px;word-spacing:2.64583px;text-anchor:middle;fill:#0f536e;stroke-width:2.47"
+       x="339.87964"
+       y="38.100452"
+       id="text1-2"><tspan
+         id="tspan1-0"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="339.87964"
+         y="38.100452"
+         sodipodi:role="line">Processing results</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="339.87964"
+         y="46.141113"
+         id="tspan6-9"
+         sodipodi:role="line">• Code for tables</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="339.87964"
+         y="54.18177"
+         sodipodi:role="line"
+         id="tspan22">• Code for figures</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="339.87964"
+         y="62.222431"
+         sodipodi:role="line"
+         id="tspan23">• Code for in-text results</tspan></text>
+    <rect
+       style="fill:#ececec;stroke-width:3.98846;opacity:0.82"
+       id="rect1-8"
+       width="87.751572"
+       height="69.971634"
+       x="239.92062"
+       y="15.295049"
+       ry="17.808353" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';text-align:center;letter-spacing:0px;word-spacing:2.64583px;text-anchor:middle;fill:#0f536e;stroke-width:2.47"
+       x="248.51846"
+       y="37.509789"
+       id="text1-0"><tspan
+         id="tspan1-4"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="248.51846"
+         y="37.509789"
+         sodipodi:role="line">Getting same outputs</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="248.51846"
+         y="45.550449"
+         id="tspan6-1"
+         sodipodi:role="line">• Seed</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="248.51846"
+         y="53.591106"
+         sodipodi:role="line"
+         id="tspan18">• Outputs calculated</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="248.51846"
+         y="61.631767"
+         sodipodi:role="line"
+         id="tspan19">• Original results file</tspan></text>
+    <rect
+       style="fill:#ececec;stroke-width:3.98846;opacity:0.82"
+       id="rect1-4"
+       width="87.751572"
+       height="69.971634"
+       x="144.56641"
+       y="15.295049"
+       ry="17.808353" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';text-align:center;letter-spacing:0px;word-spacing:2.64583px;text-anchor:middle;fill:#0f536e;stroke-width:2.47"
+       x="153.93164"
+       y="37.50824"
+       id="text1-9"><tspan
+         id="tspan1-1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="153.93164"
+         y="37.50824"
+         sodipodi:role="line">Running model</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="153.93164"
+         y="45.548901"
+         sodipodi:role="line"
+         id="tspan13">• Code for scenarios</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="153.93164"
+         y="53.589558"
+         sodipodi:role="line"
+         id="tspan14">• Correct parameters</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="153.93164"
+         y="61.630219"
+         sodipodi:role="line"
+         id="tspan15">• Required parameters</tspan></text>
+    <rect
+       style="fill:#ececec;stroke-width:3.98846;opacity:0.82"
+       id="rect1"
+       width="87.751572"
+       height="69.971634"
+       x="49.212181"
+       y="15.295049"
+       ry="17.808353" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.35px;font-family:'DejaVu Math TeX Gyre';-inkscape-font-specification:'DejaVu Math TeX Gyre, Normal';text-align:center;letter-spacing:0px;word-spacing:2.64583px;text-anchor:middle;fill:#0f536e;stroke-width:2.47"
+       x="57.330982"
+       y="30.1001"
+       id="text1"><tspan
+         id="tspan1"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="57.330982"
+         y="30.1001"
+         sodipodi:role="line">Getting set-up</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="57.330982"
+         y="38.140759"
+         sodipodi:role="line"
+         id="tspan7">• GitHub history and</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="57.330982"
+         y="46.181419"
+         sodipodi:role="line"
+         id="tspan26">  releases</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="57.330982"
+         y="54.222076"
+         id="tspan4"
+         sodipodi:role="line">• Packages</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="57.330982"
+         y="62.262737"
+         id="tspan5"
+         sodipodi:role="line">• System dependencies</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:6.35px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:start;text-anchor:start;fill:#000000;stroke-width:2.47"
+         x="57.330982"
+         y="70.303398"
+         id="tspan6"
+         sodipodi:role="line">• Versions</tspan></text>
+    <rect
+       style="fill:#383838;fill-opacity:1;stroke-width:2.17289"
+       id="rect24-9-4"
+       width="26.53409"
+       height="76.071983"
+       x="-455.32095"
+       y="-88.851921"
+       ry="13.392453"
+       rx="3.3599367"
+       transform="rotate(-179.93491)" />
+    <rect
+       style="fill:#383838;fill-opacity:1;stroke-width:2.17289"
+       id="rect24-9"
+       width="26.53409"
+       height="76.071983"
+       x="16.241026"
+       y="13.473834"
+       ry="13.392453"
+       rx="3.3599367" />
+    <rect
+       style="fill:#666666;stroke-width:2.47"
+       id="rect24"
+       width="30.304451"
+       height="86.067863"
+       x="8.1744804"
+       y="7.338028"
+       ry="15.152225"
+       rx="3.8373671" />
+    <rect
+       style="fill:#666666;stroke-width:2.47"
+       id="rect24-4"
+       width="30.304451"
+       height="86.067863"
+       x="-463.38504"
+       y="-92.883888"
+       ry="15.152225"
+       rx="3.8373671"
+       transform="rotate(-179.93491)" />
+    <rect
+       style="fill:#4d4d4d;stroke-width:2.47"
+       id="rect25"
+       width="30.603168"
+       height="13.550317"
+       x="8.0293922"
+       y="65.964241"
+       rx="0"
+       ry="13.550317" />
+    <rect
+       style="fill:#4d4d4d;stroke-width:1.79806"
+       id="rect25-33"
+       width="30.207993"
+       height="7.2745476"
+       x="8.3177443"
+       y="43.533276"
+       rx="0"
+       ry="7.2745476" />
+    <rect
+       style="fill:#4d4d4d;stroke-width:1.79806"
+       id="rect25-33-4"
+       width="30.207993"
+       height="7.2745476"
+       x="433.10168"
+       y="43.533276"
+       rx="0"
+       ry="7.2745476" />
+    <rect
+       style="fill:#b3b3b3;stroke-width:2.45101"
+       id="rect25-1"
+       width="30.134304"
+       height="13.550317"
+       x="8.2653418"
+       y="21.163553"
+       rx="0"
+       ry="13.550317" />
+    <rect
+       style="fill:#b3b3b3;stroke-width:2.45101"
+       id="rect25-1-2"
+       width="30.134304"
+       height="13.550317"
+       x="433.09839"
+       y="21.163553"
+       rx="0"
+       ry="13.550317" />
+    <rect
+       style="fill:#4d4d4d;stroke-width:2.47"
+       id="rect25-5"
+       width="30.603168"
+       height="13.550317"
+       x="432.55893"
+       y="65.964241"
+       rx="0"
+       ry="13.550317" />
+  </g>
+</svg>

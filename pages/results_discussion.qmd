@@ -3,6 +3,33 @@ title: "Results discussion"
 bibliography: ../references.bib
 ---
 
+## Reflections
+
+Reflections from the reproduction and evaluation are broadly grouped into two categories:
+
+* **Analysis pipeline**
+* **Model structure and functionality**
+
+A few additional general reflections are under **other**.
+
+### Analysis pipeline
+
+![Analysis pipeline diagram](../images/pipeline.png){.lightbox}
+
+These are important for reproduction. If need to troubleshoot, then model structure and functionality are particularly useful (e.g. writing code for results is impacted by understandable output)...
+
+Links to evaluation:
+
+* Packages - STARS: dependency management
+* Versions - Badges: documentation. STRESS: software (handy when mentioned in article but would ideally be in repository)
+* Scenario - ISPOR and STRESS: scenario (may describe in paper but if code not provided can still be tricky and time consuming to implement. Implementation of scenarios impacted by model structure e.g. programmatic, don't hard code, sufficient comments)
+* Required parameters - ISPOR and STRESS: input parameters (this was VERY important to be reported as it allows us to check code parameters are correct. When missing from paper, not possible to check)
+
+### Model structure and functionality
+
+
+## ROUGH NOTES TO SORT BELOW
+
 This page has rough notes that are blurry between results / discussion. It is from me reading ove rmy results section and trying to pull out key points or things I want to mention, and trying to group reflections into categories.
 
 ## Headlines / key findings / things want to emphasise
@@ -67,28 +94,6 @@ Meeting STARS optional wasn't helpful for reproduction (but would be for reuse)
     * State run time
     * STRESS: Run time. Found really important for this to be mentioned (particularly relevant when considering reuse too) and should be in article AND repository.
 
-### Analysis pipeline
-
-**Feels important** for being able to get same results but then if someone has to troubleshoot then model structuring and functionality ones become important too.
-
-* Packages
-    * STARS: Dependency management
-* System dependencies
-* Versions
-    * Badges: documentation
-    * STRESS: software. handy when mentioned in article - but would ideally be in repository
-* Scenario code
-    * ISPOR and STRESS: May describe in paper but if code not provided can still be tricky and time consuming to implement. Implementation of scenarios impacted by model structure e.g. programmatic, don't hard code, sufficient comments.
-* Outputs calculated
-* Corrected parameters
-* Required parameters
-    * ISPOR and STRESS: Input parameters - this was VERY important to be reported as it allows us to check code parameters are correct. When missing from paper, not possible to check
-* Code for tables, figures and in-text results
-    * Impacted by model structure e.g. understandable output
-* Seeds
-* Original results files
-* GitHub history and releases
-
 ### Other
 
 * Open license
@@ -108,3 +113,13 @@ Handy to be in article but should ideally be in code:
 
 * STRESS: software
 * Scenario code ISPOR and STRESS
+
+Regarding **relationship between reproduction and evaluation**, in terms of article reporting, these feel like the key things. In terms of repository contents, the key things feel like - see above...
+
+* STARS and badges: documentation (sufficient, minimal, step by step, careful)
+    * Instructions on how to run
+    * Understandable output e.g. data dictionaries
+    * Versions
+* STARS: dependency management
+
+Hence, instead of having **study reporting** category or mentioning above, would describe seperately in own section.
