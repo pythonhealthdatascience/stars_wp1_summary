@@ -501,58 +501,91 @@
     ]
   },
   {
-    "objectID": "pages/framework.html",
-    "href": "pages/framework.html",
-    "title": "8  Modifying the framework",
+    "objectID": "pages/results_discussion.html",
+    "href": "pages/results_discussion.html",
+    "title": "8  Results discussion",
     "section": "",
-    "text": "8.1 Contents of the framework",
+    "text": "8.1 Reflections\nReflections from the reproduction and evaluation are broadly grouped into two categories:\nA few additional general reflections are under other.",
     "crumbs": [
       "Discussion",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Modifying the framework</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
     ]
   },
   {
-    "objectID": "pages/framework.html#contents-of-the-framework",
-    "href": "pages/framework.html#contents-of-the-framework",
-    "title": "8  Modifying the framework",
+    "objectID": "pages/results_discussion.html#reflections",
+    "href": "pages/results_discussion.html#reflections",
+    "title": "8  Results discussion",
     "section": "",
-    "text": "Section from reflections\nConsideration for framework\n\n\n\n\nList required packages\nThe difference between listing all packages, and listing some that then have other dependencies. The various options there are for listing packages, and the downside of just assuming its obvious from imports. The options for guiding dependency management (e.g. providing scripts that download packages, and then environment management tools)\n\n\nProvide version for Python/R and for packages\nImportant to do so for both (not just packages). Challenge of implementing in R. Ease of implementing in Python. Importance of listing in repository itself. Options for doing this in R and Python. Suggestions. Need to explore more with R. Is it a matter of providing renv but suggesting someone could try with latest versions in first instance? As not realistic to guarantee maintenance of research projects. But know at least when it worked - as being clear, it won’t always, even in R\n\n\nModel in a “runnable” format\nThis was an unusual case, but I think could merge more under the example of providing code that aligns with the paper, as in that case, it was the code for a web app when the paper wasn’t about that\n\n\nModel designed to run programmatically, and don’t hard code parameters you want to change.\nConsider whether framework will given guidance on model structure. If so, it should be suggesting that (A) parameters are seperate from model and (B) run scenarios by changing elsewhere (and not by directly modifying the model code). Why do this? Because its simpler to run multiple versions of model with same script, and reduces likelihood of missing errors of inputing wrong parameters\n\n\nAvoid large amounts of code duplciation\nThis would also be a code structure thing (does it fit in framework?). Good to do in general - fairly standard coding practice. Here as it makes code more readable, makes it easier when want to change all scenarios, and reduces likelihood of introducing mistakes (which did see)\n\n\nSufficient comments in code\nLikewise, code structure. Standard practice like docstrings (which only one or two had). The standard structures that are available for docstrings (e.g. roxygen in R). And then also just general comments in code itself.\n\n\nQuicker models\nWorth considering for framework, as this was practically one of the big things for me when it came to using the models. Think about the options that are available for reducing model run time. And from the start, principles of keeping it simple and small. Things to avoid that make it slow. Alternatives to those things. The value of a quicker model (e.g. in being able to make an app, to rerun it all easily and spot mistakes, to just be easier to work with).\n\n\nState run time\nCould include in minimum documentation\n\n\nState memory usage and alterantives for lower spec machines\nCould include in enhanced documentation? Or minimum? Need to consider that this can seem a daunting thing if not familiar and wouldn’t know how to find this out or what this means\n\n\nProvide code for all scenarios\n\n\n\nInclude correct parameters in script\nSuggestion of default model parameters matching up to baseline in paper, and explaining that if not, issue becomes that its hard to check if model is all correct without code or paper listing every single parameter\n\n\nProvide all required parameters\n\n\n\nClearly present parameters in paper\nThis would not be relevant for STARS framework, but could feed into STRESS-DES work? How it being in a table was so much easier than it being described in the text, and how it being comprehensive of all parameters that get varied (or clear if those are the only things changed from baseline, and so on)\n\n\nProvide calculations\nAgain, might not quite fit into STARS? But if you are going to be mentioning the “pre-processed” values at all, then its important to include the calculation (ideally in the code, as that is the clearest demonstration of exactly what you did)\n\n\nSaves output to a file\nCode structure type thing. This was really handy, particularly for long run times. In doing this, set up in way that is easy to change name and location of output file, and not hard coded to one thing\n\n\nUnderstandable output tables\nNot sure where/if this might fit. But suggestion is to not provide alternative results for same metrics. And if a table or output might be unclear on what need or how to calculate, then providing some docs or something that supports\n\n\nUsing seeds\nExplain how, how it can be quite simple, and what benefit of this is. Could be in enhanced\n\n\nProvide code to produce (a) tables (b) figures (c) in-text results\nExplaining why this is handy (being able to reproduce gives confidence model is running right and also important in science) (plus useful for self too if need to make changes in review process and so on). Noting importance of not forgetting about “in-text” results\n\n\nInstructions on how to run model\nAlready in minimal documentation, but be aware, even as simple as “run this script and here is an example of how” is helpful\n\n\nGrid lines\nMinor, not sure if fits/to include\n\n\nData dictionaries\nMinor and intersects with good commenting, might not be relevant for all, but also worth considering, if people are uploading data as part of model, what the principles and practices and recommendations are for shairng of data and linking to those (as this is likely part of those, along with other things). If there is overlap, make it clear the synergies (e.g. if talks about archiving data, how could do alongside code, and so on).",
+    "text": "Analysis pipeline\nModel structure and functionality\n\n\n\n8.1.1 Analysis pipeline\n\n\n\nAnalysis pipeline diagram\n\n\nThese are important for reproduction. If need to troubleshoot, then model structure and functionality are particularly useful (e.g. writing code for results is impacted by understandable output)…\nLinks to evaluation:\n\nPackages - STARS: dependency management\nVersions - Badges: documentation. STRESS: software (handy when mentioned in article but would ideally be in repository)\nScenario - ISPOR and STRESS: scenario (may describe in paper but if code not provided can still be tricky and time consuming to implement. Implementation of scenarios impacted by model structure e.g. programmatic, don’t hard code, sufficient comments)\nRequired parameters - ISPOR and STRESS: input parameters (this was VERY important to be reported as it allows us to check code parameters are correct. When missing from paper, not possible to check)\n\n\n\n8.1.2 Model structure and functionality",
     "crumbs": [
       "Discussion",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Modifying the framework</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
     ]
   },
   {
-    "objectID": "pages/framework.html#presentation-of-the-framework",
-    "href": "pages/framework.html#presentation-of-the-framework",
-    "title": "8  Modifying the framework",
-    "section": "8.2 Presentation of the framework",
-    "text": "8.2 Presentation of the framework\nChecklist table with categories, description and space to complete. But in multiple synced formats (perhaps auto conversion github action between them) - e.g. markdown, latex, docx\nDiagram: Think about any ways could adapt this and if would benefit from that. E.g. gradual reveal with GIF. more icons. alt layout. etc.\nWebsite: Could share like https://joss.readthedocs.io/en/latest/paper.html but would want to make sure we are adding sufficient detail on top of checklist.\nInteractive web app: Could make a web app that serves as a “form” for people to complete and then downloaded their completed framework like there is set up for the PRISMA checklist.\n\nTom: Agree this is a good idea",
+    "objectID": "pages/results_discussion.html#rough-notes-to-sort-below",
+    "href": "pages/results_discussion.html#rough-notes-to-sort-below",
+    "title": "8  Results discussion",
+    "section": "8.2 ROUGH NOTES TO SORT BELOW",
+    "text": "8.2 ROUGH NOTES TO SORT BELOW\nThis page has rough notes that are blurry between results / discussion. It is from me reading ove rmy results section and trying to pull out key points or things I want to mention, and trying to group reflections into categories.",
     "crumbs": [
       "Discussion",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Modifying the framework</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
     ]
   },
   {
-    "objectID": "pages/framework.html#reflections-from-the-evaluations",
-    "href": "pages/framework.html#reflections-from-the-evaluations",
-    "title": "8  Modifying the framework",
-    "section": "8.3 Reflections from the evaluations",
-    "text": "8.3 Reflections from the evaluations\n\nTBC - in progress below…\nAlthough we can comment on how commonly or uncommonly something met a criteria, it is only a small sample (n=6), so when covered in the DES best practice audit, that might be more informative, as baesd on far more studies.\nFrom evaluation of repository:\n\nOpen licence - available on about half, added on request for rest, a very important one as without it you technically cannot reuse someones code\nComplete materials - rarely, so alot of time spent on writing code and figuring out how best to do that\nDependency management - rarely done, and although not an issue in simpler cases, a big impact in more complex\nModel interface - provided for two although not helpful as (1) host no longer operating, and as not focus, didn’t try to run locally, and (2) other app was viewable but didn’t produce the figures and outcomes from paper (was more general, whilst paper delved into scenarios beyond app)\n\nFrom evaluation of paper:\n\nIt often took a long time (up to 2 hours). It would be valuable if the completed checklist were provided along with the paper, like how people often do with equator network reporting guidelines like PRISMA. Consider varying levels detail its possible to complete (yes/no, linking to sections, full detail). Linking to sections is minimum needed to be really useful. Yes/no doesn’t impact time to find information really.\nInput parameters - very handy, as if uncertain in code, use this to check or code\nSome of my evaluations were more light handed (e.g. STRESS 1.2 and 1.3) whilst some were more nit-picky\nRun length - important for knowing when its slow\nScenarios - important to be clear, felt provided in a table was the clearest\n\nReflections on STRESS-DES from having worked on it:\n\n1.2 “how and when calculated” might feel like excess detail\n1.3A providing name for each scenario doesn’t always seem necessary\n2.4 initially found confusing/irrelevant (e.g. “operation of conveyor”)\n3.2 would be helpful to have more examples\n5.1 listing all packages and their versions is never particularly achievable or feasible. More feasible is specifying main package used for model (e.g. simmer, simpy, base R, numpy/pandas) and providing finer details in code (although it was helpful to have version of this package in the paper, when no versions were mentioned in the GitHub)\n5.2 Algorithm used is tricky/uncommon knowledge\n5.3 Event-processing machanism is tricky/uncommon knowledge\nToo many different things in several (could benefit from being clearer, seperated, or into components like 2.5). This was the case for 1.3, 3.3, 4.1, 4.3, 5.1, 5.2, 5.3, 5.4\n\nReflections from comparing what is in STRESS-DES v.s. ISPOR-derived:\n\nScenarios - ISPOR has a simpler description\nModel uncertainities - nice that ISPOR requires this\nISPOR has lots of items that relate to validity and how “good” it is (9 to 18) - whilst STRESS doesn’t touch on this",
+    "objectID": "pages/results_discussion.html#headlines-key-findings-things-want-to-emphasise",
+    "href": "pages/results_discussion.html#headlines-key-findings-things-want-to-emphasise",
+    "title": "8  Results discussion",
+    "section": "8.3 Headlines / key findings / things want to emphasise",
+    "text": "8.3 Headlines / key findings / things want to emphasise\nTimings. Timings varied alot. RESULT: 2h11 to 28h14.\nDISCUSS: Variation due to -\n\nTime consuming:\n\nWrite code for scenarios/sensitivity analysis\nWrite code for tables/figures\nIncluded troubleshooting mismatch parameters, working out how to change code for scenarios, working out appropriate transformations for processing, and which columns to use, and so on.\n\nThe two quickest studies (by a long shot - &lt;4h v.s. all others &gt;12h) I feel were quick as\n\nThey required very little troubleshooting (didn’t need any or only needed alittle coding from me)\nAlso, simplicity too - they had scope of 1 or 5 items - all others had 5 to 17.\n\n\nWhat I think were key factors in not being able to fully reproduce some studies (and hence, these are headline findings):\n\nCode containing wrong parameters.\nHaving to write code for (a) scenarios, and (b) to process results (tables, figures, in-text)\nThese related to badges: complete set of materials\n\nOpen license (badges and STARS) - couldn’t do without.",
     "crumbs": [
       "Discussion",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Modifying the framework</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
     ]
   },
   {
-    "objectID": "pages/relationship_reproduction_evaluation.html",
-    "href": "pages/relationship_reproduction_evaluation.html",
-    "title": "9  Relationship between reproduction and evaluation",
+    "objectID": "pages/results_discussion.html#other-important-things-to-mention",
+    "href": "pages/results_discussion.html#other-important-things-to-mention",
+    "title": "8  Results discussion",
+    "section": "8.4 Other important things to mention",
+    "text": "8.4 Other important things to mention\nDifferent checklists have different focuses… STRESS-DES focuses on what and how modelling work is performed… derived from ISPOR-SDM checklist is more related to validity type stuff…\nWhether or not a study was fully reproduced or not doesn’t necessarily mean it was “good” or “bad”. Did lots of troubleshooting for some before fully reproduced. And sometimes, couldn’t reproduce for simple reasons, like likely parameter being wrong impacting lal results.",
+    "crumbs": [
+      "Discussion",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
+    ]
+  },
+  {
+    "objectID": "pages/results_discussion.html#other-minor-things-to-mention",
+    "href": "pages/results_discussion.html#other-minor-things-to-mention",
+    "title": "8  Results discussion",
+    "section": "8.5 Other minor things to mention",
+    "text": "8.5 Other minor things to mention\nBadges not awarded for not having combination of things required e.g. archive + docs, or complete + docs. Many got basic one of reproducing results, but I allowed troubleshooting - yet they may not - particularly HOURS of troubleshooting.\nArticle evaluation sometimes took quite a while… limitation that may not be perfect… those that used guidelines did better… emphasis importance of (a) using guidelines and (b) attaching completed guidelines\nMeeting STARS optional wasn’t helpful for reproduction (but would be for reuse)",
+    "crumbs": [
+      "Discussion",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
+    ]
+  },
+  {
+    "objectID": "pages/results_discussion.html#grouping-reflections-from-reproduction-and-evaluation-into-categories",
+    "href": "pages/results_discussion.html#grouping-reflections-from-reproduction-and-evaluation-into-categories",
+    "title": "8  Results discussion",
+    "section": "8.6 Grouping reflections from reproduction and evaluation into categories",
+    "text": "8.6 Grouping reflections from reproduction and evaluation into categories\n\n8.6.1 Model structuring and functionality\nfeels important for reuse\n\nRunnable\nProgrammatic\n\nE.g. classes… but WITH inputs… as had example using classes but all hard coded so not programmatic so using classes isn’t magic fix, just a way of doing, so maybe don’t mention\n\nDon’t hard code\nRelative file paths\nAvoid duplication\nSufficient comments\nSave outputs to file\nUnderstandable output\n\nData dictionaries (relevant to inputs and outputs).\nBadges: careful documentation.\n\nAvoid large file sizes\nExcessive file number\nInstructions on how to run\n\nSTARS and badges: documentation (sufficient, minimal and step by step)\n\nQuicker model\n\nState memory use\nState run time\nSTRESS: Run time. Found really important for this to be mentioned (particularly relevant when considering reuse too) and should be in article AND repository.\n\n\n\n\n8.6.2 Other\n\nOpen license\n\nOn ALL repositories required\n\nUnsupported versions\n\n\n\n8.6.3 Study reporting\nSee above…\nReally important to be in article:\n\nSTRESS: Run time\nISPOR and STRESS: Input parameters\n\nHandy to be in article but should ideally be in code:\n\nSTRESS: software\nScenario code ISPOR and STRESS\n\nRegarding relationship between reproduction and evaluation, in terms of article reporting, these feel like the key things. In terms of repository contents, the key things feel like - see above…\n\nSTARS and badges: documentation (sufficient, minimal, step by step, careful)\n\nInstructions on how to run\nUnderstandable output e.g. data dictionaries\nVersions\n\nSTARS: dependency management\n\nHence, instead of having study reporting category or mentioning above, would describe seperately in own section.",
+    "crumbs": [
+      "Discussion",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
+    ]
+  },
+  {
+    "objectID": "pages/discussion.html",
+    "href": "pages/discussion.html",
+    "title": "9  General discussion points",
     "section": "",
     "text": "TODO: Add somewhere in discussion comments about subjectivity and reproduction and how the nature of what is being plot and so on can impact - e.g. health economic costs and qalys look super similar, but when turn into incremental to calculate ICER and INMB, tiny different result in big changes.\nTODO: Add this page, to assess whether (and if so, how) there is a relationship between the evaluation (code and/or reporting) and how easy it was / able we were to reproduce\nTODO: I’m also interested actually particularly in relationship between “reflections” being met, and reproduction.\nthis could be more restructured into (a) reflections from evaluations, similar to as I have for reproductions, then supported by the side by side evidence, and then (b) adding that side by side evidence to the existing reflections from reproductions\nTODO: For reflections on evaluations, add reflection that a lack of provision of ORCID or citation information didn’t have a big impact here, as I was choosing repositories that I had found from papers, so I already at least knew who the paper authors were. Although that doesn’t mean that any attempted citation of the repository itself would’ve necessarily been correct, depending on whether the author list would be the same.\nadd some scatter plots to repo evaluation but not sure how helpful they are\nTODO: Find right place for this reflection: The test-run stage after making compendium helped us to spot run issues that I hadn’t noticed, mainly from having not completely tested absolutely everything before pushing. For example, Hernandez et al. 2015, and there was at least one other example too. Shows importance of having someone else check things - easy to leave in small mistakes that mean it doesn’t run.\nTODO: Make a paper with STRESS specific reflections - so ensure these are incorporated in others, then have discussion page where I walk through STRESS and, based on what I have found, suggest what was helpful in framework, what was missing, and so on.\n\nConsider: which of my reflections pertain to what is in the article, v.s. what is in the repository - e.g. the scenarios being used is important in both - but mine is actually referring more to the repository, hence relevant to STARS more-so than STARS\n\nTODO: Add reflection from doing evaluations that likely not perfect, can be hard to find things in a paper, may have made mistakes, did have second person check to try and help with this, but that is why it can be so helpful to actually provide a completed framework, that highlights key reporting points for a given study, and where to look, particularly as things get more complicated with appendices and prior papers to refer back to for information.\nTODO: Limitation of this work, not reuse, although did sometimes dig into some more than other to figure out how to code scenarios, which is similar to scenarios, but for some could just stay top level. Hence, in many cases, can’t truly say if information provided was sufficient for that deep understanding of what it is doing and so on.\nTODO: Consider, would there be any relevant literature related to time spent to try and get someone elses code mentioned - like how Andy mentioned there would be a max amount of time that someone in the NHS would reasonably spend troubleshooting\nTODO: Include reflection that here is what was helpful for reuse, but some aspects of things are not helpful for reuse, but are helpful for other purposes - e.g. validity checks - e.g. web applications.",
     "crumbs": [
       "Discussion",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Relationship between reproduction and evaluation</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>General discussion points</span>"
     ]
   },
   {
@@ -567,13 +600,57 @@
     ]
   },
   {
+    "objectID": "pages/framework.html",
+    "href": "pages/framework.html",
+    "title": "11  Modifying the framework",
+    "section": "",
+    "text": "11.1 Contents of the framework",
+    "crumbs": [
+      "Discussion",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Modifying the framework</span>"
+    ]
+  },
+  {
+    "objectID": "pages/framework.html#contents-of-the-framework",
+    "href": "pages/framework.html#contents-of-the-framework",
+    "title": "11  Modifying the framework",
+    "section": "",
+    "text": "Section from reflections\nConsideration for framework\n\n\n\n\nList required packages\nThe difference between listing all packages, and listing some that then have other dependencies. The various options there are for listing packages, and the downside of just assuming its obvious from imports. The options for guiding dependency management (e.g. providing scripts that download packages, and then environment management tools)\n\n\nProvide version for Python/R and for packages\nImportant to do so for both (not just packages). Challenge of implementing in R. Ease of implementing in Python. Importance of listing in repository itself. Options for doing this in R and Python. Suggestions. Need to explore more with R. Is it a matter of providing renv but suggesting someone could try with latest versions in first instance? As not realistic to guarantee maintenance of research projects. But know at least when it worked - as being clear, it won’t always, even in R\n\n\nModel in a “runnable” format\nThis was an unusual case, but I think could merge more under the example of providing code that aligns with the paper, as in that case, it was the code for a web app when the paper wasn’t about that\n\n\nModel designed to run programmatically, and don’t hard code parameters you want to change.\nConsider whether framework will given guidance on model structure. If so, it should be suggesting that (A) parameters are seperate from model and (B) run scenarios by changing elsewhere (and not by directly modifying the model code). Why do this? Because its simpler to run multiple versions of model with same script, and reduces likelihood of missing errors of inputing wrong parameters\n\n\nAvoid large amounts of code duplciation\nThis would also be a code structure thing (does it fit in framework?). Good to do in general - fairly standard coding practice. Here as it makes code more readable, makes it easier when want to change all scenarios, and reduces likelihood of introducing mistakes (which did see)\n\n\nSufficient comments in code\nLikewise, code structure. Standard practice like docstrings (which only one or two had). The standard structures that are available for docstrings (e.g. roxygen in R). And then also just general comments in code itself.\n\n\nQuicker models\nWorth considering for framework, as this was practically one of the big things for me when it came to using the models. Think about the options that are available for reducing model run time. And from the start, principles of keeping it simple and small. Things to avoid that make it slow. Alternatives to those things. The value of a quicker model (e.g. in being able to make an app, to rerun it all easily and spot mistakes, to just be easier to work with).\n\n\nState run time\nCould include in minimum documentation\n\n\nState memory usage and alterantives for lower spec machines\nCould include in enhanced documentation? Or minimum? Need to consider that this can seem a daunting thing if not familiar and wouldn’t know how to find this out or what this means\n\n\nProvide code for all scenarios\n\n\n\nInclude correct parameters in script\nSuggestion of default model parameters matching up to baseline in paper, and explaining that if not, issue becomes that its hard to check if model is all correct without code or paper listing every single parameter\n\n\nProvide all required parameters\n\n\n\nClearly present parameters in paper\nThis would not be relevant for STARS framework, but could feed into STRESS-DES work? How it being in a table was so much easier than it being described in the text, and how it being comprehensive of all parameters that get varied (or clear if those are the only things changed from baseline, and so on)\n\n\nProvide calculations\nAgain, might not quite fit into STARS? But if you are going to be mentioning the “pre-processed” values at all, then its important to include the calculation (ideally in the code, as that is the clearest demonstration of exactly what you did)\n\n\nSaves output to a file\nCode structure type thing. This was really handy, particularly for long run times. In doing this, set up in way that is easy to change name and location of output file, and not hard coded to one thing\n\n\nUnderstandable output tables\nNot sure where/if this might fit. But suggestion is to not provide alternative results for same metrics. And if a table or output might be unclear on what need or how to calculate, then providing some docs or something that supports\n\n\nUsing seeds\nExplain how, how it can be quite simple, and what benefit of this is. Could be in enhanced\n\n\nProvide code to produce (a) tables (b) figures (c) in-text results\nExplaining why this is handy (being able to reproduce gives confidence model is running right and also important in science) (plus useful for self too if need to make changes in review process and so on). Noting importance of not forgetting about “in-text” results\n\n\nInstructions on how to run model\nAlready in minimal documentation, but be aware, even as simple as “run this script and here is an example of how” is helpful\n\n\nGrid lines\nMinor, not sure if fits/to include\n\n\nData dictionaries\nMinor and intersects with good commenting, might not be relevant for all, but also worth considering, if people are uploading data as part of model, what the principles and practices and recommendations are for shairng of data and linking to those (as this is likely part of those, along with other things). If there is overlap, make it clear the synergies (e.g. if talks about archiving data, how could do alongside code, and so on).",
+    "crumbs": [
+      "Discussion",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Modifying the framework</span>"
+    ]
+  },
+  {
+    "objectID": "pages/framework.html#presentation-of-the-framework",
+    "href": "pages/framework.html#presentation-of-the-framework",
+    "title": "11  Modifying the framework",
+    "section": "11.2 Presentation of the framework",
+    "text": "11.2 Presentation of the framework\nChecklist table with categories, description and space to complete. But in multiple synced formats (perhaps auto conversion github action between them) - e.g. markdown, latex, docx\nDiagram: Think about any ways could adapt this and if would benefit from that. E.g. gradual reveal with GIF. more icons. alt layout. etc.\nWebsite: Could share like https://joss.readthedocs.io/en/latest/paper.html but would want to make sure we are adding sufficient detail on top of checklist.\nInteractive web app: Could make a web app that serves as a “form” for people to complete and then downloaded their completed framework like there is set up for the PRISMA checklist.\n\nTom: Agree this is a good idea",
+    "crumbs": [
+      "Discussion",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Modifying the framework</span>"
+    ]
+  },
+  {
+    "objectID": "pages/framework.html#reflections-from-the-evaluations",
+    "href": "pages/framework.html#reflections-from-the-evaluations",
+    "title": "11  Modifying the framework",
+    "section": "11.3 Reflections from the evaluations",
+    "text": "11.3 Reflections from the evaluations\n\nTBC - in progress below…\nAlthough we can comment on how commonly or uncommonly something met a criteria, it is only a small sample (n=6), so when covered in the DES best practice audit, that might be more informative, as baesd on far more studies.\nFrom evaluation of repository:\n\nOpen licence - available on about half, added on request for rest, a very important one as without it you technically cannot reuse someones code\nComplete materials - rarely, so alot of time spent on writing code and figuring out how best to do that\nDependency management - rarely done, and although not an issue in simpler cases, a big impact in more complex\nModel interface - provided for two although not helpful as (1) host no longer operating, and as not focus, didn’t try to run locally, and (2) other app was viewable but didn’t produce the figures and outcomes from paper (was more general, whilst paper delved into scenarios beyond app)\n\nFrom evaluation of paper:\n\nIt often took a long time (up to 2 hours). It would be valuable if the completed checklist were provided along with the paper, like how people often do with equator network reporting guidelines like PRISMA. Consider varying levels detail its possible to complete (yes/no, linking to sections, full detail). Linking to sections is minimum needed to be really useful. Yes/no doesn’t impact time to find information really.\nInput parameters - very handy, as if uncertain in code, use this to check or code\nSome of my evaluations were more light handed (e.g. STRESS 1.2 and 1.3) whilst some were more nit-picky\nRun length - important for knowing when its slow\nScenarios - important to be clear, felt provided in a table was the clearest\n\nReflections on STRESS-DES from having worked on it:\n\n1.2 “how and when calculated” might feel like excess detail\n1.3A providing name for each scenario doesn’t always seem necessary\n2.4 initially found confusing/irrelevant (e.g. “operation of conveyor”)\n3.2 would be helpful to have more examples\n5.1 listing all packages and their versions is never particularly achievable or feasible. More feasible is specifying main package used for model (e.g. simmer, simpy, base R, numpy/pandas) and providing finer details in code (although it was helpful to have version of this package in the paper, when no versions were mentioned in the GitHub)\n5.2 Algorithm used is tricky/uncommon knowledge\n5.3 Event-processing machanism is tricky/uncommon knowledge\nToo many different things in several (could benefit from being clearer, seperated, or into components like 2.5). This was the case for 1.3, 3.3, 4.1, 4.3, 5.1, 5.2, 5.3, 5.4\n\nReflections from comparing what is in STRESS-DES v.s. ISPOR-derived:\n\nScenarios - ISPOR has a simpler description\nModel uncertainities - nice that ISPOR requires this\nISPOR has lots of items that relate to validity and how “good” it is (9 to 18) - whilst STRESS doesn’t touch on this",
+    "crumbs": [
+      "Discussion",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Modifying the framework</span>"
+    ]
+  },
+  {
     "objectID": "pages/acknowledgements.html",
     "href": "pages/acknowledgements.html",
-    "title": "11  Acknowledgements",
+    "title": "12  Acknowledgements",
     "section": "",
     "text": "We would like to thank the authors who made their code available under open licences, facilitating our research. We are especially grateful to the following authors for their helpful communication and support throughout the project:",
     "crumbs": [
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>Acknowledgements</span>"
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>Acknowledgements</span>"
     ]
   }
 ]
