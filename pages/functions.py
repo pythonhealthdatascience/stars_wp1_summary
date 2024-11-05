@@ -257,6 +257,9 @@ def calculate_times(used_to_date, times, limit=True):
         print(f'Used {prop}% of 40 hours max')
 
 
+# TODO: Check the values used are still corrected, as there were some minor
+# amendments made to evaluations
+
 def plot_scatter(var, sho, hua, lim, kim, ana, joh, her, woo):
     '''
     Create scatter plot of variable against reproduction success, with dot size
@@ -308,4 +311,65 @@ def plot_scatter(var, sho, hua, lim, kim, ana, joh, her, woo):
     fig['data'][0]['showlegend'] = True
     fig['data'][0]['name'] = ('<b>Dot size:</b><br>Time spent<br>on ' +
                               'reproduction<br>(smaller=quicker)')
+    return fig
+
+
+def reporting_scatter(var, reporting, sho, hua, lim, kim, ana, joh, her, woo):
+    '''
+    Creates a scatter plot showing proportion of reporting guideline (STRESS-DES
+    or the guideline derived from ISPOR-SDM) that was fully met, against a
+    categorical variable (e.g. whether used reporting guidelines, whether model
+    has been described previously).
+
+    Parameters:
+    -----------
+    var: string
+        Name of variable to plot
+    reporting: string
+        Name of reporting guidelines to plot - 'stress' or 'ispor'
+    sho: number
+        Value for Shoaib and Ramamohan 2021
+    hua: number
+        Value for Huang et al. 2019
+    lim: number
+        Value for Lim et al. 2020
+    kim: number
+        Value for Kim et al. 2021
+    ana: number
+        Value for Anagnostou et al. 2022
+    joh: number
+         Value for Johnson et al. 2021
+    her: number
+        Value for Hernandez et al. 2015
+    woo: number
+        Value for Wood et al. 2021
+    '''
+    # Alongside categorical variable, lists the proportion of each guideline
+    # that was fully met (out of all the applicable categories)
+    df =  pd.DataFrame({
+        'Shoaib and Ramamohan 2021': [sho, (17/24)*100, (11/15)*100],
+        'Huang et al. 2019': [hua, (14/23)*100, (7/16)*100],
+        'Lim et al. 2020': [lim, (16/21)*100, (12/16)*100],
+        'Kim et al. 2021': [kim, (15/22)*100, (12/17)*100],
+        'Anagnostou et al. 2022': [ana, (14/21)*100, (8/15)*100],
+        'Johnson et al. 2021': [joh, (16/19)*100, (15/17)*100],
+        'Hernandez et al. 2015': [her, (18/23)*100, (10/17)*100],
+        'Wood et al. 2021': [woo, (22/24)*100, (13/17)*100]
+    }).T.reset_index()
+    df.columns = ['study', var, 'stress', 'ispor']
+
+    # Make column with 0 and 1 replaced with "no" and "yes"
+    df['xlab'] = df[var].map({0: 'No', 1: 'Yes'})
+
+    # Create y axis label
+    if reporting == 'stress':
+        ylab = 'Proportion of STRESS-DES fully met'
+    elif reporting == 'ispor':
+        ylab = 'Proportion of ISPOR-SDM fully met'
+
+    # Create scatterplot
+    fig = px.strip(df, x='xlab', y=reporting, hover_data={'study': True})
+    fig.update_layout(xaxis_title=var,
+                      yaxis_title=ylab)
+
     return fig
