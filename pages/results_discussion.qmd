@@ -27,52 +27,7 @@ Links to evaluation:
 
 ### Model structure and functionality
 
-
-## ROUGH NOTES TO SORT BELOW
-
-This page has rough notes that are blurry between results / discussion. It is from me reading ove rmy results section and trying to pull out key points or things I want to mention, and trying to group reflections into categories.
-
-## Headlines / key findings / things want to emphasise
-
-**Timings**. Timings varied alot. RESULT: 2h11 to 28h14.
-
-DISCUSS: Variation due to -
-
-* Time consuming:
-    * Write code for scenarios/sensitivity analysis
-    * Write code for tables/figures
-    * Included troubleshooting mismatch parameters, working out how to change code for scenarios, working out appropriate transformations for processing, and which columns to use, and so on.
-* The two quickest studies (by a long shot - <4h v.s. all others >12h) I feel were quick as
-    * They required very little troubleshooting (didn't need any or only needed alittle coding from me)
-    * Also, simplicity too - they had scope of 1 or 5 items - all others had 5 to 17.
-
-What I think were key factors in not being able to fully reproduce some studies (and hence, these are headline findings):
-
-* **Code containing wrong parameters**.
-* **Having to write code for (a) scenarios, and (b) to process results (tables, figures, in-text)**
-* These related to badges: complete set of materials
-
-**Open license** (badges and STARS) - couldn't do without.
-
-## Other important things to mention
-
-Different checklists have different focuses... STRESS-DES focuses on what and how modelling work is performed... derived from ISPOR-SDM checklist is more related to validity type stuff...
-
-Whether or not a study was fully reproduced or not doesn't necessarily mean it was "good" or "bad". Did lots of troubleshooting for some before fully reproduced. And sometimes, couldn't reproduce for simple reasons, like likely parameter being wrong impacting lal results.
-
-## Other minor things to mention
-
-Badges not awarded for not having combination of things required e.g. archive + docs, or complete + docs. Many got basic one of reproducing results, but I allowed troubleshooting - yet they may not - particularly HOURS of troubleshooting.
-
-Article evaluation sometimes took quite a while... limitation that may not be perfect... those that used guidelines did better... emphasis importance of (a) using guidelines and (b) attaching completed guidelines
-
-Meeting STARS optional wasn't helpful for reproduction (but would be for reuse)
-
-## Grouping reflections from reproduction and evaluation into categories
-
-### Model structuring and functionality
-
-**feels important for reuse**
+TODO: TURN INTO DIAGRAM (like have done for analysis pipeline)
 
 * Runnable
 * Programmatic
@@ -84,25 +39,65 @@ Meeting STARS optional wasn't helpful for reproduction (but would be for reuse)
 * Save outputs to file
 * Understandable output
     * Data dictionaries (relevant to inputs and outputs).
-    * Badges: careful documentation.
 * Avoid large file sizes
 * Excessive file number
 * Instructions on how to run
-    * STARS and badges: documentation (sufficient, minimal and step by step)
 * Quicker model
     * State memory use
     * State run time
-    * STRESS: Run time. Found really important for this to be mentioned (particularly relevant when considering reuse too) and should be in article AND repository.
+
+These are important for reuse - but also pipeline stuff! As they (a) make reproduction easier and (b) are important when troubleshooting.
+
+Links to evaluation:
+
+* Data dictionaries - Badges: careful documentation
+* Instructions on how to run - STARS and Badges: documentation (sufficient, minimal and step by step)
+* Run time - STRESS: run time (found really important for this to be mentioned (particularly relevant when considering reuse too) and should be in article AND repository)
 
 ### Other
 
-* Open license
+These didn't fit into the two categories above:
+
+* **Open license**
     * On ALL repositories required
-* Unsupported versions
+* **Unsupported versions**
 
-### Study reporting
+## Headline findings
 
-See above...
+Whilst above captures the reflections, I've also pulled out a few **headline** findings.
+
+The four most important things:
+
+1. **Using correct parameters in code**
+2. **Including code for all scenarios**
+3. **Include code to create tables, figures and in-text results**
+4. **Open license**
+
+Why were these the most fundamental?
+
+**Using the code**. Open license  (4) is fundamentally important - can't reuse code without it. In several studies, had to ask authors to add license (all kindly agreed).
+
+**Timing**. Timings varied alot, from 2h11 to 28h14
+
+* Six slower studies (>12h)
+    * I think main reasons for time were: troubleshooting wrong parameters (1), writing code for scenarios (2), and creating tables/figures/in-text results (3) (including appropriate transformations, which columns to use, and so on).
+    * Scope could be larger (5 to 17 items)
+* Two quicker studies (<4h)
+    * Both required very little troubleshooting (e.g. only small amount of coding)
+    * Scope was also simple (1 or 5 items)
+
+**Reproduction success**. I think main reasons were having wrong parameters (1), not having code for scenarios (2) and not having code for results (3).
+
+Links to evaluation:
+
+* Badges and STARS: open license
+* Badges: complete set of materials
+
+## Relationship between reproduction and evaluation
+
+Regarding relationship between reproduction and evaluation, in terms of article reporting, these feel like the key things that impacted reproduction...
+
+### Article
 
 Really important to be in article:
 
@@ -114,7 +109,7 @@ Handy to be in article but should ideally be in code:
 * STRESS: software
 * Scenario code ISPOR and STRESS
 
-Regarding **relationship between reproduction and evaluation**, in terms of article reporting, these feel like the key things. In terms of repository contents, the key things feel like - see above...
+### Repository
 
 * STARS and badges: documentation (sufficient, minimal, step by step, careful)
     * Instructions on how to run
@@ -122,4 +117,14 @@ Regarding **relationship between reproduction and evaluation**, in terms of arti
     * Versions
 * STARS: dependency management
 
-Hence, instead of having **study reporting** category or mentioning above, would describe seperately in own section.
+## Other things I wanted to mention
+
+Different checklists have different focuses... STRESS-DES focuses on what and how modelling work is performed... derived from ISPOR-SDM checklist is more related to validity type stuff...
+
+Whether or not a study was fully reproduced or not doesn't necessarily mean it was "good" or "bad". Did lots of troubleshooting for some before fully reproduced. And sometimes, couldn't reproduce for simple reasons, like likely parameter being wrong impacting lal results.
+
+Badges not awarded for not having combination of things required e.g. archive + docs, or complete + docs. Many got basic one of reproducing results, but I allowed troubleshooting - yet they may not - particularly HOURS of troubleshooting.
+
+Article evaluation sometimes took quite a while... limitation that may not be perfect... those that used guidelines did better... emphasis importance of (a) using guidelines and (b) attaching completed guidelines
+
+Meeting STARS optional wasn't helpful for reproduction (but would be for reuse)
