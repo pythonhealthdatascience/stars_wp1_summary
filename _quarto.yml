@@ -19,9 +19,9 @@ book:
     - pages/paper_evaluation.qmd
   - part: "Discussion"
     chapters:
-    - pages/framework.qmd
-    - pages/relationship_reproduction_evaluation.qmd
+    - pages/discussion.qmd
     - pages/other_studies.qmd
+    - pages/framework.qmd
   - pages/acknowledgements.qmd
   favicon: images/stars_logo_blue.png
   search:

@@ -1,5 +1,5 @@
 ---
-title: "Relationship between reproduction and evaluation"
+title: "General discussion points"
 bibliography: ../references.bib
 ---
 
