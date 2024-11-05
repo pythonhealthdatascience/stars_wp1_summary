@@ -505,7 +505,7 @@
     "href": "pages/results_discussion.html",
     "title": "8  Results discussion",
     "section": "",
-    "text": "8.1 Reflections\nReflections from the reproduction and evaluation are broadly grouped into two categories:\nA few additional general reflections are under other.",
+    "text": "8.1 Reflections",
     "crumbs": [
       "Discussion",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
@@ -516,62 +516,40 @@
     "href": "pages/results_discussion.html#reflections",
     "title": "8  Results discussion",
     "section": "",
-    "text": "Analysis pipeline\nModel structure and functionality\n\n\n\n8.1.1 Analysis pipeline\n\n\n\nAnalysis pipeline diagram\n\n\nThese are important for reproduction. If need to troubleshoot, then model structure and functionality are particularly useful (e.g. writing code for results is impacted by understandable output)…\nLinks to evaluation:\n\nPackages - STARS: dependency management\nVersions - Badges: documentation. STRESS: software (handy when mentioned in article but would ideally be in repository)\nScenario - ISPOR and STRESS: scenario (may describe in paper but if code not provided can still be tricky and time consuming to implement. Implementation of scenarios impacted by model structure e.g. programmatic, don’t hard code, sufficient comments)\nRequired parameters - ISPOR and STRESS: input parameters (this was VERY important to be reported as it allows us to check code parameters are correct. When missing from paper, not possible to check)\n\n\n\n8.1.2 Model structure and functionality",
+    "text": "8.1.1 Analysis pipeline\nThese are important for reproduction. If need to troubleshoot, then model structure and functionality are particularly useful - e.g.:\n\nWriting code for scenarios is impacted by: programmatic, don’t hard code, sufficient comments\nWriting code for results is impacted by: understandable output\n\n“Reflections” in this group:\n\n\n\n“Reflections” in the group “Analysis Pipeline”\n\n\n\n\n\n\n\n\nLinks to evaluation\n\n\n\n\n\nHence, these are included in relationship between reproduction and evaluation below\n\nPackages - STARS: dependency management\nVersions - Badges: documentation, and STRESS: software\nScenario - ISPOR and STRESS: scenario, and Badges: complete set of materials\nRequired parameters - ISPOR and STRESS: input parameters\n\n\n\n\n\n\n8.1.2 Model structure and functionality\nThese are important for reuse - but also pipeline stuff! As they (a) make reproduction easier and (b) are important when troubleshooting.\nNote: Data dictionaries are relevant to inputs and outputs.\n\n\n\n“Reflections” in the group “Model structure and functionality”\n\n\n\n\n\n\n\n\nLinks to evaluation\n\n\n\n\n\nHence, these are included in relationship between reproduction and evaluation below\n\nData dictionaries - Badges: careful documentation\nInstructions on how to run - STARS and Badges: documentation (sufficient, minimal and step by step)\nRun time - STRESS: run time\n\n\n\n\n\n\n8.1.3 Other\nThese didn’t fit into the two categories above:\n\nOpen license\n\nOn ALL repositories required\n\nUnsupported versions\n\n\n\n\n\n\n\nLinks to evaluation\n\n\n\n\n\nHence, these are included in relationship between reproduction and evaluation below\n\nBadges and STARS: open license",
     "crumbs": [
       "Discussion",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
     ]
   },
   {
-    "objectID": "pages/results_discussion.html#rough-notes-to-sort-below",
-    "href": "pages/results_discussion.html#rough-notes-to-sort-below",
+    "objectID": "pages/results_discussion.html#headline-findings",
+    "href": "pages/results_discussion.html#headline-findings",
     "title": "8  Results discussion",
-    "section": "8.2 ROUGH NOTES TO SORT BELOW",
-    "text": "8.2 ROUGH NOTES TO SORT BELOW\nThis page has rough notes that are blurry between results / discussion. It is from me reading ove rmy results section and trying to pull out key points or things I want to mention, and trying to group reflections into categories.",
+    "section": "8.2 Headline findings",
+    "text": "8.2 Headline findings\nWhilst above captures the reflections, I’ve also pulled out a few headline findings.\nThe four most important things:\n\nUsing correct parameters in code\nIncluding code for all scenarios\nInclude code to create tables, figures and in-text results\nOpen license\n\nWhy were these the most fundamental?\n\nUsing the code. Open license (4) is fundamentally important - can’t reuse code without it. In several studies, had to ask authors to add license (all kindly agreed).\n\n\nTiming. Timings varied alot, from 2h11 to 28h14\n\nSix slower studies (&gt;12h)\n\nI think main reasons for time were: troubleshooting wrong parameters (1), writing code for scenarios (2), and creating tables/figures/in-text results (3) (including appropriate transformations, which columns to use, and so on).\nScope could be larger (5 to 17 items)\n\nTwo quicker studies (&lt;4h)\n\nBoth required very little troubleshooting (e.g. only small amount of coding)\nScope was also simple (1 or 5 items)\n\n\n\n\nReproduction success. I think main reasons were having wrong parameters (1), not having code for scenarios (2) and not having code for results (3).",
     "crumbs": [
       "Discussion",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
     ]
   },
   {
-    "objectID": "pages/results_discussion.html#headlines-key-findings-things-want-to-emphasise",
-    "href": "pages/results_discussion.html#headlines-key-findings-things-want-to-emphasise",
+    "objectID": "pages/results_discussion.html#relationship-between-reproduction-and-evaluation",
+    "href": "pages/results_discussion.html#relationship-between-reproduction-and-evaluation",
     "title": "8  Results discussion",
-    "section": "8.3 Headlines / key findings / things want to emphasise",
-    "text": "8.3 Headlines / key findings / things want to emphasise\nTimings. Timings varied alot. RESULT: 2h11 to 28h14.\nDISCUSS: Variation due to -\n\nTime consuming:\n\nWrite code for scenarios/sensitivity analysis\nWrite code for tables/figures\nIncluded troubleshooting mismatch parameters, working out how to change code for scenarios, working out appropriate transformations for processing, and which columns to use, and so on.\n\nThe two quickest studies (by a long shot - &lt;4h v.s. all others &gt;12h) I feel were quick as\n\nThey required very little troubleshooting (didn’t need any or only needed alittle coding from me)\nAlso, simplicity too - they had scope of 1 or 5 items - all others had 5 to 17.\n\n\nWhat I think were key factors in not being able to fully reproduce some studies (and hence, these are headline findings):\n\nCode containing wrong parameters.\nHaving to write code for (a) scenarios, and (b) to process results (tables, figures, in-text)\nThese related to badges: complete set of materials\n\nOpen license (badges and STARS) - couldn’t do without.",
+    "section": "8.3 Relationship between reproduction and evaluation",
+    "text": "8.3 Relationship between reproduction and evaluation\nRegarding relationship between reproduction and evaluation, in terms of article reporting, these feel like the key things that impacted reproduction…\n\n8.3.1 Article\nReally important to be in article:\n\nSTRESS: Run time\n\nFound this very useful when mentioned, and a bit frustrating when not and later realise its a long run time. Want in both article and repository as whether someone finds repository from article or vice versa, want them to have right expectations up front of run requirements for this model\n\nISPOR and STRESS: Input parameters\n\nThis was VERY important to be reported as it allows us to check code parameters are correct. When missing from paper, not possible to check\n\n\nHandy to be in article but should ideally be in repository:\n\nSTRESS: software\nScenario code ISPOR and STRESS\n\nMay describe in paper but if code not provided can still be tricky and time consuming to implement\n\n\n\n\n8.3.2 Repository\n\nSTARS and badges: documentation (sufficient, minimal, step by step, careful)\n\nInstructions on how to run\nUnderstandable output e.g. data dictionaries\nVersions\n\nSTARS: dependency management",
     "crumbs": [
       "Discussion",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
     ]
   },
   {
-    "objectID": "pages/results_discussion.html#other-important-things-to-mention",
-    "href": "pages/results_discussion.html#other-important-things-to-mention",
+    "objectID": "pages/results_discussion.html#other-things-i-wanted-to-mention",
+    "href": "pages/results_discussion.html#other-things-i-wanted-to-mention",
     "title": "8  Results discussion",
-    "section": "8.4 Other important things to mention",
-    "text": "8.4 Other important things to mention\nDifferent checklists have different focuses… STRESS-DES focuses on what and how modelling work is performed… derived from ISPOR-SDM checklist is more related to validity type stuff…\nWhether or not a study was fully reproduced or not doesn’t necessarily mean it was “good” or “bad”. Did lots of troubleshooting for some before fully reproduced. And sometimes, couldn’t reproduce for simple reasons, like likely parameter being wrong impacting lal results.",
-    "crumbs": [
-      "Discussion",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
-    ]
-  },
-  {
-    "objectID": "pages/results_discussion.html#other-minor-things-to-mention",
-    "href": "pages/results_discussion.html#other-minor-things-to-mention",
-    "title": "8  Results discussion",
-    "section": "8.5 Other minor things to mention",
-    "text": "8.5 Other minor things to mention\nBadges not awarded for not having combination of things required e.g. archive + docs, or complete + docs. Many got basic one of reproducing results, but I allowed troubleshooting - yet they may not - particularly HOURS of troubleshooting.\nArticle evaluation sometimes took quite a while… limitation that may not be perfect… those that used guidelines did better… emphasis importance of (a) using guidelines and (b) attaching completed guidelines\nMeeting STARS optional wasn’t helpful for reproduction (but would be for reuse)",
-    "crumbs": [
-      "Discussion",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
-    ]
-  },
-  {
-    "objectID": "pages/results_discussion.html#grouping-reflections-from-reproduction-and-evaluation-into-categories",
-    "href": "pages/results_discussion.html#grouping-reflections-from-reproduction-and-evaluation-into-categories",
-    "title": "8  Results discussion",
-    "section": "8.6 Grouping reflections from reproduction and evaluation into categories",
-    "text": "8.6 Grouping reflections from reproduction and evaluation into categories\n\n8.6.1 Model structuring and functionality\nfeels important for reuse\n\nRunnable\nProgrammatic\n\nE.g. classes… but WITH inputs… as had example using classes but all hard coded so not programmatic so using classes isn’t magic fix, just a way of doing, so maybe don’t mention\n\nDon’t hard code\nRelative file paths\nAvoid duplication\nSufficient comments\nSave outputs to file\nUnderstandable output\n\nData dictionaries (relevant to inputs and outputs).\nBadges: careful documentation.\n\nAvoid large file sizes\nExcessive file number\nInstructions on how to run\n\nSTARS and badges: documentation (sufficient, minimal and step by step)\n\nQuicker model\n\nState memory use\nState run time\nSTRESS: Run time. Found really important for this to be mentioned (particularly relevant when considering reuse too) and should be in article AND repository.\n\n\n\n\n8.6.2 Other\n\nOpen license\n\nOn ALL repositories required\n\nUnsupported versions\n\n\n\n8.6.3 Study reporting\nSee above…\nReally important to be in article:\n\nSTRESS: Run time\nISPOR and STRESS: Input parameters\n\nHandy to be in article but should ideally be in code:\n\nSTRESS: software\nScenario code ISPOR and STRESS\n\nRegarding relationship between reproduction and evaluation, in terms of article reporting, these feel like the key things. In terms of repository contents, the key things feel like - see above…\n\nSTARS and badges: documentation (sufficient, minimal, step by step, careful)\n\nInstructions on how to run\nUnderstandable output e.g. data dictionaries\nVersions\n\nSTARS: dependency management\n\nHence, instead of having study reporting category or mentioning above, would describe seperately in own section.",
+    "section": "8.4 Other things I wanted to mention",
+    "text": "8.4 Other things I wanted to mention\nDifferent checklists have different focuses… STRESS-DES focuses on what and how modelling work is performed… derived from ISPOR-SDM checklist is more related to validity type stuff…\nWhether or not a study was fully reproduced or not doesn’t necessarily mean it was “good” or “bad”. Did lots of troubleshooting for some before fully reproduced. And sometimes, couldn’t reproduce for simple reasons, like likely parameter being wrong impacting lal results.\nBadges not awarded for not having combination of things required e.g. archive + docs, or complete + docs. Many got basic one of reproducing results, but I allowed troubleshooting - yet they may not - particularly HOURS of troubleshooting.\nArticle evaluation sometimes took quite a while… limitation that may not be perfect… those that used guidelines did better… emphasis importance of (a) using guidelines and (b) attaching completed guidelines\nMeeting STARS optional wasn’t helpful for reproduction (but would be for reuse)",
     "crumbs": [
       "Discussion",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Results discussion</span>"
