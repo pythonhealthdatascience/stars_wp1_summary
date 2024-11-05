@@ -3,56 +3,62 @@ title: "Results discussion"
 bibliography: ../references.bib
 ---
 
+::: {.callout-note}
+
+## What is on this page?
+
+* Reflections from the reproduction and evaluation, broadly grouped into two categories
+* Headline findings
+* Relationship between reproduction and evaluation
+* Some other things I want to mention
+
+:::
+
 ## Reflections
-
-Reflections from the reproduction and evaluation are broadly grouped into two categories:
-
-* **Analysis pipeline**
-* **Model structure and functionality**
-
-A few additional general reflections are under **other**.
 
 ### Analysis pipeline
 
-![Analysis pipeline diagram](../images/pipeline.png){.lightbox}
+These are important for reproduction. If need to troubleshoot, then model structure and functionality are particularly useful - e.g.:
 
-These are important for reproduction. If need to troubleshoot, then model structure and functionality are particularly useful (e.g. writing code for results is impacted by understandable output)...
+* Writing code for scenarios is impacted by: programmatic, don't hard code, sufficient comments
+* Writing code for results is impacted by: understandable output
 
-Links to evaluation:
+"Reflections" in this group:
+
+!["Reflections" in the group "Analysis Pipeline"](../images/pipeline.png){.lightbox}
+
+::: {.callout-note collapse="true"}
+
+## Links to evaluation
+
+Hence, these are included in relationship between reproduction and evaluation below
 
 * Packages - STARS: dependency management
-* Versions - Badges: documentation. STRESS: software (handy when mentioned in article but would ideally be in repository)
-* Scenario - ISPOR and STRESS: scenario (may describe in paper but if code not provided can still be tricky and time consuming to implement. Implementation of scenarios impacted by model structure e.g. programmatic, don't hard code, sufficient comments)
-* Required parameters - ISPOR and STRESS: input parameters (this was VERY important to be reported as it allows us to check code parameters are correct. When missing from paper, not possible to check)
+* Versions - Badges: documentation, and STRESS: software
+* Scenario - ISPOR and STRESS: scenario, and Badges: complete set of materials
+* Required parameters - ISPOR and STRESS: input parameters
+
+:::
 
 ### Model structure and functionality
 
-TODO: TURN INTO DIAGRAM (like have done for analysis pipeline)
-
-* Runnable
-* Programmatic
-    * E.g. classes... but WITH inputs... as had example using classes but all hard coded so not programmatic so using classes isn't magic fix, just a way of doing, so maybe don't mention
-* Don't hard code
-* Relative file paths
-* Avoid duplication
-* Sufficient comments
-* Save outputs to file
-* Understandable output
-    * Data dictionaries (relevant to inputs and outputs).
-* Avoid large file sizes
-* Excessive file number
-* Instructions on how to run
-* Quicker model
-    * State memory use
-    * State run time
-
 These are important for reuse - but also pipeline stuff! As they (a) make reproduction easier and (b) are important when troubleshooting.
 
-Links to evaluation:
+Note: Data dictionaries are relevant to inputs and outputs.
+
+!["Reflections" in the group "Model structure and functionality"](../images/structure_function.png){.lightbox}
+
+::: {.callout-note collapse="true"}
+
+## Links to evaluation
+
+Hence, these are included in relationship between reproduction and evaluation below
 
 * Data dictionaries - Badges: careful documentation
 * Instructions on how to run - STARS and Badges: documentation (sufficient, minimal and step by step)
-* Run time - STRESS: run time (found really important for this to be mentioned (particularly relevant when considering reuse too) and should be in article AND repository)
+* Run time - STRESS: run time
+
+:::
 
 ### Other
 
@@ -61,6 +67,16 @@ These didn't fit into the two categories above:
 * **Open license**
     * On ALL repositories required
 * **Unsupported versions**
+
+::: {.callout-note collapse="true"}
+
+## Links to evaluation
+
+Hence, these are included in relationship between reproduction and evaluation below
+
+* Badges and STARS: open license
+
+:::
 
 ## Headline findings
 
@@ -75,23 +91,18 @@ The four most important things:
 
 Why were these the most fundamental?
 
-**Using the code**. Open license  (4) is fundamentally important - can't reuse code without it. In several studies, had to ask authors to add license (all kindly agreed).
+> **Using the code**. Open license  (4) is fundamentally important - can't reuse code without it. In several studies, had to ask authors to add license (all kindly agreed).
 
-**Timing**. Timings varied alot, from 2h11 to 28h14
+> **Timing**. Timings varied alot, from 2h11 to 28h14
+> 
+> * Six slower studies (>12h)
+>     * I think main reasons for time were: troubleshooting wrong parameters (1), writing code for scenarios (2), and creating tables/figures/in-text results (3) (including appropriate transformations, which columns to use, and so on).
+>     * Scope could be larger (5 to 17 items)
+> * Two quicker studies (<4h)
+>     * Both required very little troubleshooting (e.g. only small amount of coding)
+>     * Scope was also simple (1 or 5 items)
 
-* Six slower studies (>12h)
-    * I think main reasons for time were: troubleshooting wrong parameters (1), writing code for scenarios (2), and creating tables/figures/in-text results (3) (including appropriate transformations, which columns to use, and so on).
-    * Scope could be larger (5 to 17 items)
-* Two quicker studies (<4h)
-    * Both required very little troubleshooting (e.g. only small amount of coding)
-    * Scope was also simple (1 or 5 items)
-
-**Reproduction success**. I think main reasons were having wrong parameters (1), not having code for scenarios (2) and not having code for results (3).
-
-Links to evaluation:
-
-* Badges and STARS: open license
-* Badges: complete set of materials
+> **Reproduction success**. I think main reasons were having wrong parameters (1), not having code for scenarios (2) and not having code for results (3).
 
 ## Relationship between reproduction and evaluation
 
@@ -99,15 +110,18 @@ Regarding relationship between reproduction and evaluation, in terms of article 
 
 ### Article
 
-Really important to be in article:
+**Really important to be in article:**
 
 * STRESS: Run time
+    * Found this very useful when mentioned, and a bit frustrating when not and later realise its a long run time. Want in both article and repository as whether someone finds repository from article or vice versa, want them to have right expectations up front of run requirements for this model
 * ISPOR and STRESS: Input parameters
+    * This was VERY important to be reported as it allows us to check code parameters are correct. When missing from paper, not possible to check
 
-Handy to be in article but should ideally be in code:
+**Handy to be in article but should ideally be in repository:**
 
 * STRESS: software
 * Scenario code ISPOR and STRESS
+    * May describe in paper but if code not provided can still be tricky and time consuming to implement
 
 ### Repository
 
