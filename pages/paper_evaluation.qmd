@@ -96,7 +96,7 @@ However, I again think it's most relevant to consider which criteria were met, r
 *Note. This plots the proportion of **applicable** criteria that were **fully met***.
 
 ```{python}
-plot_scatter('STRESS-DES criteria met',
+plot_scatter('ISPOR-SDM criteria met',
              sho = (11/15)*100,
              hua = (7/16)*100,
              lim = (12/16)*100,
@@ -385,81 +385,79 @@ criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 eval_chart(criteria_wide)
 ```
 
-These guidelines have quite a different focus from STRESS-DES. STRESS-DES is very focused on what and how modelling work is performed. These guidelines do cover that, but have quite alot of focus on validity of the work, and good practice (e.g. stating funding, involving stakeholders).
-
-<!--TODO: Add reflections on each of the elements -->
+These guidelines have quite a **different focus** from STRESS-DES. STRESS-DES is very focused on what and how modelling work is performed. These guidelines do cover that, but have quite alot of focus on validity of the work, and good practice (e.g. stating funding, involving stakeholders). This is important, as **different checklists can be important** - and although practice is typically to use one practice, referring to more than one could also be beneficial.
 
 **1 Is the focused health-related decision problem clarified?**<br>...the decision problem under investigation was defined. DES studies included different types of decision problems, eg, those listed in previously developed taxonomies.
 
-*
+* Pretty basic requirement that all meet (unsurprisingly).
 
 **2 Is the modeled healthcare setting/health condition clarified?**<br>...the physical context/scope (eg, a certain healthcare unit or a broader system) or disease spectrum simulated was described.
 
-*
+* Pretty basic requirement that all meet (unsurprisingly).
 
 **3 Is the model structure described?**<br>...the model’s conceptual structure was described in the form of either graphical or text presentation.
 
-*
+* Pretty basic requirement that all meet (unsurprisingly).
 
 **4 Is the time horizon given?**<br>...the time period covered by the simulation was reported.
 
-*
+* There was only one study where this was not stated (@anagnostou_facs-charm_2022), though this didn't impact the reproduction itself, for this study I was simply able to run the code and pretty much get the result required with minimal troubleshooting.
 
 **5 Are all simulated strategies/scenarios specified?**<br>...the comparators under test were described in terms of their components, corresponding variations, etc
 
-*
+* All papers with scenarios described them. As reflected for STRESS-DES, though the description of the scenario can feel clear from the paper, when the code was not provided, it could be quick tricky and time-consuming to work out how to appropriately change the code, in order to implement the scenario.
 
 **6 Is the target population described?**<br>...the entities simulated and their main attributes were characterized.
 
-*
+* Fulfilment didn't impact the reproduction as this is more about interpretation/validity/etc.
 
 **7 Are data sources informing parameter estimations provided?**<br>...the sources of all data used to inform model inputs were reported.
 
-*
+* All met, although it's worth noting that I didn't check that *every* single parameter's data source was stated (and indeed, its likely some were not) - simply whether I could identified that at least some were.
 
 **8 Are the parameters used to populate model frameworks specified?**<br>...all relevant parameters fed into model frameworks were disclosed.
 
-*
+* This was quite important for the reproduction as it allows us to check the parameters in the code are correct. When I identified that there were some discrepancies between the article and code, then in cases where a parameter was not given in the article, I couldn't be sure if it was correct or not in the code, as there was nothing to compare against.
 
 **9 Are model uncertainties discussed?**<br>...the uncertainty surrounding parameter estimations and adopted statistical methods (eg, 95% confidence intervals or possibility distributions) were reported.
 
-*
+* Some don't (but worth noting this doesn't have impact on reproduction - beyond just these being additional values/lines in plot that we are trying to reproduce)
 
 **10 Are sensitivity analyses performed and reported?**<br>...the robustness of model outputs to input uncertainties was examined, for example via deterministic (based on parameters’ plausible ranges) or probabilistic (based on a priori-defined probability distributions) sensitivity analyses, or both.
 
-*
+* Some performed, some mentioned but no results presented, and some didn't mention at all. One explained it to not be relevant.
 
 **11 Is face validity evaluated and reported?**<br>...it was reported that the model was subjected to the examination on how well model designs correspond to the reality and intuitions. It was assumed that this type of validation should be conducted by external evaluators with no stake in the study.
 
-*
+* Rare (only one completed) - but didn't impact reproduction as this is more related to validity
 
 **12 Is cross validation performed and reported**<br>...comparison across similar modeling studies which deal with the same decision problem was undertaken.
 
-*
+* Rare (only two completed) - but didn't impact reproduction as this is more related to validity
 
 **13 Is external validation performed and reported?**<br>...the modeler(s) examined how well the model’s results match the empirical data of an actual event modeled.
 
-*
+* Rare (only two completed) - although some argue not applicable - but didn't impact reproduction as this is more related to validity
 
 **14 Is predictive validation performed or attempted?**<br> ...the modeler(s) examined the consistency of a model’s predictions of a future event and the actual outcomes in the future. If this was not undertaken, it was assessed whether the reasons were discussed.
 
-*
+* Generally not applicable - but didn't impact reproduction as this is more related to validity
 
 **15 Is the model generalizability issue discussed?**<br>...the modeler(s) discussed the potential of the resulting model for being applicable to other settings/populations (single/multiple application).
 
-*
+* More than half did discuss this - but didn't impact reproduction as this is more related to reuse
 
 **16 Are decision makers or other stakeholders involved in modeling?**<br>...the modeler(s) reported in which part throughout the modeling process decision makers and other stakeholders (eg, subject experts) were engaged.
 
-*
+* Rare (only one mentioned) - but didn't impact reproduction as this is more related to validity
 
 **17 Is the source of funding stated?**<br>...the sponsorship of the study was indicated.
 
-* Good practice, usually a journal requirement, although some did not have.
+* Good practice, usually a journal requirement, although some did not have - but didn't impact reproduction.
 
 **18 Are model limitations discussed?**<br>...limitations of the assessed model, especially limitations of interest to decision makers, were discussed.
 
-*
+* Most discuss limitations (didn't really assess how comprehensive these were though, except in two cases where they only had a very general or hint towards limitations) - but didn't impact reproduction.
 
 :::
 
@@ -474,6 +472,14 @@ These guidelines have quite a different focus from STRESS-DES. STRESS-DES is ver
 * @hernandez_optimal_2015 - 1h 11m
 * @wood_value_2021 - 1h 24m
 
+::: {.callout icon=false collapse=false}
+
+## Reflections
+
+It sometimes took quite a while to find all this information from the articles - and we acknowledge there's a chance that it is provided somewhere in the article but I missed it. For both of these reasons, we see the value in actually attaching a completed reporting checklist, clearly laying out key information about the model and study.
+
+:::
+
 ## Use of reporting guidelines
 
 Regarding whether each study mentioned using reporting guidelines:
@@ -487,28 +493,16 @@ Regarding whether each study mentioned using reporting guidelines:
 * @hernandez_optimal_2015 - ❌
 * @wood_value_2021 - ✅ STRESS-DES: Strengthening The Reporting of Empirical Simulation Studies (Discrete-Event Simulation) - @monks_strengthening_2019
 
-<!--TODO: Add reflections on this, and relationship between these and then e.g. how many of the reporting guidelines were met -->
+Although this is only a small sample, its interesting to note that the two studies that used reporting guidelines both had the highest proportion of fully met criteria in either reporting guideline.
 
 ```{python}
-import plotly.express as px
+from functions import reporting_scatter
 
-# For each study, define (a) whether use a previously reported model, and (b) proportion of applicable STRESS-DES fully met
-previous_stress =  [
-  (0, (17/24)*100),
-  (0, (14/23)*100),
-  (0, (16/21)*100),
-  (0, (15/22)*100),
-  (0, (14/21)*100),
-  (1, (16/19)*100),
-  (0, (18/23)*100),
-  (1, (22/24)*100)
-]
-
-# Get x and y values
-x, y = zip(*previous_stress)
-
-fig = px.scatter(x=x, y=y)
-fig.show()
+for guide in ['stress', 'ispor']:
+    fig = reporting_scatter(
+        'Used reporting guidelines', reporting=guide,
+        sho=0, hua=0, lim=0, kim=0, ana=0, joh=1, her=0, woo=1)
+    fig.show()
 ```
 
 ## Uses a previously reported model
@@ -524,32 +518,14 @@ Regarding whether each study was using a previously reported model:
 * @hernandez_optimal_2015 - No
 * @wood_value_2021 - Yes - previously described by @wood_covid-19_2020
 
-<!--TODO: Add reflections on this, and relationship between these and then e.g. how many of the reporting guidelines were met -->
+Again, a small sample, but this time a weaker pattern. We note that the two studies that used reporting guidelines are the same that are previously reported models here, alongside one other study which was previously reported but did not use reporting guidelines in this instance, and has a lower proportion of criteria that were fully met.
 
 ```{python}
-import plotly.express as px
-
-# For each study, define (a) whether use a previously reported model, and (b) proportion of applicable STRESS-DES fully met
-previous_stress =  [
-  (0, (17/24)*100),
-  (0, (14/23)*100),
-  (0, (16/21)*100),
-  (1, (15/22)*100),
-  (0, (14/21)*100),
-  (1, (16/19)*100),
-  (0, (18/23)*100),
-  (1, (22/24)*100)
-]
-
-# Get x and y values
-x, y = zip(*previous_stress)
-
-fig = px.scatter(x=x, y=y)
-fig.show()
+for guide in ['stress', 'ispor']:
+    fig = reporting_scatter(
+        'Model reported previously', reporting=guide,
+        sho=0, hua=0, lim=0, kim=1, ana=0, joh=1, her=0, woo=1)
+    fig.show()
 ```
-
-<!--TODO: Improve this plot so (a) it's not a massive gap between the bars, (b) it's a function used for this and above rather than duplicate code, (c) so we have ones for STRESS and ISPOR -->
-
-<!-- TODO: consider, did the previously reported model also use reporting guidelines? -->
 
 ## References
