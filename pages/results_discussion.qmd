@@ -1,0 +1,110 @@
+---
+title: "Results discussion"
+bibliography: ../references.bib
+---
+
+This page has rough notes that are blurry between results / discussion. It is from me reading ove rmy results section and trying to pull out key points or things I want to mention, and trying to group reflections into categories.
+
+## Headlines / key findings / things want to emphasise
+
+**Timings**. Timings varied alot. RESULT: 2h11 to 28h14.
+
+DISCUSS: Variation due to -
+
+* Time consuming:
+    * Write code for scenarios/sensitivity analysis
+    * Write code for tables/figures
+    * Included troubleshooting mismatch parameters, working out how to change code for scenarios, working out appropriate transformations for processing, and which columns to use, and so on.
+* The two quickest studies (by a long shot - <4h v.s. all others >12h) I feel were quick as
+    * They required very little troubleshooting (didn't need any or only needed alittle coding from me)
+    * Also, simplicity too - they had scope of 1 or 5 items - all others had 5 to 17.
+
+What I think were key factors in not being able to fully reproduce some studies (and hence, these are headline findings):
+
+* **Code containing wrong parameters**.
+* **Having to write code for (a) scenarios, and (b) to process results (tables, figures, in-text)**
+* These related to badges: complete set of materials
+
+**Open license** (badges and STARS) - couldn't do without.
+
+## Other important things to mention
+
+Different checklists have different focuses... STRESS-DES focuses on what and how modelling work is performed... derived from ISPOR-SDM checklist is more related to validity type stuff...
+
+Whether or not a study was fully reproduced or not doesn't necessarily mean it was "good" or "bad". Did lots of troubleshooting for some before fully reproduced. And sometimes, couldn't reproduce for simple reasons, like likely parameter being wrong impacting lal results.
+
+## Other minor things to mention
+
+Badges not awarded for not having combination of things required e.g. archive + docs, or complete + docs. Many got basic one of reproducing results, but I allowed troubleshooting - yet they may not - particularly HOURS of troubleshooting.
+
+Article evaluation sometimes took quite a while... limitation that may not be perfect... those that used guidelines did better... emphasis importance of (a) using guidelines and (b) attaching completed guidelines
+
+Meeting STARS optional wasn't helpful for reproduction (but would be for reuse)
+
+## Grouping reflections from reproduction and evaluation into categories
+
+### Model structuring and functionality
+
+**feels important for reuse**
+
+* Runnable
+* Programmatic
+    * E.g. classes... but WITH inputs... as had example using classes but all hard coded so not programmatic so using classes isn't magic fix, just a way of doing, so maybe don't mention
+* Don't hard code
+* Relative file paths
+* Avoid duplication
+* Sufficient comments
+* Save outputs to file
+* Understandable output
+    * Data dictionaries (relevant to inputs and outputs).
+    * Badges: careful documentation.
+* Avoid large file sizes
+* Excessive file number
+* Instructions on how to run
+    * STARS and badges: documentation (sufficient, minimal and step by step)
+* Quicker model
+    * State memory use
+    * State run time
+    * STRESS: Run time. Found really important for this to be mentioned (particularly relevant when considering reuse too) and should be in article AND repository.
+
+### Analysis pipeline
+
+**Feels important** for being able to get same results but then if someone has to troubleshoot then model structuring and functionality ones become important too.
+
+* Packages
+    * STARS: Dependency management
+* System dependencies
+* Versions
+    * Badges: documentation
+    * STRESS: software. handy when mentioned in article - but would ideally be in repository
+* Scenario code
+    * ISPOR and STRESS: May describe in paper but if code not provided can still be tricky and time consuming to implement. Implementation of scenarios impacted by model structure e.g. programmatic, don't hard code, sufficient comments.
+* Outputs calculated
+* Corrected parameters
+* Required parameters
+    * ISPOR and STRESS: Input parameters - this was VERY important to be reported as it allows us to check code parameters are correct. When missing from paper, not possible to check
+* Code for tables, figures and in-text results
+    * Impacted by model structure e.g. understandable output
+* Seeds
+* Original results files
+* GitHub history and releases
+
+### Other
+
+* Open license
+    * On ALL repositories required
+* Unsupported versions
+
+### Study reporting
+
+See above...
+
+Really important to be in article:
+
+* STRESS: Run time
+* ISPOR and STRESS: Input parameters
+
+Handy to be in article but should ideally be in code:
+
+* STRESS: software
+* Scenario code ISPOR and STRESS
