@@ -4,6 +4,8 @@ echo: False
 bibliography: ../references.bib
 ---
 
+<!-- TODO: Once complete, carefully go over again and check everything is correct -->
+
 This page describes the facilitators for each reproduction (and, conversely, the barriers to the reproduction, in their absence). With each section, I have created a table which evaluates whether the facilitators were fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A) for each study.
 
 Links to each study:
@@ -16,24 +18,6 @@ Links to each study:
 * @johnson_cost_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-johnson-2021/evaluation/reflections.html" target="_blank">link to reflections</a>
 * @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/reflections.html" target="_blank">link to reflections</a>
 * @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/reflections.html" target="_blank">link to reflections</a>
-
-<!-- TODO: Consider whether to make further attempts at managing to backdate R. Didn't manage before. E.g. `containerit` package. Although - is it necessary, if I succeeded without? Note, I always backdated the python environments. So, relatedly, TODO: Is it worth checking/trying with newest Python and seeing if they would work?</mark -->
-
-<!-- TODO: Add reflections related specifically to the reproduction package and second reproduction test parts of the work (i.e. after the reproduction) -->
-
-<!-- TODO: Once complete, carefully go over again and check everything is correct -->
-
-<!-- TODO: From Tom - So much great work and interesting findings. We need to move towards some headlines and take aways for the community. Mayybe there are some high level groupings of your findings? e.g.
-
-* Study reporting
-* Model structuring and functionality
-* Analysis pipeline
-
-Or perhaps:
-
-* Evidence supporting the use of reporting guidelines
-    * as in - reporting guidelines state this should info be included and you found it v.difficult or impossible to reproduce without it.?
--->
 
 ## Summary
 
@@ -163,7 +147,7 @@ This issue was specific to (a) R studies, and (b) the study with an unsupported 
 * Handy to provide specific versions too, particularly when there can be reasonably large changes between minor versions.
 * This was a very common issue.
 * Tom: For R, we are sort of moving towards a pre-built container for an R reproducible pipeline
-    * Response: Though being aware that it is possible to successfully reproduce without backdating - didn't run into issues with it for the R models - though that doesn't mean you wouldn't - but it is a sort of "characteristic" of R, that it is *supposed* to be less changeable than Python in this regard. Though obviously no guarantees. And not a fair comparison, as I didn't try to run the Python ones without backdating.
+    * Response: Though being aware that it is possible to successfully reproduce without backdating - didn't run into issues with it for the R models - though that doesn't mean you wouldn't - but it is a sort of "characteristic" of R, that it is *supposed* to be less changeable than Python in this regard. Though obviously no guarantees. And **not a fair comparison, as I didn't try to run the Python ones without backdating**.
 
 :::
 

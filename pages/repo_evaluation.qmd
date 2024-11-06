@@ -217,8 +217,6 @@ Key:
 * **He:** @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/badges.html" target="_blank">link to evaluation</a>
 * **W:** @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/badges.html" target="_blank">link to evaluation</a>
 
-<!-- TODO: Add Johnson et al. 2021 -->
-
 In this section and below, the criteria for each study are marked as either being fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A).
 
 **Unique criteria:**
@@ -303,8 +301,6 @@ The badges are grouped into three categories:
 * "Object review" badges: These badges relate to the research artefacts being reviewed against criteria of the badge issuer.
 * "Reproduced" badges: These badges relate to an independent party regenerating the reuslts of the article using the author objects.
 
-<!-- TODO: Add Johnson et al. 2021 -->
-
 | Item | S | Hu | L | K | A | J | He | W |
 | - | - | - | - | - | - | - | - | - | - |
 | **“Open objects” badges** |
@@ -327,8 +323,6 @@ The badges are grouped into three categories:
 ::: {.callout icon=false collapse=false}
 
 ## Reflections
-
-<!-- TODO: Update after Johnson et al. 2021 -->
 
 ```{python}
 # Create dataframe of results
@@ -375,8 +369,6 @@ Key:
 * **He:** @hernandez_optimal_2015 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-hernandez-2015/evaluation/artefacts.html" target="_blank">link to evaluation</a>
 * **W:** @wood_value_2021 - <a href="https://pythonhealthdatascience.github.io/stars-reproduce-wood-2021/evaluation/artefacts.html" target="_blank">link to evaluation</a>
 
-<!-- TODO: Add Johnson et al. 2021 -->
-
 | Item | S | Hu | L | K | A | J | He | W |
 | - | - | - | - | - | - | - | - | - | - |
 | **Essential components** |
@@ -399,8 +391,6 @@ Key:
 ::: {.callout icon=false collapse=false}
 
 ## Reflections
-
-<!-- TODO: Update after Johnson et al. 2021 -->
 
 ```{python}
 # Create dataframe of results
@@ -425,13 +415,17 @@ stars_wide = pd.DataFrame(stars_dict, index=col).T
 eval_chart(stars_wide)
 ```
 
-These topics were covered in the badge criteria reflections: **open licence**, **minimum documentation**, and **open science archive**. <!--TODO: Consider re minimum documentation: Kim met for STARS but not for badges. Double-check that decision-->
+These topics were covered in the badge criteria reflections: **open licence**, **minimum documentation**, and **open science archive**.
 
 **Dependency management**: This was pretty uncommon, and often took some troubleshooting at the start, to figure out which packages were needed, and certain versions.
 
 **FOSS model**: All met as requirement of our reproduction.
 
-**ORCID** and **citation information**: Doesn't impact reproduction in this case - but we do go to these from having found an article. In all cases, I emailed the authors, which requires finding contact information (generally via paper, sometimes from googling them to find new emails).
+**ORCID** and **citation information**: Doesn't impact reproduction in this case - but:
+
+* We do go to these from having found an article. I was choosing repositories that I had found from papers, so I already at least knew who the paper authors were.
+* In all cases, I emailed the authors, which requires finding contact information (generally via paper, sometimes from googling them to find new emails).
+* Any attempted citation of the repository itself would've necessarily been correct, depending on whether the author list would be the same as in the paper, if you relied on the paper without citation information.
 
 **Remote code repository**: All met, most common way to share code.
 

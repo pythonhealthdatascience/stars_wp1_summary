@@ -11,6 +11,8 @@ The project was funded for two years by the [Medical Research Council](https://g
 
 ## General context
 
+<!--TODO: Write this up, currently just some notes and ideas - or, could leave as notes.-->
+
 @baker_1500_2016 - survey of 1576 researchers across disciplines, finding:
 
 * "More than 70% of researchers have tried and failed to reproduce another scientist's experiments"
@@ -22,6 +24,8 @@ Differences between **reproduction** and **replication**
 
 * Reproduction - using their code
 * Replication - writing your own code 
+
+(I.e. terminology I researched previously, **computational reproducibiltiy** etc, similar to how lots of articles define it, e.g. @samuel_computational_2024).
 
 @korbmacher_replication_2023 - great discussion of the **replication** crisis
 
@@ -59,7 +63,7 @@ The pilot STARS framework consists of essential components (minimum to make mode
 
 The essential components are:
 
-* Open license
+* Open licence
 * Dependency management
 * FOSS model
 * Minimum documentation

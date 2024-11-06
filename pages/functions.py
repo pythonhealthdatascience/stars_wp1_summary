@@ -316,10 +316,10 @@ def plot_scatter(var, sho, hua, lim, kim, ana, joh, her, woo):
 
 def reporting_scatter(var, reporting, sho, hua, lim, kim, ana, joh, her, woo):
     '''
-    Creates a scatter plot showing proportion of reporting guideline (STRESS-DES
-    or the guideline derived from ISPOR-SDM) that was fully met, against a
-    categorical variable (e.g. whether used reporting guidelines, whether model
-    has been described previously).
+    Creates a scatter plot showing proportion of reporting guideline
+    (STRESS-DES or guideline derived from ISPOR-SDM) that was fully met,
+    against a categorical variable (e.g. whether used reporting guidelines, or
+    whether model has been described previously).
 
     Parameters:
     -----------
@@ -346,7 +346,7 @@ def reporting_scatter(var, reporting, sho, hua, lim, kim, ana, joh, her, woo):
     '''
     # Alongside categorical variable, lists the proportion of each guideline
     # that was fully met (out of all the applicable categories)
-    df =  pd.DataFrame({
+    df = pd.DataFrame({
         'Shoaib and Ramamohan 2021': [sho, (17/24)*100, (11/15)*100],
         'Huang et al. 2019': [hua, (14/23)*100, (7/16)*100],
         'Lim et al. 2020': [lim, (16/21)*100, (12/16)*100],

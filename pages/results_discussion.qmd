@@ -3,17 +3,6 @@ title: "Results discussion"
 bibliography: ../references.bib
 ---
 
-::: {.callout-note}
-
-## What is on this page?
-
-* Reflections from the reproduction and evaluation, broadly grouped into two categories
-* Headline findings
-* Relationship between reproduction and evaluation
-* Some other things I want to mention
-
-:::
-
 ## Reflections
 
 (Addressing Tom's suggestion - "Maybe there are some high level groupings of your findings? e.g. Study reporting; Model structuring and functionality; Analysis pipeline")
