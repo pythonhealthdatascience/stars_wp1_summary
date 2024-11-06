@@ -227,7 +227,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#reflections" id="toc-reflections" class="nav-link active" data-scroll-target="#reflections"><span class="header-section-number">8.1</span> Reflections</a></li>
+  <li><a href="#reflections-related-to-compendium" id="toc-reflections-related-to-compendium" class="nav-link active" data-scroll-target="#reflections-related-to-compendium"><span class="header-section-number">8.1</span> Reflections related to compendium</a></li>
+  <li><a href="#reflections-related-to-test-run" id="toc-reflections-related-to-test-run" class="nav-link" data-scroll-target="#reflections-related-to-test-run"><span class="header-section-number">8.2</span> Reflections related to test-run</a></li>
   </ul>
 </nav>
     </div>
@@ -254,9 +255,40 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>After completing the reproduction and evaluation, the final stage involved organising the <code>reproduction/</code> folder into a mini “research compendium”, and having a test-run of this by a second STARS team member.</p>
-<section id="reflections" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="reflections"><span class="header-section-number">8.1</span> Reflections</h2>
-<p>The test-run stage after making compendium helped us to spot run issues that I hadn’t noticed, mainly from having not completely tested absolutely everything before pushing. For example, Hernandez et al.&nbsp;2015, and there was at least one other example too. Shows importance of having someone else check things - easy to leave in small mistakes that mean it doesn’t run.</p>
+<section id="reflections-related-to-compendium" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="reflections-related-to-compendium"><span class="header-section-number">8.1</span> Reflections related to compendium</h2>
+<p><strong>Organisation:</strong></p>
+<ul>
+<li>No one right way to organise. If it was already pretty good, I left it (e.g.&nbsp;Kim et al.&nbsp;2021). However, for lots of them, I did change organise to e.g.&nbsp;<code>scripts/</code>, <code>inputs/</code>, <code>outputs/</code></li>
+</ul>
+<p><strong>Tests:</strong></p>
+<ul>
+<li>When creating the tests, since many of the models had long run times, my intention was often just to create a <strong>“mini-run” of the model</strong> that allows someone to quickly and easily check if they can run some aspect of the model (without needing to try the whole one with long run time).</li>
+<li>The tests created <strong>provide examples</strong> of how can set up tests in Python and R, doing something basic like comparing dataframes or CSV files between runs. Indeed, it took a little bit of time to get set up initially with tests working as I want, but once figured for one, I could <strong>reuse</strong> like a template for the next.</li>
+<li>Sometimes had to amend model to be able to run tests - e.g.&nbsp;for Wood et al.&nbsp;2021, test wouldn’t work if model was run with parallel processing</li>
+<li>Also, an example of Johnson et al.&nbsp;2021 where I couldn’t get the model to work correctly within a test (despite no visible errors), and so went with the solution of making a normal .R script that operates like a test but without the <code>testthat</code> package</li>
+</ul>
+<p><strong>GitHub actions:</strong></p>
+<ul>
+<li>Wasn’t able to successfully build a quarto book using GitHub actions if it required both Python and R (in which case, had to push from local)</li>
+</ul>
+<p><strong>Docker:</strong></p>
+<ul>
+<li>This sometimes took rather alot of troubleshooting, and could sometimes be quite tricky. However, once resolved (Python, R, and later a older Python), I could then just <strong>reuse</strong> previous dockerfiles like a template (although sometimes still some troubleshooting still needed).</li>
+</ul>
+</section>
+<section id="reflections-related-to-test-run" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="reflections-related-to-test-run"><span class="header-section-number">8.2</span> Reflections related to test-run</h2>
+<p>The test-run stage after making compendium helped us to <strong>spot run issues</strong> that I hadn’t noticed, mainly from having not completely tested absolutely everything before pushing. For example:</p>
+<ul>
+<li>Shoaib and Ramamohan 2022 - there was an authentication error when trying to pull the docker image from GitHub Container Registry, as I was missing some of the steps related to personal access tokens</li>
+<li>Hernandez et al.&nbsp;2015 - though the test worked locally, it did not work on docker. This was related to imports, and resolved by adding <code>__init__.py</code> files, but I hadn’t noticed as hadn’t checked the test on docker.</li>
+<li>Lim et al.&nbsp;2020 - one of the files failed to run as I hadn’t uploaded some of the required data</li>
+</ul>
+<p>Shows importance of having someone else check things - <strong>easy to leave in small mistakes</strong> that mean it doesn’t run. In general, having something like this to check your code is a really <strong>handy practice</strong>, if possible.</p>
+<p>The test-run stage also helped highlight <strong>things that weren’t clear</strong>. For example, I had a test that took a few minutes to run, and whilst running your console is blank. He was unsure if this was an error - so I then add a section to the README that explained what to expect to see when running those tests.</p>
+<p>Also, <strong>likely errors</strong> people will encounter - for example, by not having a particular environment active or not being in the right folder when trying to run something - and so I then made sure to clarify this in the README.</p>
+<p>When running test-runs on a fresh machine, Tom often found there were <strong>operating system dependencies</strong> he had to install for R. Also, examples like Huang et al.&nbsp;2019 were Tom looked to run on his virtual machine but that only allocates 4GB RAM and the model used 8GB RAM so he had to use a different machine - hence, also helping highlight <strong>memory requirements</strong>.</p>
 
 
 </section>

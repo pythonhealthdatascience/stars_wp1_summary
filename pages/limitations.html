@@ -230,7 +230,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#subjective-reproduction-success" id="toc-subjective-reproduction-success" class="nav-link active" data-scroll-target="#subjective-reproduction-success"><span class="header-section-number">12.1</span> Subjective reproduction success</a></li>
   <li><a href="#reuse-v.s.-reproduction" id="toc-reuse-v.s.-reproduction" class="nav-link" data-scroll-target="#reuse-v.s.-reproduction"><span class="header-section-number">12.2</span> Reuse v.s. reproduction</a></li>
   <li><a href="#human-error-in-evaluation" id="toc-human-error-in-evaluation" class="nav-link" data-scroll-target="#human-error-in-evaluation"><span class="header-section-number">12.3</span> Human error in evaluation</a></li>
-  <li><a href="#focus-on-reproduction" id="toc-focus-on-reproduction" class="nav-link" data-scroll-target="#focus-on-reproduction"><span class="header-section-number">12.4</span> Focus on reproduction</a></li>
   </ul>
 </nav>
     </div>
@@ -258,33 +257,28 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="subjective-reproduction-success" class="level2" data-number="12.1">
 <h2 data-number="12.1" class="anchored" data-anchor-id="subjective-reproduction-success"><span class="header-section-number">12.1</span> Subjective reproduction success</h2>
-<p>As acknowledged in the protocol, reproduction success is a subjective decision.</p>
-<ul>
-<li>Where helpful, did compare numbers and absolute / percent difference, but this can be heavily impacted by scales (e.g.&nbsp;if comparing 0.1 0.2 0.3, will see much larger percentage differences than comparing 10 15 20, but actually one might be more meaningful than other, depending on what the underlying scale etc is.)</li>
-<li>Nature of what is being plot can have a big impact - e.g.&nbsp;for one study, health economic costs and QALYs look super similar, but when calculate ICER and INMB, tiny differences result in huge changes</li>
-</ul>
+<p>As noted in the research protocol, the assessment of <strong>reproduction success</strong> involves <strong>subjective judgment</strong>.</p>
+<p>We sometimes looked at <strong>absolute and percentage difference</strong> betweeen our reproduction and the original results. However, these could be <strong>significantly influenced by the scale</strong> used. For instance, comparing values like 0.1, 0.2, and 0.3 results in larger percentage differences than comparing values such as 10, 15, and 20, even though the latter comparison might hold more practical significance depending on the context.</p>
+<p>The <strong>nature of the metrics being analyzed</strong> also affected outcomes. For example, in the health economic study, costs and Quality-Adjusted Life Years (QALYs) appeared similar in value. However, when using them to calculating the Incremental Cost-Effectiveness Ratio (ICER) and the Incremental Net Monetary Benefit (INMB), even <strong>minor variations in the costs and QALYs resulted in substantial differences in the ICER and INMB</strong>.</p>
 </section>
 <section id="reuse-v.s.-reproduction" class="level2" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="reuse-v.s.-reproduction"><span class="header-section-number">12.2</span> Reuse v.s. reproduction</h2>
-<p>I did not try to reuse studies for new context. Although for some studies, I did have to dig into the code quite alot to work out how to set up scenarios and process results, and I would argue that is similar to reuse (as I was trying to adapt it for a new scenario). However, for some other studies, this was not necessary and for those I just had a more top-level/basic interaction with the code (and didn’t have to delve). Hence, in many cases, can’t truly say if information provided was sufficient for that deep understanding of what it is doing and so on, but in some cases I can a bit more.</p>
+<p>This study <strong>did not attempt to reuse</strong> the model/s in new contexts. Despite this, for some studies, I did have to examine the underlying code extensively to understand how to implement the scenarios or process the results. This troubleshooting process was <strong>similar to reuse</strong>, as I was attempting to <strong>adapt the model code to run a new scenario</strong>. However, for other studies, I could quite easily run the model and didn’t need to delve into the code.</p>
+<p>As such, I would not have been able to consistently assess whether the repository provided sufficient information for a comprehensive understanding of the model, necessary for reuse. As such, the focus is moreso on <strong>reproduction</strong> and what was necessary/helpful/unnecessary for that.</p>
+<p>It’s important to note that features I didn’t as important for reproduction were indeed specific to reproduction, not to reuse. As such, certain <strong>elements that weren’t essential for reproduction might still be highly valuable for reuse</strong> (and, we know, often would be), such as:</p>
+<ul>
+<li>Validity information from the article</li>
+<li>Web applications</li>
+</ul>
 </section>
 <section id="human-error-in-evaluation" class="level2" data-number="12.3">
 <h2 data-number="12.3" class="anchored" data-anchor-id="human-error-in-evaluation"><span class="header-section-number">12.3</span> Human error in evaluation</h2>
-<p>Evaluations are likely imperfect. Can be hard to find things in a paper, may have made mistakes, to help with this did:</p>
+<p>The evaluations (in particular, of the articles) are likely to be <strong>imperfect</strong>. It can be difficult to locate information in the papers and errors may have occurred. To help mitigate this we:</p>
 <ul>
-<li>Have a second person look at uncertain or unmet criteria</li>
-<li>Revist all the evaluations side-by-side once complete to check for any inconsistent decisions between them</li>
+<li>Had a <strong>second person</strong> look at uncertain or unmet criteria</li>
+<li>Revisited all the evaluations <strong>side-by-side</strong> once complete to check for any inconsistent decisions between them</li>
 </ul>
-<p>However, this does highlight how it can be so helpful to actually provide a completed framework, that highlights key reporting points for a given study, and where to look, particularly as things get more complicated with appendices and prior papers to refer back to for information.</p>
-</section>
-<section id="focus-on-reproduction" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="focus-on-reproduction"><span class="header-section-number">12.4</span> Focus on reproduction</h2>
-<p>I’m not sure if this is a limitation? But certaintly its worth baring in mind that things I have flagged as being really important for the reproductions were indeed for reproductions, and not for reuse. As mentioned above, for some studies I did veer more into “reuse territory”, but for others not.</p>
-<p>There will be things that were not helpful for the reproduction, but would be helpful for reuse, e.g.</p>
-<ul>
-<li>Validity information in the article</li>
-<li>Web applications</li>
-</ul>
+<p>However, this potential for error - as well as the time taken to complete these evaluations - does highlight how it can be so helpful to actually <strong>provide a completed reporting guidelines framework</strong>, which highlights key reporting points for each study and indicates where to find specific information. This can become especially helpful as studies become more complex with <strong>longer articles</strong>, or details often spread across <strong>several appendices</strong> or <strong>earlier papers</strong>.</p>
 
 
 </section>
