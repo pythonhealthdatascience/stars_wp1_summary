@@ -1,0 +1,33 @@
+---
+title: "Limitations"
+bibliography: ../references.bib
+---
+
+## Subjective reproduction success
+
+As acknowledged in the protocol, reproduction success is a subjective decision.
+
+* Where helpful, did compare numbers and absolute / percent difference, but this can be heavily impacted by scales (e.g. if comparing 0.1 0.2 0.3, will see much larger percentage differences than comparing 10 15 20, but actually one might be more meaningful than other, depending on what the underlying scale etc is.)
+* Nature of what is being plot can have a big impact - e.g. for one study, health economic costs and QALYs look super similar, but when calculate ICER and INMB, tiny differences result in huge changes
+
+## Reuse v.s. reproduction
+
+I did not try to reuse studies for new context. Although for some studies, I did have to dig into the code quite alot to work out how to set up scenarios and process results, and I would argue that is similar to reuse (as I was trying to adapt it for a new scenario). However, for some other studies, this was not necessary and for those I just had a more top-level/basic interaction with the code (and didn't have to delve). Hence, in many cases, can't truly say if information provided was sufficient for that deep understanding of what it is doing and so on, but in some cases I can a bit more.
+
+## Human error in evaluation
+
+Evaluations are likely imperfect. Can be hard to find things in a paper, may have made mistakes, to help with this did:
+
+* Have a second person look at uncertain or unmet criteria
+* Revist all the evaluations side-by-side once complete to check for any inconsistent decisions between them
+
+However, this does highlight how it can be so helpful to actually provide a completed framework, that highlights key reporting points for a given study, and where to look, particularly as things get more complicated with appendices and prior papers to refer back to for information.
+
+## Focus on reproduction
+
+I'm not sure if this is a limitation? But certaintly its worth baring in mind that things I have flagged as being really important for the reproductions were indeed for reproductions, and not for reuse. As mentioned above, for some studies I did veer more into "reuse territory", but for others not.
+
+There will be things that were not helpful for the reproduction, but would be helpful for reuse, e.g.
+
+* Validity information in the article
+* Web applications

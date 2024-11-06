@@ -17,12 +17,13 @@ book:
     - pages/reflections.qmd
     - pages/repo_evaluation.qmd
     - pages/paper_evaluation.qmd
+    - pages/compendium.qmd
   - part: "Discussion"
     chapters:
     - pages/results_discussion.qmd
-    - pages/discussion.qmd
     - pages/other_studies.qmd
     - pages/framework.qmd
+    - pages/limitations.qmd
   - pages/acknowledgements.qmd
   favicon: images/stars_logo_blue.png
   search:

@@ -5,6 +5,8 @@ bibliography: ../references.bib
 
 **In-progress**
 
+TODO: Consider, would there be any relevant literature related to time spent to try and get someone elses code mentioned - like how Andy mentioned there would be a max amount of time that someone in the NHS would reasonably spend troubleshooting
+
 TODO: Add page comparing our findings to other studies. This could include:
 
 * Studies that have gone through this same process of finding barriers in reproductions

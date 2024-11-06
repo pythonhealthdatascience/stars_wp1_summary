@@ -1,0 +1,10 @@
+---
+title: "Reflections from research compendium and test-run"
+bibliography: ../references.bib
+---
+
+After completing the reproduction and evaluation, the final stage involved organising the `reproduction/` folder into a mini "research compendium", and having a test-run of this by a second STARS team member.
+
+## Reflections
+
+The test-run stage after making compendium helped us to spot run issues that I hadn't noticed, mainly from having not completely tested absolutely everything before pushing. For example, Hernandez et al. 2015, and there was at least one other example too. Shows importance of having someone else check things - easy to leave in small mistakes that mean it doesn't run.
