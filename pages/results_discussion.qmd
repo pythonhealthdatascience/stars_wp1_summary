@@ -16,6 +16,8 @@ bibliography: ../references.bib
 
 ## Reflections
 
+(Addressing Tom's suggestion - "Maybe there are some high level groupings of your findings? e.g. Study reporting; Model structuring and functionality; Analysis pipeline")
+
 ### Analysis pipeline
 
 These are important for reproduction. If need to troubleshoot, then model structure and functionality are particularly useful - e.g.:
@@ -23,7 +25,9 @@ These are important for reproduction. If need to troubleshoot, then model struct
 * Writing code for scenarios is impacted by: programmatic, don't hard code, sufficient comments
 * Writing code for results is impacted by: understandable output
 
-"Reflections" in this group:
+Notes:
+
+* Tom: Key for STARS 2.0: seeds
 
 !["Reflections" in the group "Analysis Pipeline"](../images/pipeline.png){.lightbox}
 
@@ -44,7 +48,10 @@ Hence, these are included in relationship between reproduction and evaluation be
 
 These are important for reuse - but also pipeline stuff! As they (a) make reproduction easier and (b) are important when troubleshooting.
 
-Note: Data dictionaries are relevant to inputs and outputs.
+Notes:
+
+* Data dictionaries are relevant to inputs and outputs.
+* Some of these can become "less of an issue" for reproduction if there is a reproducible analytical pipeline, as don't need to delve into it and troubleshoot (but are still relevant for reuse).
 
 !["Reflections" in the group "Model structure and functionality"](../images/structure_function.png){.lightbox}
 
@@ -89,6 +96,8 @@ The four most important things:
 3. **Include code to create tables, figures and in-text results**
 4. **Open license**
 
+Many of these headlines link to the importance of reproducible analytical pipelines (RAP) for simulation.
+
 Why were these the most fundamental?
 
 > **Using the code**. Open license  (4) is fundamentally important - can't reuse code without it. In several studies, had to ask authors to add license (all kindly agreed).
@@ -107,6 +116,8 @@ Why were these the most fundamental?
 ## Relationship between reproduction and evaluation
 
 Regarding relationship between reproduction and evaluation, in terms of article reporting, these feel like the key things that impacted reproduction...
+
+(Also addressing Tom's suggestion: "Evidence supporting the use of reporting guidelines... as in - reporting guidelines state this should info be included and you found it v.difficult or impossible to reproduce without it")
 
 ### Article
 
@@ -130,6 +141,15 @@ Regarding relationship between reproduction and evaluation, in terms of article 
     * Understandable output e.g. data dictionaries
     * Versions
 * STARS: dependency management
+
+## Evidence for framework components
+
+Reflections:
+
+* "Include instructions on how to run the model/script" --> Evidence for STARS essential component minimum documentation
+* "For slow models, state the expected run time" --> Evidence for STRESS-DES 5.4
+* "For computationally expensive models, state memory usage and provide alternatives for lower spec machines" --> Evidence for STRESS-DES
+* "Provide all the required parameters" and "If not provided in the script, then *clearly* present all parameters in the paper" --> Evidence for STRESS-DES 3.3
 
 ## Other things I wanted to mention
 
