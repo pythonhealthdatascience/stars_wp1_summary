@@ -5,29 +5,28 @@ bibliography: ../references.bib
 
 ## Subjective reproduction success
 
-As acknowledged in the protocol, reproduction success is a subjective decision.
+As noted in the research protocol, the assessment of **reproduction success** involves **subjective judgment**.
 
-* Where helpful, did compare numbers and absolute / percent difference, but this can be heavily impacted by scales (e.g. if comparing 0.1 0.2 0.3, will see much larger percentage differences than comparing 10 15 20, but actually one might be more meaningful than other, depending on what the underlying scale etc is.)
-* Nature of what is being plot can have a big impact - e.g. for one study, health economic costs and QALYs look super similar, but when calculate ICER and INMB, tiny differences result in huge changes
+We sometimes looked at **absolute and percentage difference** betweeen our reproduction and the original results. However, these could be **significantly influenced by the scale** used. For instance, comparing values like 0.1, 0.2, and 0.3 results in larger percentage differences than comparing values such as 10, 15, and 20, even though the latter comparison might hold more practical significance depending on the context.
+
+The **nature of the metrics being analyzed** also affected outcomes. For example, in the health economic study, costs and Quality-Adjusted Life Years (QALYs) appeared similar in value. However, when using them to calculating the Incremental Cost-Effectiveness Ratio (ICER) and the Incremental Net Monetary Benefit (INMB), even **minor variations in the costs and QALYs resulted in substantial differences in the ICER and INMB**.
 
 ## Reuse v.s. reproduction
 
-I did not try to reuse studies for new context. Although for some studies, I did have to dig into the code quite alot to work out how to set up scenarios and process results, and I would argue that is similar to reuse (as I was trying to adapt it for a new scenario). However, for some other studies, this was not necessary and for those I just had a more top-level/basic interaction with the code (and didn't have to delve). Hence, in many cases, can't truly say if information provided was sufficient for that deep understanding of what it is doing and so on, but in some cases I can a bit more.
+This study **did not attempt to reuse** the model/s in new contexts. Despite this, for some studies, I did have to examine the underlying code extensively to understand how to implement the scenarios or process the results. This troubleshooting process was **similar to reuse**, as I was attempting to **adapt the model code to run a new scenario**. However, for other studies, I could quite easily run the model and didn't need to delve into the code.
+
+As such, I would not have been able to consistently assess whether the repository provided sufficient information for a comprehensive understanding of the model, necessary for reuse. As such, the focus is moreso on **reproduction** and what was necessary/helpful/unnecessary for that.
+
+It's important to note that features I didn't as important for reproduction were indeed specific to reproduction, not to reuse. As such, certain **elements that weren't essential for reproduction might still be highly valuable for reuse** (and, we know, often would be), such as:
+
+* Validity information from the article
+* Web applications
 
 ## Human error in evaluation
 
-Evaluations are likely imperfect. Can be hard to find things in a paper, may have made mistakes, to help with this did:
+The evaluations (in particular, of the articles) are likely to be **imperfect**. It can be difficult to locate information in the papers and errors may have occurred. To help mitigate this we:
 
-* Have a second person look at uncertain or unmet criteria
-* Revist all the evaluations side-by-side once complete to check for any inconsistent decisions between them
+* Had a **second person** look at uncertain or unmet criteria
+* Revisited all the evaluations **side-by-side** once complete to check for any inconsistent decisions between them
 
-However, this does highlight how it can be so helpful to actually provide a completed framework, that highlights key reporting points for a given study, and where to look, particularly as things get more complicated with appendices and prior papers to refer back to for information.
-
-## Focus on reproduction
-
-I'm not sure if this is a limitation? But certaintly its worth baring in mind that things I have flagged as being really important for the reproductions were indeed for reproductions, and not for reuse. As mentioned above, for some studies I did veer more into "reuse territory", but for others not.
-
-There will be things that were not helpful for the reproduction, but would be helpful for reuse, e.g.
-
-* Validity information in the article
-* Web applications
+However, this potential for error - as well as the time taken to complete these evaluations - does highlight how it can be so helpful to actually **provide a completed reporting guidelines framework**, which highlights key reporting points for each study and indicates where to find specific information. This can become especially helpful as studies become more complex with **longer articles**, or details often spread across **several appendices** or **earlier papers**.
