@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "STARS Work Package 1",
+    "title": "STARS Work Package 1: Computational Reproducibility Assessments",
     "section": "",
     "text": "Overview\nThis book describes the findings from work package 1 of the project STARS: Sharing Tools and Artefacts for Reproducible Simulations in healthcare.\nUse the sidebar to navigate through:",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#overview",
     "href": "index.html#overview",
-    "title": "STARS Work Package 1",
+    "title": "STARS Work Package 1: Computational Reproducibility Assessments",
     "section": "",
     "text": "Introduction - background on STARS, pilot work, and the aim of work package 1\nMethods - summarises the methods which are described in detail in our protocol\nResults - describes the results of the reproductions and evaluations, and reflections from the process\nDiscussion - considers and applies findings",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "index.html#funding",
     "href": "index.html#funding",
-    "title": "STARS Work Package 1",
+    "title": "STARS Work Package 1: Computational Reproducibility Assessments",
     "section": "Funding",
     "text": "Funding\nThis work is supported by the Medical Research Council [grant number MR/Z503915/1].",
     "crumbs": [
@@ -32,7 +32,7 @@
   {
     "objectID": "index.html#licence",
     "href": "index.html#licence",
-    "title": "STARS Work Package 1",
+    "title": "STARS Work Package 1: Computational Reproducibility Assessments",
     "section": "Licence",
     "text": "Licence\nThis book is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence.",
     "crumbs": [
