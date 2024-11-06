@@ -73,3 +73,53 @@ Starting points:
         * Some journals, article types, levels of documentation and research fields had more reproduced notebooks than others. Worth considering procedures at those journals with most reproduced (**iScience**). Also, notebooks combining computation and narrative.
         * Things go out of data... importance of pre-prints...
         * Reproducibility badges, reproducibility platforms like REScience, nanopublications
+
+And some relevant articles/discussions:
+
+* @hrynaszkiewicz_survey_2021
+    * Survey in Autumn 2020 of previous authors and other registered users with PLOS Computational Biology
+    * 214 complete responses
+    * Lots had papers where code was not shared - reasons inc (1) takes too much time to prepare code for sharing, (2) software and systems dependencies (3) concerns with my ability to prepare the code for sharing (4) I needed to protect intellectual property, etc...
+    * More likely to submit to journal if mandatory code sharing policy (moreso for ECR)
+    * Low mean satisfication score for accessing others code (44.0)
+* @cadwallader_survey_2022
+    * Survey in Spring 2021 of previous authors and other registers used with PLOS computational biology related disciplines
+    * 188 complete responses
+    * Questions on
+        * How often look at code associated with research articles
+        * Whether have encountered different methods of code sharing
+        * How useful found different methods of accessing code - **link to code repository was rated most useful - with code "available upon request" least useful**. When explaining why link was most useful, common reasons were: (**a) ability to see new versions of code (b) quick access to code (c) good documentation/README (d) practicality (e) reproduction of results (f) established**. For sharing via notebooks, like ability to explore code and reproduction of results. For archived code, like that it gives long term access.
+        * Features of code notebooks that are useful when accessing/reading code, highest ranked: (1) having all code, data and figures in one place, (2) knowing code is running in right environment (3) ability to interact inline with code in browser (4) ability to uncover data point by hovering over point in graph ...etc
+        * Satisifcation and importance scores of factors associated with sharing code
+        * Time spent preparing and sharing code
+        * Extra time willing to spend to make code easier to read and run
+* @noauthor_revisiting_2022
+    * Initiative from Nature Machine Intelligence to have new article type **"Reusability Report"** where researchers try code from article in journal and try running it, applying to new data or tweaking or extending it
+* @mejba_evolution_2023
+    * Lists **benefits of code reuse**: increase **productivity**, improved code quality, reduced errors, cost efficiency, faster time-to-market, **knowledge sharing**, scalability, sustainability, innovation
+    * Lists challenges of code reuse: **understanding reused code**, integration issues, incompatability, maintaining and updating reused code, **licensing and ownership**, security risks, quality control, overhead, dependency management
+    * Gives solutions to changes e.g. understanding reused code --> **comprehensive documentation**
+    * Strategies for effective code reuse... modular design, use of libraries and frameworks, design patterns, object oriented programming, apis and microservices, code documentation, automated testing, refactoring, code reviews, ci/cd
+    * Lists security implications of code reuse, and best practices for security
+    * Impacts of code reuse on software development lifecycle:
+        * Planning and analysis - **reuse code can reduce time and resources required, although crucial to check code compatability, quality and security to meet needs**
+        * Design - design of code can facilitate reuse
+        * Implementation - reuse snippets, lirbaries, etc.
+        * Testing - reused code can have benefit of being previously tests so less bugs, more stable software, but will need rigorous re test
+        * Deployment - if code has depenedencies, need to manage properly eg docker
+        * Maintenance - if reused code well understood and well documentation can make maintence easier
+* @dupre_beyond_2022
+    * <https://theplosblog.plos.org/2022/05/uphold-the-code/> describes the article, saying " DuPree and colleagues draw a distinction between the scholarly article, which they argue functions as a kind of preview or entrypoint to the research, and the real scholarly work. That is, the methods researchers develop (in this case software and code), and the data they gather and analyze in order to produce a result. It’s this data and code which forms the core of the research, the fulcrum on which everything else turns. For that reason, code not only deserves a place in the literature, it is required in order to fully understand and appreciate the scholarship."
+    * Article is about "**hybrid research objects**" - i.e. multiple content types, so narrative text plus at least one of: code, data, and/or computation. Can link in data/code availability statements. Publisher may require those linked objects to meet specific standards and include as part of review process. "Hope to see more hybrid research objects where each linked object is formatted with domain-relevant standards... and bi-directionally linked using persistent identifiers"
+    * Article then talks about interactive research objects, with everything all in one place, like "executable research articles", RMArkdown, Jupyter Book, Binder, Pangeo, NeuroLibre
+* @benureau_re-run_2018
+    * https://www.frontiersin.org/journals/neuroinformatics/articles/10.3389/fninf.2017.00069/full#B22
+    * "In conclusion, the R3 **(reproducible) form should be accepted as the minimum scientific standard** (Wilson et al., 2017). "
+* @wilson_good_2017
+    * https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510
+* @gomes_why_2022
+    * https://royalsocietypublishing.org/doi/full/10.1098/rspb.2022.1113
+    * Figure 1 is a nice visualisation
+* @connolly_software_2023
+    * https://par.nsf.gov/servlets/purl/10510561
+* https://www.nature.com/articles/nn.4550
