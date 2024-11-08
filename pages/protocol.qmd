@@ -74,17 +74,15 @@ It was also informed by:
 * @mcmanus_can_2019: Article proposing several possible definitions for success in reproducing or replicating models in health economics.
 * @marwick_packaging_2018: Article recommending how to structure data analytical work as research compendiums using the R package structure.
 
-## Major deviations from the protocol
+## Modifications from the protocol
 
-There was one major deviation from the protocol...
+There was one major change from the protocol...
 
 | Deviation | Description and reason for the change |
 | --- | --- |
 | Expanding from 6 to 8 studies | Whilst partway through the 6th study, we reflected on what we had found so far, and felt it would be beneficial to do a few more studies. The primary motivation for this was to try and include a selection of studies that reflect the range of studies in the literature. So far, we had a few studies where the model code/run times were very large or very small, and we felt it beneficial to try and include some more "medium-sized" studies, as these are more typical of the literature. We also thought it would be good to include an older study (for example, about 10 years ago, if we can find one), as all those included so far were within the last few years, but working with more outdated code will be/can be a problem people encounter. |
 
-## Minor deviations from the protocol
-
-There were some minor deviations from the protocol, which are explained below...
+There were also some minor changes, which are explained below...
 
 | Deviation | Description and reason for the change |
 | --- | --- |
