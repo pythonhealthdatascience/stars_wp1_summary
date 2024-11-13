@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="459mm"
+   height="117mm"
+   viewBox="0 0 459 117"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   sodipodi:docname="5rs.svg"
+   inkscape:export-filename="5rs.png"
+   inkscape:export-xdpi="300"
+   inkscape:export-ydpi="300"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.79375"
+     inkscape:cx="968.8189"
+     inkscape:cy="175.74803"
+     inkscape:window-width="2560"
+     inkscape:window-height="1403"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:export-bgcolor="#ffffffff" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="ArrowTriangleStylized"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Stylized triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path4" />
+    </marker>
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="168.2265"
+       height="30.57621"
+       id="rect1" />
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="177.93738"
+       height="30.853418"
+       id="rect1-7" />
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="177.93738"
+       height="30.853418"
+       id="rect1-7-2" />
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="177.93738"
+       height="30.853418"
+       id="rect1-7-2-9" />
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="177.93738"
+       height="30.853418"
+       id="rect1-7-2-9-6" />
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="168.2265"
+       height="30.57621"
+       id="rect1-0" />
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="307.33115"
+       height="57.901657"
+       id="rect1-0-2" />
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="307.33115"
+       height="57.901657"
+       id="rect1-0-2-2" />
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="307.33115"
+       height="57.901657"
+       id="rect1-0-2-2-8" />
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="283.71826"
+       height="133.52081"
+       id="rect1-0-2-2-8-6" />
+    <marker
+       style="overflow:visible"
+       id="ArrowTriangleStylized-6"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Stylized triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path4-8" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowTriangleStylized-6-6"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Stylized triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path4-8-6" />
+    </marker>
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="307.33115"
+       height="57.901657"
+       id="rect1-0-2-2-1" />
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="307.33115"
+       height="57.901657"
+       id="rect1-0-2-2-1-9" />
+    <rect
+       x="138.46841"
+       y="98.619667"
+       width="307.33115"
+       height="57.901657"
+       id="rect1-0-2-2-1-9-5" />
+    <marker
+       style="overflow:visible"
+       id="ArrowTriangleStylized-6-9"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Stylized triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path4-8-0" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowTriangleStylized-6-9-1"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Stylized triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path4-8-0-1" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="ArrowTriangleStylized-6-9-1-4"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Stylized triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="m 6,0 c -3,1 -7,3 -9,5 0,0 0,-4 2,-5 -2,-1 -2,-5 -2,-5 2,2 6,4 9,5 z"
+         id="path4-8-0-1-4" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#f4d7d7;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2"
+       width="67.119308"
+       height="19.115215"
+       x="6.6723723"
+       y="8.8042498"
+       ry="5.5671687" />
+    <rect
+       style="fill:#e9afaf;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-0"
+       width="67.119308"
+       height="19.115215"
+       x="99.739288"
+       y="8.8042498"
+       ry="5.5671687" />
+    <rect
+       style="fill:#de8787;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-0-9"
+       width="67.119308"
+       height="19.115215"
+       x="192.8062"
+       y="8.8042498"
+       ry="5.5671687" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-18.777036,-12.004206)"
+       id="text1"
+       style="font-size:26.6667px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="144.79547"
+         y="122.63929"
+         id="tspan9"><tspan
+           style="font-weight:bold"
+           id="tspan3">Re-runnable</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,-18.691163,7.705564)"
+       id="text1-37"
+       style="font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-0);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="170.86857"
+         y="117.8352"
+         id="tspan11"><tspan
+           dx="0 0 0 0 -4.9999981 5.0000005"
+           id="tspan10">Code runs</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,55.864651,7.705564)"
+       id="text1-37-9"
+       style="font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-0-2);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="148.12358"
+         y="117.8352"
+         id="tspan13"><tspan
+           dx="0 0 0 0 -4.9999981 5.0000005 0 0 -4.9999943 4.9999967 0 0 0 0 0 0 -5.0000019 5.0000043 0 0 -5.0000019 5.0000043 0 0 0 -5.0000019"
+           id="tspan12">Code can produce the same </tspan></tspan><tspan
+         x="176.13396"
+         y="144.50183"
+         id="tspan15"><tspan
+           dx="0 0 0 0 0 0 0 -4.9999971 4.9999967 0 0 0 -4.9999943 4.9999967 0 0 0 -5.0000019 5.0000043"
+           id="tspan14">results more than once</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,148.85026,7.6366622)"
+       id="text1-37-9-3"
+       style="font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-0-2-2);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="141.1236"
+         y="117.8352"
+         id="tspan17"><tspan
+           dx="0 0 0 0 0 0 0 -4.9999943 4.9999967 0 0 0 -5.0000095 5.0000043 0 0 0 0 0 0 0 0 0 0 -5.0000086 4.999989 0 0 -5.0000019"
+           id="tspan16">Running code regenerates the </tspan></tspan><tspan
+         x="209.58704"
+         y="144.50183"
+         id="tspan19"><tspan
+           dx="0 0 0 0 0 0 0 0 0 -5.0000019 4.9999967"
+           id="tspan18">published results</tspan></tspan></text>
+    <ellipse
+       style="fill:#cdde87;fill-opacity:1;stroke:none;stroke-width:0.945561;stroke-dasharray:4.20469, 1.40156;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8"
+       cx="226.36586"
+       cy="98.472221"
+       rx="44.060616"
+       ry="14.599655" />
+    <ellipse
+       style="fill:#cdde87;fill-opacity:1;stroke:none;stroke-width:0.945561;stroke-dasharray:4.20469, 1.40156;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8-9"
+       cx="319.51682"
+       cy="98.468079"
+       rx="44.060616"
+       ry="14.599655" />
+    <ellipse
+       style="fill:#cdde87;fill-opacity:1;stroke:none;stroke-width:0.945561;stroke-dasharray:4.20469, 1.40156;stroke-dashoffset:0;stroke-opacity:1"
+       id="path8-2"
+       cx="412.49689"
+       cy="98.505287"
+       rx="44.060616"
+       ry="14.599655" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,149.00322,65.260998)"
+       id="text1-37-9-3-6"
+       style="font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-0-2-2-1);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="153.47253"
+         y="117.8352"
+         id="tspan22"><tspan
+           style="font-weight:bold"
+           id="tspan20">Verifies</tspan><tspan
+           dx="-5.0000019 5.0000043 0 0 0 -4.9999943 5.0000043 0 -4.9999933 4.999989 0 0 0 0 0 0 -4.9999866 4.999989 0 -4.9999933"
+           id="tspan21"> code is working as </tspan></tspan><tspan
+         x="145.30068"
+         y="144.50183"
+         id="tspan25"><tspan
+           dx="0 0 0 0 0 0 0 0 -5.0000019 4.9999967 0 0 -4.9999943 4.999989 0 0 0 0 0 0 0 0 -5.0000086"
+           id="tspan23">expected and increases </tspan><tspan
+           dx="5.0000043"
+           style="font-weight:bold"
+           id="tspan24">trust</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,242.07013,65.260998)"
+       id="text1-37-9-3-6-9"
+       style="font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-0-2-2-1-9);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="211.83182"
+         y="117.8352"
+         id="tspan29"><tspan
+           dx="0 0 0 0 0 -5.000001"
+           id="tspan26">Saves </tspan><tspan
+           dx="5.0000043"
+           style="font-weight:bold"
+           id="tspan27">time</tspan><tspan
+           dx="-5.0000019 5.0000043 0 0 -5.0000019"
+           id="tspan28"> and
+</tspan></tspan><tspan
+         x="206.63913"
+         y="144.50183"
+         id="tspan32"><tspan
+           dx="0 0 0 0 0 0 0 0 0 -5.000001"
+           id="tspan30">increases </tspan><tspan
+           dx="4.9999967"
+           style="font-weight:bold"
+           id="tspan31">impact</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,335.05297,65.260998)"
+       id="text1-37-9-3-6-9-7"
+       style="font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-0-2-2-1-9-5);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="149.48817"
+         y="117.8352"
+         id="tspan36"><tspan
+           dx="0 0 0 0 0 -5.000001"
+           id="tspan33">Gives </tspan><tspan
+           dx="5.0000005"
+           style="font-weight:bold"
+           id="tspan34">confidence</tspan><tspan
+           dx="-4.9999943 5.0000043 0 -5.0000019 5.0000043 0 0 0 0 0 0 0 -4.9999957"
+           id="tspan35"> in results; </tspan></tspan><tspan
+         x="163.09752"
+         y="144.50183"
+         id="tspan38"><tspan
+           dx="0 0 0 0 0 -4.999999 5.0000005 0 0 0 0 0 0 0 -5.000001 5.0000043 0 0 -5.0000019 5.0000043"
+           id="tspan37">their validity and reliability</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,241.99847,7.705564)"
+       id="text1-37-9-3-5"
+       style="font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-0-2-2-8);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="159.36315"
+         y="117.8352"
+         id="tspan40"><tspan
+           dx="0 0 0 0 -4.9999981 5.0000005 0 0 -4.9999943 4.9999967 0 -5.0000019 5.0000043 0 0 0 0 0 0 -5.0000019 5.0000043 0 0 -4.9999866"
+           id="tspan39">Code can be adapted and </tspan></tspan><tspan
+         x="185.01936"
+         y="144.50183"
+         id="tspan42"><tspan
+           dx="0 0 0 0 -4.9999981 5.0000005 0 -5.0000019 5.0000043 0 0 -4.9999981 5.0000043"
+           id="tspan41">used in new contexts</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,338.23856,7.6366622)"
+       id="text1-37-9-3-5-2"
+       style="font-size:21.3333px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-0-2-2-8-6);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="178.54182"
+         y="117.8352"
+         id="tspan44"><tspan
+           dx="0 0 0 -4.9999981 4.9999967 0 0 0 -5.0000019 4.9999967 0 0 0 0 -5.0000019 5.0000043 0 -5.0000019"
+           id="tspan43">New code based on </tspan></tspan><tspan
+         x="187.70327"
+         y="144.50183"
+         id="tspan46"><tspan
+           dx="0 0 0 0 0 0 0 0 0 -5.0000019 4.9999967 0 0 0 0 0 0 -4.9999933"
+           id="tspan45">described methods </tspan></tspan><tspan
+         x="146.07833"
+         y="171.16846"
+         id="tspan48"><tspan
+           dx="0 0 0 0 0 0 0 0 -5.000001 5.0000043 0 0 0 0 0 0 0 0 0 -4.9999957 5.0000043"
+           id="tspan47">produces consistent results</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,73.005205,-12.257106)"
+       id="text1-3"
+       style="font-size:26.6667px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-7);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="156.29809"
+         y="122.63929"
+         id="tspan50"><tspan
+           style="font-weight:bold"
+           id="tspan49">Repeatable</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,166.07211,-12.257106)"
+       id="text1-3-1"
+       style="font-size:26.6667px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-7-2);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="142.24208"
+         y="122.63929"
+         id="tspan52"><tspan
+           style="font-weight:bold"
+           id="tspan51">Reproducible</tspan></tspan></text>
+    <path
+       style="fill:#f9e8df;fill-opacity:1;stroke:#000000;stroke-width:0.9;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowTriangleStylized)"
+       d="M 73.79168,18.361857 H 96.090606"
+       id="path2" />
+    <path
+       style="fill:#f9e8df;fill-opacity:1;stroke:#000000;stroke-width:0.9;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowTriangleStylized-6)"
+       d="m 166.8586,18.361857 h 22.29892"
+       id="path2-4" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#89a02c;stroke-width:1.02019;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowTriangleStylized-6-9)"
+       d="m 226.36586,51.498715 0,26.444376"
+       id="path2-4-8"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#89a02c;stroke-width:1.02019;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowTriangleStylized-6-9-1)"
+       d="m 319.43276,51.498715 0,26.444376"
+       id="path2-4-8-9"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#89a02c;stroke-width:1.02019;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowTriangleStylized-6-9-1-4)"
+       d="m 412.48588,58.5 0.0138,19.443091"
+       id="path2-4-8-9-7"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#f9e8df;fill-opacity:1;stroke:#000000;stroke-width:0.9;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#ArrowTriangleStylized-6-6)"
+       d="m 259.9255,18.361857 h 22.29892"
+       id="path2-4-9" />
+    <rect
+       style="fill:#d35f5f;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-0-8"
+       width="67.119308"
+       height="19.115215"
+       x="285.87311"
+       y="8.8042498"
+       ry="5.5671687" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,259.13902,-11.602537)"
+       id="text1-3-1-6"
+       style="font-size:26.6667px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-7-2-9);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="168.15357"
+         y="122.63929"
+         id="tspan54"><tspan
+           style="font-weight:bold"
+           id="tspan53">Reusable</tspan></tspan></text>
+    <rect
+       style="fill:#ff9955;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-0-8-2"
+       width="67.119308"
+       height="19.115215"
+       x="378.94"
+       y="8.8042498"
+       ry="5.5671687" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,352.20592,-12.257106)"
+       id="text1-3-1-6-8"
+       style="font-size:26.6667px;font-family:Arial;-inkscape-font-specification:'Arial, Normal';text-align:center;letter-spacing:0px;word-spacing:5px;white-space:pre;shape-inside:url(#rect1-7-2-9-6);display:inline;fill:#000000;stroke-width:5.17795"><tspan
+         x="160.74471"
+         y="122.63929"
+         id="tspan56"><tspan
+           style="font-weight:bold"
+           id="tspan55">Replicable</tspan></tspan></text>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#c8b7b7;stroke-width:1.33403;stroke-dasharray:4.00209, 1.33403;stroke-dashoffset:0;stroke-opacity:1"
+       d="M 365.96621,94.499829 V 8.4976011"
+       id="path3" />
+  </g>
+</svg>
