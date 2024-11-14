@@ -21,8 +21,13 @@ bibliography: ../references.bib
 | @stagge_assessing_2019 | Hydrology and water resources articles | 20 | Looked at data, model and code availability in 360 articles. Of those, 20 had required data/code/directions available for reproduction. Fully reproduce 4, partially reproduced 2, couldn't reproduce 2, and found 10 actually didn't have all the required artefacts. Allowed minor troubleshooting (e.g. folder/file locations) |
 | @stockemer_data_2018 | Political science articles | 71 | Looked for data/code in 145 articles, then emailed authors to ask for it. Received data and code for 71. For those, ran code, and success in reproducing apx. 70%. |
 | @stodden_enabling_2018 | Articles from Journal of Computational Physics | 55 | Precursor to @krafczyk_learning_2021. Of 306 articles, 55 had code. Spent max 4 hours on them, managed to reproduce some struff for 18, but didn't complete any. |
-| @wood_push_2018 | Impact evaluations in low- and middle-income countries | 50 | Of 109, 27 ran to produced comparable results. 59 refused to provide replications files. Of remaining 23, 3 had propreitrary data, 15 had incomplete replication files, and 5 had minor differences in results. | 
+| @stodden_empirical_2018 | Articles from Science before and after policy change around code sharing | 22 | After policy was 204 articles - could identify artefacts themselves for 24, but contacted authors for 180, of which 131 replied - of which got data/code for 65/180 (36\%). From looking at the then total of 89 article artefacts, anticipated 56 to looked potentially reproducible. Chose 22 of them and were able to replicate results in publication for all except one (large dataset and software no longer acccesible). Issues in those thought not to reproduce were missing scripts, documentation, or parameters. Few papers cited visualisation tools, even when visualisation in article were important. |
+| @wood_push_2018 | Impact evaluations in low- and middle-income countries | 50 | Of 109, 27 ran to produced comparable results. 59 refused to provide replications files. Of remaining 23, 3 had propreitrary data, 15 had incomplete replication files, and 5 had minor differences in results. |
 : {tbl-colwidths="[20, 25, 15, 40]"}
+
+Examples that just try and run code but don't check results:
+
+* @trisovic_large-scale_2022 - R code from the Harvard Dataverse repository | 9000 unique R files from 2000+ replication packages - with interesting oobservations about basic code cleaning, whether there's documentation and comments, and some stuff about **backwards compatability of R** and how it does become non-compatabile
 
 Examples that use code and/or description in article (i.e. dont' *require* code):
 
@@ -223,3 +228,5 @@ e.g. @schwander_replication_2021 and @zhang_reporting_2020 for reporting... @lau
 Journal of Memory and Language  - open data and code policy, requiring code and data to be released
 
 Vadose Zone Journal - "Reproducible Research" programme where code and data is published alongside article - @skaggs_reproducible_2015
+
+## References
