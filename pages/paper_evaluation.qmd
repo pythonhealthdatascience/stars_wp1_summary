@@ -50,6 +50,8 @@ Of the applicable criteria, all studies fully met at least 60% (and many others 
 
 Looking at the quality score suggested (`score`), we see no relationship between reporting quality and reproduction sucess. This remains the case when using other scoring systems used in other papers (`score_schwander` and `score_zhang`).
 
+With similar conclusions from `score` and `score_fully`, I think it's sensible to present `score_fully` as that is the simplest interpretation.
+
 ```{python}
 def check_reporting(df):
   '''
@@ -66,6 +68,8 @@ def check_reporting(df):
   # Calculating some reporting quality scores
   scores = calculate_scores(df).rename_axis('study').reset_index()
   display(scores)
+  print("Mean values...")
+  display(scores.apply(pd.to_numeric, errors="coerce").mean())
 
   # Plot relationship of score with reproduction success
   for score in ['score', 'score_fully', 'score_schwander', 'score_zhang']:
