@@ -260,6 +260,37 @@ def calculate_times(used_to_date, times, limit=True):
         print(f'Used {prop}% of 40 hours max')
 
 
+def calculate_scores(df):
+    '''
+    Calculate different reporting quality scores
+
+    Parameters:
+    -----------
+    df : pandas dataframe
+      Dataframe with columns for counts of fully, partially and not met items
+    '''
+    # Score: fully 1, partially 0.5, find as proportion of all applicable
+    df['score'] = (
+        (df['fully'] + df['partially'] / 2) /
+        (df['fully'] + df['partially'] + df['not']) * 100)
+
+    # Score: proportion fully met
+    df['score_fully'] = (
+        df['fully'] /
+        (df['fully'] + df['partially'] + df['not']) * 100)
+
+    # Score: As in Schwander - fully 1, partially 0.5, not or na 0
+    df['score_schwander'] = (
+        (df['fully'] + df['partially'] / 2) /
+        (df['fully'] + df['partially'] + df['not'] + df['na']) * 100)
+
+    # Score: As in Zhang - proportion of items fully met out of all (inc na)
+    df['score_zhang'] = (
+        df['fully'] /
+        (df['fully'] + df['partially'] + df['not'] + df['na']) * 100)
+    return df
+
+
 # TODO: Check the values used are still corrected, as there were some minor
 # amendments made to evaluations
 

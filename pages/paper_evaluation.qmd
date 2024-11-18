@@ -22,7 +22,8 @@ Consider: **What criteria are people struggling to meet from the guidelines?**
 
 ```{python}
 import pandas as pd
-from functions import eval_chart, plot_scatter
+import plotly.express as px
+from functions import eval_chart, plot_scatter, calculate_scores
 
 # Create dataframe of results
 col = ['fully', 'partially', 'not', 'na']
@@ -45,22 +46,39 @@ eval_chart(stress_wide)
 
 ## Reflections
 
-Of the applicable criteria, all studies fully met at least 60% (and many others still partially met).
+Of the applicable criteria, all studies fully met at least 60% (and many others still partially met) (`score_fully`).
 
-I don't think we learn much in relation to items reproduced, and that it is more interesting to consider which criteria were met and whether this aided the reproduction or not.
-
-*Note. This plots the proportion of **applicable** criteria that were **fully met***.
+Looking at the quality score suggested (`score`), we see no relationship between reporting quality and reproduction sucess. This remains the case when using other scoring systems used in other papers (`score_schwander` and `score_zhang`).
 
 ```{python}
-plot_scatter('STRESS-DES criteria met',
-             sho = (17/24)*100,
-             hua = (14/23)*100,
-             lim = (15/21)*100,
-             kim = (15/22)*100,
-             ana = (14/21)*100,
-             joh = (16/19)*100,
-             her = (18/23)*100,
-             woo = (22/24)*100)
+def check_reporting(df):
+  '''
+  Check the reporting quality of each study with different scoring systems
+
+  Parameters:
+  -----------
+  df : pandas dataframe
+    Dataframe with counts of fully, partially, not met and na items
+  '''
+  # Add reproduction success
+  df['reproduce'] = [94, 37.5, 100, 100, 100, 80, 12.5, 100]
+
+  # Calculating some reporting quality scores
+  scores = calculate_scores(df).rename_axis('study').reset_index()
+  display(scores)
+
+  # Plot relationship of score with reproduction success
+  for score in ['score', 'score_fully', 'score_schwander', 'score_zhang']:
+    fig = px.scatter(scores, x=score, y='reproduce', hover_data={'study': True})
+    fig.update_layout(xaxis_range=[-10, 110],
+                      yaxis_range=[-10, 110],
+                      yaxis_title='Items reproduced',
+                      xaxis_ticksuffix='%',
+                      yaxis_ticksuffix='%')
+    fig.show()
+
+
+check_reporting(stress_wide)
 ```
 
 :::
@@ -89,22 +107,12 @@ eval_chart(ispor_wide)
 
 ## Reflections
 
-The proportion of applicable criteria met was lower for this checklist.
+The proportion of applicable criteria met was lower for this checklist (`score_fully`).
 
-However, I again think it's most relevant to consider which criteria were met, rather than draw conclusions from this chart.
-
-*Note. This plots the proportion of **applicable** criteria that were **fully met***.
+Same conclusions as for STRESS.
 
 ```{python}
-plot_scatter('ISPOR-SDM criteria met',
-             sho = (11/15)*100,
-             hua = (7/16)*100,
-             lim = (12/16)*100,
-             kim = (12/17)*100,
-             ana = (8/15)*100,
-             joh = (15/17)*100,
-             her = (10/17)*100,
-             woo = (13/17)*100)
+check_reporting(ispor_wide)
 ```
 
 :::
