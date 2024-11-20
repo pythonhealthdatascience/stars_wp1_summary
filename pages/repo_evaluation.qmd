@@ -485,7 +485,7 @@ No particular comments, don't think we learn much from the timings here.
 * "Code Reviewed"
 * "Code Reproducible"
 
-**Psychological Science** (@hardwicke_transparency_2023 and @association_for_psychological_science_aps_psychological_2023)
+**Psychological Science** (@hardwicke_transparency_2024 and @association_for_psychological_science_aps_psychological_2023)
 
 * "Computational Reproducibility"
 
