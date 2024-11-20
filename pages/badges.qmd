@@ -44,7 +44,7 @@ Across all badges, whether explicitly stated or not, assuming that:
 | Reproduced results (assuming (a) acceptably similar (b) reasonabe time frame (c) only minor troubleshooting) | ✅ | ✅ | ✅ | ✅ |
 | README file with step-by-step instructions to run analysis | ❌ | ❌ | ❌ | ✅ |
 | Dependencies (e.g. package versions) stated | ❌ | ❌ | ❌ | ✅ |
-| Clear how output of analysis corrsponds to article | ❌ | ❌ | ❌ | ✅ |
+| Clear how output of analysis corresponds to article | ❌ | ❌ | ❌ | ✅ |
 : {tbl-colwidths="[50, 12.5, 12.5, 12.5, 12.5]"}
 
 ## Full criteria
@@ -151,7 +151,7 @@ This badge was not included, as it doesn't have specific criteria to review agai
 >
 > To ensure their work is computationally reproducible, authors should accompany analysis scripts with a **README file that provides clear step-by-step instructions** for repeating the analyses. Any **software dependencies (e.g., package versions) should be identified**. Authors should make **clear how the output of the analysis scripts corresponds to the results reported in the manuscript**. We strongly encourage authors to perform a reproducibility check within their own team before submitting a manuscript, as this will reduce delays at the conditional acceptance stage."
 >
-> @association_for_psychological_science_aps_psychological_2023
+> @association_for_psychological_science_aps_psychological_2024
 >
 > "The Computational Reproducibility Badge will be awarded when authors take the necessary steps to ensure that reported results can be independently reproduced, **within a reasonable time frame**, by the STAR team. This is a standard that we expect from all articles submitted to Psychological Science; however, we appreciate that the community may currently lack the resources and skills required to write reproducible manuscripts. With that in mind, we are identifying and collating resources (see Educational Resources section) to help the community build the capacity to meet this standard. Eventually, we plan to make verified computational reproducibility a blanket requirement for all empirical articles."
 >

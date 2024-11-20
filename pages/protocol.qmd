@@ -32,8 +32,8 @@ For this work, six published healthcare DES models were selected. These were mod
         * National Information Standards Organisation (NISO)(@niso_reproducibility_badging_and_definitions_working_group_reproducibility_2021)
         * Association for Computing Machinery (ACM) (@association_for_computing_machinery_acm_artifact_2020)
         * Center for Open Science (COS) (@blohowiak_badges_2023)
-        * Institute of Electrical and Electronics Engineers (IEEE) (@institute_of_electrical_and_electronics_engineers_ieee_about_nodate)
-        * Psychological Science (@hardwicke_transparency_2023 and @association_for_psychological_science_aps_psychological_2023)
+        * Institute of Electrical and Electronics Engineers (IEEE) (@institute_of_electrical_and_electronics_engineers_ieee_about_2024)
+        * Psychological Science (@hardwicke_transparency_2023 and @association_for_psychological_science_aps_psychological_2024)
     * Recommendations from the pilot STARS framework for the sharing of code and associated materials from discrete-event simulation models (@monks_towards_2024).
 * This is timed
 

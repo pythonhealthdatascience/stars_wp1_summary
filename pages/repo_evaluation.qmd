@@ -479,13 +479,13 @@ No particular comments, don't think we learn much from the timings here.
 
 * "Open Code"
 
-**Institute of Electrical and Electronics Engineers (IEEE)** (@institute_of_electrical_and_electronics_engineers_ieee_about_nodate)
+**Institute of Electrical and Electronics Engineers (IEEE)** (@institute_of_electrical_and_electronics_engineers_ieee_about_2024)
 
 * "Code Available"
 * "Code Reviewed"
 * "Code Reproducible"
 
-**Psychological Science** (@hardwicke_transparency_2024 and @association_for_psychological_science_aps_psychological_2023)
+**Psychological Science** (@hardwicke_transparency_2024 and @association_for_psychological_science_aps_psychological_2024)
 
 * "Computational Reproducibility"
 
