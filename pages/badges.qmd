@@ -1,0 +1,160 @@
+---
+title: "Badges"
+echo: False
+bibliography: ../references.bib
+---
+
+There are several different badges with similar criteria. For clarity, a summary provides a comparison in the key criteria between these badges, and then the quoted criteria for each are here laid out in full.
+
+A set of criteria was outlined in the protocol and used for the evaluation, but this was since revisited, revised and re-evaluated, to ensure the evaluation is **more specific** to the unique criteria of each badge (and not over-simplified).
+
+## Summary
+
+### "Open objects" badges
+
+| Criteria | ACM Artifacts Available | NISO ORO | NISO ORO-A | COS Open Code | IEEE Code Available |
+| - | - | - | - | - | - |
+| Artefacts are archived in a repository that is: (a) public (b) guarantees persistence (c) gives a unique identifier (e.g. DOI) | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Open licence | ❌ | ✅ | ✅ | ✅ | ❌ |
+| Complete (all relevant artefacts are available) | ❌ | ❌ | ✅ | ❌ | ✅ |
+| Sufficient explanation to "understand how the code is used and relates to the reported methodology, including information about versions of software, systems, and packages." | ❌ | ❌ | ❌ | ✅ | ❌ |
+: {tbl-colwidths="[50, 10, 10, 10, 10, 10]"}
+
+### "Object review" badges
+
+| Criteria | ACM Artifacts Evaluated - Functional | ACM Artifacts Evaluated - Reusable | IEEE Code Reviewed |
+| - | - | - | - |
+| Documentation with: (a) inventory of artefacts (b) sufficient description for artefacts to be exercised | ✅ | ✅ | ❌ |
+| Artefacts relevant to paper | ✅ | ✅ | ❌ |
+| Complete (all relevant artefacts are available) | ✅ | ✅ | ✅ |
+| Scripts can be executed | ✅ | ✅ | ✅ |
+| Artefacts are "carefully documented and well-structured to the extent that reuse and repurposing is facilitated", adhering to norms and standards | ❌ | ✅ | ❌ |
+: {tbl-colwidths="[50, 16.66, 16.66, 16.66]"}
+
+### "Reproduced" badges
+
+Across all badges, whether explicitly stated or not, assuming that:
+
+* Reproduced meaning agreement within tolerance deemed acceptable given context (e.g. not change main claims)
+* Reproduction is within a reasonable time frame (assuming this to mean no more than a few hours, at the very most)
+* Minor troubleshooting is reasonable (e.g. set up of right environment), but nothing extensive
+
+| Criteria | ACM Results Reproduced | NISO ROR-R | IEEE Code Reproducible | Psychological Science Computational Reproducibility |
+| - | - | - | - | - |
+| Reproduced results (assuming (a) acceptably similar (b) reasonabe time frame (c) only minor troubleshooting) | ✅ | ✅ | ✅ | ✅ |
+| README file with step-by-step instructions to run analysis | ❌ | ❌ | ❌ | ✅ |
+| Dependencies (e.g. package versions) stated | ❌ | ❌ | ❌ | ✅ |
+| Clear how output of analysis corrsponds to article | ❌ | ❌ | ❌ | ✅ |
+: {tbl-colwidths="[50, 12.5, 12.5, 12.5, 12.5]"}
+
+## Full criteria
+
+### Association for Computing Machinery (ACM)
+
+#### Artifacts Available
+
+> "Author-created artifacts relevant to this paper have been placed on a **publically accessible archival repository**. A **DOI or link** to this repository along with a **unique identifier** for the object is provided.
+> 
+> * We do not mandate the use of specific repositories. Publisher repositories (such as the ACM Digital Library), institutional repositories, or open commercial repositories (e.g., figshare or Dryad) are acceptable. In all cases, repositories used to archive data should have a declared plan to enable **permanent accessibility**. Personal web pages are not acceptable for this purpose.
+> * Artifacts **do not need to have been formally evaluated** in order for an article to receive this badge. In addition, they **need not be complete** in the sense described above. They simply need to be relevant to the study and add value beyond the text in the article. Such artifacts could be something as simple as the data from which the figures are drawn, or as complex as a complete software system under study."
+> 
+> @association_for_computing_machinery_acm_artifact_2020
+
+#### Artifacts Evaluated - Functional
+
+> "The artifacts associated with the research are found to be documented, consistent, complete, exercisable, and include appropriate evidence of verification and validation.
+>
+> * Documented: At minimum, an **inventory of artifacts** is included, and **sufficient description provided to enable the artifacts to be exercised**.
+> * Consistent: The artifacts are **relevant** to the associated paper, and contribute in some inherent way to the generation of its main results.
+> * Complete: To the extent possible, **all components relevant to the paper in question are included**. (Proprietary artifacts need not be included. If they are required to exercise the package then this should be documented, along with instructions on how to obtain them. **Proxies for proprietary data should be included** so as to demonstrate the analysis.)
+> * Exercisable: Included scripts and/or software used to generate the results in the associated paper **can be successfully executed**, and included data can be accessed and appropriately manipulated."
+
+#### Artifacts Evaluated - Reusable
+
+> "The artifacts associated with the paper are of a quality that significantly exceeds minimal functionality. That is, they have all the qualities of the Artifacts Evaluated – Functional level, but, in addition, they are very **carefully documented and well-structured** to the extent that **reuse and repurposing is facilitated**. In particular, **norms and standards** of the research community for artifacts of this type are strictly adhered to."
+
+#### Results Reproduced
+
+> "The **main results** of the paper have been obtained in a subsequent study by a person or team **other than the authors**, **using, in part, artifacts provided by the author**."
+>
+> "...exact...reproduction of results is not required, or even expected. Instead, the **results must be in agreement to within a tolerance deemed acceptable for experiments of the given type**. In particular, differences in the results should **not change the main claims** made in the paper."
+>
+> For reproduced (or replicated) badges, "...a **peer-reviewed publication** which reports the replication or reproduction must be submitted as evidence, and if awarded, the **badge will contain a link to this paper**."
+
+
+### National Information Standards Organisation (NISO)
+
+#### Open Research Objects (ORO) and Open Research Objects - All (ORO-A)
+
+> "This badge signals that author-created digital objects used in the research (including data and code) are **permanently archived** in a **public repository** that assigns a **global identifier** and **guarantees persistence**, and are made available via standard **open licenses** that maximize artifact availability.
+>
+> If **all relevant research objects are made available**, the badge is designated by a modifier, e.g., ORO-A. This badge signals that the research publication is reproducible (as described in the NASEM Report).
+> 
+> Notes:
+>
+> 1. This is akin to author-supplied supplemental materials, shared under a standard public license such as an Open Science Initiative (OSI)–approved license for software or a Creative Commons license or public domain dedication for data and other materials.
+> 2. This definition corresponds to the Association for Computing Machinery (ACM) “Artifacts Available” badge, and to the combined Center for Open Science (COS) “Open Data” and “Open Materials” (pertaining to digital objects) badges. (See Appendix A.)
+> 3. The determination of what objects are “relevant” to a research publication is in the hands of the editorial board or leadership members of the community, in addition to the authors themselves.
+> 4. For physical objects relevant to the research, the metadata about the object should be made available."
+>
+> @niso_reproducibility_badging_and_definitions_working_group_reproducibility_2021
+
+#### Research Objects Reviewed (ROR)
+
+This badge was not included, as it doesn't have specific criteria to review against, and simply states that artefacts should be "reviewed according to the criteria provided by the badge issuer" (@niso_reproducibility_badging_and_definitions_working_group_reproducibility_2021).
+
+#### Results Reproduced (ROR-R)
+
+> "This badge signals that an additional step was taken or facilitated by the badge issuer (e.g., publisher, trusted third-party certifier) to certify that an independent party has regenerated computational results using the author-created research objects, methods, code, and conditions of analysis. Results Reproduced assumes that the research objects were **also reviewed**. For this reason, a possible distinction for this badge could be as a tag on the ROR badge: ROR-R. This Recommended Practice has adopted the National Academies of Sciences Engineering Medicine, definition of Reproducibility: “We define reproducibility to mean computational reproducibility— obtaining **consistent results using the same input data, computational steps, methods, code, and conditions of analysis**.”"
+>
+> @niso_reproducibility_badging_and_definitions_working_group_reproducibility_2021
+
+### Center for Open Science (COS)
+
+#### Open Code
+
+> "The Open Analytic Code badge is earned by making publicly available the analytical code needed to reproduce the reported analyses.
+>
+> Criteria:
+>
+> * Digitally-shareable code is **publicly available** on an open-access **repository** (e.g., university repository, a registration on the Open Science Framework, or an independent repository at www.re3data.org). The code must be provided in a format that is **time-stamped, immutable, and permanent**. It must also have an associated **persistent identifier such as a DOI**. Note that the code itself may not have a distinct identifier, but rather be included in a repository with related files that is under one distinct identifier.
+> * The code has an **open license** allowing others to copy, distribute, and make use of the code while allowing the licensor to retain credit and copyright as applicable.
+> * **Sufficient explanation** is present for an independent researcher to understand **how the code is used and relates to the reported methodology, including information about versions of software, systems, and packages**."
+>
+> @blohowiak_badges_2023
+
+### Institute of Electrical and Electronics Engineers (IEEE)
+
+#### Code Available
+
+> "The code and/or datasets, including any associated data and documentation, provided by the authors is reasonable and **complete** and can potentially be used to support reproducibility of the published results."
+>
+> @institute_of_electrical_and_electronics_engineers_ieee_about_2024
+
+#### Code Reviewed
+
+> "The code and/or datasets, including any associated data and documentation, provided by the authors is reasonable and **complete**, **runs to produce the outputs described**, and can support reproducibility of the published results."
+>
+> @institute_of_electrical_and_electronics_engineers_ieee_about_2024
+
+#### Code Reproducible
+
+> "This badge signals that an additional step was taken or facilitated to certify that an **independent party** has **regenerated computational results using the author-created research objects, methods, code, and conditions of analysis**. Reproducible assumes that the research objects were **also reviewed**."
+>
+> @institute_of_electrical_and_electronics_engineers_ieee_about_2024
+
+### Psychological Science
+
+#### Computational Reproducibility
+
+> "All manuscripts submitted to Psychological Science are expected to be computationally reproducible. That is, a reader should be able to **run the authors’ analysis scripts on the authors’ data and reproduce the results reported in the manuscript, tables, and figures**. As part of the STAR review after conditional acceptance, we will conduct computational reproducibility checks.
+>
+> To ensure their work is computationally reproducible, authors should accompany analysis scripts with a **README file that provides clear step-by-step instructions** for repeating the analyses. Any **software dependencies (e.g., package versions) should be identified**. Authors should make **clear how the output of the analysis scripts corresponds to the results reported in the manuscript**. We strongly encourage authors to perform a reproducibility check within their own team before submitting a manuscript, as this will reduce delays at the conditional acceptance stage."
+>
+> @association_for_psychological_science_aps_psychological_2023
+>
+> "The Computational Reproducibility Badge will be awarded when authors take the necessary steps to ensure that reported results can be independently reproduced, **within a reasonable time frame**, by the STAR team. This is a standard that we expect from all articles submitted to Psychological Science; however, we appreciate that the community may currently lack the resources and skills required to write reproducible manuscripts. With that in mind, we are identifying and collating resources (see Educational Resources section) to help the community build the capacity to meet this standard. Eventually, we plan to make verified computational reproducibility a blanket requirement for all empirical articles."
+>
+> @hardwicke_transparency_2024
+
+## References

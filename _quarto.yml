@@ -9,8 +9,12 @@ book:
   - index.qmd
   - text: "Introduction"
     href: pages/background.qmd
-  - text: "Methods"
-    href: pages/protocol.qmd
+  - part: "Methods"
+    chapters:
+    - text: "Protocol"
+      href: pages/protocol.qmd
+    - text: "Badges"
+      href: pages/badges.qmd
   - part: "Results"
     chapters:
     - pages/reproduction.qmd
