@@ -16,18 +16,18 @@ A set of criteria was outlined in the protocol and used for the evaluation, but 
 | - | - | - | - | - | - |
 | Artefacts are archived in a repository that is: (a) public (b) guarantees persistence (c) gives a unique identifier (e.g. DOI) | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Open licence | ❌ | ✅ | ✅ | ✅ | ❌ |
-| Complete (all relevant artefacts are available) | ❌ | ❌ | ✅ | ❌ | ✅ |
-| Sufficient explanation to "understand how the code is used and relates to the reported methodology, including information about versions of software, systems, and packages." | ❌ | ❌ | ❌ | ✅ | ❌ |
+| Complete (all artefacts that would be needed for reproduction) | ❌ | ❌ | ✅ | ❌ | ✅ |
+| Documents (a) how code is used (b) how it relates to article (c) software, systems, packages and versions | ❌ | ❌ | ❌ | ✅ | ❌ |
 : {tbl-colwidths="[50, 10, 10, 10, 10, 10]"}
 
 ### "Object review" badges
 
 | Criteria | ACM Artifacts Evaluated - Functional | ACM Artifacts Evaluated - Reusable | IEEE Code Reviewed |
 | - | - | - | - |
-| Documentation with: (a) inventory of artefacts (b) sufficient description for artefacts to be exercised | ✅ | ✅ | ❌ |
+| Documents (a) inventory of artefacts (b) sufficient description for artefacts to be exercised | ✅ | ✅ | ❌ |
 | Artefacts relevant to paper | ✅ | ✅ | ❌ |
-| Complete (all relevant artefacts are available) | ✅ | ✅ | ✅ |
-| Scripts can be executed | ✅ | ✅ | ✅ |
+| Complete (all artefacts that would be needed for reproduction) | ✅ | ✅ | ✅ |
+| Scripts can be successfully executed | ✅ | ✅ | ✅ |
 | Artefacts are "carefully documented and well-structured to the extent that reuse and repurposing is facilitated", adhering to norms and standards | ❌ | ✅ | ❌ |
 : {tbl-colwidths="[50, 16.66, 16.66, 16.66]"}
 
