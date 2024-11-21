@@ -336,11 +336,120 @@ badges_wide = pd.DataFrame(badges_dict, index=col).T
 eval_chart(badges_wide)
 ```
 
+```{python}
+# Create dataframe of results
+col = ['fully', 'partially', 'not', 'na']
+badges_dict = {
+  'open_acm': [1, 0, 7, 0],
+  'open_niso': [1, 0, 7, 0],
+  'open_niso_all': [0, 0, 8, 0],
+  'open_cos': [1, 0, 7, 0],
+  'open_ieee': [1, 0, 7, 0],
+  'review_acm_functional': [0, 0, 8, 0],
+  'review_acm_reusable': [0, 0, 8, 0],
+  'review_ieee': [1, 0, 7, 0],
+  'reproduce_acm': [1, 0, 7, 0],
+  'reproduce_niso': [1, 0, 7, 0],
+  'reproduce_ieee': [1, 0, 7, 0],
+  'reproduce_psy': [0, 0, 8, 0],
+}
+badges_wide = pd.DataFrame(badges_dict, index=col).T
+
+# Full badge names
+badge_names = {
+    # Open objects
+    'open_acm': 'ACM “Artifacts<br>Available”',
+    'open_niso': 'NISO “Open Research<br>Objects (ORO)”',
+    'open_niso_all': 'NISO “Open Research<br>Objects - All (ORO-A)”',
+    'open_cos': 'COS “Open Code”',
+    'open_ieee': 'IEEE “Code Available”',
+    # Object review
+    'review_acm_functional': 'ACM “Artifacts<br>Evaluated - Functional”',
+    'review_acm_reusable': 'ACM “Artifacts<br>Evaluated - Reusable”',
+    'review_ieee': 'IEEE “Code Reviewed”',
+    # Results reproduced
+    'reproduce_acm': 'ACM “Results Reproduced”',
+    'reproduce_niso': 'NISO “Results<br>Reproduced (ROR-R)”',
+    'reproduce_ieee': 'IEEE “Code Reproducible”',
+    'reproduce_psy': 'Psychological Science<br>“Computational Reproducibility”'
+}
+
+# Replace with full badge names
+badges_fig = badges_wide.copy()
+badges_fig.index = badges_fig.index.map(badge_names)
+
+# Create figure
+eval_chart(badges_fig)
+```
+
 Only one study had **permanent archive (with persistent identifier)**, hence one being awarded *NISO “Open Research Objects (ORO)”*, *ACM “Artifacts Available”* and *COS “Open Code”*. However, that study did not receive *NISO “Open Research Objects - All (ORO-A)”* as artefacts were not complete.
 
 A **complete set of materials** was required by *IEEE “Code Available”* and *IEEE “Code Reviewed”* - but this was only met by one study, as studies commonly did not include code for scenarios or creation of figures and tables. It was also required by *ACM “Artifacts Evaluated - Functional and Reusable”* badges, but since that one study didn't meet their **documentation** requirements, none were awarded those badges.
 
 Three badges had one criteria: **reproduction of results** - but with assumptions - and only one study met this (with 100% reproduction PLUS meeting the assumptions).
+:::
+
+::: {.callout icon=false collapse=false}
+
+## Badges summary tables for the article
+
+```{python}
+# Criteria and their definitions
+criteria = {
+    'archive': 'Artefacts are archived in a repository that is: (a) public (b) guarantees persistence (c) gives a unique identifier (e.g. DOI)',
+    'licence': 'Open licence',
+    'complete': 'Complete (all relevant artefacts available)',
+    'docs1': 'Documents (a) how code is used (b) how it relates to article (c) software, systems, packages and versions',
+    'docs2': 'Documents (a) inventory of artefacts (b) sufficient description for artefacts to be exercised',
+    'relevant': 'Artefacts relevant to paper',
+    'execute': 'Scripts can be successfully executed',
+    'careful': 'Artefacts are carefully documented and well-structured to the extent that reuse and repurposing is facilitated, adhering to norms and standards',
+    'reproduce': 'Reproduced results (assuming (a) acceptably similar (b) reasonable time frame (c) only minor troubleshooting)',
+    'readme': 'README file with step-by-step instructions to run analysis',
+    'dependencies': 'Dependencies (e.g. package versions) stated',
+    'correspond': 'Clear how output of analysis corresponds to article'
+}
+
+# Criteria required by each badge
+badges = {
+    # Open objects
+    'open_acm': ['archive'],
+    'open_niso': ['archive', 'licence'],
+    'open_niso_all': ['archive', 'licence', 'complete'],
+    'open_cos': ['archive', 'licence', 'docs1'],
+    'open_ieee': ['complete'],
+    # Object review
+    'review_acm_functional': ['docs2', 'relevant', 'complete', 'execute'],
+    'review_acm_reusable': ['docs2', 'relevant', 'complete', 'execute', 'careful'],
+    'review_ieee': ['complete', 'execute'],
+    # Results reproduced
+    'reproduce_acm': ['reproduce'],
+    'reproduce_niso': ['reproduce'],
+    'reproduce_ieee': ['reproduce'],
+    'reproduce_psy': ['reproduce', 'readme', 'dependencies', 'correspond']
+}
+
+# Find proportion fully met, then use to make "met criteria" column
+badges_table = badges_wide.copy()
+badges_table['percent'] = round((badges_table['fully'] / 8)*100, 2)
+badges_table['met_criteria'] = badges_table['fully'].astype(str) + '/8 (' + badges_table['percent'].astype(str) + '%)'
+
+# Create a column with criteria for each badge
+badges_table['criteria'] = badges_table.index.map(
+    lambda badge: '<br>'.join(
+        f"• {criteria[crit]}" for crit in badges[badge]
+    )
+)
+
+# Replace with full badge names, then filter and relabel columns
+badges_table.index = badges_table.index.map(badge_names)
+badges_table.index.name = 'Badge'
+badges_table = badges_table[['criteria', 'met_criteria']].rename(
+  columns={'criteria': 'Criteria', 'met_criteria': 'Studies that met criteria'}
+)
+badges_table
+```
+
 :::
 
 ## STARS framework
