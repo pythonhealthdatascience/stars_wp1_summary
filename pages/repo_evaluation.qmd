@@ -447,6 +447,9 @@ badges_table.index.name = 'Badge'
 badges_table = badges_table[['criteria', 'met_criteria']].rename(
   columns={'criteria': 'Criteria', 'met_criteria': 'Studies that met criteria'}
 )
+
+# Save to CSV and show
+badges_table.to_csv('../data/badges_table.csv')
 badges_table
 ```
 

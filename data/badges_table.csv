@@ -1,0 +1,13 @@
+Badge,Criteria,Studies that met criteria
+ACM “Artifacts<br>Available”,• Artefacts are archived in a repository that is: (a) public (b) guarantees persistence (c) gives a unique identifier (e.g. DOI),1/8 (12.5%)
+NISO “Open Research<br>Objects (ORO)”,• Artefacts are archived in a repository that is: (a) public (b) guarantees persistence (c) gives a unique identifier (e.g. DOI)<br>• Open licence,1/8 (12.5%)
+NISO “Open Research<br>Objects - All (ORO-A)”,• Artefacts are archived in a repository that is: (a) public (b) guarantees persistence (c) gives a unique identifier (e.g. DOI)<br>• Open licence<br>• Complete (all relevant artefacts available),0/8 (0.0%)
+COS “Open Code”,"• Artefacts are archived in a repository that is: (a) public (b) guarantees persistence (c) gives a unique identifier (e.g. DOI)<br>• Open licence<br>• Documents (a) how code is used (b) how it relates to article (c) software, systems, packages and versions",1/8 (12.5%)
+IEEE “Code Available”,• Complete (all relevant artefacts available),1/8 (12.5%)
+ACM “Artifacts<br>Evaluated - Functional”,• Documents (a) inventory of artefacts (b) sufficient description for artefacts to be exercised<br>• Artefacts relevant to paper<br>• Complete (all relevant artefacts available)<br>• Scripts can be successfully executed,0/8 (0.0%)
+ACM “Artifacts<br>Evaluated - Reusable”,"• Documents (a) inventory of artefacts (b) sufficient description for artefacts to be exercised<br>• Artefacts relevant to paper<br>• Complete (all relevant artefacts available)<br>• Scripts can be successfully executed<br>• Artefacts are carefully documented and well-structured to the extent that reuse and repurposing is facilitated, adhering to norms and standards",0/8 (0.0%)
+IEEE “Code Reviewed”,• Complete (all relevant artefacts available)<br>• Scripts can be successfully executed,1/8 (12.5%)
+ACM “Results Reproduced”,• Reproduced results (assuming (a) acceptably similar (b) reasonable time frame (c) only minor troubleshooting),1/8 (12.5%)
+NISO “Results<br>Reproduced (ROR-R)”,• Reproduced results (assuming (a) acceptably similar (b) reasonable time frame (c) only minor troubleshooting),1/8 (12.5%)
+IEEE “Code Reproducible”,• Reproduced results (assuming (a) acceptably similar (b) reasonable time frame (c) only minor troubleshooting),1/8 (12.5%)
+Psychological Science<br>“Computational Reproducibility”,• Reproduced results (assuming (a) acceptably similar (b) reasonable time frame (c) only minor troubleshooting)<br>• README file with step-by-step instructions to run analysis<br>• Dependencies (e.g. package versions) stated<br>• Clear how output of analysis corresponds to article,0/8 (0.0%)
