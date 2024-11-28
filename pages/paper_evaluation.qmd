@@ -16,15 +16,20 @@ This page shares the results from the evaluation of the journal articles against
 
 Consider: **What criteria are people struggling to meet from the guidelines?**
 
+```{python}
+# Imports and functions
+import pandas as pd
+import plotly.express as px
+import plotly.express as px
+import plotly.io as pio
+from functions import eval_chart, plot_scatter, calculate_scores
+```
+
 ## Summary
 
 **STRESS-DES:**
 
 ```{python}
-import pandas as pd
-import plotly.express as px
-from functions import eval_chart, plot_scatter, calculate_scores
-
 # Create dataframe of results
 col = ['fully', 'partially', 'not', 'na']
 stress_dict = {
@@ -39,7 +44,7 @@ stress_dict = {
 }
 stress_wide = pd.DataFrame(stress_dict, index=col).T
 
-eval_chart(stress_wide)
+eval_chart(stress_wide).show(config={'displayModeBar': False})
 ```
 
 ::: {.callout icon=false collapse=false}
@@ -104,7 +109,7 @@ ispor_dict = {
 }
 ispor_wide = pd.DataFrame(ispor_dict, index=col).T
 
-eval_chart(ispor_wide)
+eval_chart(ispor_wide).show(config={'displayModeBar': False})
 ```
 
 ::: {.callout icon=false collapse=false}
@@ -207,7 +212,15 @@ criteria_dict = {
 }
 criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 
-eval_chart(criteria_wide)
+# Create figure
+stress_chart = eval_chart(criteria_wide)
+
+# Display figure
+stress_chart.show(config={'displayModeBar': False})
+
+# Save figure as 300DPI static image for use in article
+pio.write_image(stress_chart, '../images/stress_criteria.png',
+                width=2.8*300, height=2.5*300, scale=1)
 ```
 
 I find this chart a really helpful visualisation, to see what is commonly being met, things that are often not applicable, and things often not met.
@@ -394,7 +407,16 @@ criteria_dict = {
 }
 criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 
-eval_chart(criteria_wide)
+# Create figure
+ispor_chart = eval_chart(criteria_wide)
+
+# Display figure
+ispor_chart.show(config={'displayModeBar': False})
+
+# Save figure as 300DPI static image for use in article
+pio.write_image(ispor_chart, '../images/ispor_criteria.png',
+                width=2.5*300, height=2*300, scale=1)
+
 ```
 
 These guidelines have quite a **different focus** from STRESS-DES. STRESS-DES is very focused on what and how modelling work is performed. These guidelines do cover that, but have quite alot of focus on validity of the work, and good practice (e.g. stating funding, involving stakeholders). This is important, as **different checklists can be important** - and although practice is typically to use one practice, referring to more than one could also be beneficial.

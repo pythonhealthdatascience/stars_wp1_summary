@@ -55,7 +55,7 @@ criteria_dict = {
 }
 criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 
-eval_chart(criteria_wide)
+eval_chart(criteria_wide).show(config={'displayModeBar': False})
 ```
 
 ## Environment

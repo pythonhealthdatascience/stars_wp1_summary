@@ -20,6 +20,7 @@ Consider: **What criteria are people struggling to meet from the guidelines?**
 ```{python}
 # Imports and function
 import plotly.express as px
+import plotly.io as pio
 import pandas as pd
 from functions import eval_chart, plot_scatter
 ```
@@ -43,7 +44,7 @@ criteria_dict = {
 }
 criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 
-eval_chart(criteria_wide)
+eval_chart(criteria_wide).show(config={'displayModeBar': False})
 ```
 
 ::: {.callout icon=false collapse=false}
@@ -83,7 +84,7 @@ badge_dict = {
 }
 badge_wide = pd.DataFrame(badge_dict, index=col).T
 
-eval_chart(badge_wide)
+eval_chart(badge_wide).show(config={'displayModeBar': False})
 ```
 
 ::: {.callout icon=false collapse=false}
@@ -128,7 +129,7 @@ essential_dict = {
 }
 essential_wide = pd.DataFrame(essential_dict, index=col).T
 
-eval_chart(essential_wide)
+eval_chart(essential_wide).show(config={'displayModeBar': False})
 ```
 
 ::: {.callout icon=false collapse=false}
@@ -171,7 +172,7 @@ optional_dict = {
 }
 optional_wide = pd.DataFrame(optional_dict, index=col).T
 
-eval_chart(optional_wide)
+eval_chart(optional_wide).show(config={'displayModeBar': False})
 ```
 
 ::: {.callout icon=false collapse=false}
@@ -255,7 +256,7 @@ criteria_dict = {
 }
 criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 
-eval_chart(criteria_wide)
+eval_chart(criteria_wide).show(config={'displayModeBar': False})
 ```
 
 **Artefacts are archived in a repository that is: (a) public (b) guarantees persistence (c) gives a unique identifier (e.g. DOI)**: Fulfillment doesn't impact reproduction as I was able to get everything needed from the remote code repository (GitHub or GitLab). However, if these had been deleted from GitHub, it would have become invaluable.
@@ -333,7 +334,7 @@ badges_dict = {
 }
 badges_wide = pd.DataFrame(badges_dict, index=col).T
 
-eval_chart(badges_wide)
+eval_chart(badges_wide).show(config={'displayModeBar': False})
 ```
 
 ```{python}
@@ -379,7 +380,7 @@ badges_fig = badges_wide.copy()
 badges_fig.index = badges_fig.index.map(badge_names)
 
 # Create figure
-eval_chart(badges_fig)
+eval_chart(badges_fig).show(config={'displayModeBar': False})
 ```
 
 Only one study had **permanent archive (with persistent identifier)**, hence one being awarded *NISO “Open Research Objects (ORO)”*, *ACM “Artifacts Available”* and *COS “Open Code”*. However, that study did not receive *NISO “Open Research Objects - All (ORO-A)”* as artefacts were not complete.
@@ -511,7 +512,15 @@ stars_dict = {
 }
 stars_wide = pd.DataFrame(stars_dict, index=col).T
 
-eval_chart(stars_wide)
+# Create figure
+stars_chart = eval_chart(stars_wide)
+
+# Display figure
+stars_chart.show(config={'displayModeBar': False})
+
+# Save figure as 300DPI static image for use in article
+pio.write_image(stars_chart, '../images/stars_criteria.png',
+                width=2.5*300, height=1.8*300, scale=1)
 ```
 
 These topics were covered in the badge criteria reflections: **open licence**, **minimum documentation**, and **open science archive**.

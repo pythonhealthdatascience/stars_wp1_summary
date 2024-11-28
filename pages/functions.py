@@ -165,17 +165,18 @@ def eval_chart(df):
         x='percent',
         y='guideline',
         color='result',
-        color_discrete_map={'fully': '#06a94d',
+        color_discrete_map={'fully': '#56ae77',
                             'partially': '#ffd68c',
                             'not': '#ff9999',
-                            'na': '#d1dcea'},
+                            'na': '#f4f7fa'},
         orientation='h',
         hover_data={
             'count': True,
             'percent': False,
             'percentage': True,
             'guideline': False,
-            'result': False})
+            'result': False},
+        text='percentage')
 
     # Amend x axis label and ticks
     fig.update_layout(xaxis=dict(
@@ -197,8 +198,7 @@ def eval_chart(df):
                 'not': 'Not met', 'na': 'Not applicable'}
     fig.for_each_trace(lambda t: t.update(name=newnames[t.name]))
 
-    # Show without toolbar
-    fig.show(config={'displayModeBar': False})
+    return fig
 
 
 def min_hour(time):

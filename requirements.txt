@@ -4,3 +4,4 @@ jupyter==1.0.0
 pandas==2.2.2
 plotly==5.23.0
 matplotlib==3.9.2
+kaleido==0.2.1
