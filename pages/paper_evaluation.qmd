@@ -220,7 +220,7 @@ stress_chart.show(config={'displayModeBar': False})
 
 # Save figure as 300DPI static image for use in article
 pio.write_image(stress_chart, '../images/stress_criteria.png',
-                width=2.8*300, height=2.5*300, scale=1)
+                width=2.8*300, height=2.5*300, scale=1.97)
 ```
 
 I find this chart a really helpful visualisation, to see what is commonly being met, things that are often not applicable, and things often not met.
@@ -415,7 +415,7 @@ ispor_chart.show(config={'displayModeBar': False})
 
 # Save figure as 300DPI static image for use in article
 pio.write_image(ispor_chart, '../images/ispor_criteria.png',
-                width=2.5*300, height=2*300, scale=1)
+                width=2.5*300, height=2*300, scale=2.2)
 
 ```
 

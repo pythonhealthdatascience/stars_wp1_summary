@@ -520,7 +520,7 @@ stars_chart.show(config={'displayModeBar': False})
 
 # Save figure as 300DPI static image for use in article
 pio.write_image(stars_chart, '../images/stars_criteria.png',
-                width=2.5*300, height=1.8*300, scale=1)
+                width=2.5*300, height=1.8*300, scale=2.2)
 ```
 
 These topics were covered in the badge criteria reflections: **open licence**, **minimum documentation**, and **open science archive**.
