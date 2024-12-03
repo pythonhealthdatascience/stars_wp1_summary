@@ -9,28 +9,6 @@ This book describes work from **work package 1** of the project STARS: Sharing T
 
 The project was funded for two years by the [Medical Research Council](https://gtr.ukri.org/projects?ref=MR%2FZ503915%2F1), from April 2024 to April 2026. Prior to this funding, some **pilot work** was carried out by Tom Monks, Alison Harper and Nav Mustafee. This included a review of code sharing practices and the development of the STARS framework.
 
-## General context
-
-<!--TODO: Write this up, currently just some notes and ideas - or, could leave as notes.-->
-
-@baker_1500_2016 - survey of 1576 researchers across disciplines, finding:
-
-* "More than 70% of researchers have tried and failed to reproduce another scientist's experiments"
-* "More than half have failed to reproduce their own experiments"
-* 52% "agree that there is a significant 'crisis' of reproducibility"
-* "Less than 31% think that failure to reproduce published results means that the result is probably wrong, and most say that they still trust the published literature"
-
-Differences between **reproduction** and **replication**
-
-* Reproduction - using their code
-* Replication - writing your own code 
-
-(I.e. terminology I researched previously, **computational reproducibiltiy** etc, similar to how lots of articles define it, e.g. @samuel_computational_2024).
-
-@korbmacher_replication_2023 - great discussion of the **replication** crisis
-
-On the [protocol page](protocol.qmd), several reproducibility studies are mentioned, which were used to help inform the methods in our reproducibility assessments.
-
 ## Pilot work
 
 ### Review of healthcare simulation sharing practices
