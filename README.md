@@ -20,6 +20,7 @@
 ## Table of contents
 
 * [👋 About the repository](#-about-the-repository)
+* [📍 Locating tables and figures from the article](#-locating-tables-and-figures-from-the-article)
 * [📖 View book locally](#-view-book-locally)
 * [📝 Citation](#-citation)
 * [💰 Funding](#-funding)
@@ -49,6 +50,31 @@ Relevant GitHub repositories:
 | [stars-reproduce-johnson-2021](https://github.com/pythonhealthdatascience/stars-reproduce-johnson-2021) | Reproduction study 6: Johnson et al. 2021 (R) |
 | [stars-reproduce-hernandez-2015](https://github.com/pythonhealthdatascience/stars-reproduce-hernandez-2015) | Reproduction study 7: Hernandez et al. 2015 (Python + R) |
 | [stars-reproduce-wood-2021](https://github.com/pythonhealthdatascience/stars-reproduce-wood-2021) | Reproduction study 8: Wood et al. 2021 (R) |
+
+<br>
+<br>
+
+## 📍 Locating tables and figures from the article
+
+| Figure/Table | Method | Location |
+| - | - | - |
+| **Figure 1.** Five standards that scientific code should strive to achieve, and the benefits of doing so | Inkscape | `images/5rs.svg` |
+| **Figure 2.** Time to complete items in scope for each reproduction, inspired by figure in Krafczyk et al. 2021 | Matplotlib | Created within `pages/reproduction.qmd`, saved as `images/article_times.png` |
+| **Figure 3.** Recommendations to support reproduction, with stars to highlight five recommendations considered to have the greatest potential impact. | Inkscape | `images/reproduction_wheel.svg`|
+| **Figure 4.** Recommendations to support troubleshooting and reuse | Inkscape | `images/troubleshooting_wheel.svg` |
+| **Figure 5.** Of the eight healthcare DES studies evaluated, proportion that met each recommendation in the current STARS framework. | Plotly express | Created within `pages/repo_evaluation.qmd`, saved as `images/stars_criteria.png` |
+| **Figure 6.** Of the eight healthcare DES studies evaluated, proportion that met each item in the current STRESS-DES criteria. | Plotly express | Created within `pages/paper_evaluation.qmd`, saved as `stress_criteria.png` |
+| **Figure 7.** Of the eight healthcare DES studies evaluated, proportion that met each criteria in the general reporting checklist for DES | Plotly express | Created within `pages/paper_evaluation.qmd`, saved as `ispor_criteria.png` |
+| **Table 2.** Evaluation of repositories against ACM badge criteria. | - | Created within `pages/repo_evaluation.qmd`, saved as `data/badges_table.csv` (and Table 2 is an extract from that table) |
+| **Table 3.** Proportion of applicable criteria that were fully met, from evaluation of repository or article, alongside the proportion of items reproduced from each study. | - | Combination of two tables: (1) `data/applicable_stars.csv` created within `pages/repo_evaluation.qmd`, and (2) `data/applicable_report.csv` created within `pages/paper_evaluation.qmd` |
+| **Table D1.** Evaluation of studies against badge criteria - grouped into three themes, as defined by NISO. | - | Created within `pages/repo_evaluation.qmd`, saved as `data/badges_table.csv` |
+
+The remaining tables were created directly in the Latex article, rather than in this repository, as they are not describing results from reproduction:
+
+* **Table 1.** Description of the included studies.
+* **Table 4.** Simple checklists to assist reviewers in assessing the openness, longevity, and reproducibility of DES models during peer review.
+* **Table B1.** Links for reproduction and evaluation.
+* **Table B2.** Links to original study repositories.
 
 <br>
 <br>
