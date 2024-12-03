@@ -22,7 +22,8 @@ Consider: **What criteria are people struggling to meet from the guidelines?**
 import plotly.express as px
 import plotly.io as pio
 import pandas as pd
-from functions import eval_chart, plot_scatter
+from functions import (eval_chart, plot_scatter,
+                       calculate_percentage, extract_reproduced)
 ```
 
 ## Summary
@@ -193,6 +194,40 @@ plot_scatter('Optional STARS components met',
              joh = 0,
              her = 0,
              woo = 0)
+```
+
+:::
+
+::: {.callout icon=false collapse=false}
+
+## Table with proportion of applicable STARS criteria that were fully met
+
+This is part of a table used in the journal article:
+
+```{python}
+# Calculate essential and optional percentages
+stars_df = pd.DataFrame({
+    'stars_essential': calculate_percentage(essential_wide),
+    'stars_optional': calculate_percentage(optional_wide)
+})
+
+# Calculate percentage and items in scope
+stars_df['percentage'], stars_df['num'], stars_df['denom'] = zip(
+  *stars_df.index.to_series().apply(extract_reproduced))
+
+# Sort by percentage and then by number of items in scope
+stars_df = stars_df.sort_values(by=['percentage', 'denom'],
+                                ascending=[False, False])
+
+# Create formatted column with % and n/n reproduced
+stars_df['reproduction'] = stars_df.apply(
+    lambda row: f"{row['percentage']}% ({row['num']}/{row['denom']})", axis=1
+)
+
+# Filter to relevant columns, save and display
+stars_applicable = stars_df[['reproduction', 'stars_essential', 'stars_optional']]
+stars_applicable.to_csv('../data/applicable_stars.csv')
+stars_applicable
 ```
 
 :::

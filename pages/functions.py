@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from plotly import graph_objects as go
 import plotly.express as px
+import re
 
 
 def process_times(time_list, adjust=False):
@@ -407,3 +408,38 @@ def reporting_scatter(var, reporting, sho, hua, lim, kim, ana, joh, her, woo):
                       yaxis_title=ylab)
 
     return fig
+
+
+def calculate_percentage(df):
+    '''
+    Calculate of fully met criteria, out of all applicable criteria.
+
+    Parameters:
+    -----------
+    df : Dataframe containing 'fully', 'partially' and 'not' columns
+
+    Returns:
+    --------
+    Series contained calculate percentage as string rounded to int with '%' symbol.
+    '''
+    total = df[['fully', 'partially', 'not']].sum(axis=1)
+    return (df['fully'] / total * 100).round().astype(int).astype(str) + '%'
+
+
+def extract_reproduced(x):
+    '''
+    Extract count of items reproduced and total items in scope for each study,
+    and convert to percentage.
+
+    Parameters:
+    -----------
+    x : String including a format of 'X/Y' (e.g. '16/17')
+
+    Returns:
+    --------
+    Tuple containing the percentage, numerator and denominator
+    '''
+    nums = re.search(r'(\d+)/(\d+)', x)
+    num, denom = int(nums.group(1)), int(nums.group(2))
+    percentage = round(num / denom * 100, 1)
+    return percentage, num, denom

@@ -22,7 +22,8 @@ import pandas as pd
 import plotly.express as px
 import plotly.express as px
 import plotly.io as pio
-from functions import eval_chart, plot_scatter, calculate_scores
+from functions import (eval_chart, plot_scatter, calculate_scores,
+                       calculate_percentage, extract_reproduced)
 ```
 
 ## Summary
@@ -33,14 +34,14 @@ from functions import eval_chart, plot_scatter, calculate_scores
 # Create dataframe of results
 col = ['fully', 'partially', 'not', 'na']
 stress_dict = {
-  'Shoaib and<br>Ramamohan 2021': [17, 6, 1, 0],
-  'Huang et al. 2019': [14, 5, 4, 1],
-  'Lim et al. 2020': [15, 3, 3, 3],
-  'Kim et al. 2021': [15, 5, 2, 2],
-  'Anagnostou et al. 2022': [14, 2, 5, 3],
-  'Johnson et al. 2021': [16, 1, 2, 5],
-  'Hernandez et al. 2015': [18, 2, 3, 1],
-  'Wood et al. 2021': [22, 2, 0, 0]
+  'Shoaib and<br>Ramamohan 2021 (16/17)': [17, 6, 1, 0],
+  'Huang et al. 2019 (3/8)': [14, 5, 4, 1],
+  'Lim et al. 2020 (9/9)': [15, 3, 3, 3],
+  'Kim et al. 2021 (10/10)': [15, 5, 2, 2],
+  'Anagnostou et al. 2022 (1/1)': [14, 2, 5, 3],
+  'Johnson et al. 2021 (4/5)': [16, 1, 2, 5],
+  'Hernandez et al. 2015 (1/8)': [18, 2, 3, 1],
+  'Wood et al. 2021 (5/5)': [22, 2, 0, 0]
 }
 stress_wide = pd.DataFrame(stress_dict, index=col).T
 
@@ -98,14 +99,14 @@ check_reporting(stress_wide)
 # Create dataframe of results
 col = ['fully', 'partially', 'not', 'na']
 ispor_dict = {
-  'Shoaib and<br>Ramamohan 2021': [11, 2, 2, 3],
-  'Huang et al. 2019': [7, 2, 7, 2],
-  'Lim et al. 2020': [12, 0, 4, 2],
-  'Kim et al. 2021': [12, 0, 5, 1],
-  'Anagnostou et al. 2022': [8, 3, 4, 3],
-  'Johnson et al. 2021': [15, 0, 2, 1],
-  'Hernandez et al. 2015': [10, 0, 7, 1],
-  'Wood et al. 2021': [13, 0, 4, 1]
+  'Shoaib and<br>Ramamohan 2021 (16/17)': [11, 2, 2, 3],
+  'Huang et al. 2019 (3/8)': [7, 2, 7, 2],
+  'Lim et al. 2020 (9/9)': [12, 0, 4, 2],
+  'Kim et al. 2021 (10/10)': [12, 0, 5, 1],
+  'Anagnostou et al. 2022 (1/1)': [8, 3, 4, 3],
+  'Johnson et al. 2021 (4/5)': [15, 0, 2, 1],
+  'Hernandez et al. 2015 (1/8)': [10, 0, 7, 1],
+  'Wood et al. 2021 (5/5)': [13, 0, 4, 1]
 }
 ispor_wide = pd.DataFrame(ispor_dict, index=col).T
 
@@ -122,6 +123,40 @@ Same conclusions as for STRESS.
 
 ```{python}
 check_reporting(ispor_wide)
+```
+
+:::
+
+::: {.callout icon=false collapse=false}
+
+## Table with proportion of applicable reporting criteria that were fully met
+
+This is part of a table used in the journal article:
+
+```{python}
+# Calculate essential and optional percentages
+report_df = pd.DataFrame({
+    'stress': calculate_percentage(stress_wide),
+    'generic': calculate_percentage(ispor_wide)
+})
+
+# Calculate percentage and items in scope
+report_df['percentage'], report_df['num'], report_df['denom'] = zip(
+  *report_df.index.to_series().apply(extract_reproduced))
+
+# Sort by percentage and then by number of items in scope
+report_df = report_df.sort_values(by=['percentage', 'denom'],
+                                  ascending=[False, False])
+
+# Create formatted column with % and n/n reproduced
+report_df['reproduction'] = report_df.apply(
+    lambda row: f"{row['percentage']}% ({row['num']}/{row['denom']})", axis=1
+)
+
+# Filter to relevant columns, save and display
+report_applicable = report_df[['reproduction', 'stress', 'generic']]
+report_applicable.to_csv('../data/applicable_report.csv')
+report_applicable
 ```
 
 :::
