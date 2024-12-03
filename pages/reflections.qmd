@@ -4,8 +4,6 @@ echo: False
 bibliography: ../references.bib
 ---
 
-<!-- TODO: Once complete, carefully go over again and check everything is correct -->
-
 This page describes the facilitators for each reproduction (and, conversely, the barriers to the reproduction, in their absence). With each section, I have created a table which evaluates whether the facilitators were fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A) for each study.
 
 Links to each study:

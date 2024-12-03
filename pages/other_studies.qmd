@@ -51,8 +51,6 @@ Note: It is difficult to make comparisons between all these studies due to the l
 
 However, this section does try to pull out the more relevant studies (in terms of their focus and/or methods), and consider the **similarities and differences** to our work (e.g. broadly considering reproduction findings, but focusing particularly on **issues encountered** and **recommendations made**).
 
-<!--TODO: Write this section -->
-
 **Similar focus**: @henderson_reproducibility_2024
 
 * Infectious disease models (i.e. models, health)
@@ -117,8 +115,6 @@ However, this section does try to pull out the more relevant studies (in terms o
 :::
 
 ## Studies that evaluated research artefacts and/or articles
-
-<!--TODO: Look into this -->
 
 e.g. @schwander_replication_2021 and @zhang_reporting_2020 for reporting... @laurinavichyute_share_2022 for code...
 
@@ -215,8 +211,6 @@ e.g. @schwander_replication_2021 and @zhang_reporting_2020 for reporting... @lau
     * Suggest papers enriched with metadata/artefacts
 
 ## Journal procedures
-
-<!--TODO: Finish this -->
 
 *Psychological Science*
 

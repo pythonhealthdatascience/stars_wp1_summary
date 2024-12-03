@@ -3,20 +3,6 @@ title: "Modifying the framework"
 bibliography: ../references.bib
 ---
 
-<!--TODO: Move this to stars_wp2-->
-
-<!--TODO: Divide this into STARS framework and STRESS framework reflections-->
-
-<!--TODO: Consider implications of:
-* Reproduction
-* Evaluation of the repository
-* Evaluation of the article
-* Timings -->
-
-<!--TODO: Make a paper with STRESS specific reflections - so ensure these are incorporated in others, then have discussion page where I walk through STRESS and, based on what I have found, suggest what was helpful in framework, what was missing, and so on.
-
-* Consider: which of my reflections pertain to what is in the article, v.s. what is in the repository - e.g. the scenarios being used is important in both - but mine is actually referring more to the repository, hence relevant to STARS more-so than STARS-->
-
 ## Contents of the STARS framework
 
 | Section from reflections | Consideration for framework |
@@ -56,8 +42,6 @@ bibliography: ../references.bib
 * Tom: Agree this is a good idea
 
 ## Reflections from the evaluations
-
-<!-- TODO: Restructure this into implications for framework, and implications for STRESS-DES-->
 
 **TBC - in progress below...**
 

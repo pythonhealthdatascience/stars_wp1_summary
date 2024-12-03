@@ -15,8 +15,6 @@ Between each journal badge, there was often alot of overlap in criteria. Hence, 
 
 Consider: **What criteria are people struggling to meet from the guidelines?**
 
-<!-- TODO: Once complete, carefully go over again and check everything is correct -->
-
 ```{python}
 # Imports and function
 import plotly.express as px

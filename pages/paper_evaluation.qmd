@@ -7,8 +7,6 @@ format:
 bibliography: ../references.bib
 ---
 
-<!-- TODO: Once complete, carefully go over again and check everything is correct -->
-
 This page shares the results from the evaluation of the journal articles against criteria from two discrete-event simulation study reporting guidelines:
 
 * @monks_strengthening_2019 - STRESS-DES: Strengthening The Reporting of Empirical Simulation Studies (Discrete-Event Simulation) (Version 1.0).
@@ -69,7 +67,7 @@ def check_reporting(df):
     Dataframe with counts of fully, partially, not met and na items
   '''
   # Add reproduction success
-  df['reproduce'] = [94, 37.5, 100, 100, 100, 80, 12.5, 100]
+  df['reproduce'] = [94.1, 37.5, 100, 100, 100, 80, 12.5, 100]
 
   # Calculating some reporting quality scores
   scores = calculate_scores(df).rename_axis('study').reset_index()

@@ -4,8 +4,6 @@ echo: False
 bibliography: ../references.bib
 ---
 
-<!-- TODO: Once complete, carefully go over again and check everything is correct -->
-
 ## Studies
 
 **@shoaib_simulation_2021:** Uses **python (salabim)** to model primary health centres (PHCs) in India. The model has four patient types: outpatients, inpatients, childbirth cases and antenatal care patients. Four model configurations are developed based on observed PHC practices or government-mandated operational guidelines. The paper explores different operational patterns for scenarios where very high utilisation was observed, to explore what might help reduce utilisation of these resources. Note: The article was as @shoaib_simulation_2022, but we used the green open access pre-print @shoaib_simulation_2021. <a href="https://pythonhealthdatascience.github.io/stars-reproduce-shoaib-2022/evaluation/reproduction_success.html" target="_blank">Link to reproduction.</a>
@@ -28,7 +26,7 @@ bibliography: ../references.bib
 
 | Study | Scope | Success | Time |
 | --- | --- | --- | --- |
-| Shoaib and Ramamohan 2022 | 17 items:<br>• 1 table<br>• 9 figures<br>• 7 in-text results | 16 out of 17 (94%) | 28h 14m |
+| Shoaib and Ramamohan 2022 | 17 items:<br>• 1 table<br>• 9 figures<br>• 7 in-text results | 16 out of 17 (94.1%) | 28h 14m |
 | Huang et al. 2019 | 8 items:<br>• 5 figures<br>• 3 in-text results | 3 out of 8 (37.5%) | 24h 10m |
 | Lim et al. 2020 | 9 items:<br>• 5 tables<br>• 4 figures | 9 out of 9 (100%) | 12h 27m |
 | Kim et al. 2021 | 10 items:<br>• 3 tables<br>• 6 figures<br>• 1 in-text result | 10 out of 10 (100%) | 14h 42m |
@@ -220,7 +218,7 @@ to_plot = [
         df_sho,
         'Shoaib and<br>Ramamohan<br>2022',
         '#ee6677',
-        '94% (16/17), 28h 14m',
+        '94.1% (16/17), 28h 14m',
         (5, (10, 3))
     )
 ]

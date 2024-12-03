@@ -292,9 +292,6 @@ def calculate_scores(df):
     return df
 
 
-# TODO: Check the values used are still corrected, as there were some minor
-# amendments made to evaluations
-
 def plot_scatter(var, sho, hua, lim, kim, ana, joh, her, woo):
     '''
     Create scatter plot of variable against reproduction success, with dot size
@@ -324,7 +321,7 @@ def plot_scatter(var, sho, hua, lim, kim, ana, joh, her, woo):
     # Create data frame with columns for study, % items reproduced,
     # time (minutes) spent on reproduction, and the input variable
     df = pd.DataFrame({
-        'Shoaib and Ramamohan 2021': [94, 1694, sho],
+        'Shoaib and Ramamohan 2021': [94.1, 1694, sho],
         'Huang et al. 2019': [37.5, 1450, hua],
         'Lim et al. 2020': [100, 747, lim],
         'Kim et al. 2021': [100, 875, kim],
