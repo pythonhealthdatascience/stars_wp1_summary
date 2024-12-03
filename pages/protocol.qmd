@@ -7,7 +7,7 @@ For work package 1, the methods were described in our protocol, @heather_protoco
 
 > Heather, Amy, Thomas Monks, Alison Harper, Navonil Mustafee, and Andrew Mayne. 2024. “Protocol for Assessing the Computational Reproducibility of Discrete-Event Simulation Models on STARS,” June. <https://zenodo.org/records/12179846>.
 
-These are summarised below, and deviations from the protocol are also described.
+These are summarised below, and modifications from the protocol are also described.
 
 ## Protocol summary
 
@@ -78,16 +78,16 @@ It was also informed by:
 
 There were two main changes from the protocol...
 
-| Deviation | Description and reason for the change |
+| Modification | Description and reason for the change |
 | --- | --- |
 | Expanding from 6 to 8 studies | Whilst partway through the 6th study, we reflected on what we had found so far, and felt it would be beneficial to do a few more studies. The primary motivation for this was to try and include a selection of studies that reflect the range of studies in the literature. So far, we had a few studies where the model code/run times were very large or very small, and we felt it beneficial to try and include some more "medium-sized" studies, as these are more typical of the literature. We also thought it would be good to include an older study (for example, about 10 years ago, if we can find one), as all those included so far were within the last few years, but working with more outdated code will be/can be a problem people encounter. |
 | Using the latest software packages | In the protocol, I had planned that - if no versions were provided  we select a version of the software and each package that is closest to but still prior to the date of the code archive or paper publication. I kept to this for the Python models (easily set using a conda/mamba environment). However, I had great difficulties attempting to do this in R, and could not successfully backdate both. As such, I used the latest versions of R and each package for those studies |
 
 There were also some very minor changes, which are explained below...
 
-| Deviation | Description and reason for the change |
+| Modification | Description and reason for the change |
 | --- | --- |
-| Using percentage difference in results to help decided reproduction success | This is not particularly deviation, as I did explore this, but I ultimately found it very unhelpful, as the percentage difference could be greatly impacted by scale (for example, 0.1 vs 0.2 would appear much greater than 3 vs 4, but the actual meaning of these differences might be similar (e.g. both might be considered a small difference) depending on the scale used and what is being compared - whilst in another context with a different scale, 0.1 vs 0.2 might actually reflect a huge difference!). |
+| Using percentage difference in results to help decided reproduction success | I did explore this, but I ultimately found it very unhelpful, as the percentage difference could be greatly impacted by scale (for example, 0.1 vs 0.2 would appear much greater than 3 vs 4, but the actual meaning of these differences might be similar (e.g. both might be considered a small difference) depending on the scale used and what is being compared - whilst in another context with a different scale, 0.1 vs 0.2 might actually reflect a huge difference!). |
 | Moving onto evaluation stage before receive author response regarding reproduction discrepancy or before getting consensus on reproduction | In the protocol, we required that authors are contacted if there are any remaining difficulties in running the code or items in the scope that were not reproduced. The authors were given a total of four weeks to respond if they chose to. We had implied that we must wait for this time to pass before continuing to the evaluation stage (since the three stages were presented as being completed one after another). The rationale for this was that the timings for the reproduction would be influenced by whether the evaluation had been completed or not, and vice versa. However, given the many possible influences on the timings, this was considered negligble.<br><br>We also required consensus on whether items had been succesfully reproduced or not before moving on. In some cases, this was not done, as other team members were not available (e.g. busy or on annual leave) and so could not yet give a second opinion, and so I progressed with the evaluation and got consensus on reproductions afterwards, once they were available. |
 | Organisation of the repository for the research compendium | In the protocol, we had planned that seperate folders were created for data, methods and outputs. This was generally followed but, if an alternative structure seemed more suitable. For example, if the original study already divided items well, but perhaps with different folder names or with multiple scripts folders or so on, we might have used that original structure, as it still served the purpose of being clear and easy to re-run, whilst reducing the number of differences compared with the original study. |
 | Retrospective archiving | For Johnson et al. 2021, I forgot to create a release to archive this repository after defining scope and before proceeding with reproduction. However, I was easily able to resolve this by setting the release to a prior commit, choosing the commit from that timepoint (between scope and reproduction), so it was as if it had been done at the time |
