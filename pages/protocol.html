@@ -216,45 +216,10 @@ div.csl-indent {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">Discussion</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/results_discussion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Results discussion</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/other_studies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Comparison to other studies</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/framework.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Modifying the framework</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/limitations.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Limitations</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/acknowledgements.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Acknowledgements</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Acknowledgements</span></span></a>
   </div>
 </li>
     </ul>
@@ -329,7 +294,7 @@ div.csl-indent {
 <li>Association for Computing Machinery (ACM) (<span class="citation" data-cites="association_for_computing_machinery_acm_artifact_2020">Association for Computing Machinery (ACM) (<a href="#ref-association_for_computing_machinery_acm_artifact_2020" role="doc-biblioref">2020</a>)</span>)</li>
 <li>Center for Open Science (COS) (<span class="citation" data-cites="blohowiak_badges_2023">Blohowiak et al. (<a href="#ref-blohowiak_badges_2023" role="doc-biblioref">2023</a>)</span>)</li>
 <li>Institute of Electrical and Electronics Engineers (IEEE) (<span class="citation" data-cites="institute_of_electrical_and_electronics_engineers_ieee_about_2024">Institute of Electrical and Electronics Engineers (IEEE) (<a href="#ref-institute_of_electrical_and_electronics_engineers_ieee_about_2024" role="doc-biblioref">2024</a>)</span>)</li>
-<li>Psychological Science (<span class="citation" data-cites="hardwicke_transparency_2023">(<a href="#ref-hardwicke_transparency_2023" role="doc-biblioref"><strong>hardwicke_transparency_2023?</strong></a>)</span> and <span class="citation" data-cites="association_for_psychological_science_aps_psychological_2024">Association for Psychological Science (APS) (<a href="#ref-association_for_psychological_science_aps_psychological_2024" role="doc-biblioref">2024</a>)</span>)</li>
+<li>Psychological Science (<span class="citation" data-cites="hardwicke_transparency_2024">Hardwicke and Vazire (<a href="#ref-hardwicke_transparency_2024" role="doc-biblioref">2024</a>)</span> and <span class="citation" data-cites="association_for_psychological_science_aps_psychological_2024">Association for Psychological Science (APS) (<a href="#ref-association_for_psychological_science_aps_psychological_2024" role="doc-biblioref">2024</a>)</span>)</li>
 </ul></li>
 <li>Recommendations from the pilot STARS framework for the sharing of code and associated materials from discrete-event simulation models (<span class="citation" data-cites="monks_towards_2024">Monks, Harper, and Mustafee (<a href="#ref-monks_towards_2024" role="doc-biblioref">2024</a>)</span>).</li>
 </ul></li>
@@ -379,7 +344,7 @@ div.csl-indent {
 </section>
 <section id="modifications-from-the-protocol" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="modifications-from-the-protocol"><span class="header-section-number">3.3</span> Modifications from the protocol</h2>
-<p>There was one major change from the protocol…</p>
+<p>There were two main changes from the protocol…</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -396,9 +361,13 @@ div.csl-indent {
 <td>Expanding from 6 to 8 studies</td>
 <td>Whilst partway through the 6th study, we reflected on what we had found so far, and felt it would be beneficial to do a few more studies. The primary motivation for this was to try and include a selection of studies that reflect the range of studies in the literature. So far, we had a few studies where the model code/run times were very large or very small, and we felt it beneficial to try and include some more “medium-sized” studies, as these are more typical of the literature. We also thought it would be good to include an older study (for example, about 10 years ago, if we can find one), as all those included so far were within the last few years, but working with more outdated code will be/can be a problem people encounter.</td>
 </tr>
+<tr class="even">
+<td>Using the latest software packages</td>
+<td>In the protocol, I had planned that - if no versions were provided we select a version of the software and each package that is closest to but still prior to the date of the code archive or paper publication. I kept to this for the Python models (easily set using a conda/mamba environment). However, I had great difficulties attempting to do this in R, and could not successfully backdate both. As such, I used the latest versions of R and each package for those studies</td>
+</tr>
 </tbody>
 </table>
-<p>There were also some minor changes, which are explained below…</p>
+<p>There were also some very minor changes, which are explained below…</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -412,30 +381,26 @@ div.csl-indent {
 </thead>
 <tbody>
 <tr class="odd">
-<td>Using the latest software packages</td>
-<td>In the protocol, I had planned that - if no versions were provided we select a version of the software and each package that is closest to but still prior to the date of the code archive or paper publication. I kept to this for the Python models (easily set using a conda/mamba environment). However, I had great difficulties attempting to do this in R, and could not successfully backdate both. As such, I used the latest versions of R and each package for those studies</td>
-</tr>
-<tr class="even">
 <td>Using percentage difference in results to help decided reproduction success</td>
 <td>This is not particularly deviation, as I did explore this, but I ultimately found it very unhelpful, as the percentage difference could be greatly impacted by scale (for example, 0.1 vs 0.2 would appear much greater than 3 vs 4, but the actual meaning of these differences might be similar (e.g.&nbsp;both might be considered a small difference) depending on the scale used and what is being compared - whilst in another context with a different scale, 0.1 vs 0.2 might actually reflect a huge difference!).</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Moving onto evaluation stage before receive author response regarding reproduction discrepancy or before getting consensus on reproduction</td>
 <td>In the protocol, we required that authors are contacted if there are any remaining difficulties in running the code or items in the scope that were not reproduced. The authors were given a total of four weeks to respond if they chose to. We had implied that we must wait for this time to pass before continuing to the evaluation stage (since the three stages were presented as being completed one after another). The rationale for this was that the timings for the reproduction would be influenced by whether the evaluation had been completed or not, and vice versa. However, given the many possible influences on the timings, this was considered negligble.<br><br>We also required consensus on whether items had been succesfully reproduced or not before moving on. In some cases, this was not done, as other team members were not available (e.g.&nbsp;busy or on annual leave) and so could not yet give a second opinion, and so I progressed with the evaluation and got consensus on reproductions afterwards, once they were available.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Organisation of the repository for the research compendium</td>
 <td>In the protocol, we had planned that seperate folders were created for data, methods and outputs. This was generally followed but, if an alternative structure seemed more suitable. For example, if the original study already divided items well, but perhaps with different folder names or with multiple scripts folders or so on, we might have used that original structure, as it still served the purpose of being clear and easy to re-run, whilst reducing the number of differences compared with the original study.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Retrospective archiving</td>
 <td>For Johnson et al.&nbsp;2021, I forgot to create a release to archive this repository after defining scope and before proceeding with reproduction. However, I was easily able to resolve this by setting the release to a prior commit, choosing the commit from that timepoint (between scope and reproduction), so it was as if it had been done at the time</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Identification of papers</td>
 <td>Although 7 papers were identified from the review by <span class="citation" data-cites="monks_computer_2023">Monks and Harper (<a href="#ref-monks_computer_2023" role="doc-biblioref">2023</a>)</span>, 1 was identified from additional searches (informal, not systematic) - this was so we could find an older paper.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Reflections</td>
 <td>I effectivelly created an “additional” stage, which was to create a page of reflections on the reproduction (barriers and faciliators). This was not formally part of the original protocol, but implicit.</td>
 </tr>
@@ -473,6 +438,9 @@ Berkeley Initiative for Transparency in the Social Sciences. 2022. <span>“Guid
 </div>
 <div id="ref-blohowiak_badges_2023" class="csl-entry" role="listitem">
 Blohowiak, Ben B., Johanna Cohoon, Lee de-Wit, Eric Eich, Frank J. Farach, Fred Hasselman, Alex O. Holcombe, Macartan Humphreys, Melissa Lewis, and Brian A. Nosek. 2023. <span>“Badges to <span>Acknowledge</span> <span>Open</span> <span>Practices</span>.”</span> <a href="https://osf.io/tvyxz/">https://osf.io/tvyxz/</a>.
+</div>
+<div id="ref-hardwicke_transparency_2024" class="csl-entry" role="listitem">
+Hardwicke, Tom E., and Simine Vazire. 2024. <span>“Transparency <span>Is</span> <span>Now</span> the <span>Default</span> at <span>Psychological</span> <span>Science</span>.”</span> <em>Psychological Science</em> 35 (7): 708–11. <a href="https://doi.org/10.1177/09567976231221573">https://doi.org/10.1177/09567976231221573</a>.
 </div>
 <div id="ref-heather_protocol_2024" class="csl-entry" role="listitem">
 Heather, Amy, Thomas Monks, Alison Harper, Navonil Mustafee, and Andrew Mayne. 2024. <span>“Protocol for Assessing the Computational Reproducibility of Discrete-Event Simulation Models on <span>STARS</span>.”</span> Zenodo. <a href="https://doi.org/10.5281/zenodo.12179846">https://doi.org/10.5281/zenodo.12179846</a>.
