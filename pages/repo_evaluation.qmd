@@ -518,6 +518,11 @@ stars_chart = eval_chart(stars_wide)
 # Display figure
 stars_chart.show(config={'displayModeBar': False})
 
+# Reduce white space
+stars_chart.update_layout(
+    margin=dict(l=0, r=0, t=10, b=0)
+)
+
 # Save figure as 300DPI static image for use in article
 pio.write_image(stars_chart, '../images/stars_criteria.png',
                 width=2.5*300, height=1.8*300, scale=2.2)

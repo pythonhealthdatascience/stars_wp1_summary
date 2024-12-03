@@ -218,6 +218,11 @@ stress_chart = eval_chart(criteria_wide)
 # Display figure
 stress_chart.show(config={'displayModeBar': False})
 
+# Reduce white space
+stress_chart.update_layout(
+    margin=dict(l=0, r=0, t=10, b=0)
+)
+
 # Save figure as 300DPI static image for use in article
 pio.write_image(stress_chart, '../images/stress_criteria.png',
                 width=2.8*300, height=2.5*300, scale=1.97)
@@ -396,10 +401,10 @@ criteria_dict = {
   '8 Inputs': [6, 2, 0, 0],
   '9 Uncertainty': [3, 1, 3, 1],
   '10 Sensitivity': [4, 0, 3, 1],
-  '11 Face val.': [1, 0, 7, 0],
-  '12 Cross val.': [2, 0, 5, 1],
-  '13 External val.': [2, 0, 3, 3],
-  '14 Predictive val.': [0, 0, 1, 7],
+  '11 Face validity': [1, 0, 7, 0],
+  '12 Cross validity': [2, 0, 5, 1],
+  '13 External validity': [2, 0, 3, 3],
+  '14 Predictive validity': [0, 0, 1, 7],
   '15 Generalisability': [5, 1, 2, 0],
   '16 Stakeholders': [1, 0, 7, 0],
   '17 Funding': [6, 0, 2, 0],
@@ -412,6 +417,11 @@ ispor_chart = eval_chart(criteria_wide)
 
 # Display figure
 ispor_chart.show(config={'displayModeBar': False})
+
+# Reduce white space
+ispor_chart.update_layout(
+    margin=dict(l=0, r=0, t=10, b=0)
+)
 
 # Save figure as 300DPI static image for use in article
 pio.write_image(ispor_chart, '../images/ispor_criteria.png',
