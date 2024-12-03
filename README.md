@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+    <a target="_blank" href="https://doi.org/10.5281/zenodo.14267268"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.14267268.svg" alt="DOI 10.5281/zenodo.14267268"/></a>
     <!--<a href="#"><img src="https://img.shields.io/github/v/release/pythonhealthdatascience/stars_wp1_summary" alt="GitHub release" /></a>
     <a href="#"><img src="https://img.shields.io/github/release-date/pythonhealthdatascience/stars_wp1_summary" alt="GitHub release date" /></a>-->
     <a href="#"><img src="https://img.shields.io/github/last-commit/pythonhealthdatascience/stars_wp1_summary" alt="GitHub last commit" /></a>
@@ -110,7 +111,11 @@ quarto render
 
 ## 📝 Citation
 
-If you wish to cite this repository, please refer to the citation file `CITATION.cff`, and the auto-generated alternatives `citation_apalike.apa` and `citation_bibtex.bib`. Authors:
+This repository has been archived on Zenodo and can be cited as:
+
+> Heather, A., Monks, T., & Harper, A. (2024). STARS Work Package 1 Summary. Zenodo. <https://doi.org/10.5281/zenodo.14267268>.
+
+If you wish to cite this repository on GitHub, please refer to the citation file `CITATION.cff`, and the auto-generated alternatives `citation_apalike.apa` and `citation_bibtex.bib`. Authors:
 
 | Member | ORCID | GitHub |
 | --- | --- | --- |
