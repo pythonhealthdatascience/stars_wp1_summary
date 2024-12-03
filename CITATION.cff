@@ -26,5 +26,5 @@ abstract: >-
   Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1. These assessed six discrete-event simulation papers with models in Python and R.
 license: CC-BY-4.0
 # TODO: Manually update with each GitHub release (start with 0.1.0)
-version: '0.1.0'
-date-released: '2024-08-14'
+version: '1.0.0'
+date-released: '2024-12-03'
