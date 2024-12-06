@@ -169,57 +169,49 @@ to_plot = [
         df_ana,
         'Anagnostou<br>et al. 2022',
         '#882255',
-        '100% (1/1), 2h 11m',
-        (0, (1, 1))
+        '100% (1/1), 2h 11m'
     ),
     (
         df_woo,
         'Wood et al.<br>2021',
         '#117733',
-        '100% (5/5), 3h 50m',
-        '--'
+        '100% (5/5), 3h 50m'
     ),
     (
         df_lim,
         'Lim et<br>al. 2020',
         '#4477aa',
-        '100% (9/9), 12h 27m',
-        '-.'
+        '100% (9/9), 12h 27m'
     ),
     (
         df_kim,
         'Kim et<br>al. 2021',
         '#ccbb44',
-        '100% (10/10), 14h 42m',
-        ':'
-    ),
-    (
-        df_her,
-        'Hernandez<br>et al. 2015',
-        '#aa3377',
-        '12.5% (1/8), 17h 56m',
-        '-'
-    ),
-    (
-        df_joh,
-        'Johnson et<br>al. 2021',
-        '#66ccee',
-        '80% (4/5), 19h 49m',
-        (0, (3, 1, 1, 1, 1, 1))
-    ),
-    (
-        df_hua,
-        'Huang et<br>al. 2019',
-        '#228833',
-        '37.5% (3/8), 24h 10m',
-        (0, (3, 3, 1, 3, 1, 3))
+        '100% (10/10), 14h 42m'
     ),
     (
         df_sho,
         'Shoaib and<br>Ramamohan<br>2022',
         '#ee6677',
-        '94.1% (16/17), 28h 14m',
-        (5, (10, 3))
+        '94.1% (16/17), 28h 14m'
+    ),
+    (
+        df_joh,
+        'Johnson et<br>al. 2021',
+        '#228833',
+        '80% (4/5), 19h 49m'
+    ),
+    (
+        df_hua,
+        'Huang et<br>al. 2019',
+        '#66ccee',
+        '37.5% (3/8), 24h 10m'
+    ),
+    (
+        df_her,
+        'Hernandez<br>et al. 2015',
+        '#aa3377',
+        '12.5% (1/8), 17h 56m'
     )
 ]
 ```
@@ -232,7 +224,7 @@ fig, ax = plt.subplots()
 
 # Loop through and add lines for each reproduction
 for x in to_plot:
-    success_static(x[0], ax, x[1], x[2], ls=x[4])
+    success_static(x[0], ax, x[1], x[2])
 
 # Amend appearance
 plt.xlim(0, 30)
@@ -254,7 +246,7 @@ fig, ax = plt.subplots(figsize=(8, 4))
 
 # Loop through and add lines for each reproduction
 for x in to_plot:
-    success_static(x[0], ax, label=x[3], colour=x[2], ls=x[4])
+    success_static(x[0], ax, label=x[3], colour=x[2])
 
 # Amend appearance
 plt.xlim(0, 30)

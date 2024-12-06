@@ -115,7 +115,7 @@ def success_interactive(times_df, fig, label, colour):
             '%{hovertext}<br>Time: %{x:.1f} hours<br>Completion: %{y:.1f}%')))
 
 
-def success_static(times_df, ax, label, colour, ls):
+def success_static(times_df, ax, label, colour):
     '''
     Create static/non-interactive plot of time-to-completion
 
@@ -129,11 +129,9 @@ def success_static(times_df, ax, label, colour, ls):
         Label for the line
     colour : string
         Colour of line
-    ls : string or tuple
-        Line style
     '''
     ax.plot(times_df['hours'], times_df['ecdf'],
-            marker='.', markevery=2, linestyle=ls,
+            marker='.', markevery=2,
             label=label.replace('<br>', '\n'), color=colour)
 
 
