@@ -26,6 +26,8 @@ Links to each study:
 
 This is a summary of all the items that were evaluated (with ✅🟡❌) below.
 
+It **excludes** the "Other section". It also excludes a few criteria which weren't felt particularly relevant/suitable to mark as met or not. These were "link publication to a specific version of the code", "optimise model run time" and "avoid large file sizes".
+
 ```{python}
 import pandas as pd
 from functions import eval_chart
@@ -33,28 +35,22 @@ from functions import eval_chart
 # Create dataframe of results
 col = ['fully', 'partially', 'not', 'na']
 criteria_dict = {
-  'List packages': [2, 3, 3, 0],
-  'Provide versions': [0, 6, 2, 0],
-  'Model in "runnable" format': [7, 0, 1, 0],
-  'Can run some programmatically': [7, 0, 1, 0],
-  '''Don't hard code scenario param.''': [3, 2, 2, 1],
-  'Relative file paths': [5, 0, 0, 3],
-  'Avoid duplication': [5, 0, 3, 0],
-  'Sufficient comments': [1, 3, 4, 0],
-  'If slow, state run time': [2, 2, 3, 1],
-  'Provide scenario code': [1, 1, 5, 1],
-  'Provide all required outputs': [3, 0, 5, 0],
-  'Include correct parameters': [4, 2, 2, 0],
-  'Provide all required parameters': [4, 0, 4, 0],
-  'If not, clearly state in paper': [1, 2, 2, 3],
-  'If process param., provide calc.': [1, 0, 1, 6],
-  'Save output to file': [4, 0, 4, 0],
-  'Understandable output tables': [5, 0, 3, 0],
-  'Use seeds': [5, 0, 3, 0],
-  'Code to make tables': [1, 1, 4, 2],
-  'Code to make figures': [1, 2, 5, 0],
-  'Code to process in-text results': [0, 0, 3, 5],
-  'Run instructions': [2, 1, 5, 0],
+    'Share code with an open licence': [4, 0, 4, 0],
+    'List required packages and versions': [0, 6, 2, 0],
+    'Provide code for all scenarios<br>and sensitivity analyses': [1, 1, 5, 1],
+    'Ensure model parameters are correct': [4, 2, 2, 0],
+    'Control randomness': [5, 0, 3, 0],
+    'Include code to calculate all<br>required model outputs': [3, 0, 5, 0],
+    'Include code to generate the tables,<br>figures and other reported results': [1, 3, 4, 0],
+    'Separate model code from applications': [1, 0, 1, 6],
+    'Avoid hard-coded parameters': [3, 2, 2, 1],
+    'Minimise code duplication': [5, 0, 3, 0],
+    'Comment sufficiently': [1, 3, 4, 0],
+    'Ensure clarity and consistency<br>in the model results tables': [5, 0, 3, 0],
+    'Include run instructions': [2, 1, 5, 0],
+    'State run times and<br>machine specifications': [0, 5, 3, 0],
+    'Save output to a file': [4, 0, 4, 0],
+    'Avoid excessive output files': [7, 0, 1, 0]
 }
 criteria_wide = pd.DataFrame(criteria_dict, index=col).T
 
@@ -62,6 +58,8 @@ eval_chart(criteria_wide).show(config={'displayModeBar': False})
 ```
 
 ## Recommendations to support reproduction.
+
+![](../images/reproduction_wheel.png)
 
 ### Set-up
 
@@ -81,11 +79,23 @@ Absence of licence prevents legal reuse of code for reproduction.
 
 ## Link publication to a specific version of the code
 
+Whether or not they did it:
+
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| | | | | | ❌ | | | 
+| ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
-<!--TODO: Check if any other studies had commits after publication-->
+Then, considering how "applicable" it feels... although you could argue those where I have marked "non-applicable" would become applicable with the addition of any new commits to the repository.
+
+| @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| N/A | N/A | N/A | ❌ | N/A | ❌ | N/A | N/A | 
+
+@shoaib_simulation_2021, @hernandez_optimal_2015: N/A. Not met but not an issue as last commit (with exception of any related to licence from our communication) is prior to publication, so marked as not applicable.
+
+@huang_optimizing_2019, @lim_staff_2020, @anagnostou_facs-charm_2022, @wood_value_2021: N/A. Only 1 commit (excluding repo creation), or only commits on one day.
+
+@kim_modelling_2021: Not met. Had commits to their GitHub repository after the publication date - though these largely appear related to a different model in the same repository, or for a fix.
 
 @johnson_cost_2021: Not met. Had commits to their GitHub repository after the publication date. It wasn't clear which version aligned with the publication. However, the most recent commits add clear README instructions to the repository. We decided to use the latest version of the repository, but it would have beneficial to have releases/versions/a change log that would help to outline the commit history in relation to the publication and any subsequent changes.
 
@@ -95,13 +105,13 @@ Absence of licence prevents legal reuse of code for reproduction.
 
 ## List required packages and versions
 
-### Packages and versions
+**Packages and versions**
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | ❌ | ❌ | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 | 🟡 |
 
-### Packages
+**Packages**
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -133,7 +143,7 @@ Absence of licence prevents legal reuse of code for reproduction.
 * If there are local dependencies (e.g. other GitHub repositories), make sure to (a) mention and link to these repositories, so it is clear they are also required, and (b) include licence/s in those repositories also, so they can be used.
 * This was a common issue.
 
-### Versions
+**Versions**
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -237,7 +247,7 @@ Absence of licence prevents legal reuse of code for reproduction.
 
 :::
 
-::: {.callout-note icon=false collapse=true}
+::: {.callout-tip icon=false collapse=true}
 
 ## Control randomness
 
@@ -274,7 +284,7 @@ Absence of licence prevents legal reuse of code for reproduction.
 
 ### Outputs
 
-::: {.callout-tip icon=false collapse=true}
+::: {.callout-warning icon=false collapse=true}
 
 ## Include code to calculate all required model outputs
 
@@ -310,13 +320,13 @@ Absence of licence prevents legal reuse of code for reproduction.
 
 ## Include code to generate the tables, figures and other reported results
 
-### Summary
+**Summary**
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | ❌ | ❌ | 🟡 | ❌ | ❌ | 🟡 | 🟡 | ✅ |
 
-### Provide code to process results into tables
+**Provide code to process results into tables**
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -343,7 +353,7 @@ Absence of licence prevents legal reuse of code for reproduction.
 * It can take a bit of time to do this processing, and it can be tricky/confusing to do correctly, so very handy for it to be provided.
 * Common issue.
 
-### Provide code to process results into figures
+**Provide code to process results into figures**
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -367,7 +377,7 @@ Absence of licence prevents legal reuse of code for reproduction.
 * Also, handy if the full code can be provided for all figures (although partial code is more helpful than none at all).
 * Common issue.
 
-### Provide code to calculate in-text results
+**Provide code to calculate in-text results**
 
 By "in-text results", I am referred to results that are mentioned in the text but not included in/cannot be deduced from any of the tables or figures.
 
@@ -388,31 +398,31 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 
 ## Recommendations to support troubleshooting and reuse
 
+![](../images/troubleshooting_wheel.png)
+
 ### Design
 
-::: {.callout-warning icon=false collapse=true}
+::: {.callout-caution icon=false collapse=true}
 
 ## Separate model code from applications
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| ✅ | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| N/A | ❌ | N/A | N/A | ✅ | N/A | N/A | N/A |
 
-@shoaib_simulation_2021: Fully met. Provided as a single `.py` file which ran model with function `main()`.
+For studies where this is relevant (i.e. with applications):
 
-@huang_optimizing_2019: Not met. The model code was provided within the code for a web application, but the paper was not focused on this application, and instead on specific model scenarios. I had to extract the model code and transform it into a format that was "runnable" as an R script/notebook.
+* @huang_optimizing_2019: Not met. The model code was provided within the code for a web application, but the paper was not focused on this application, and instead on specific model scenarios. I had to extract the model code and transform it into a format that was "runnable" as an R script/notebook.
+* @anagnostou_charm_2022: Fully met. Code for web app in a seperate repository to model code.
 
-@lim_staff_2020: Fully met. Provided as a single `.py` file which ran the model with a for loop.
+For other studies, regarding whether the model code was in a "runnable" format and not embedded within anything else...
 
-@kim_modelling_2021: Fully met. Has seperate `.R` scripts for each scenario which ran the model by calling functions from elsewhere in repository.
-
-@anagnostou_facs-charm_2022: Fully met. Can run model from command line.
-
-@johnson_cost_2021: Fully met. Model provided as a package (which is an R interface for the C++ model).
-
-@hernandez_optimal_2015: Fully met. The model (python code) can be run from `main.py`.
-
-@wood_value_2021: Fully met. Provided as a single `.R` file which ran the model with a for loop.
+* @shoaib_simulation_2021: Provided as a single `.py` file which ran model with function `main()`.
+* @lim_staff_2020: Provided as a single `.py` file which ran the model with a for loop.
+* @kim_modelling_2021: Has seperate `.R` scripts for each scenario which ran the model by calling functions from elsewhere in repository.
+* @johnson_cost_2021: Model provided as a package (which is an R interface for the C++ model).
+* @hernandez_optimal_2015: The model (python code) can be run from `main.py`.
+* @wood_value_2021: Provided as a single `.R` file which ran the model with a for loop.
 
 **Reflections:**
 
@@ -421,7 +431,7 @@ By "in-text results", I am referred to results that are mentioned in the text bu
 
 :::
 
-::: {.callout-warning icon=false collapse=true}
+::: {.callout-caution icon=false collapse=true}
 
 ## Avoid hard-coded parameters
 
@@ -456,7 +466,7 @@ Don't hard code parameters that you will want to change for scenario analyses
 
 :::
 
-::: {.callout-warning icon=false collapse=true}
+::: {.callout-caution icon=false collapse=true}
 
 ## Minimise code duplication
 
@@ -491,7 +501,7 @@ Don't hard code parameters that you will want to change for scenario analyses
 
 ### Clarity
 
-::: {.callout-warning icon=false collapse=true}
+::: {.callout-important icon=false collapse=true}
 
 ## Comment sufficiently
 
@@ -523,7 +533,7 @@ Don't hard code parameters that you will want to change for scenario analyses
 
 :::
 
-::: {.callout-caution icon=false collapse=true}
+::: {.callout-important icon=false collapse=true}
 
 ## Ensure clarity and consistency in the model results tables
 
@@ -589,11 +599,13 @@ Don't hard code parameters that you will want to change for scenario analyses
 
 ## State run times and machine specifications
 
+**Summary (whether stated both)**
+
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
 | 🟡 | ❌ | 🟡 | ❌ | ❌ | 🟡 | 🟡 | 🟡 |
 
-### State run time
+**State run time**
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -624,7 +636,7 @@ Don't hard code parameters that you will want to change for scenario analyses
 * Tom: This supports the inclusion of section 5.4 in the STRESS-DES guidelines
     * Response: But think it is also important that this is in the repository itself, and not just the paper.
 
-### State machine specification
+**State machine specification**
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
@@ -634,11 +646,11 @@ Regarding the one that did describe it:
 
 * @lim_staff_2020: Describe in article ("desktop computer (Intel Core i5 3.5 GHz, 8 GB RAM)")
 
-### Computationally expensive models
+**Computationally expensive models**
 
 Regarding whether models were computationally expensive...
 
-* @shoaib_simulation_2021, @huang_optimizing_2019, and @lim_staff_2020, @anagnostou_facs-charm_2022: No issues
+* @shoaib_simulation_2021, @huang_optimizing_2019, and @lim_staff_2020,  @anagnostou_facs-charm_2022: No issues
 * @kim_modelling_2021: Unable to run on my machine (`serial` took too long to run (would have to leave laptop on for many many hours which isn't feasible), and `parallel` was too computationally expensive and crashed the machine (with the original number of people)). This is not mentioned in the repository or paper, but only referred to in a prior publication. Would've been handy if it included suggestions like reducing number of people and so on (which is what I had to do to feasibly run it).
 * @johnson_cost_2021: It becomes more computationally expensive if try to run lots at once in simultaneous terminals. Didn't try running one on local machine with full parameter due to long run time making it infeasible, but knowing my system specs, it should have been able to if did.
 * @hernandez_optimal_2015: This had long run times but I don't know if it was computationally expensive or not - I just know that I didn't run into any issues (but I didn't record memory usage, so its possible a lower-specced machine might).
@@ -656,7 +668,7 @@ Regarding whether models were computationally expensive...
 
 ### Functionality
 
-::: {.callout-important icon=false collapse=true}
+::: {.callout-note icon=false collapse=true}
 
 ## Optimise model run time
 
@@ -682,7 +694,7 @@ In one of the studies, there was a minor error which needed fixing, which we ant
 
 :::
 
-::: {.callout-caution icon=false collapse=true}
+::: {.callout-note icon=false collapse=true}
 
 ## Saves output to a file
 
@@ -710,13 +722,13 @@ In one of the studies, there was a minor error which needed fixing, which we ant
 
 :::
 
-::: {.callout-caution icon=false collapse=true}
+::: {.callout-note icon=false collapse=true}
 
 ## Avoid excessive output files
 
 | @shoaib_simulation_2021 | @huang_optimizing_2019 | @lim_staff_2020 | @kim_modelling_2021 | @anagnostou_facs-charm_2022 | @johnson_cost_2021 | @hernandez_optimal_2015 | @wood_value_2021 |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| N/A | N/A | N/A | N/A | N/A | N/A | ❌ | N/A |
+| ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ✅ |
 
 For @hernandez_optimal_2015 the default behaviour of the script was to output lots of files from each round (so you could easily have 90, 100, 200+ files), which were then not used in analysis (as it just depended on an aggregate results file). Although these individual files might be useful during quality control, as a default behaviour of the script, it could easily make the repository quite busy/littered with files.
 
@@ -724,7 +736,7 @@ For @hernandez_optimal_2015 the default behaviour of the script was to output lo
 
 :::
 
-::: {.callout-caution icon=false collapse=true}
+::: {.callout-note icon=false collapse=true}
 
 ## Address large file sizes
 
@@ -752,7 +764,7 @@ Regarding file sizes in each study:
 
 ## Other recommendations
 
-::: {.callout-note icon=false collapse=true}
+::: {.callout-tip icon=false collapse=true}
 
 ## Be aware of potential system dependencies
 
@@ -768,7 +780,7 @@ This issue was specific to (a) R studies, and (b) the study with an unsupported 
 
 ::: 
 
-::: {.callout-warning icon=false collapse=true}
+::: {.callout-tip icon=false collapse=true}
 
 ## Model is designed to be run programmatically (i.e. can run model with different parameters without needing to change the model code)
 
@@ -802,7 +814,7 @@ This issue was specific to (a) R studies, and (b) the study with an unsupported 
 
 :::
 
-::: {.callout-warning icon=false collapse=true}
+::: {.callout-tip icon=false collapse=true}
 
 ## Use relative file paths
 
