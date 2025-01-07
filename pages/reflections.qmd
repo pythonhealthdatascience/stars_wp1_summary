@@ -26,7 +26,7 @@ Links to each study:
 
 This is a summary of all the items that were evaluated (with ✅🟡❌) below.
 
-It **excludes** the "Other section". It also excludes a few criteria which weren't felt particularly relevant/suitable to mark as met or not. These were "link publication to a specific version of the code", "optimise model run time" and "avoid large file sizes".
+It **excludes** the "Other section". It also excludes a few criteria which weren't felt particularly relevant/suitable to mark as met or not. These were "optimise model run time" and "avoid large file sizes".
 
 ```{python}
 import pandas as pd
@@ -36,6 +36,7 @@ from functions import eval_chart
 col = ['fully', 'partially', 'not', 'na']
 criteria_dict = {
     'Share code with an open licence': [4, 0, 4, 0],
+    'Link publication to a specific<br>version of the code': [0, 0, 2, 6],
     'List required packages and versions': [0, 6, 2, 0],
     'Provide code for all scenarios<br>and sensitivity analyses': [1, 1, 5, 1],
     'Ensure model parameters are correct': [4, 2, 2, 0],
