@@ -249,7 +249,7 @@
     "href": "pages/reflections.html",
     "title": "6  Reflections from reproductions",
     "section": "",
-    "text": "6.1 Summary\nThis page describes the facilitators and barriers encountered in each reproduction, presented as a series of recommendations. These are grouped into two themes:\nWith each section, I have created a table which evaluates whether the facilitators were fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A) for each study.\nLinks to each study:\nThis is a summary of all the items that were evaluated (with ✅🟡❌) below.\nIt excludes the “Other section”. It also excludes a few criteria which weren’t felt particularly relevant/suitable to mark as met or not. These were “link publication to a specific version of the code”, “optimise model run time” and “avoid large file sizes”.",
+    "text": "6.1 Summary\nThis page describes the facilitators and barriers encountered in each reproduction, presented as a series of recommendations. These are grouped into two themes:\nWith each section, I have created a table which evaluates whether the facilitators were fully met (✅), partially met (🟡), not met (❌) or not applicable (N/A) for each study.\nLinks to each study:\nThis is a summary of all the items that were evaluated (with ✅🟡❌) below.\nIt excludes the “Other section”. It also excludes a few criteria which weren’t felt particularly relevant/suitable to mark as met or not. These were “optimise model run time” and “avoid large file sizes”.",
     "crumbs": [
       "Results",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Reflections from reproductions</span>"
