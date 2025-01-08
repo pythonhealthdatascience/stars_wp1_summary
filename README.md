@@ -6,7 +6,7 @@
 </h1>
 
 <p align="center">
-  <i align="center">Summary of the six computational reproducibility assessments conducted as part of STARS Work Package 1.</i>
+  <i align="center">Summary of the eight computational reproducibility assessments conducted as part of STARS Work Package 1.</i>
 </p>
 
 <p align="center">
@@ -51,6 +51,10 @@ Relevant GitHub repositories:
 | [stars-reproduce-johnson-2021](https://github.com/pythonhealthdatascience/stars-reproduce-johnson-2021) | Reproduction study 6: Johnson et al. 2021 (R) |
 | [stars-reproduce-hernandez-2015](https://github.com/pythonhealthdatascience/stars-reproduce-hernandez-2015) | Reproduction study 7: Hernandez et al. 2015 (Python + R) |
 | [stars-reproduce-wood-2021](https://github.com/pythonhealthdatascience/stars-reproduce-wood-2021) | Reproduction study 8: Wood et al. 2021 (R) |
+
+Process followed for each study:
+
+![Workflow](./images/stars_wp1_workflow.png)
 
 <br>
 <br>
