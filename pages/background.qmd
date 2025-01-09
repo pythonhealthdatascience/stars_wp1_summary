@@ -85,7 +85,7 @@ This objectives will be achieved through four work packages:
 
 **Work package 1: Reproducibility of computational results**
 
-* Assess the computational reproducibility of six published DES models created in Python and R.
+* Assess the computational reproducibility of eight published DES models created in Python and R.
 * Evaluate the publication, code and associated artefacts against reporting guidelines, best practice for code sharing, and criteria from journal artefact badges.
 
 **Work package 2: R and Python framework for sharing DES models**

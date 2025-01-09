@@ -4,7 +4,7 @@ project:
     browser: true
 
 book:
-  title: "STARS Work Package 1: Computational Reproducibility Assessments"
+  title: "Computational Reproducibility Assessments: Summary"
   chapters:
   - index.qmd
   - text: "Introduction"

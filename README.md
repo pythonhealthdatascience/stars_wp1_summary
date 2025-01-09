@@ -1,7 +1,7 @@
 <h1 align="center">
   <a href="https://github.com/pythonhealthdatascience"><img src="https://raw.githubusercontent.com/pythonhealthdatascience/stars_wp1_summary/main/images/stars_banner.png" alt="Markdownify"></a>
   <br>
-  STARS Work Package 1 Summary
+  Computational Reproducibility Assessments: Summary
   <br>
 </h1>
 
@@ -117,7 +117,7 @@ quarto render
 
 This repository has been archived on Zenodo and can be cited as:
 
-> Heather, A., Monks, T., & Harper, A. (2024). STARS Work Package 1 Summary. Zenodo. <https://doi.org/10.5281/zenodo.14267268>.
+> Heather, A., Monks, T., & Harper, A. (2025). Computational Reproducibility Assessments: Summary. Zenodo. <https://doi.org/10.5281/zenodo.14267268>.
 
 If you wish to cite this repository on GitHub, please refer to the citation file `CITATION.cff`, and the auto-generated alternatives `citation_apalike.apa` and `citation_bibtex.bib`. Authors:
 

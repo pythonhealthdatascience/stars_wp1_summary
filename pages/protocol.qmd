@@ -11,7 +11,7 @@ These are summarised below, and modifications from the protocol are also describ
 
 ## Protocol summary
 
-For this work, six published healthcare DES models were selected. These were models with publicly available code under an open licence (either already available or add on request from the STARS team). For each model, the follow stages of work were conducted:
+For this work, eight published healthcare DES models were selected. These were models with publicly available code under an open licence (either already available or add on request from the STARS team). For each model, the follow stages of work were conducted:
 
 **Stage 1: Reproduction** - assessing the computational reproducibility of each study
 
