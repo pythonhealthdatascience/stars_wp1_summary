@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "STARS Work Package 1: Computational Reproducibility Assessments",
+    "title": "Computational Reproducibility Assessments: Summary",
     "section": "",
     "text": "Overview\nThis book describes the findings from work package 1 of the project STARS: Sharing Tools and Artefacts for Reproducible Simulations in healthcare.\nUse the sidebar to navigate through:",
     "crumbs": [
@@ -12,7 +12,7 @@
   {
     "objectID": "index.html#overview",
     "href": "index.html#overview",
-    "title": "STARS Work Package 1: Computational Reproducibility Assessments",
+    "title": "Computational Reproducibility Assessments: Summary",
     "section": "",
     "text": "Introduction - background on STARS, pilot work, and the aim of work package 1\nMethods - summarises the methods which are described in detail in our protocol\nResults - describes the results of the reproductions and evaluations, and reflections from the process\nDiscussion - considers and applies findings",
     "crumbs": [
@@ -22,7 +22,7 @@
   {
     "objectID": "index.html#funding",
     "href": "index.html#funding",
-    "title": "STARS Work Package 1: Computational Reproducibility Assessments",
+    "title": "Computational Reproducibility Assessments: Summary",
     "section": "Funding",
     "text": "Funding\nThis work is supported by the Medical Research Council [grant number MR/Z503915/1].",
     "crumbs": [
@@ -32,7 +32,7 @@
   {
     "objectID": "index.html#licence",
     "href": "index.html#licence",
-    "title": "STARS Work Package 1: Computational Reproducibility Assessments",
+    "title": "Computational Reproducibility Assessments: Summary",
     "section": "Licence",
     "text": "Licence\nThis book is licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence.",
     "crumbs": [
@@ -64,7 +64,7 @@
     "href": "pages/background.html#stars-project",
     "title": "2  Introduction",
     "section": "2.2 STARS project",
-    "text": "2.2 STARS project\nThe MRC-funded STARS project builds on this pilot work. As stated in the funding application, the objective of this project is “to improve the quality and quantity of shared discrete-event simulation models, tools and other research artefacts:\n\nIdentify barriers, and good practices for sharing simulation models;\nDevelop a new framework for sharing computer models applicable the most common free and open-source languages;\nTest the framework in both retrospective and prospective case studies;\nDevelop online interactive training materials;\nTransfer knowledge of our STARS framework to health data science researchers;\nEnsure sustainability of materials;\nSupport our partner archival journals adopt open science principles and our findings;”\n\nThis objectives will be achieved through four work packages:\nWork package 1: Reproducibility of computational results\n\nAssess the computational reproducibility of six published DES models created in Python and R.\nEvaluate the publication, code and associated artefacts against reporting guidelines, best practice for code sharing, and criteria from journal artefact badges.\n\nWork package 2: R and Python framework for sharing DES models\n\nImprove the pilot framework (e.g. extend baesd on barriers and enablers to reproduction observed in work package 1, and making it relevant to R models)\nProvide time-saving measures for researchers (e.g. automated support for STRESS, use of large language models (LLM) to support creating of summaries, automated testing of models, continuous integration tools)\n\nWork package 3: Prospective and retrospective application of the framework\n\nApply STARS framework within two case studies (one prospective and one retrospective)\n\nWork package 4: Training\n\nDevelop online interactive training materials to support researchers in using the STARS framework\n\nFrom this point onwards, this site/book summarises the findings from work package 1.",
+    "text": "2.2 STARS project\nThe MRC-funded STARS project builds on this pilot work. As stated in the funding application, the objective of this project is “to improve the quality and quantity of shared discrete-event simulation models, tools and other research artefacts:\n\nIdentify barriers, and good practices for sharing simulation models;\nDevelop a new framework for sharing computer models applicable the most common free and open-source languages;\nTest the framework in both retrospective and prospective case studies;\nDevelop online interactive training materials;\nTransfer knowledge of our STARS framework to health data science researchers;\nEnsure sustainability of materials;\nSupport our partner archival journals adopt open science principles and our findings;”\n\nThis objectives will be achieved through four work packages:\nWork package 1: Reproducibility of computational results\n\nAssess the computational reproducibility of eight published DES models created in Python and R.\nEvaluate the publication, code and associated artefacts against reporting guidelines, best practice for code sharing, and criteria from journal artefact badges.\n\nWork package 2: R and Python framework for sharing DES models\n\nImprove the pilot framework (e.g. extend baesd on barriers and enablers to reproduction observed in work package 1, and making it relevant to R models)\nProvide time-saving measures for researchers (e.g. automated support for STRESS, use of large language models (LLM) to support creating of summaries, automated testing of models, continuous integration tools)\n\nWork package 3: Prospective and retrospective application of the framework\n\nApply STARS framework within two case studies (one prospective and one retrospective)\n\nWork package 4: Training\n\nDevelop online interactive training materials to support researchers in using the STARS framework\n\nFrom this point onwards, this site/book summarises the findings from work package 1.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
     ]
@@ -84,7 +84,7 @@
     "href": "pages/protocol.html",
     "title": "3  Methods",
     "section": "",
-    "text": "3.1 Protocol summary\nFor work package 1, the methods were described in our protocol, Heather et al. (2024).\nThese are summarised below, and modifications from the protocol are also described.\nFor this work, six published healthcare DES models were selected. These were models with publicly available code under an open licence (either already available or add on request from the STARS team). For each model, the follow stages of work were conducted:\nStage 1: Reproduction - assessing the computational reproducibility of each study\nStage 2: Evaluation - evaluating the publication, code and associated artefacts against sharing and reporting standards\nStage 3: Report and research compendium - summary report and organised repository\nFor each study, a quarto site was produced which shared the results from the reproduction and evaluation and the summary report. Throughout the work, a detailed logbook was kept to keep track of timings and to record work on each stage, such as detailing troubleshooting steps during the reproduction, or uncertainities discussed with another STARS team member during the evaluation.\nSummary diagram\nThis process is captured in the diagram below:",
+    "text": "3.1 Protocol summary\nFor work package 1, the methods were described in our protocol, Heather et al. (2024).\nThese are summarised below, and modifications from the protocol are also described.\nFor this work, eight published healthcare DES models were selected. These were models with publicly available code under an open licence (either already available or add on request from the STARS team). For each model, the follow stages of work were conducted:\nStage 1: Reproduction - assessing the computational reproducibility of each study\nStage 2: Evaluation - evaluating the publication, code and associated artefacts against sharing and reporting standards\nStage 3: Report and research compendium - summary report and organised repository\nFor each study, a quarto site was produced which shared the results from the reproduction and evaluation and the summary report. Throughout the work, a detailed logbook was kept to keep track of timings and to record work on each stage, such as detailing troubleshooting steps during the reproduction, or uncertainities discussed with another STARS team member during the evaluation.\nSummary diagram\nThis process is captured in the diagram below:",
     "crumbs": [
       "Methods",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Protocol</span>"
