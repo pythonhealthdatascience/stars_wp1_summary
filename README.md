@@ -32,6 +32,10 @@
 
 In work package 1, we assessed the computational reproducibility of eight discrete-event simulation papers with models in Python and R. The reproductions and findings are summarised at: <https://pythonhealthdatascience.github.io/stars_wp1_summary/>.
 
+This is work is described in:
+
+> Heather, A. Monks, T. Harper, A. Mustafee, N. Mayne, A. **On the reproducibility of discrete-event simulation studies in health research: an empirical study using open models** (2025). Journal of Simulation. <https://doi.org/10.1080/17477778.2025.2552177>.
+
 [![Python](https://img.shields.io/badge/-python-black?style=for-the-badge&logoColor=white&logo=python&color=3776AB)](https://www.python.org/)
 [![R](https://img.shields.io/badge/-r-black?style=for-the-badge&logoColor=white&logo=r&color=276DC3)](https://www.r-project.org/)
 

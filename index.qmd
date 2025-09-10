@@ -26,6 +26,12 @@ Use the sidebar to navigate through:
 * **Results** - describes the results of the reproductions and evaluations, and reflections from the process
 * **Discussion** - considers and applies findings \
 
+## Publication {.unnumbered}
+
+This is work is described in:
+
+> Heather, A. Monks, T. Harper, A. Mustafee, N. Mayne, A. **On the reproducibility of discrete-event simulation studies in health research: an empirical study using open models** (2025). Journal of Simulation. <https://doi.org/10.1080/17477778.2025.2552177>.
+
 ## Funding {.unnumbered}
 
 This work is supported by the Medical Research Council [grant number [MR/Z503915/1](https://gtr.ukri.org/projects?ref=MR%2FZ503915%2F1)].
